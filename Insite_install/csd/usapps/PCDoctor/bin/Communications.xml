@@ -1,0 +1,8 @@
+<Script >
+	<TestSet>
+		<Device type="NetworkCard"/>
+	</TestSet>
+	<TestSet>
+		<Device type="Modem"/>
+	</TestSet>
+</Script>

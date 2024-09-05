@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleRFS>
+	<ALL>
+		<constant name="PageBackgroundColor" value="lightgrey" />
+		<constant name="PageFontFamily" value="Arial, Helvetica, sans-serif" />
+		<constant name="PageFontSize" value="small" />
+		<constant name="PageFontColor" value="#000" />
+		<constant name="ButtonBackgroundColor" value="#EEE" />
+		<constant name="ButtonBorderColor" value="#CCC" />
+		<constant name="ButtonFontColor" value="#000" />
+		<constant name="ButtonHeight" value="2em" />
+		<constant name="ButtonWidth" value="8em" />
+	</ALL>
+	<TableCommon>
+		<!-- Used for both the Queue Table and Review Table -->
+		<constant name="TableBackgroundColor" value="#FFFFF0" />
+		<constant name="TableAltRowColor" value="#EEE" />
+		<constant name="TableSelRowColor" value="lightblue" />
+		<constant name="TableSelRowFontColor" value="black" />
+		<constant name="TableBorderColor" value="gray" />
+		<constant name="TableBorderStyle" value="solid" />
+		<constant name="TableBorderWidth" value="1px" />
+	</TableCommon>
+	<QueueTable>
+		<constant name="HeaderFontColor" value="#000" />
+		<constant name="LastNameColumnWidth" value="10%" />
+		<constant name="FirstNameColumnWidth" value="10%" />
+		<constant name="DateColumnWidth" value="20%" />
+		<constant name="DescriptionColumnWidth" value="30%" />
+		<constant name="StatusColumnWidth" value="10%" />
+		<constant name="RefNoColumnWidth" value="20%" />
+		<constant name="Table1HeaderBackgroundColor" value="darkgray" />
+	</QueueTable>
+	<ReviewTable>
+		<constant name="Table2HeaderBackgroundColor" value="#EEE" />
+		<constant name="DescriptionHeight" value="8em" />
+	</ReviewTable>
+</styleRFS>

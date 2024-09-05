@@ -1,0 +1,134 @@
+﻿ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdravi english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  June_Li
+  * @version $Id: //depot/mainline/Matrix_Projects/projects/modules/src/windows/diag/pcdravi
+  /pcdravi.p5p$
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=AVI
+Module.Description=Interactive test for AVI video playback
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.AVITest.Name=Interactive Test
+Test.AVITest.Description=AVI Interactive Test
+
+#MSG_AVI_MCI_UNKNOWN_ERROR
+## @jl This string is different from 4x --I removed variable since there is no variable printout in 4x
+Event.MCIUnknownError.Message=Unknown error occurred
+Event.MCIUnknownError.EventCode=1
+
+#MSG_AVI_ERROR_FILE_NOT_FOUND
+Event.FileNotFound.Message=Could not locate an AVI file to use for playing. Unable to run this test.
+Event.FileNotFound.EventCode=2
+
+#MSG_AVI_TEST_FAILED
+Event.TestFailed.Message=The AVI Test failed.
+Event.TestFailed.EventCode=4
+
+#MSG_AVI_ERROR_COULD_NOT_OPEN_AVI_FILE
+Event.FileCouldNotBeOpened.Message=The AVI file could not be opened.
+Event.FileCouldNotBeOpened.EventCode=5
+   
+#localized string
+LocalizedString.AVIString3004 = Perhaps you don't have AVI capability, or the driver is installed incorrectly. If everything should be fine, try rebooting. If you still get this error message, and you can play AVI files just fine outside of this program, then the issue must be an incompatibility between this test program and your system configuration. If you can't play any AVI files even outside of this program, and you have rebooted your system, install the drivers for your video card again. Use the Control Panel to reload the drivers.
+LocalizedString.AVIString3009 = Error Detected.
+LocalizedString.AVIString3027 = Select the type of the video playback using one of the buttons below. You can select normal size or full-screen playback. If you see no output when you click on one of the buttons, click on "More Info" for suggestions.
+LocalizedString.AVIString3028 = Click on "Play" to run the test. If the test runs successfully, you will see a small window that presents a brief video clip with sound effects. If you do not see or hear output, click on "More Info" for help.
+LocalizedString.AVIMoreInfoString3012 = This test attempts to play a default AVI (a digital video clip) file. You can test the performance of your system in the current video mode by running the video clip in normal size. 
+LocalizedString.AVIMoreInfoString3016= If you do not see any action when you click on a button, please try to play a video clip outside of this program. If the clip is reproduced just fine, then there is probably an incompatibility between this program and your computer configuration.
+LocalizedString.AVIMoreInfoString3020 = If you don't see anything even outside of this program, and you are sure you have digital video playback capability (your system might not have it!), try these steps:
+LocalizedString.AVIMoreInfoString3023 = 1. Reboot Windows.
+LocalizedString.AVIMoreInfoString3024 = 2. Reinstall the video drivers (usually via the control panel).
+LocalizedString.AVIMoreInfoString3025 = Copyright 2005 PC-Doctor Inc.
+
+LocalizedString.MsgFileNotFoundError = Could not locate an AVI file to use for playing. Unable to run this test.
+LocalizedString.MsgUnknownError =  Unknown error occurred.
+LocalizedString.MsgCouldNotOpenAVIFileError =  The AVI file could not be opened.
+LocalizedString.MSG_DID_THE_TEST_PASS = Did the test pass?
+
+LocalizedString.AVIString3029 = &Play
+LocalizedString.AVIString3039 = &Close
+LocalizedString.AVIString3040 = &More Info
+LocalizedString.AVIString3041 = Instructions
+LocalizedString.AVIMoreInfoOk = OK
+
+#MSG_MCIERR_WAVE_OUTPUTSINUSE_ERROR
+LocalizedString.MsgMCIWaveOutputInuseError = All waveform devices that can play files in the current format are in use. Wait until one of these devices is free; then, try again or reinstall the sound devices.
+
+#MSG_MCIERR_SEQ_DIV_INCOMPATIBLE_ERROR
+LocalizedString.MsgMCISeqDivIncompatibleError = The time formats of the -song pointer- and SMPTE are singular. You can't use them together.
+
+#MSG_MCIERR_SEQ_NOMIDIPRESENT_ERROR
+LocalizedString.MsgMCISeqNoMidiPresentError = This system has no installed MIDI devices. Use the Drivers option from the Control Panel to install a MIDI driver.
+
+#MSG_MCIERR_SEQ_PORT_INUSE_ERROR
+LocalizedString.MsgMCISeqPortInuseError = The specified MIDI port is already in use. Wait until it is free, then, try again.
+
+#MSG_MCIERR_SEQ_PORT_MAPNODEVICE_ERROR
+LocalizedString.MsgMCISeqPortMapNoDeviceError = The current MIDI Mapper setup refers to a MIDI device that is not installed on the system. Use the MIDI Mapper from the Control Panel to edit the setup.
+
+#MSG_MCIERR_SEQ_PORT_MISCERROR_ERROR
+LocalizedString.MsgMCISeqPortMiscError = An error occurred with specified port.
+
+#MSG_MCIERR_SEQ_PORT_NONEXISTENT_ERROR
+LocalizedString.MsgMCISeqPortNonExistError = The specified MIDI device is not installed on the system. Use the Drivers option from the Control Panel to install a MIDI device.
+
+#MSG_MCIERR_SEQ_PORTUNSPECIFIED_ERROR
+LocalizedString.MsgMCISeqPortUnspecifiedError = The system does not have a current MIDI port specified.
+
+#MSG_MCIERR_SEQ_TIMER_ERROR
+LocalizedString.MsgMCISeqTimerError = All multimedia timers are being used by other applications. Quit one of these applications; then, try again.
+
+#MSG_MCIERR_WAVE_INPUTSINUSE_ERROR
+LocalizedString.MsgMCIWaveInputInuseError = All waveform devices that can record files in the current format are in use. Wait until one of these devices is free; then, try again.
+
+#MSG_MCIERR_WAVE_INPUTSUNSUITABLE_ERROR
+LocalizedString.MsgMCIWaveInputsUnsuitableError = No installed waveform device can record files in the current format. Use the Drivers option from the Control Panel to install a suitable waveform recording device.
+
+#MSG_MCIERR_WAVE_INPUTUNSPECIFIED_ERROR
+LocalizedString.MsgMCIWaveInputUnspecifiedError = You can specify any compatible waveform recording device.
+
+#MSG_MCIERR_WAVE_OUTPUTSUNSUITABLE_ERROR
+LocalizedString.MsgMCIWaveOutputsUnsuitableError = No installed waveform device can play files in the current format. Use the Drivers option from the Control Panel to install a suitable waveform device.
+
+#MSG_MCIERR_WAVE_OUTPUTUNSPECIFIED_ERROR
+LocalizedString.MsgMCIWaveOutputUnspecifiedError = You can specify any compatible waveform playback device.
+
+#MSG_MCIERR_WAVE_SETINPUTINUSE_ERROR
+LocalizedString.MsgMCIWaveSetInputInUseError = The current waveform device is in use. Wait until the device is free; then, try again to set the device for recording.
+
+#MSG_MCIERR_WAVE_SETINPUTUNSUITABLE_ERROR
+LocalizedString.MsgMCIWaveSetInputUnsuitableError = The device you are using to record a waveform cannot recognize the data format.
+
+#MSG_MCIERR_WAVE_SETOUTPUTINUSE_ERROR
+LocalizedString.MsgMCIWaveSetOutputInUseError = The current waveform device is in use. Wait until the device is free; then, try again to set the device for playback.
+
+#MSG_MCIERR_WAVE_SETOUTPUTUNSUITABLE_ERROR
+LocalizedString.MsgMCIWaveSetOutputUnsuitableError = The device you are using to playback a waveform cannot recognize the data format. An error occurred with specified port.
+
+

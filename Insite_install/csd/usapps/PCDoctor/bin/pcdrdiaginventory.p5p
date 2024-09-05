@@ -1,0 +1,75 @@
+#<header>
+# <cr>
+#  Copyright (c) 2000-2005 PC-Doctor, Inc.
+# </cr>
+# <addr>
+#  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+#  All rights reserved.
+# </addr>
+#
+# <lic>
+#  This software is the confidential and proprietary information of PC-Doctor, Inc.
+#  ("Confidential Information"). You shall not disclose such confidential
+#  information and shall use it only in accordance with the terms of the license
+#  agreement you entered into with PC-Doctor.
+# </lic>
+#
+# <desc>
+#  The pcdrharddrive english strings properties file
+# </desc>
+#
+# <file>
+#  @author  Wilson_Hu
+#  @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/multi/diag/pcdrdiaginventory/pcdrdiaginventory.p5p#1 $
+#  @.date   $DateTime: 2005/06/16 13:46:33 $
+#  @.change $Change: 39950 $
+#  @.last   $Author: Dan_Lu $
+# </file>
+#</header>
+
+
+Module.Name=Inventory Tester
+Module.Description=Handles inventory test
+Module.Copyright=Copyright (c) 2004 PC-Doctor, Inc. All Rights Reserved.
+
+Test.ExactMatchInventory.Name=Exact Match Inventory
+Test.ExactMatchInventory.Description=Handles exactly-matched inventory test
+
+Parameter.InventoryFileName.Name=Inventory File Name
+Parameter.InventoryFileName.Description=The inventory file used in the inventory test.
+
+Parameter.ForceReEnumerate.Name=Force Re-enumerate
+Parameter.ForceReEnumerate.Description=Force the Engine to re-enumerate the all devices
+
+Event.inventory_Check_Succeeded_Event.Message={message}
+Event.inventory_Check_Succeeded_Event.EventCode=1
+Event.inventory_Check_Succeeded_Event.Tip1=Tip.Happy
+Event.inventory_Check_Succeeded_Event.Tip2=Tip.KeepHappy
+
+LocalizedString.progressInfo_String={info}
+
+Event.one_InventoryDevice_Matchs_Multi-Devices_Event.Message={info}
+Event.one_InventoryDevice_Matchs_Multi-Devices_Event.EventCode=1
+Event.one_InventoryDevice_Matchs_Multi-Devices_Event.Tip1=Tip.Check_Your_Inventory
+Event.one_InventoryDevice_Matchs_Multi-Devices_Event.Tip2=Tip.Check_Your_Devices
+
+Event.one_Device_Matchs_Multi-InventoryDevices_Event.Message={info}
+Event.one_Device_Matchs_Multi-InventoryDevices_Event.EventCode=1
+Event.one_Device_Matchs_Multi-InventoryDevices_Event.Tip1=Tip.Check_Your_Devices
+Event.one_Device_Matchs_Multi-InventoryDevices_Event.Tip2=Tip.Check_Your_Inventory
+
+Event.inventory_Check_Failed_Event.Message={message}
+Event.inventory_Check_Failed_Event.EventCode=1
+Event.inventory_Check_Failed_Event.Tip1=Tip.CheckResult
+Event.inventory_Check_Failed_Event.Tip2=Tip.CheckDeviceInYourSystem
+
+Event.inventory_File_Error_Event.Message={error}
+Event.inventory_File_Error_Event.EventCode=1
+Event.inventory_File_Error_Event.Tip1=Tip.CheckInventoryFileExistence
+Event.inventory_File_Error_Event.Tip2=Tip.CheckFolderExistenceAndReadibility
+
+Event.warn_Event.Message={warn}
+Event.warn_Event.EventCode=1
+Event.warn_Event.Tip1=Tip.CheckTheWarningMessage
+Event.warn_Event.Tip2=Tip.WarningIsSignificantToYou?
+

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<title>New Page 5</title>
+<script>
+function callLogApplet(_description)
+{	
+	if(navigator.javaEnabled())
+        {
+                // Changes for 2.4
+		//parent.pna.document.ActivityLogApplet.LogIt(_description);	
+	}
+	
+}
+</script>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<base target="bottom">
+</head>
+
+<body alink="#000000" vlink="#000000" link="#000000" bgcolor="#C0C0C0">
+
+<BASE TARGET=left>
+<CENTER><TABLE ALIGN=ABSCENTER BORDER=2 WIDTH="100%" >
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD ALIGN=CENTER VALIGN=CENTER>
+<A HREF="/ctcgi-bin/sdm_web/sdmXappStarter?command=cleanup" 
+onClick="callLogApplet('System Cleanup selected')" >
+Cleanup</A></TD>
+
+<TD><A HREF="/ctcgi-bin/sdm_web/sdmXappStarter?command=diagResetFunc"
+onClick="callLogApplet('System Resets selected')">
+System Resets</A></TD>
+</TR>
+</TABLE></CENTER>
+
+</body>
+</html>

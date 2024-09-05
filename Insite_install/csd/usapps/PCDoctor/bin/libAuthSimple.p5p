@@ -1,0 +1,93 @@
+/* <header>
+ * <cr> 
+ *  Copyright (c) 2000-2005 {product}, Inc.
+ * </cr>
+ * <addr>
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * </addr>
+ *
+ * <lic>
+ * This software is the confidential and proprietary information of {product}, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with {product}.
+ * </lic>
+ * 
+ * <desc>
+ * libAuth Implementation
+ * </desc>
+ * 
+ * <file>
+ * @author  Jyoti Gandhe
+ * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/common/src/libAuth/src/localizedResources/libAuthSimple.p5p#1 $
+ * @.date   $DateTime: 2005/06/16 13:46:33 $
+ * @.change $Change: 39950 $
+ * @.last   $Author: 
+ * </file>
+ * </header>
+ */
+
+Error.Manufacturer.Description = This version of {product} is not licensed to run on this system.
+
+Error.Model.Description = This version of {product} is not licensed to run on this system.
+
+Error.USBDongle.Description = This version of {product} requires a USB key (dongle) to run. The USB key was not detected. Please insert USB key to run {product}.
+
+Error.USBDongleSilent.Description=Unable to connect to USB Dongle found in system. Please remove and reinsert USB Dongle into same USB Port and relaunch product. If the dongle is still not recognized, reboot and try again.
+
+Error.USBDongleBadInstall.Description=Unable to connect to USB Dongle found in system. Automatic installation of driver failed. Please refer to documentation on manual installation of the USB Dongle driver.
+
+Error.ParallelDongle.Description = This version of {product} requires a parallel port dongle to run. The  dongle was not detected. Please insert it to run {product}.
+
+Error.LanguageProhibit.Description = This version of {product} is not licensed to run on this system.
+
+Error.LanguageAllow.Description = This version of {product} is not licensed to run on this system.
+
+Error.ExpiryDateSystem.Description = This version of {product} is not licensed to run on this system.
+
+Error.EvalNotBegun.Description = This version of {product} is not licensed to run on this system.
+
+Error.SysDateSetBack.Description = This version of {product} is not licensed to run on this system.
+
+Error.ExpiryDateDongle.Description = This version of {product} is not licensed to run on this system.
+
+Error.UserName.Description = This version of {product} is not licensed to run on this system.
+
+Error.MACAddress.Description = This version of {product} is not licensed to run on this system.
+
+Error.MemorySize.Description = This version of {product} is not licensed to run on this system.
+
+Error.CPUSpeed.Description  = This version of {product} is not licensed to run on this system.
+
+Error.NetworkFactoryClient.Description = This version of {product} is not licensed to run on this system.
+
+Error.USBDongleSerial.Description = This version of {product} is not licensed to run on this system.
+
+Error.SystemSerialAllow.Description = This version of {product} is not licensed to run on this system.
+
+Error.SystemSerialProhibit.Description = This version of {product} is not licensed to run on this system.
+
+Error.SystemVersionAllow.Description = This version of {product} is not licensed to run on this system.
+
+Error.SystemVersionProhibit.Description = This version of {product} is not licensed to run on this system.
+
+Error.DesktopProhibit.Description = This version of {product} is not licensed to run on this system.
+
+Error.NotebookProhibit.Description = This version of {product} is not licensed to run on this system.
+
+Error.OSProhibit.Description =  This version of {product} is not licensed to run on this system. 
+
+Error.SigMissing.Description = License File format is invalid. Please ensure that your license file is not corrupted.
+
+Error.InvalidSig.Description = License File verification failed. Please make sure that your license file is not corrupted.
+
+Error.InvalidLicense.Description = Please ensure you have a valid license for this copy of {product}.
+
+Error.PCDError.Description = An exception occured during authentication. Please contact {product} to resolve this issue.
+
+Error.UnknownError.Description = Unknown Error occured during authentication. Please contact {product} to resolve this issue.
+
+Error.LicenseFileOpenFailed.Description = Unable to open the {product} License file.  Please ensure that the license file exists and you have permission to read it.
+
+Error.NotLicensed.Description=This version of PC-Doctor is not licensed to run on this system.

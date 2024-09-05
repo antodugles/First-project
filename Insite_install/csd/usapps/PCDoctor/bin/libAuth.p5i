@@ -1,0 +1,33 @@
+
+/* <header>
+ * <cr> 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * </cr>
+ * <addr>
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * </addr>
+ *
+ * <lic>
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * </lic>
+ * 
+ * <desc>
+ *  Test setting for ADSL diag module
+ * </desc>
+ * 
+ * <file>
+ * @author  
+ * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/common/src/libAuth/src/libAuth.p5i#1 $
+ * @.date   $DateTime: 2005/06/16 13:46:33 $
+ * @.change $Change: 39950 $
+ * @.last   $Author: Dan_Lu $
+ * </file>
+ * </header>
+ */
+ 
+serverPath = http://192.168.25.232/cgi-bin/generateLicenseFromString
+useServer = true

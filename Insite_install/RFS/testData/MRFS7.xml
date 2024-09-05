@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<createRFS>
+	<SystemID>ILINQTEST1</SystemID>
+	<OtherSystemID>ILINQTEST2</OtherSystemID>
+	<ProblemType>System</ProblemType>
+	<ProblemArea>Power</ProblemArea>
+	<ContactDetail>
+		<FirstName>JAMES</FirstName>
+		<LastName>BROWN</LastName>
+		<ContactPhone>250-334-0334</ContactPhone>
+		<ContactEmail>James.Brown@ge.com</ContactEmail>
+	</ContactDetail>
+	<ExamNumber></ExamNumber>
+	<SeriesNumber></SeriesNumber>
+	<ImageNumber></ImageNumber>
+	<ProblemDescription>Power failure.</ProblemDescription>
+	<RequestSource>ContactGE</RequestSource>
+	<Status>Not Sent</Status>
+</createRFS>

@@ -1,0 +1,273 @@
+<html>
+
+<head>
+<title>nav bar</title>
+<script>
+var currentImage,currentImageIndex;
+function CsdImage( name, imageURL ) {
+
+	this.name = name;
+	this.image = new Image();
+	this.image.src = imageURL;
+
+}
+
+function loadInit()
+{
+	currentImage = "home";
+	currentImageIndex=8;
+	currentUnderline="home";
+}
+
+function loadIt(image, whichImage)
+{
+  	selImageName =  image +"_selected";
+	selImageUnderline = image + "_edge";
+	imageToDisplay = findImage( selImageName );
+	imageToUnderline = findEdgeImage( selImageUnderline );
+	document.images[whichImage].src=imageToDisplay.image.src;
+	document.images["underline"].src=imageToUnderline.image.src;
+
+	if	(
+			(currentImageIndex != null) &&
+			(currentImage != image)
+		)
+	{
+  		unselImageName =  currentImage +"_unselected";
+		imageToUnDisplay = findUnImage( unselImageName );
+		document.images[currentImageIndex].src=imageToUnDisplay.image.src;
+	}
+
+        if(whichImage!=8)
+        {
+                homeUnDisplay = findUnImage( "home_unselected" );
+                document.images[8].src=homeUnDisplay.image.src;
+        }
+
+	currentImage=image;
+	currentImageIndex=whichImage;
+
+	URL = image + "/" + image + "Page.html";
+	 if(image=="home")
+	{
+         //Changes for 2.4
+	//	document.ActivityLogApplet.LogIt('MENU SELECTION: Entering Home Page');
+        }
+        if(image=="pm")
+        {
+          //Changes for 2.4
+         //       document.ActivityLogApplet.LogIt('MENU SELECTION: Entering PM Menu');
+        }
+        if(image=="part")
+        {
+           //Changes for 2.4
+          //      document.ActivityLogApplet.LogIt('MENU SELECTION: Entering Replacement Menu');
+        }
+        if(image=="util")
+        {
+            //Changes for 2.4
+           //     document.ActivityLogApplet.LogIt('MENU SELECTION: Entering Utilities Menu');
+        }
+        if(image=="config")
+        {
+            //Changes for 2.4
+            //    document.ActivityLogApplet.LogIt('MENU SELECTION: Entering Configuration Menu');
+        }
+        if(image=="calib")
+        {
+              //Changes for 2.4
+             //   document.ActivityLogApplet.LogIt('MENU SELECTION: Entering Calibration Menu');
+        }
+        if(image=="iq")
+        {
+               //Changes for 2.4
+              //  document.ActivityLogApplet.LogIt('MENU SELECTION: Entering Image Quality Menu');
+        }
+        if(image=="diag")
+        {
+                //Changes for 2.4
+               // document.ActivityLogApplet.LogIt('MENU SELECTION: Entering Diagnostics Menu');
+        }
+        if(image=="errorLog")
+        {
+               //Changes for 2.4
+                //document.ActivityLogApplet.LogIt('MENU SELECTION: Entering Error Logs Menu');
+        }
+
+	parent.frames[1].location = URL;
+}
+
+function findEdgeImage( image ) {
+	for ( var inx = 0; inx < myEdgeImageArray.length; inx++ ) {
+		if ( myEdgeImageArray[inx].name == image ) {
+			return myEdgeImageArray[inx];
+		}
+
+	}
+	return null;
+}
+
+
+function findUnImage( image ) {
+
+	//alert( "Inside findUnImage with " + myUnImageArray.length + " images" );
+	for ( var inx = 0; inx < myUnImageArray.length; inx++ ) {
+		//alert(" image = " + myUnImageArray[inx].name + "with src = " + myUnImageArray[inx].image.src );
+		if ( myUnImageArray[inx].name == image ) {
+			//alert("found image: " + image );
+			return myUnImageArray[inx];
+		}
+
+	}
+	return null;
+}
+
+
+function findImage( image ) {
+
+	//alert( "Inside findImage with " + myImageArray.length + " images" );
+	for ( var inx = 0; inx < myImageArray.length; inx++ ) {
+		//alert(" image = " + myImageArray[inx].name + "with src = " + myImageArray[inx].image.src );
+		if ( myImageArray[inx].name == image ) {
+			//alert("found image: " + image );
+			return myImageArray[inx];
+		}
+
+	}
+	return null;
+}
+
+
+/* Load all images first by creating Image objects */
+
+errorLog_selected = new CsdImage( "errorLog_selected", "images/Errlog_on.png" );
+diag_selected = new CsdImage( "diag_selected", "images/Diag_on.png" );
+calib_selected = new CsdImage( "calib_selected", "images/Calib_on.png" );
+iq_selected = new CsdImage( "iq_selected", "images/Iq_on.png" );
+config_selected = new CsdImage( "config_selected", "images/Config_on.png" );
+util_selected = new CsdImage( "util_selected", "images/Util_on.png" );
+part_selected = new CsdImage( "part_selected", "images/Parts_on.png" );
+pm_selected = new CsdImage( "pm_selected", "images/PM_on.png" );
+home_selected = new CsdImage( "home_selected", "images/Home_on.png" );
+
+errorLog_edge = new CsdImage( "errorLog_edge", "images/Errlog_edge.png" );
+diag_edge = new CsdImage( "diag_edge", "images/Diag_edge.png" );
+calib_edge = new CsdImage( "calib_edge", "images/Calib_edge.png" );
+iq_edge = new CsdImage( "iq_edge", "images/Iq_edge.png" );
+config_edge = new CsdImage( "config_edge", "images/Config_edge.png" );
+util_edge = new CsdImage( "util_edge", "images/Util_edge.png" );
+part_edge = new CsdImage( "part_edge", "images/Parts_edge.png" );
+pm_edge = new CsdImage( "pm_edge", "images/PM_edge.png" );
+home_edge = new CsdImage( "home_edge", "images/Home_edge.png" );
+
+
+errorLog_unselected = new CsdImage( "errorLog_unselected", "images/Errlog_off.png" );
+diag_unselected = new CsdImage( "diag_unselected", "images/Diag_off.png" );
+calib_unselected = new CsdImage( "calib_unselected", "images/Calib_off.png" );
+iq_unselected = new CsdImage( "iq_unselected", "images/Iq_off.png" );
+config_unselected = new CsdImage( "config_unselected", "images/Config_off.png" );
+util_unselected = new CsdImage( "util_unselected", "images/Util_off.png" );
+part_unselected = new CsdImage( "part_unselected", "images/Parts_off.png" );
+pm_unselected = new CsdImage( "pm_unselected", "images/PM_off.png" );
+home_unselected = new CsdImage( "home_unselected", "images/Home_off.png" );
+
+/* Now put all of these images in an array */
+myImageArray = new Array( errorLog_selected, home_selected, pm_selected,
+			  part_selected, config_selected,
+			  iq_selected, calib_selected,
+			  diag_selected,
+			  util_selected );
+
+myUnImageArray = new Array( errorLog_unselected, home_unselected, pm_unselected,
+			  part_unselected, config_unselected,
+			  iq_unselected, calib_unselected,
+			  diag_unselected,
+			  util_unselected );
+
+myEdgeImageArray = new Array( errorLog_edge, home_edge, pm_edge,
+			  part_edge, config_edge,
+			  iq_edge, calib_edge,
+			  diag_edge,
+			  util_edge );
+
+
+
+</script>
+</head>
+
+
+<body link="#888888" vlink="#888888" alink="#888888" bgcolor="gray" onLoad="loadInit()">
+
+<form name = "navigation">
+<!-- old mapping is 15,35,78,93 -->
+
+<map name = "errorMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "Error Log"
+      href = 'javascript:loadIt("errorLog", 0)' >
+</map>
+
+<map name = "diagMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "Diagnostic"
+      href = 'javascript:loadIt("diag", 1)' >
+</map>
+
+<map name = "iqMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "Image Quality"
+      href = 'javascript:loadIt("iq", 2)' >
+</map>
+
+<map name = "calibMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "Calib"
+      href = 'javascript:loadIt("calib", 3)' >
+</map>
+
+<map name = "configMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "Configuration"
+      href = 'javascript:loadIt("config", 4)' >
+</map>
+
+<map name = "utilMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "Utilities"
+      href = 'javascript:loadIt("util", 5)' >
+</map>
+
+<map name = "partMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "Replacement"
+      href = 'javascript:loadIt("part", 6)' >
+</map>
+<map name = "pmMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "PM"
+      href = 'javascript:loadIt("pm", 7)' >
+</map>
+<map name = "homeMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "Home"
+      href = 'javascript:loadIt("home", 8)' >
+</map>
+
+<map name = "errorMap">
+    <area shape = RECT coords = "11,6,82,83" alt = "Error Log"
+      href = 'javascript:loadIt("errorLog", 0)' >
+</map>
+
+<table BACKGROUND="" CELLPADDING="0" CELLSPACING="0" border=0 >
+<tr>
+<td><img name = "1" src = "images/Errlog_off.png"  border=0 usemap = "#errorMap" align = "Middle"></td>
+<td><img name = "2" src = "images/Diag_off.png" border=0 usemap = "#diagMap" align = "Middle"></td>
+<td><img name = "3" src = "images/Iq_off.png" border=0 usemap = "#iqMap" align = "Middle"></td>
+<td><img name = "4" src = "images/Calib_off.png" border=0 usemap = "#calibMap" align = "Middle"></td>
+<td><img name = "5" src = "images/Config_off.png" border=0 usemap = "#configMap" align = "Middle"></td>
+<td><img name = "6" src = "images/Util_off.png" border=0 usemap = "#utilMap" align = "Middle"></td>
+<td><img name = "7" src = "images/Parts_off.png" border=0 usemap = "#partMap" align = "Middle"></td>
+<td><img name = "8" src = "images/PM_off.png" border=0 usemap = "#pmMap" align = "Middle"></td>
+<td><img name = "9" src = "images/Home_on.png" border=0 usemap = "#homeMap" align = "Middle"></td>
+</tr>
+<tr bgcolor="gray" valign=TOP>
+<td colspan=9><image name = "underline" src = "images/Home_edge.png" border=0 valign = "top"></td>
+</tr>
+</table>
+
+</form>
+<!-- <applet code="com/ge/med/csd/ActivityLogApplet" codebase="/applets" name="ActivityLogApplet" width="0" height="0"></applet> -->
+</body>
+</html>
+

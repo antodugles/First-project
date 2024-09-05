@@ -1,0 +1,139 @@
+<ModificationMap>
+  <replace>
+    <!-- ServiceAgent profile -->
+    <text symbol="__SA_ASSET_TYPE_NAME__">UltraSound</text>
+	<text symbol="__SA_ASSET_TYPE_MANUFACTURER__">GE_Healthcare</text>
+	<text symbol="__SA_ASSET_TYPE_PRODUCT__">UltraSound_Twin</text>
+	<text symbol="__SA_ASSET_TYPE_MODEL__">UltraSound4D</text>
+	<text symbol="__SA_ASSET_TYPE_VERSION__">1.0</text>
+	<text symbol="__SA_ASSET_NAME__" userconfig="true">UNKNOWN</text>
+    	<text symbol="__SA_ASSET_PASSWORD__">test1234</text>
+	<text symbol="__SA_ASSET_SERIAL_NUMBER__" userconfig="true">UNKNOWN</text>
+	<text symbol="__SA_ASSET_FRIENDLY_NAME__" userconfig="true"></text>
+	<text symbol="__SA_ASSET_DESCRIPTION__" userconfig="true">PrimaryServiceAgent</text>
+	<text symbol="__BACKEND__INTEGRATION__">UL</text>
+
+	<!-- Address -->
+	<text symbol="__SA_ADDRESS_LINE1__" userconfig="true"></text>
+	<text symbol="__SA_ADDRESS_LINE2__" userconfig="true"></text>
+	
+	<!-- Release 2.0 Device Properties (Mandatory, Dynamically Configurable)-->
+	<text symbol="__SA_CONTINENT__" userconfig="true"></text>
+	<text symbol="__SA_COUNTRY__" userconfig="true"></text>
+    <text symbol="__SA_STATE__" userconfig="true"></text>
+    <text symbol="__SA_CITY__" userconfig="true"></text>
+    <text symbol="__SA_INSTITUTION__" userconfig="true"></text>
+    <text symbol="__PROXY_SCHEME__" userconfig="true">FALSE</text>
+    <text symbol="__SA_SERVICE_CENTER__" userconfig="true"></text>
+
+    <!-- Release 2.0 Device Properties (Optional, Dynamically Configurable)-->
+    <text symbol="__SA_POSTALCODE__" userconfig="true"></text>
+    <text symbol="__SA_LATITUDE__" userconfig="true"></text>
+    <text symbol="__SA_LONGITUDE__" userconfig="true"></text>
+    <text symbol="__SA_DEPARTMENT__" userconfig="true"></text>
+    <text symbol="__SA_BUILDING__" userconfig="true"></text>
+    <text symbol="__SA_FLOOR__" userconfig="true"></text>
+    <text symbol="__SA_ROOM__" userconfig="true"></text>
+
+    <!-- Release 2.0 Device Properties (Mandatory, Static)-->
+    <text symbol="__SA_MODALITY__">ULS</text>
+    <text symbol="__SA_OP_SYSTEM__">WINXP</text>
+    <text symbol="__SA_OP_REVISION__">5.1.2600</text>
+    <text symbol="__SA_AP_REVISION__">1.0</text>
+    <text symbol="__SA_SRV_REVISION__">1.0</text>
+    <text symbol="__SA_POLLTYPE__">CONSTANT</text>
+    <text symbol="__SA_HRFS_SUPPORT__">TRUE</text>
+    <text symbol="__SA_MRFS_SUPPORT__">FALSE</text>
+    <text symbol="__SA_SWRLOAD_SUPPORT__">TRUE</text>
+    <text symbol="__SA_SWDLOAD_SUPPORT__">FALSE</text>
+    <text symbol="__SA_ALERT_LVL3__"></text>
+    <text symbol="__SA_ALERT_LVL2__"></text>
+    <text symbol="__SA_ALERT_LVL1__">EMAIL ALERT LEVEL 1</text>
+
+    <!-- Release 2.0 Device Properties (Optional, Static)-->
+    <text symbol="__SA_GHST_REVISION__">1.0</text>
+    
+    	<!-- OCM -->
+    	<text symbol="__SCHEME__">https</text>
+	<text symbol="__ENT_URL__" userconfig="true">https://us1-ws.service.gehealthcare.com:443</text>
+	<text symbol="__TUN_URL__" userconfig="true">https://us1-rd.service.gehealthcare.com:443</text>
+	<text symbol="__PROXY_SERVER__" userconfig="true"></text>
+	<text symbol="__PROXY_AUTH_USERNAME__" userconfig="true"></text>
+	<text symbol="__PROXY_AUTH_PASSWORD__" userconfig="true"></text>
+	<text symbol="__PROXY_AUTH_SCHEME__" userconfig="true">NONE</text>
+	<text symbol="__LOG_LEVEL__" userconfig="true">WARN</text>
+	<text symbol="__SA_POLLINTERVAL__">900</text>
+
+	<!-- Server Port Numbers -->
+	<text symbol="__RA_CSD_LOCALPORT__">80</text>
+	<text symbol="__RA_VNC_LOCALPORT__">5900</text>
+	<text symbol="__RA_TELNET_LOCALPORT__">23</text>
+
+	<!-- Misc -->
+	<text symbol="__INSTALL_DIR__">%INSITE2_ROOT_DIR%</text>
+	<text symbol="__DATA_DIR__">%INSITE2_ROOT_DIR%</text>
+	<text symbol="__FILE_REPOS_DIR__" userconfig="true">%INSITE2_ROOT_DIR%\etc</text>
+	<text symbol="__FILE_WATCHER_ALIAS__">Export</text>
+	<text symbol="__FILE_WATCHER_DIR__" userconfig="true">D:\Export</text>
+	<text symbol="__VIRTUAL_DIR_ALIAS__">Log</text>
+	<text symbol="__VIRTUAL_DIR__">D:\Log</text>
+	<text symbol="__FILE_WATCHER_FILTER__" userconfig="true">*.*</text>
+	<text symbol="__CUSTOM_LOG_DIR__">D:\Log</text>
+	<text symbol="__VNC_CONNECTIONS__">1</text>
+
+	<!-- Software director -->
+    	<text symbol="__SWD_DIR__">%INSITE2_ROOT_DIR%\swd</text>
+    	<text symbol="__ADMINUSERNAME__">admin</text>
+    	<text symbol="__ADMINPASSWORD__">admin</text>
+    	<text symbol="__HTML_SERVER_LOCALPORT__">8011</text>
+    	<text symbol="__WEBAPP_SCHEME__">http</text>
+  </replace>
+
+  <delete>
+    <!-- start proxy server nodes -->
+    <node>/HttpServerConnDS/Asset/Connection/ProxyServerAddress</node>
+    <node>/HttpServerConnDS/Asset/Connection/ProxyServerAuthorization</node>
+    <node>/HttpServerConnDS/Asset/Connection/ProxyServerAuthorization/AuthScheme</node>
+    <node>/HttpServerConnDS/Asset/Connection/SslCaFile</node>
+    <node>/HttpServerConnDS/Asset/Connection/SslCertFile</node>
+    <node>/ServiceAgent/OCM/ProxyServerAddress</node>
+    <node>/ServiceAgent/OCM/ProxyServerAuthorization</node>
+    <node>/ServiceAgent/OCM/ProxyServerAuthorization/AuthScheme</node>
+    <node>/ServiceAgent/OCM/SslCaFile</node>
+    <node>/ServiceAgent/OCM/SslCertFile</node>
+    <!-- end proxy server nodes -->
+
+	<!-- start HtmlServer SSL nodes -->
+	<node>/HtmlServer/SslCertFile</node>
+	<node>/HtmlServer/SslCaFile</node>
+	<!-- end HtmlServer SSL nodes -->
+
+	<!-- FileWatcher nodes -->
+	<node>/ServiceAgent/ContactInfo/ServiceAgentProfile/FileRepository/FileWatcher</node>
+
+<!-- SSLMode node: adds FIPS and compatible with 5.2SP2 agent/P212 Patch onwards (openssl version - 0.9.8k) -->
+<!-- SSLMode enabled by default so node is commented out, to disable FIPS uncomment the following node -->
+<!-- node>/ServiceAgent/SslMode</node-->
+	
+	<!-- Do not use custom logger extension -->
+	<node>/ServiceAgent/LoggerSource</node>
+	
+	<!-- Do not use Contact GE UI extension. Clinical Systems uses it's own ContactGE UI -->
+	<node>/ServiceAgent/Extension[InitParam='__DATA_DIR__/etc/ContactGEUIExt.xml']</node>
+
+	<node>/ServiceAgent/ContactInfo/ServiceAgentProfile/LatLonCoordinates</node>
+    
+    <!-- Optional CS_GSP_PXY_ADD property -->
+    <node>/ServiceAgent/ContactInfo/ServiceAgentProfile/Property[@name='CS_GSP_PXY_ADD']</node>
+    <!-- Optional CS_GSP_GHSTREV property -->
+    <node>/ServiceAgent/ContactInfo/ServiceAgentProfile/Property[@name='CS_GSP_GHSTREV']</node>
+  </delete>
+  
+  <replace>
+    	<!-- Windows libs/directories-->
+    	<text symbol="/lib/lib">\bin\</text>
+	<text symbol="/etc/">\etc\</text>
+    	<text symbol="/etc">\etc</text>
+    	<text symbol=".so">.dll</text>
+  </replace>
+</ModificationMap>

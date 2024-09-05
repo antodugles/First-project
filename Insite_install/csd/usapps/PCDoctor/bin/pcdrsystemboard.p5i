@@ -1,0 +1,50 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdrsystemboard
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+Test.RTCAccuracyTest.Enable = true
+
+Test.RTCAccuracyTest.fPercentTolerance = 0.5
+
+Test.RTCAccuracyTest.iDurationInSeconds = 1
+
+Test.RTCAccuracyTest.iRetries = 5
+
+Test.RTCRolloverTest.Enable = true
+
+

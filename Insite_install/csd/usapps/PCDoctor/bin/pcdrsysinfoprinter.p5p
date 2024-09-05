@@ -1,0 +1,65 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Raymond_Chow
+  
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/sysinfo/pcdrsysinfoprinter/pcdrsysinfoprinter.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Printer Device Information
+Module.Description=This module gathers information about the Printer.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Property.Model.Name=Model
+Property.Model.Description=Model
+
+Property.Driver.Name=Driver
+Property.Driver.Description=Driver
+
+Property.DriverVersion.Name=Version
+Property.DriverVersion.Description=Version
+
+Property.Port.Name=Port
+Property.Port.Description=Port
+
+Property.Location.Name=Location
+Property.Location.Description=Location
+
+Property.ShareName.Name=Share Name
+Property.ShareName.Description=Share Name
+
+Property.Description.Name=Description
+Property.Description.Description=Description
+
+Property.PrintProcessor.Name=Print Processor
+Property.PrintProcessor.Description=Print Processor
+
+Property.DefaultParameters.Name=Default Parameters
+Property.DefaultParameters.Description=Default Parameters
+
+Property.PrinterPath.Name=Path
+Property.PrinterPath.Description=Printer Path

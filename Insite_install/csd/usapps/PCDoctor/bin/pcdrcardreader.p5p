@@ -1,0 +1,50 @@
+#<header>
+# <cr>
+#  Copyright (c) 2000-2004 PC-Doctor, Inc.
+# </cr>
+# <addr>
+#  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+#  All rights reserved.
+# </addr>
+#
+# <lic>
+#  This software is the confidential and proprietary information of PC-Doctor, Inc.
+#  ("Confidential Information"). You shall not disclose such confidential
+#  information and shall use it only in accordance with the terms of the license
+#  agreement you entered into with PC-Doctor.
+# </lic>
+#
+# <desc>
+#  The pcdrharddrive english strings properties file
+# </desc>
+#
+# <file>
+#  @author  Chris_Matyas
+#  @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrcardreader/pcdrcardreader.p5p#2 $
+#  @.date   $DateTime: 2005/06/16 14:24:58 $
+#  @.change $Change: 39959 $
+#  @.last   $Author: Bob_Zaretsky $
+# </file>
+#</header>
+
+
+Module.Name=Removable Drive Test
+Module.Description=This module tests Removable Drives
+Module.Copyright=Copyright (c) 2001-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.ScanCardReaderTest.Name=Scan Test
+Test.ScanCardReaderTest.Description=Removable Drive Scan Test
+
+Test.PatternCardReaderTest.Name=Pattern Test
+Test.PatternCardReaderTest.Description=Removable Drive Pattern Test
+
+
+#MSG_INSERT_MEDIA
+LocalizedString.InsertMedia=Removable Drive Test - Insert Media
+
+#MSG_NO_MEDIA_MEDIA
+LocalizedString.NoMediaPrompt=Please insert media into the removable drive ({DeviceName}).
+
+Event.NoMediaDetected.Message=No media was detected in the drive.
+Event.NoMediaDetected.EventCode=2

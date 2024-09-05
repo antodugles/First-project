@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceAgent>
+
+   <LogLevel>__LOG_LEVEL__</LogLevel>
+   <ConfigVersion>1.0</ConfigVersion>
+   <AutoregisterRetries>-1</AutoregisterRetries>
+   <AutoregisterRetryInterval>3600</AutoregisterRetryInterval>
+
+   <AssetType name="__SA_ASSET_TYPE_NAME__">
+       <Manufacturer>__SA_ASSET_TYPE_MANUFACTURER__</Manufacturer>
+       <Product>__SA_ASSET_TYPE_PRODUCT__</Product>
+       <Model>__SA_ASSET_TYPE_MODEL__</Model>
+       <Version>__SA_ASSET_TYPE_VERSION__</Version>
+   </AssetType>
+   <ThreadPool name="defaultThreadPool">
+      <MaxThreads>4</MaxThreads>
+      <MaxQueue>128</MaxQueue>
+   </ThreadPool>
+
+   <OCM name="__SCHEME__OCM">
+      <ServerAddress>__ENT_URL__</ServerAddress>
+      <NumRetries>1</NumRetries>
+      <RetryInterval>15</RetryInterval>
+      <ThreadPool ref="defaultThreadPool"/>
+      <SslCaFile>__OCM_SSL_CA_FILE__</SslCaFile>
+      <SslCertFile>__SSL_CERT_FILE__</SslCertFile>
+      <ProxyServerAddress>__PROXY_SERVER__</ProxyServerAddress>
+      <ProxyServerAuthorization>
+         <AuthScheme name="__PROXY_AUTH_SCHEME__">
+            <SharedLib>__INSTALL_DIR__\bin\authntlm.dll</SharedLib>
+            <AuthFuncName>NtlmAuthFunc</AuthFuncName>
+         </AuthScheme>
+         <Username>__PROXY_AUTH_USERNAME__</Username>
+         <Password>__PROXY_AUTH_PASSWORD__</Password>
+      </ProxyServerAuthorization>
+   </OCM>
+
+
+  <BootStateExtension>
+    <SharedLib>__INSTALL_DIR__/lib/libAutoRegBSE.so</SharedLib>
+    <InitParam/>
+    <StartupFuncName>A2BAutoRegBSEStartup</StartupFuncName>
+    <ShutdownFuncName>A2BAutoRegBSEShutdown</ShutdownFuncName>
+    <BootStateFuncName>A2BAutoRegBSESetState</BootStateFuncName>
+  </BootStateExtension>
+
+
+	<!--********************* HSCDS  Data Sources   *********************-->
+   <Extension>
+      <SharedLib>__INSTALL_DIR__/lib/libhttpServerConnDS.so</SharedLib>
+      <InitParam></InitParam>
+      <StartupFuncName>A2BHttpServerConnExtStartupProtocol</StartupFuncName>
+      <ShutdownFuncName>A2BHttpServerConnExtShutdownProtocol</ShutdownFuncName>
+   </Extension>
+
+   <!--********************* RSM  Data Sources   *********************-->
+   <RADataSource name="RSMDataSource">
+     <SharedLib>__INSTALL_DIR__/lib/libInSite2RSMLogger.so</SharedLib>
+      <InitParam>__DATA_DIR__/etc/ScheduleRSM.txt</InitParam>
+      <StartupFuncName>IS2RSMDSStartup</StartupFuncName>
+      <ShutdownFuncName>IS2RSMDSShutdown</ShutdownFuncName>
+      <GetFuncName>IS2RSMDSGet</GetFuncName>
+      <SetFuncName>IS2RSMDSSet</SetFuncName>
+      <ExecuteFuncName>IS2RSMDSExectue</ExecuteFuncName>
+      <DestroyResponseFuncName>IS2RSMDSDestoryResponse</DestroyResponseFuncName>
+      <DestroyPropertyListFuncName>IS2RSMDSDestroyPropList</DestroyPropertyListFuncName>
+   </RADataSource>
+
+
+   <!--*********************  Software Director   *********************-->
+
+   <RevReaderSource name="qsarr">
+      <SharedLib>__INSTALL_DIR__/lib/libqsaversions.so</SharedLib>
+      <InitParam>__DATA_DIR__/etc/versions.txt</InitParam>
+      <StartupFuncName>A2BQSARevStartup</StartupFuncName>
+      <ShutdownFuncName>A2BQSARevShutdown</ShutdownFuncName>
+      <GetFuncName>A2BQSARevGet</GetFuncName>
+      <DestroyFuncName>A2BQSARevDestroy</DestroyFuncName>
+   </RevReaderSource>
+
+   <Extension>
+      <SharedLib>__INSTALL_DIR__/lib/libhtmlext.so</SharedLib>
+      <InitParam>__DATA_DIR__/etc/qsaui.xml</InitParam>
+      <StartupFuncName>A2BStartupHtmlServer</StartupFuncName>
+      <ShutdownFuncName>A2BShutdownHtmlServer</ShutdownFuncName>
+   </Extension>
+   <Extension>
+      <SharedLib>__INSTALL_DIR__/lib/libwsext.so</SharedLib>
+      <InitParam>__DATA_DIR__/etc/InSite2ServicesExtn.xml</InitParam>
+      <StartupFuncName>A2BStartupWsExt</StartupFuncName>
+      <ShutdownFuncName>A2BShutdownWsExt</ShutdownFuncName>
+   </Extension>
+
+   <!--*********************  Contact & Assets   *********************-->
+
+   <ContactInfo>
+      <IPAddress>0.0.0.0</IPAddress>
+	  <IpcListenPort>localhost:__IPC_LISTENER_PORT__</IpcListenPort>
+      <HttpListenPort>0</HttpListenPort>
+      <HttpsListenPort>0</HttpsListenPort>
+      <ServiceAgentProfile>
+         <OCM ref="__SCHEME__OCM"/>
+		 <AssetType ref="__SA_ASSET_TYPE_NAME__"/>
+         <MemberName>__SA_VIRTUAL_ASSET_NAME__</MemberName>
+         <MemberPassword>__SA_ASSET_PASSWORD__</MemberPassword>
+         <FriendlyName>__SA_ASSET_FRIENDLY_NAME__</FriendlyName>
+         <SerialNumber>__SA_ASSET_SERIAL_NUMBER__</SerialNumber>
+         <IsNetworkAccessible>false</IsNetworkAccessible>
+         <Description>__SA_ASSET_DESCRIPTION__</Description>
+         <Protocol>__SCHEME__</Protocol>
+         <InitialPollInterval>__SA_POLLINTERVAL__</InitialPollInterval>
+
+         <Address>
+			<Address1>__SA_ADDRESS_LINE1__</Address1>
+			<Address2>__SA_ADDRESS_LINE2__</Address2>
+			<City>__SA_CITY__</City>
+			<StateOrProvince>__SA_STATE__</StateOrProvince>
+			<PostalCode>__SA_POSTALCODE__</PostalCode>
+			<Country>__SA_COUNTRY__</Country>
+			<Location> </Location>
+			<Description> </Description>
+         </Address>
+         <FileRepository>
+            <ThreadPool ref="defaultThreadPool"/>
+            <RootDirectory>__FILE_REPOS_DIR__</RootDirectory>
+            <VirtualDirectory>
+				<Alias>__VIRTUAL_DIR_ALIAS__</Alias>
+				<Directory>__VIRTUAL_DIR__</Directory>
+			</VirtualDirectory>
+
+         </FileRepository>
+         <SoftwareRepository>
+            <ThreadPool ref="defaultThreadPool" /> 
+            <RootDirectory>__SWD_DIR__</RootDirectory>
+            <RevReaderSource ref="qsarr"/>
+
+            <MissedInstallWindow>-1</MissedInstallWindow>
+            <MissedDownloadWindow>-1</MissedDownloadWindow>
+         </SoftwareRepository>
+         <RATD>
+            <ThreadPool ref="defaultThreadPool"/>
+            <RADataSource ref="RSMDataSource"/>
+         </RATD>
+        <Property name="RSM_MODE" value="NOT_ACTIVE" action="update"/>
+        <Property name="RSM_START_TIME" value="0" action="update"/>
+        <Property name="RSM_MODE_START_TIME" value="0" action="update"/>
+        <Property name="RSM_GRACE_PERIOD" value="0" action="update"/>
+        <Property name="RSM_FORCED_POLLING_RATE" value="0" action="update"/>
+        <Property name="RSM_DELAY_PROFILE_START_TIME" value="0" action="update"/>
+        <Property name="RSM_DELAY_PROFILE_FORCED_POLLING_RATE" value="0" action="update"/>
+        <Property name="RSM_DELAY_PROFILE_GRACE_PERIOD" value="0" action="update"/>
+        <Property name="BackEndIntegration" value="__BACKEND__INTEGRATION__" action="update"/>
+        
+        <!-- Release 2.0 Device Properties -->
+        <Property name="CS_GSP_MODALITY" value="__SA_MODALITY__" action="update"/>
+        <Property name="CS_GSP_DOCKING_MASTER" value="__SA_ASSET_NAME__" action="update"/>
+        <Property name="CS_GSP_CONTINENT" value="__SA_CONTINENT__" action="update"/>
+        <Property name="CS_GSP_COUNTRY" value="__SA_COUNTRY__" action="update"/>
+        <Property name="CS_GSP_STATEPROVINCE" value="__SA_STATE__" action="update"/>
+        <Property name="CS_GSP_CITY" value="__SA_CITY__" action="update"/>
+        <Property name="CS_GSP_POSTALCODE" value="__SA_POSTALCODE__" action="update"/>
+        <Property name="CS_GSP_LATITUDE" value="__SA_LATITUDE__" action="update"/>
+        <Property name="CS_GSP_LONGITUDE" value="__SA_LONGITUDE__" action="update"/>
+        <Property name="CS_GSP_INSTITUTION" value="__SA_INSTITUTION__" action="update"/>
+        <Property name="CS_GSP_DEPARTMENT" value="__SA_DEPARTMENT__" action="update"/>
+        <Property name="CS_GSP_BUILDING" value="__SA_BUILDING__" action="update"/>
+        <Property name="CS_GSP_FLOOR" value="__SA_FLOOR__" action="update"/>
+        <Property name="CS_GSP_ROOM" value="__SA_ROOM__" action="update"/>
+        <Property name="CS_GSP_OPSYSTEM" value="__SA_OP_SYSTEM__" action="update"/>
+        <Property name="CS_GSP_OPREV" value="__SA_OP_REVISION__" action="update"/>
+        <Property name="CS_GSP_APREV" value="__SA_AP_REVISION__" action="update"/>
+        <Property name="CS_GSP_SRVREV" value="__SA_SRV_REVISION__" action="update"/>
+        <Property name="CS_GSP_GHSTREV" value="__SA_GHST_REVISION__" action="update"/>
+        <Property name="CS_GSP_POLLTYPE" value="__SA_POLLTYPE__" action="update"/>
+        <Property name="CS_GSP_TUN_ADD" value="__TUN_URL__" action="update"/>
+        <Property name="CS_GSP_ENT_ADD" value="__ENT_URL__" action="update"/>
+        <Property name="CS_GSP_PXY_CFG" value="__PROXY_SCHEME__" action="update"/>
+        <Property name="CS_GSP_PXY_ADD" value="__PROXY_SERVER__" action="update"/>
+        <Property name="CS_GSP_HRFS_SUPPORT" value="__SA_HRFS_SUPPORT__" action="update"/>
+        <Property name="CS_GSP_MRFS_SUPPORT" value="__SA_MRFS_SUPPORT__" action="update"/>
+        <Property name="CS_GSP_SWRLOAD_SUPPORT" value="__SA_SWRLOAD_SUPPORT__" action="update"/>
+        <Property name="CS_GSP_SWDLOAD_SUPPORT" value="__SA_SWDLOAD_SUPPORT__" action="update"/>
+        <Property name="CS_GSP_ALERT_EMAIL_LVL3" value="__SA_ALERT_LVL3__" action="update"/>
+        <Property name="CS_GSP_ALERT_EMAIL_LVL2" value="__SA_ALERT_LVL2__" action="update"/>
+        <Property name="CS_GSP_ALERT_EMAIL_LVL1" value="__SA_ALERT_LVL1__" action="update"/>
+        <Property name="CS_GSP_SERVICE_CENTER" value="__SA_SERVICE_CENTER__" action="update"/>
+      </ServiceAgentProfile>
+   </ContactInfo>
+
+   <Extension>
+       <SharedLib>__INSTALL_DIR__/lib/libInSite2RSMLogger.so</SharedLib>
+       <InitParam>__DATA_DIR__/etc/InSite2CustomLogger.xml</InitParam>
+       <StartupFuncName>I2RSMExtnStartup</StartupFuncName>
+       <ShutdownFuncName>I2RSMExtnShutdown</ShutdownFuncName>
+   </Extension>
+</ServiceAgent>

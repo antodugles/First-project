@@ -1,0 +1,127 @@
+ /* <header>
+ * <cr>
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved.
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  *
+  * <desc>
+  * Sysinfostorage module - Enumerates Hard Drives, Optical Drives, Tape Drives, ZIP Drives and LS drives
+  * </desc>
+  *
+  * <file>
+  * @author
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/sysinfo/pcdrsysinfostorage/pcdrsysinfostorage.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+ 
+ Module.Name=Storage Device Information
+ Module.Description=This module gathers information about the storage devices
+ Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+ Module.Company=PC-Doctor, Inc.
+ 
+ Property.SCSIAddress.Name=SCSI Address
+ Property.SCSIAddress.Description= SCSI Address
+
+ Property.ModelNumber.Name=Model Number
+ Property.ModelNumber.Description= Model Number
+ 
+ Property.SerialNumber.Name=Serial Number
+ Property.SerialNumber.Description=Serial Number
+ 
+ Property.Controller.Name=Controller Version
+ Property.Controller.Description=Controller Version
+ 
+ Property.FirmwareVersion.Name=Setting
+ Property.FirmwareVersion.Description=Firmware Version
+ 
+ Property.BufferSize.Name=Buffer Size
+ Property.BufferSize.Description=Buffer Size
+ 
+ Property.DMAMode.Name=DMA Mode
+ Property.DMAMode.Description=DMA Mode
+ 
+ Property.FreeSpace.Name=Unused Hard Disk Space
+ Property.FreeSpace.Description=Free Space
+ 
+ Property.UsedSpace.Name=Used Hard Disk Space
+ Property.UsedSpace.Description=Used Space
+ 
+ Property.TotalCapacity.Name=Usable Hard Disk Capacity
+ Property.TotalCapacity.Description=Total Capacity
+ 
+ Property.MaxFileNameLen.Name=Maximum File Name Length
+ Property.MaxFileNameLen.Description=Maximum File Name Length
+ 
+ Property.FileSystem.Name=File System
+ Property.FileSystem.Description=File System
+ 
+ Property.DriveLetter.Name=Drive Letter
+ Property.DriveLetter.Description=DriveLetter
+ 
+ Property.VendorID.Name=Vendor ID
+ Property.VendorID.Description=Vendor ID
+ 
+ Property.ProductID.Name=Product ID
+ Property.ProductID.Description=Product ID
+ 
+ Property.Driver.Name=Driver
+ Property.Driver.Description=Driver
+ 
+ Property.DriverVersion.Name=Version
+ Property.DriverVersion.Description=DriverVersion
+ 
+ Property.Readable.Name=Readable Media
+ Property.Readable.Description=Readable Media
+ 
+Property.Writable.Name=Writable Media
+Property.Writable.Description=Writable Media
+
+Property.pDriveLetter1.Name=Writable
+Property.pDriveLetter1.Description=Writable
+
+Property.DriveCapabilities.Name=Drive Capabilities
+Property.DriveCapabilities.Description=Drive Capabilities
+
+Property.PhysicalProperties.Name=Physical Properties
+Property.PhysicalProperties.Description=Physical Properties
+
+Property.TotalCylinders.Name=Total Cylinders
+Property.TotalCylinders.Description=Total Cylinders
+
+Property.TracksPerCyclinder.Name=Tracks Per Cyclinder
+Property.TracksPerCyclinder.Description=Tracks Per Cyclinder
+
+Property.SectorsPerTrack.Name=Sectors Per Track
+Property.SectorsPerTrack.Description=Sectors Per Track
+
+Property.BytesPerSector.Name= Bytes Per Sector
+Property.BytesPerSector.Description=Bytes Per Sector
+
+Property.MediaType.Name=Media Type
+Property.MediaType.Description=Media Type
+
+Property.SCSIPath.Name=SCSI Path
+Property.SCSIPath.Description= SCSI Path
+
+Property.DriverName.Name= Driver Name
+Property.DriverName.Description= Driver Name
+
+Property.LogicalParentKey.Name= Serial Number
+Property.LogicalParentKey.Description= Serial Number
+
+Property.Label.Name = Drive Label
+Property.Label.Description = Drive Label

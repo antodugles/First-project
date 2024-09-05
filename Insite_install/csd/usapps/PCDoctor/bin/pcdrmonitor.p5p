@@ -1,0 +1,124 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrmonitor english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Chris_Matyas
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrmonitor/pcdrmonitor.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Monitor Test
+Module.Description=This module tests monitor capability
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.MonitorTest.Name=Monitor Interactive Test
+Test.MonitorTest.Description=Tests monitor capabilities
+
+Tip.RestartMachine =Restart the Machine
+
+LocalizedString.MSG_INSTRUCTIONS=Instructions
+
+LocalizedString.MSG_INST_1=This test has three elements. Select the one that you want to use. When you are in any test screen, click the mouse or press any key to exit the test and return to this dialog. Click "Close" to quit.
+
+LocalizedString.MSG_INST_2=The Combination Test helps you to check your monitor for proper alignment, color depth and resolution. For alignment, a crosshair pattern is displayed in each corner of the screen. Check for proper alignment by verifying that the crosshairs are straight and not distorted. An RGB spectrum array is displayed for visually evaluating the monitor's color depth capacity. View the graduated horizontal and vertical alignment bars to determine the monitor's resolution capabilities. The better you can discern individual lines as they move closer together, the higher the resolution capabilities of the monitor.
+
+LocalizedString.MSG_INST_3=The Solid Color Test is intended for LCD displays, and enables you to easily detect pixels that are not functioning properly. View each of the solid screen colors to ensure that all color pixels are working correctly.
+
+LocalizedString.MSG_INST_4=The VESA Test Patterns allow you to test the display for proper luminance, geometry and focus. These test patterns are intended for professional measurement use.
+
+LocalizedString.MSG_COMBINATION_TEST=Combination Test
+
+LocalizedString.MSG_COMBINATION=&Combination
+
+LocalizedString.MSG_SOLID_COLOR_TEST=Solid Color Test (LCD Pixel Test)
+
+LocalizedString.MSG_RED=&Red
+
+LocalizedString.MSG_GREEN=&Green
+
+LocalizedString.MSG_BLUE=&Blue
+
+LocalizedString.MSG_VESA_TEST_PATTERNS=VESA Test Patterns
+
+LocalizedString.MSG_LUMINANCE=&Luminance
+
+LocalizedString.MSG_GEOMETRY=&Geometry
+
+LocalizedString.MSG_FOCUS=&Focus
+
+LocalizedString.MSG_CLOSE=&Close
+
+LocalizedString.MSG_TEST_NAME=Monitor Interactive Test
+
+LocalizedString.MSG_3002=PC-Doctor Test Screen
+
+LocalizedString.MSG_3003=1. Use the crosshairs to align your monitor horizontally and vertically.
+
+LocalizedString.MSG_3004=2. Check to see if the color is smooth.
+
+LocalizedString.MSG_DID_THE_TEST_PASS=Did the test pass?
+
+
+Event.TestAborted.Message=The test was canceled by user.
+Event.TestAborted.EventCode=3
+
+Event.TestFailed.Message=The test failed.
+Event.TestFailed.EventCode=2
+
+
+Event.InternalError.Message=There was an internal error.
+Event.InternalError.EventCode=4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

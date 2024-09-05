@@ -1,0 +1,111 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdrdvddrive
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+Test.FunnelSeekTest.Enable = true
+
+Test.FunnelSeekTest.EndRange = MAX
+
+Test.FunnelSeekTest.MaxErrors = 3
+
+Test.FunnelSeekTest.NumberOfSeeks = 100
+
+Test.FunnelSeekTest.PromptUserForMedia = true
+
+Test.FunnelSeekTest.ReRunTestOnFailure = true
+
+Test.FunnelSeekTest.SectorPercentToTest = 0.01
+
+Test.FunnelSeekTest.StartRange = MIN
+
+Test.LinearReadCompareTest.Enable = true
+
+Test.LinearReadCompareTest.EndRange = 1500
+
+Test.LinearReadCompareTest.MaxErrors = 3
+
+Test.LinearReadCompareTest.NumberOfSeeks = 1000
+
+Test.LinearReadCompareTest.PromptUserForMedia = true
+
+Test.LinearReadCompareTest.ReRunTestOnFailure = true
+
+Test.LinearReadCompareTest.SectorPercentToTest = 100
+
+Test.LinearReadCompareTest.StartRange = 600
+
+Test.LinearSeekTest.Enable = true
+
+# The EndRange defines the testing parameter to where testing will end. 
+# Acceptable values are MAX {Last testable sector}, sector number {any valid
+# sector greater than StartRange},  percent {any valid % greater than StartRange}
+Test.LinearSeekTest.EndRange = MAX
+
+Test.LinearSeekTest.MaxErrors = 3
+
+# defined SectorPercentToTest will be set to 100.
+Test.LinearSeekTest.NumberOfSeeks = 1000
+
+Test.LinearSeekTest.PromptUserForMedia = true
+
+Test.LinearSeekTest.ReRunTestOnFailure = true
+
+# The SectorPercentToTest testing parameter defines the testing coverage. 
+# Acceptable values are {any valid integer from 1-100} or {any decimal value}
+Test.LinearSeekTest.SectorPercentToTest = 0.1
+
+# The StartRange defines the testing parameter from where testing will start. 
+# Acceptable values are MIN {starting sector}, sector number {any valid sector}
+# and percent {1%}
+Test.LinearSeekTest.StartRange = MIN
+
+Test.RandomSeekTest.Enable = true
+
+Test.RandomSeekTest.EndRange = MAX
+
+Test.RandomSeekTest.MaxErrors = 3
+
+Test.RandomSeekTest.NumberOfSeeks = 500
+
+Test.RandomSeekTest.PromptUserForMedia = true
+
+Test.RandomSeekTest.ReRunTestOnFailure = true
+
+Test.RandomSeekTest.StartRange = MIN
+
+

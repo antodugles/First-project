@@ -1,0 +1,102 @@
+@import "DiagBase.css";
+
+div.control input#advanced {
+	font-size: 12px;
+	padding-top: 0;
+}
+
+div.control input.text {
+	height: 16px;
+}
+	
+div.control input#loopcount {
+	width: 50px;
+}
+
+div.control input#execute {
+	width: 80px;
+	height: 24px;
+}
+
+div.control input#info {
+	width: 216px;
+}
+
+div.control div.frame {
+	position: relative;
+	height: 22px;
+	border: 1px solid black;
+	padding: 7px 4px 4px 4px;
+	margin: 1px 2px 7px 0;
+	float: left;
+}
+
+div.control div.loopcount {
+	width: 130px;
+}
+
+div.control div.execute {
+	width: 82px;
+}
+
+div.control div.info {
+	width: 224px;
+}
+
+div.control div.status {
+	padding: 0px;
+	height: 33px;
+	width: 138px;
+}
+
+div.control div.status pre {
+	margin: 0px;
+	padding: 2px 1px 1px 1px;
+}
+
+div.control p#loopnumber, div.control p#listnumber{
+	margin: 0;
+}
+
+div.control p.label {
+	position: absolute;
+	left: 7px;
+	top: -9px;
+	background-color: #C0C0C0;
+	z-index: 1000;
+}
+
+div#advancedcontrol {
+	height: 100%;
+	padding-top: 7px;
+	border-top: 2px groove white;
+	clear: left;
+}
+
+div.control div.looping, div.control div.list {
+	width: 224px;
+	height: auto;
+}
+
+/* Disabled Control Color */
+div.control div.disabled {
+	border-color: #A0A0A0;
+}
+
+div.control div.disabled p{
+	color: #A0A0A0;
+}
+
+div.control div.disabled td {
+	filter: alpha(opacity=25);
+	-moz-opacity: 0.25;
+	opacity: 0.25;
+}
+
+div.control td {
+	height: 20px;
+}
+
+div.control td input {
+	margin-top: 0px;
+}

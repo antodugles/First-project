@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<SAUIConfig xmlns="urn:questra-a2b:SAUICfg_v1_0">
+  <DownloadPolicy>
+    <Policy>OnEvent</Policy>
+    <Task taskId="0">
+      <TaskType>A</TaskType>
+      <RecurFrequency>DA</RecurFrequency>
+      <RecurInterval>1</RecurInterval>
+      <RecurCount>1</RecurCount>
+      <RecurMonthday>0</RecurMonthday>
+      <RecurMonth>0</RecurMonth>
+      <OccurrenceCount>0</OccurrenceCount>
+      <Enabled>true</Enabled>
+    </Task>
+  </DownloadPolicy>
+  <InstallPolicy>
+    <Policy>OnEvent</Policy>
+    <Task taskId="0">
+      <TaskType>A</TaskType>
+      <RecurFrequency>DA</RecurFrequency>
+      <RecurInterval>1</RecurInterval>
+      <RecurCount>1</RecurCount>
+      <RecurMonthday>0</RecurMonthday>
+      <RecurMonth>0</RecurMonth>
+      <OccurrenceCount>0</OccurrenceCount>
+      <Enabled>true</Enabled>
+    </Task>
+  </InstallPolicy>
+  <ActivatePolicy>
+    <Policy>OnEvent</Policy>
+    <Task taskId="0">
+      <TaskType>A</TaskType>
+      <RecurFrequency>DA</RecurFrequency>
+      <RecurInterval>1</RecurInterval>
+      <RecurCount>1</RecurCount>
+      <RecurMonthday>0</RecurMonthday>
+      <RecurMonth>0</RecurMonth>
+      <OccurrenceCount>0</OccurrenceCount>
+      <Enabled>true</Enabled>
+    </Task>
+  </ActivatePolicy>
+</SAUIConfig>

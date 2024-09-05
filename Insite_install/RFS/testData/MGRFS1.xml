@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<MachineRFS>
+	<SubSystem>Power</SubSystem>
+	<ErrorCode>1</ErrorCode>
+	<ErrorDesc>Power Failure</ErrorDesc>
+	<!-- Optional Date/Time -->
+	<!-- MachineRFS.exe will generate one if not specified -->
+	<DateTime>02/08/2007 13:30</DateTime>
+	<!-- Optional Force Poll Rate and Duration in seconds and minutes respectively -->
+	<!-- If not specified, the values from rfs_config.xml will be used -->
+	<ForcePollPeriod>20</ForcePollPeriod>
+	<ForcePollDuration>50</ForcePollDuration>
+</MachineRFS>

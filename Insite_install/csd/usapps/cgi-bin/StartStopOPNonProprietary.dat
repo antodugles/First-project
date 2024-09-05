@@ -1,0 +1,58 @@
+
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.74 [en] (Windows NT 5.0; U) [Netscape]">
+   <meta name="Author" content="Insite Account">
+   <title>CleanUD</title>
+<script language=javascript>
+
+function startOP()
+{
+
+	url="/uscgi-bin/RunOpIOTool.cgi?action=start"
+	location.href=url
+}
+function stopOP()
+{
+	url="/uscgi-bin/RunOpIOTool.cgi?action=stop"
+	location.href=url
+}
+</script>
+</head>
+<body bgcolor=lightyellow>
+&nbsp;
+<center><table BORDER=6 CELLSPACING=0 CELLPADDING=0 WIDTH=90%>
+<tr>
+<td>
+<center><h1>&nbsp OP Panel Test &nbsp</h1></center>
+<center>
+   <table BORDER=0 CELLSPACING=0 CELLPADDING=10 >
+      <tr>
+          <TD><form name=f1><input type=button onClick=startOP() value="Start"></form></TD>
+          <TD><form name=f2><input type=button onClick=stopOP() value="Stop"></form></TD>
+      </tr>
+   </table>
+</center>
+</td>
+</tr>
+<TR><TD><Center>XXX</Center></TC></TR>
+<br>
+   <table BORDER=0 CELLSPACING=0 CELLPADDING=10 WIDTH="90%">
+      <tr>
+          <TD>
+        <br><ul>
+	<li>In G. E. TestApp perform the following configuration steps:</li>
+	<ul>
+	    <li>On the Menu Select:  Options >CP Type > Musashi.</li>
+	    <li>Click on the "Attach" button.</li>
+	    <li>Select the various tabs to test different Operator Panel functions.</li>
+	    </ul>
+	    </ul>
+          </TD>
+      </tr>
+   </table>
+</table></center>
+
+</body>
+</html>

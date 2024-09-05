@@ -1,0 +1,187 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdr2d3dvideo
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+bGUIPromptSupported  =  false
+
+bPromptEnable  =  false
+
+# Specifies the resource file this test will use for rendering animations.
+Test.FixedTLPipelineTest.AnimationFile =  computer.x
+
+# Specifies in miliseconds the length of the test animation.
+Test.FixedTLPipelineTest.AnimationLength = 40000
+
+# Specifies in miliseconds the length of the test animation frame intervals.
+Test.FixedTLPipelineTest.AnimationTimestep  =  50
+
+# If the value of this parameter is "true", PC-Doctor will display the
+# test as part of the module in the user interface. If "false",
+# PC-Doctor disables the test.
+Test.FixedTLPipelineTest.Enable = true
+
+# Specifies vendor and device  IDs to exclude from a test. The format is
+# <vendor id>:<device id>.  Vendor ID and Device ID must follow the
+# PCI convention for Vendor ID.  Both Vendor ID and Device ID must be valid
+# hexadecimal numbers, or a  wildcard. Wildcards must consist of one asterisk (
+# '* ') only. Otherwise  the test will return Internal Error.
+Test.FixedTLPipelineTest.IncompatibleDeviceList = 5333:8A22
+
+# list of (<vendorID>:<deviceID>) where the portal will not render.
+Test.FixedTLPipelineTest.NoPortalDeviceList = 1039:6330
+
+Test.FixedTLPipelineTest.SkinnedMeshExternalComponents = 0:helmet, 0:LeftEye, 0:RightEye, 0:HelmetLightMount
+
+# Integer color component difference tolerance to account for roundoff errors.
+Test.FixedTLPipelineTest.Tolerance = 128
+
+Test.FixedTLPipelineWireframeTest.AnimationFile =  computer.x
+
+# Short Wireframe Rendering Test Parameter
+Test.FixedTLPipelineWireframeTest.AnimationLength = 40000
+
+Test.FixedTLPipelineWireframeTest.AnimationTimestep  =  50
+
+# Switch for cleaning stencil buffer
+Test.FixedTLPipelineWireframeTest.CleanStencil = false
+
+Test.FixedTLPipelineWireframeTest.Enable = true
+
+# list of (<vendorID>:<deviceID>) pc code that must use reference
+# rasterizer numbers in the ids must be hexadecimal. Do not prefix with 0x. Do
+# not put any leading 0. Do not put any suffix. Case does not matter Just put the
+# vendor id:device id, without the prefix VEN_,DEV_
+Test.FixedTLPipelineWireframeTest.IncompatibleDeviceList =  8086:*
+
+# Switch for line anti aliasing
+Test.FixedTLPipelineWireframeTest.LineAntiAliasing = false
+
+# list of (<vendorID>:<deviceID>) where the portal will not render
+Test.FixedTLPipelineWireframeTest.NoPortalDeviceList = 1039:6330
+
+Test.FixedTLPipelineWireframeTest.SkinnedMeshExternalComponents = 0:helmet, 0:LeftEye, 0:RightEye, 0:HelmetLightMount
+
+# Integer color component difference tolerance to account for roundoff errors.
+Test.FixedTLPipelineWireframeTest.Tolerance = 128
+
+Test.TLPipelineStressTest.AnimationFile =  computer.x
+
+# Pipeline stress test parameters animation length, in miliseconds
+Test.TLPipelineStressTest.AnimationLength = 300000
+
+Test.TLPipelineStressTest.AnimationTimestep  =  50
+
+Test.TLPipelineStressTest.Enable = true
+
+# list of (<vendorID>:<deviceID>) pc code that must use reference
+# rasterizer numbers in the ids must be hexadecimal. Do not prefix with 0x. Do
+# not put any leading 0. Do not put any suffix. Case does not matter. Just put
+# the vendor id:device id, without the prefix VEN_,DEV_ Solid rendering is
+# currently disabled for rage xl and savage 4
+Test.TLPipelineStressTest.IncompatibleDeviceList = 5333:8A22
+
+# list of (<vendorID>:<deviceID>) where the portal will not render
+Test.TLPipelineStressTest.NoPortalDeviceList = 1039:6330
+
+Test.TLPipelineStressTest.SkinnedMeshExternalComponents = 0:helmet, 0:LeftEye, 0:RightEye, 0:HelmetLightMount
+
+# Integer color component difference tolerance to account for roundoff errors.
+Test.TLPipelineStressTest.Tolerance = 128
+
+Test.TLPipelineWireframeStressTest.AnimationFile =  computer.x
+
+# Parameter for short wireframe rendering test
+Test.TLPipelineWireframeStressTest.AnimationLength = 300000
+
+Test.TLPipelineWireframeStressTest.AnimationTimestep  =  50
+
+# Switch for cleaning stencil buffer
+Test.TLPipelineWireframeStressTest.CleanStencil = false
+
+Test.TLPipelineWireframeStressTest.Enable = true
+
+# list of (<vendorID>:<deviceID>) pc code that must use reference
+# rasterizer numbers in the ids must be hexadecimal. Do not prefix with 0x. Do
+# not put any leading 0. Do not put any suffix. Case does not matter Just put the
+# vendor id:device id, without the prefix VEN_,DEV_
+Test.TLPipelineWireframeStressTest.IncompatibleDeviceList =  8086:*
+
+# Switch for line anti aliasing
+Test.TLPipelineWireframeStressTest.LineAntiAliasing = false
+
+# list of (<vendorID>:<deviceID>) where the portal will not render
+Test.TLPipelineWireframeStressTest.NoPortalDeviceList = 1039:6330
+
+Test.TLPipelineWireframeStressTest.SkinnedMeshExternalComponents = 0:helmet, 0:LeftEye, 0:RightEye, 0:HelmetLightMount
+
+# Integer color component difference tolerance to account for roundoff errors.
+Test.TLPipelineWireframeStressTest.Tolerance = 128
+
+Test.VideoMemoryTest.BusySurfaceWaitTimeout = 1
+
+Test.VideoMemoryTest.DisplayDimensions = true
+
+Test.VideoMemoryTest.DisplayMode = true
+
+Test.VideoMemoryTest.DisplayPattern = true
+
+Test.VideoMemoryTest.DisplayStatus = true
+
+Test.VideoMemoryTest.DisplaySurfaceNumber = true
+
+Test.VideoMemoryTest.DisplaySurfaceType = true
+
+Test.VideoMemoryTest.DisplayTotal = true
+
+Test.VideoMemoryTest.Enable = true
+
+# Largest square memory side dimension, in pixels
+Test.VideoMemoryTest.LargestMemoryTestDimension = 1024
+
+Test.VideoMemoryTest.MaximumAGPMemoryTested = 1048576
+
+# Smallest square memory side dimension, in pixels
+Test.VideoMemoryTest.SmallestMemoryTestDimension = 16
+
+Test.VideoMemoryTest.StopOnError = false
+
+Test.VideoMemoryTest.TestAGPMemory = true
+
+Test.VideoMemoryTest.WaitTimeout = 1000
+
+

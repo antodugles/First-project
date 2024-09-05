@@ -1,0 +1,131 @@
+body {
+	background: PageBackground;
+	font-family: PageFontFamily;
+	font-size: PageFontSize;
+	color: SectionFontColor;
+	}
+div#root {
+	border-top: PageBorderWidth PageBorderStyle PageBorderColor;
+	background: SectionBackground;
+	}
+	div#root div {
+		border: PageBorderWidth PageBorderStyle PageBorderColor;
+		border-top: none;
+		}
+	div#root input,
+	div#root input.valid,
+	div#root textarea,
+	div#root textarea.valid {
+		border-color: ControlBorderColor;
+		background: ControlBackground;
+		color: ControlFontColor;
+		font-family: PageFontFamily;
+		}
+	div#root textarea {
+		height: DescriptionHeight;
+		}
+	div#root textarea.readonly,
+	div#root input.readonly {
+		color: ControlReadonlyFontColor;
+		background: ControlReadonlyBackground;
+		}
+	div#root input.button,
+	div#root input.button.released {
+		border-color: ButtonBorderColor;
+		background: ButtonBackground;
+		color: ButtonFontColor;
+		font-family: PageFontFamily;
+		}
+	div#root input.button.pushed {
+		border-color: ButtonPushedBorderColor;
+		background: ButtonPushedBackground;
+		}
+	div#root input.invalid,
+	div#root textarea.invalid {
+		border-color: ControlInvalidBorderColor;
+		background: ControlInvalidBackground;
+		}
+	div#root span.title {
+		font-size: HeaderFontSize;
+		color: HeaderFontColor;
+		background: HeaderBackground;
+		}
+	div#root em {
+		font-family: Verdana, PageFontFamily;
+		color: AsteriskFontColor;
+		}
+				div#root div#CDI div ul#suggest {
+					background: SuggestBackground;
+					border-color: SuggestBorderColor;
+					border-top: none;
+					}
+						div#root div#CDI div ul#suggest li a {
+							color: SuggestFontColor;
+							}
+						div#root div#CDI div ul#suggest li a:hover {
+							background: SuggestHighlightedBackground;
+							}
+				div#root div#SAI div label,
+				div#root div#SAI div label.released {
+					border-color: ButtonBorderColor;
+					background: ButtonBackground;
+					color: ButtonFontColor;
+					font-family: PageFontFamily;
+					}
+				div#root div#SAI div label.pushed {
+					border-color: ButtonPushedBorderColor;
+					background: ButtonPushedBackground;
+					}
+				div#root div#SAI div label.invalid {
+					border-color: ButtonInvalidBorderColor;
+					background: ButtonInvalidBackground;
+					}
+			div#root div#PTI div p select,
+			div#root div#PTI div p select.valid {
+				border-color: ControlBorderColor;
+				background: ControlBackground;
+				font-family: PageFontFamily;
+				color: ControlFontColor;
+				}
+			div#root div#PTI div p select.invalid {
+				border-color: ControlInvalidBorderColor;
+				background: ControlInvalidBackground;
+				}
+		div#root div#HELP div div {
+			background: HelpBackground;
+			border-color: HelpBorderColor;
+			height: HelpHeight;
+			}
+			div#root div#HELP div div p {
+				color: HelpFontColor;
+				}
+			div#root div#HELP div div p.title {
+				color: HelpFontColor;
+				}
+	div#tooltip div {
+		border-color: HelpTooltipBorderColor;
+		color: HelpTooltipFontColor;
+		}
+		div#tooltip div p.title {
+			background: HelpTooltipTitleBackground;
+			}
+		div#tooltip div p.text {
+			background: HelpTooltipBodyBackground;
+			}
+	div#root div#statusbar {
+	border-color: HelpTooltipBorderColor;
+}
+/* Floating Status Bar */
+		div#root div#statusbar div {
+			border-color: HelpTooltipBorderColor;
+			font-family: PageFontFamily;
+			color: HelpTooltipFontColor;
+			background: HelpTooltipBodyBackground;
+		}
+			div#root div#statusbar div p {
+				background: HelpTooltipBodyBackground;
+			}
+			div#root div#statusbar div input {
+				background: ButtonBackground;
+				border-color: ButtonBorderColor;
+			}

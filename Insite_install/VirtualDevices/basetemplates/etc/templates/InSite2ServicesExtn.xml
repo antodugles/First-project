@@ -1,0 +1,35 @@
+<WebServicesExt xmlns="urn:questra-a2b:WebServicesExt_v1_0">
+
+   <WebServiceSource name="connectToGE">
+      <SharedLib>__INSTALL_DIR__\bin\InSite2RSMLogger.dll</SharedLib>
+      <InitParam/>
+      <StartupExFuncName>IS2RSMWSStartup</StartupExFuncName>
+      <ShutdownFuncName>IS2RSMWSShutdown</ShutdownFuncName>
+      <CreateServiceFuncName>IS2RSMWSCreateService</CreateServiceFuncName>
+      <DestroyServiceFuncName>IS2RSMWSDestroyService</DestroyServiceFuncName>
+   </WebServiceSource>
+
+   <WebService>
+      <Protocol>http</Protocol>
+   	  <Binding>lan</Binding>
+      <ServiceUri>/a2b/InSite2Services</ServiceUri>
+      <WebServiceSource ref="connectToGE"/>
+   </WebService>
+
+	<WebServiceSource name="ContactGE">
+      <SharedLib>__INSTALL_DIR__\bin\ContactGEWSExtn.dll</SharedLib>
+      <InitParam/>
+      <StartupExFuncName>WSEStartup</StartupExFuncName>
+      <ShutdownFuncName>WSEShutdown</ShutdownFuncName>
+      <CreateServiceFuncName>WSECreateService</CreateServiceFuncName>
+      <DestroyServiceFuncName>WSEDestroyService</DestroyServiceFuncName>
+   </WebServiceSource>
+
+   <WebService>
+      <Protocol>http</Protocol>
+   	  <Binding>lan</Binding>
+      <ServiceUri>/a2b/ContactGEWS</ServiceUri>
+      <WebServiceSource ref="ContactGE"/>
+   </WebService>
+
+</WebServicesExt>

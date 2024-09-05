@@ -1,0 +1,23 @@
+<Script >
+	<TestSet>
+		<Device type="CDROM"/>
+	</TestSet>
+	<TestSet>
+		<Device type="DVD"/>
+	</TestSet>
+	<TestSet>
+		<Device type="CDR"/>
+	</TestSet>
+	<TestSet>
+		<Device type="CDRW"/>
+	</TestSet>
+	<TestSet>
+		<Device type="DVDMINUSRW"/>
+	</TestSet>
+	<TestSet>
+		<Device type="DVDRAM"/>
+	</TestSet>
+	<TestSet>
+		<Device type="DVDPLUSRW"/>
+	</TestSet>
+</Script>

@@ -1,0 +1,7 @@
+Service Agent Core: 5.2.13105
+SSL: 0.9.8b
+OpSys: __SA_OP_SYSTEM__
+OpSysRev: __SA_OP_REVISION__
+AppSWRev: __SA_AP_REVISION__
+ServiceSWRev: __SA_SRV_REVISION__
+ImageSWRev: __SA_GHST_REVISION__

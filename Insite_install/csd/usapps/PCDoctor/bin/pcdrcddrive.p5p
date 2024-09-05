@@ -1,0 +1,182 @@
+#<header>
+
+# <cr>
+
+#  Copyright (c) 2000-2005 PC-Doctor, Inc.
+
+# </cr>
+
+# <addr>
+
+#  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+
+#  All rights reserved.
+
+# </addr>
+
+#
+
+# <lic>
+
+#  This software is the confidential and proprietary information of PC-Doctor, Inc.
+
+#  ("Confidential Information"). You shall not disclose such confidential
+
+#  information and shall use it only in accordance with the terms of the license
+
+#  agreement you entered into with PC-Doctor.
+
+# </lic>
+
+#
+
+# <desc>
+
+#  The pcdrharddrive english strings properties file
+
+# </desc>
+
+#
+
+# <file>
+
+#  @author  Chris_Matyas
+
+#  @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrcddrive/pcdrcddrive.p5p#1 $
+
+#  @.date   $DateTime: 2005/06/16 13:46:33 $
+
+#  @.change $Change: 39950 $
+
+#  @.last   $Author: Dan_Lu $
+
+# </file>
+
+#</header>
+
+
+
+
+
+Module.Name=CD Drive Test
+
+Module.Description=This module tests CD-ROM drives.
+
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+
+Module.Company=PC-Doctor, Inc.
+
+
+
+Test.LinearSeekTest.Name=Linear Seek Test
+
+Test.LinearSeekTest.Description=CD Drive Linear Seek Test
+
+
+
+Test.RandomSeekTest.Name=Random Seek Test
+
+Test.RandomSeekTest.Description=CD Drive Random Seek Test
+
+
+
+Test.FunnelSeekTest.Name=Funnel Seek Test
+
+Test.FunnelSeekTest.Description=CD Drive Funnel Seek Test
+
+
+
+Test.LinearReadCompareTest.Name=Linear Read Compare Test
+
+Test.LinearReadCompareTest.Description=CD Drive Linear Read Compare Test
+
+
+
+Test.CDAudioTest.Name=CD Audio Test
+
+Test.CDAudioTest.Description=CD Drive CD Audio Test
+
+
+
+
+
+#EVENT_NO_SOUND_CARD
+
+Event.NoSoundCard.Message=No sound card detected.  Test could not run.
+
+Event.NoSoundCard.EventCode=3
+
+
+
+#EVENT_AUDIO_PLAY_FAILURE
+
+Event.DRIVE_IO_AUDIO_PLAY_FAILURE.Message=Error playing audio.  SCSI Error {ScsiError1}H and {ScsiError2}H.
+
+Event.DRIVE_IO_AUDIO_PLAY_FAILURE.EventCode=4
+
+
+
+#EVENT_AUDIO_STOP_FAILURE
+
+Event.DRIVE_IO_STOP_AUDIO_FAILURE.Message=Error stopping audio playback.  SCSI Error {ScsiError1}H and {ScsiError2}H.
+
+Event.DRIVE_IO_STOP_AUDIO_FAILURE.EventCode=5
+
+
+
+#EVENT_NO_AUDIO_HEARD
+
+Event.EVENT_NO_AUDIO_HEARD.Message=Test marked as failed by user.  No audio was heard.
+
+Event.EVENT_NO_AUDIO_HEARD.EventCode=6
+
+
+
+#MSG_TEST_PASS_FAIL_PROMPT
+
+LocalizedString.TestPassFailPrompt=The test is considered passed if the audio track was heard. Did you hear the audio?
+
+
+
+#MSG_PLAYING_CD_AUDIO_VIA_AUDIO_CABLE
+
+LocalizedString.PlayingCDAudioViaAudioCable=Playing audio track through audio cable.
+
+
+
+#MSG_PLAYING_CD_AUDIO_VIA_AUDIO_CABLE
+
+LocalizedString.PlayingCDAudioViaDigitalCable=Playing audio track through digital cable.
+
+
+
+Parameter.bPromptUserForMedia.Name=Prompt User For Media
+
+Parameter.bPromptUserForMedia.Description=Prompt the user to insert the correct media if required media is not detected.
+
+
+
+#MSG_NO_AUDIO_TRACKS
+
+LocalizedString.NoAudioTracks=Please insert a CD that contains at least one audio track.
+
+
+
+#MSG_TEST_FAIL_REMEDIES
+
+LocalizedString.TestFailRemedies=The test has been marked as failed because no audio was heard.  In order to verify that this is not due to a mixer setting please verify that the settings such as 'AUX IN' or 'CD Audio' are not set to MUTE in the Audio Mixer and that the volume levels are high enough to be audible.  To accomplish this follow these steps: 1) After closing this window select the Volume Control icon from within the Audio Category of this application. 2) Verify that AUX IN or CD Audio are not MUTED by unchecking the checkbox. 3) Set volume controls to non zero values. 4) Rerun the test.
+
+
+
+LocalizedString.MediaName=Data CD
+
+
+
+LocalizedString.AudioMediaName=Audio CD
+
+
+
+LocalizedString.CDAudio=CD Audio Test
+
+
+

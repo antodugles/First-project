@@ -1,0 +1,54 @@
+#<header>
+# <cr>
+#  Copyright (c) 2000-2005 PC-Doctor, Inc.
+# </cr>
+# <addr>
+#  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+#  All rights reserved.
+# </addr>
+#
+# <lic>
+#  This software is the confidential and proprietary information of PC-Doctor, Inc.
+#  ("Confidential Information"). You shall not disclose such confidential
+#  information and shall use it only in accordance with the terms of the license
+#  agreement you entered into with PC-Doctor.
+# </lic>
+#
+# <desc>
+#  The pcdrfloppy english strings properties file
+# </desc>
+#
+# <file>
+#  @author  Chris_Matyas
+#  @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrfloppy/pcdrfloppy.p5p#1 $
+#  @.date   $DateTime: 2005/06/16 13:46:33 $
+#  @.change $Change: 39950 $
+#  @.last   $Author: 
+# </file>
+#</header>
+
+
+Module.Name=Floppy Test
+Module.Description=This module tests Floppy drives.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.LinearSeekTest.Name=Linear Seek Test
+Test.LinearSeekTest.Description=Floppy Drive Linear Seek Test
+
+Test.RandomSeekTest.Name=Random Seek Test
+Test.RandomSeekTest.Description=Floppy Drive Random Seek Test
+
+Test.FunnelSeekTest.Name=Funnel Seek Test
+Test.FunnelSeekTest.Description=Floppy Drive Funnel Seek Test
+
+Test.SurfaceScanTest.Name=Surface Scan Test
+Test.SurfaceScanTest.Description=Floppy Drive Surface Scan Test
+
+Test.PatternTest.Name=Pattern Test
+Test.PatternTest.Description=Floppy Drive Pattern Test
+
+
+#new
+LocalizedString.MEDIA_NAME=Floppy
+

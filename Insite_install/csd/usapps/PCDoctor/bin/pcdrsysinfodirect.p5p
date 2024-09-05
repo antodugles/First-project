@@ -1,0 +1,363 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Shree S
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/sysinfo/pcdrsysinfodirect/pcdrsysinfodirect.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Direct System Information
+Module.Description=This module gathers info about devices using a bus-wise enumeration.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+LocalizedString.VideoMode ={pixelWidth} x {pixelHeight} ({bitDepth}-bit) ({freq} Hz)
+LocalizedString.Digital=Digital
+LocalizedString.Analog=Analog
+LocalizedString.ManufactureDate=Week {week}, Year {year}
+
+LocalizedString.PCIMultifunction=PCI Multifunction Device (Bus {bus}, Device {device})
+LocalizedString.PCIBus=PCI Bus
+LocalizedString.PCILocator=PCI bus {bus}, device {device}, function {function}
+LocalizedString.Ports=Ports
+
+LocalizedString.IOPortRange=I/O Port : {begin} - {end}
+LocalizedString.Affinity=(Affinity : {affinity})
+LocalizedString.Unshareable=(Unshareable)
+LocalizedString.Shareable=(Shareable)
+LocalizedString.LevelTriggered=(Level Triggered)
+LocalizedString.EdgeTriggered=(Edge Triggered)
+LocalizedString.MemoryRange=Memory : {beginRange} - {endRange}
+LocalizedString.Prefetchable=(Prefetchable)
+LocalizedString.Cacheable=(Cacheable)
+LocalizedString.Interrupt=Interrupt : {int}
+LocalizedString.DMAChannel=DMA Channel : {channel}
+LocalizedString.XBitChannel=({x}-bit channel)
+LocalizedString.XYBitChannel=({x}-bit and {y}-bit channel)
+LocalizedString.DMAStandard=(Standard)
+LocalizedString.DMAType=(Type {alphaChar})
+LocalizedString.DMABusMaster=(Bus Master)
+
+LocalizedString.UnknownDevice=Unknown Device
+LocalizedString.PCIDevice=PCI Device
+LocalizedString.1394Device=IEEE1394 Device
+LocalizedString.USBDevice=USB Device
+LocalizedString.USBHub=USB Hub
+LocalizedString.USBRootHub=USB Root Hub
+LocalizedString.HardDrivePrefix=Hard Drive -
+
+Property.Temperature.Name=Temperature
+Property.Temperature.Description=Temperature
+Property.CriticalTemperature.Name=Critical Temperature
+Property.CriticalTemperature.Description=Critical Temperature
+
+Property.BatteryName.Name=Battery Name
+Property.BatteryName.Description=Battery Name
+Property.BatteryManufacturerName.Name=Manufacturer Name
+Property.BatteryManufacturerName.Description=Manufacutrer Name
+Property.BatterySerialNumber.Name=Battery Serial Number
+Property.BatterySerialNumber.Description=Battery Serial Number
+Property.BatteryUniqueId.Name=Unique ID
+Property.BatteryUniqueId.Description=Unique ID
+Property.BatteryChemistry.Name=Type
+Property.BatteryChemistry.Description=Type
+Property.BatteryfullChargedCapacity.Name=Full Charged Capacity
+Property.BatteryfullChargedCapacity.Description=Full Charged Capacity
+Property.BatteryDesignedCapacity.Name=Designed Capacity
+Property.BatteryDesignedCapacity.Description=Designed Capacity
+Property.BatteryCurrentCharge.Name=Current Charge
+Property.BatteryCurrentCharge.Description=Current Charge
+Property.BatteryVoltage.Name=Voltage
+Property.BatteryVoltage.Description=Voltage
+Property.BatteryTemperature.Name=Temperature
+Property.BatteryTemperature.Description=Temperature
+Property.BatteryManufactureDate.Name=Manufacture Date
+Property.BatteryManufactureDate.Description=Manufacture Date
+Property.BatteryManufacturerLowAlertCapacity.Name=Low Alert Capacity
+Property.BatteryManufacturerLowAlertCapacity.Description=Low Alert Capacity
+Property.BatteryanufacutrerWarnAlertCapacity.Name=Warning Capacity
+Property.BatteryanufacutrerWarnAlertCapacity.Description=Warning Capacity
+
+Property.MonitorModelName.Name=Model Name
+Property.MonitorModelName.Description=Model Name
+Property.MonitorPreferedTimingMode.Name=Prefered Timing Mode
+Property.MonitorPreferedTimingMode.Description=Prefered Timing Mode
+Property.MonitorSupportedTimingModes.Name=Supported Timing Modes
+Property.MonitorSupportedTimingModes.Description=Factory supported modes of the monitor
+Property.MonitorManufacturerProductCode.Name=Vendor / Product Code
+Property.MonitorManufacturerProductCode.Description=Vendor / Product Code
+
+
+
+Property.VideoCardMode.Name=Mode
+Property.VideoCardMode.Description=Video Card Mode
+
+Property.VideoCardDACType.Name=Video Card DAC Type
+Property.VideoCardDACType.Description=Video Card DAC Type
+
+Property.VideoCardChipType.Name=Video Card Chip Type
+Property.VideoCardChipType.Description=Video Card Chip Type
+
+Property.VideoCardMemory.Name=Video Card Memory
+Property.VideoCardMemory.Description=Video Card Memory
+
+Property.VideoCardBiosString.Name=Video Card BIOS
+Property.VideoCardBiosString.Description=Video Card BIOS
+
+Property.MonitorManufacturer.Name=Manufacturer
+Property.MonitorManufacturer.Description=Manufacturer
+
+Property.MonitorManufactureDate.Name=Manufacture Date
+Property.MonitorManufactureDate.Description=Manufacture Date
+
+Property.MonitorSerialNumber.Name=Serial Number
+Property.MonitorSerialNumber.Description=Serial Number
+
+Property.MonitorSignalType.Name=Signal Type
+Property.MonitorSignalType.Description=Signal Type
+
+Property.DeviceIDGroup.Name=Device Indentification
+Property.DeviceIDGroup.Description=Properties that uniquely identify a device and manufacturer
+
+Property.DeviceClassGroup.Name=Device Class
+Property.DeviceClassGroup.Description=Properties that indentify the type of device
+
+Property.DriverGroup.Name=Driver Information
+Property.DriverGroup.Description=Information about the drivers used by the device
+
+Property.ResourcesGroup.Name=Resource Information
+Property.ResourcesGroup.Description=Resources used by the device
+
+Property.WindowsPropGroup.Name=Windows Properties
+Property.WindowsPropGroup.Description=Values Windows keeps for the device
+
+Property.DeviceSpecificGroup.Name=Device-Specific Properties
+Property.DeviceSpecificGroup.Description=Device-Specific Properties
+
+Property.DeviceVendorID.Name=Vendor ID
+Property.DeviceVendorID.Description=Number uniquely indentifying a vendor of a particular device class.
+Property.DeviceID.Name=Device ID
+Property.DeviceID.Description=Number uniquely identifying a device of a particular device class
+
+Property.DeviceClass.Name=Class Code
+Property.DeviceClass.Description=Major code describing device type
+Property.DeviceSubClass.Name=Sub Class Code
+Property.DeviceSubClass.Description=Minor code describing device type
+Property.DeviceProgrammingInterface.Name=Programming Interface
+Property.DeviceProgrammingInterface.Description=Sub-minor code describing device type
+Property.SerialNumber.Name=Serial Number
+Property.SerialNumber.Description=Serial Number
+Property.DeviceManufacturer.Name=Manufacturer
+Property.DeviceManufacturer.Description=Manufacturer Name
+
+Property.WinClass.Name=Windows Class
+Property.WinClass.Description=Windows classification for this device
+Property.WinClassGUID.Name=Windows Class GUID
+Property.WinClassGUID.Description=Global unique indentifier for the Windows class
+Property.WinDriverKey.Name=Windows Driver Key
+Property.WinDriverKey.Description=Windows Driver Key
+Property.WinService.Name=Windows Service
+Property.WinService.Description=Windows service used by device
+Property.WinLocation.Name=Windows Location
+Property.WinLocation.Description=Device specific location
+Property.WinBusTypeGUID.Name=Windows Bus Type GUID.
+Property.WinBusTypeGUID.Description=Windows global unique indentifer for the device's bus
+Property.WinEnumerator.Name=Windows Enumerator
+Property.WinEnumerator.Description=Name of the Windows Enumerator that enumerated the device during startup
+Property.WinManufacturer.Name=Manufacturer
+Property.WinManufacturer.Description=The Manufacturer that Windows reports manufactured a device
+Property.WinHardwareIDs.Name=Windows Hardware IDs
+Property.WinHardwareIDs.Description=Windows Hardware IDs
+Property.WinCompatibleIDs.Name=Windows Compatible IDs
+Property.WinCompatibleIDs.Description=Compatible Windows hardware IDs
+Property.WinBusNumber.Name=Windows Bus Number
+Property.WinBusNumber.Description=Device-type specific bus number provided by Windows
+Property.WinDeviceAddress.Name=Device Address
+Property.WinDeviceAddress.Description=Device-type specific address provided by Windows
+
+Property.ResourcesMemory.Name=Memory Resources
+Property.ResourcesMemory.Description=Memory ranges used by device
+Property.ResourcesIO.Name=I/O Resources
+Property.ResourcesIO.Description=I/O Port ranges used by device
+Property.ResourcesDMA.Name=DMA Resources
+Property.ResourcesDMA.Description=DMA channels used by device
+Property.ResourcesIRQ.Name=IRQ Resources
+Property.ResourcesIRQ.Description=IRQs used by device
+
+Property.Driver.Name=Driver
+Property.Driver.Description=Driver
+
+Property.DriverProvider.Description=Driver Provider
+Property.DriverProvider.Name=Driver Provider
+
+Property.DriverVersion.Name=Version
+Property.DriverVersion.Description=Version
+
+Property.PCILocation.Name=PCI Location
+Property.PCILocation.Description=PCI Location
+
+Property.PCIConfigSpaceGroup.Name=PCI Config Space Fields
+Property.PCIConfigSpaceGroup.Description=A listing of fields from the PCI Configuration Space
+
+Property.PCIVendorIdReg.Name=PCI Vendor ID
+Property.PCIVendorIdReg.Description=PCI Vendor ID
+
+Property.PCIDeviceIdReg.Name=PCI Device ID
+Property.PCIDeviceIdReg.Description=PCI Device ID
+
+Property.PCICommandReg.Name=PCI Command Register
+Property.PCICommandReg.Description=PCI Command Register
+
+Property.PCIStatusReg.Name=PCI Status Register
+Property.PCIStatusReg.Description=PCI Status Register
+
+Property.PCIRevisionIdReg.Name=Revison ID
+Property.PCIRevisionIdReg.Description=Revison ID
+
+Property.PCIProgIfReg.Name=Programming Interface
+Property.PCIProgIfReg.Description=Programming Interface
+
+Property.PCISubClassReg.Name=Sub Class Register
+Property.PCISubClassReg.Description=Sub Class Register
+
+Property.PCIBaseClassReg.Name=Base Class Register
+Property.PCIBaseClassReg.Description=Base Class Register
+
+Property.PCICacheLineSizeReg.Name=Cacheline size.
+Property.PCICacheLineSizeReg.Description=Cacheline size
+
+Property.PCILatencyTimerReg.Name=Latency Timer
+Property.PCILatencyTimerReg.Description=Latency Timer
+
+Property.PCIHeaderTypeReg.Name=PCI Header Type
+Property.PCIHeaderTypeReg.Description=PCI Header Type
+
+Property.PCIBISTReg.Name=BIST
+Property.PCIBISTReg.Description=Built-In Self-Test
+
+Property.PCIBaseAddress0Reg.Name=Base Address Register 0
+Property.PCIBaseAddress0Reg.Description=Base Address Register 0
+
+Property.PCIBaseAddress1Reg.Name=Base Address Register 1
+Property.PCIBaseAddress1Reg.Description=Base Address Register 1
+
+Property.PCIBaseAddress2Reg.Name=Base Address Register 2
+Property.PCIBaseAddress2Reg.Description=Base Address Register 2
+
+Property.PCIBaseAddress3Reg.Name=Base Address Register 3
+Property.PCIBaseAddress3Reg.Description=Base Address Register 3
+
+Property.PCIBaseAddress4Reg.Name=Base Address Register 4
+Property.PCIBaseAddress4Reg.Description=Base Address Register 4
+
+Property.PCIBaseAddress5Reg.Name=Base Address Register 5
+Property.PCIBaseAddress5Reg.Description=Base Address Register 5
+
+Property.PCICISReg.Name=CardBus CIS Pointer
+Property.PCICISReg.Description=CardBus CIS Pointer.
+
+Property.PCIExpansionROMBaseAddressReg.Name=Expansion ROM Base Address Register.
+Property.PCIExpansionROMBaseAddressReg.Description=Expansion ROM Base Address Register.
+
+Property.PCISubVendorIdReg.Name=Sub Vendor Id Register
+Property.PCISubVendorIdReg.Description=Sub Vendor Id Register.
+Property.PCISubSystemIdReg.Name=Subsystem Id Register
+Property.PCISubSystemIdReg.Description=Subsystem Id Register.
+Property.PCIROMBaseAddressReg.Name=ROM Base Address Register
+Property.PCIROMBaseAddressReg.Description=ROM Base Address Register.
+
+Property.PCICapPtrReg.Name=PCI Capabilities Pointer
+Property.PCICapPtrReg.Description=PCI Capability Pointer
+Property.PCIInterruptLineReg.Name=PCI Interrupt Line
+Property.PCIInterruptLineReg.Description=PCI Interrupt Line
+Property.PCIInterruptPinReg.Name=Interrupt Pin
+Property.PCIInterruptPinReg.Description=Interrupt pin used by device function
+Property.PCIMinimumGrantReg.Name=Minimum Grant
+Property.PCIMinimumGrantReg.Description=Minimum Grant
+Property.PCIMaximumLatencyReg.Name=Maximum Latency
+Property.PCIMaximumLatencyReg.Description=Maximum Latency
+
+Property.PCISecondaryLatencyTimerReg.Name=Secondary Latency Timer
+Property.PCISecondaryLatencyTimerReg.Description=Secondary Latency Timer
+
+
+Property.PCIPrimaryBusNumberReg.Name=Primary Bus Number
+Property.PCIPrimaryBusNumberReg.Description=The bus number where the bridge resides
+Property.PCISecondaryBusNumberReg.Name=Secondary Bus Number
+Property.PCISecondaryBusNumberReg.Description=The second bus the bridge spans
+Property.PCISubordinateBusNumberReg.Name=Subordinate Bus Number
+Property.PCISubordinateBusNumberReg.Description=The highest numbered bus behind the bridge
+
+Property.PCIIOBaseReg.Name=I/O Base Register
+Property.PCIIOBaseReg.Description=I/O Base Register
+
+Property.PCIIOLimitReg.Name=I/O Limit Register
+Property.PCIIOLimitReg.Description=I/O Limit Register
+
+Property.PCISecondaryStatusReg.Name=Secondary Status Register
+Property.PCISecondaryStatusReg.Description=Secondary Status Register
+
+Property.PCIMemoryBaseReg.Name=Memory Base Register
+Property.PCIMemoryBaseReg.Description=Memory Base Register
+
+Property.PCIMemoryLimitReg.Name=Memory Limit Register
+Property.PCIMemoryLimitReg.Description=Memory Limit Register
+
+Property.PCIPrefetchableMemoryBaseReg.Name=Prefetchable Memory Base Register
+Property.PCIPrefetchableMemoryBaseReg.Description=Prefetchable Memory Base Register
+
+Property.PCIPrefetchableMemoryLimitReg.Name=Prefetchable Memory Limit Register
+Property.PCIPrefetchableMemoryLimitReg.Description=Prefetchable Memory Limit Register
+
+Property.PCIPrefetchableBaseUpper32Reg.Name=Prefetchable Base Upper 32 Register
+Property.PCIPrefetchableBaseUpper32Reg.Description=Prefetchable Base Upper 32 Register
+
+Property.PCIPrefetchableLimitUpper32Reg.Name=Prefetchable Limit Upper 32 Register
+Property.PCIPrefetchableLimitUpper32Reg.Description=Prefetchable Limit Upper 32 Register
+
+Property.PCIIOBaseUpper16Reg.Name=I/O Base Upper 16 Register
+Property.PCIIOBaseUpper16Reg.Description=I/O Base Upper 16 Register
+
+Property.PCIIOLimitUpper16Reg.Name=I/O Limit Upper 16 Register
+Property.PCIIOLimitUpper16Reg.Description=I/O Limit Upper 16 Register
+
+Property.PCIBridgeControlReg.Name=Bridge Control Register
+Property.PCIBridgeControlReg.Description=Bridge Control Register
+
+Property.PCISocketRegistersBaseAddressReg.Name=Socket Registers Base Address
+Property.PCISocketRegistersBaseAddressReg.Description=Socket Reigsters Base Address
+
+Property.PortCount.Name=Port Count
+Property.PortCount.Description=Number of ports on this hub.
+
+Property.USBVersion.Name=USB Version
+Property.USBVersion.Description=Version of the USB standard used by the device.
+
+Property.DeviceVersion.Name=Device Version
+Property.DeviceVersion.Description=Device Version.
+
+Property.USBMaxBusPowerConsumption.Name=USB Max Bus Power Consumption.
+Property.USBMaxBusPowerConsumption.Description=Maximum power a USB device can consume from the attached bus.
+

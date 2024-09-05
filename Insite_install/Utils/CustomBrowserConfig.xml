@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<CustomBrowser>
+	<Browser Mode="configtool" NoContextMenu="1" NoFullScreen="1" NoFileNew="1" NoFileOpen="1" NoPrinting="1" NoSearch="1" NoHistory="1" TopMost="0">
+		<!-- Title of the window.  If not provided, the default title will be used -->
+		<Title>Service Browser</Title>
+		<!-- Command to run before opening the browser (This will start the web server if it's not running)-->
+		<PreExec>cmd /c StartComp.bat -webserver -nr -s</PreExec>
+		<URL>http://localhost:%WebPort%/modality-csd/</URL>
+		<!-- If position is not provided, the window will be positioned randomly. -->
+		<Position>
+			<!-- Integer values for the position coordinates. -->
+			<X>0</X>
+			<Y>0</Y>
+		</Position>
+		<!-- When Resizable attribute is 0, MaximizeButton attribute has no effect.
+		Maximize button is always disabled when the window is not resizable.
+		Maximize attribute 1 will maximize the window but the window will be still movable. -->
+		<Size Resizable="0" MaximizeButton="0" MinimizeButton="0" Maximize="0">
+			<!-- Integer values for the size when the window is not maximized. -->
+			<Height>740</Height>
+			<Width>1024</Width> 
+		</Size> 
+		<!-- The service browser will have no bars -->
+		<!-- If NoCustomize attriute is 1, the bars are not customizable (cannot be added or removed at runtime) nor movable -->
+		<!-- Also, the buttons of the tool bar will not be customizable -->
+		<Bars NoCustomize="0">
+			<Menubar Show="0"/>
+			<Addressbar Show="0"/>
+			<Statusbar Show="0"/> 
+			<Toolbar Show="0">
+				<Back>1</Back>
+				<Forward>1</Forward>
+				<Stop>1</Stop>
+				<Refresh>1</Refresh>
+			</Toolbar>
+		</Bars>
+	</Browser>
+	<Browser Mode="service" NoContextMenu="1" NoFullScreen="1" NoFileNew="1" NoFileOpen="1" NoPrinting="1" NoSearch="1" NoHistory="1" TopMost="0">
+		<!-- Title of the window.  If not provided, the default title will be used -->
+		<Title>Service Browser</Title>
+		<!-- Command to run before opening the browser (This will start the web server if it's not running)-->
+		<PreExec>cmd /c StartComp.bat -webserver -nr -s</PreExec>
+		<URL>http://localhost:%WebPort%/modality-csd/</URL>
+		<!-- If position is not provided, the window will be positioned randomly. -->
+		<Position>
+			<!-- Integer values for the position coordinates. -->
+			<X>0</X>
+			<Y>0</Y>
+		</Position>
+		<!-- When Resizable attribute is 0, MaximizeButton attribute has no effect.
+		Maximize button is always disabled when the window is not resizable.
+		Maximize attribute 1 will maximize the window but the window will be still movable. -->
+		<Size Resizable="0" MaximizeButton="0" MinimizeButton="0" Maximize="0">
+			<!-- Integer values for the size when the window is not maximized. -->
+			<Height>740</Height>
+			<Width>1024</Width> 
+		</Size> 
+		<!-- The service browser will have no bars -->
+		<!-- If NoCustomize attriute is 1, the bars are not customizable (cannot be added or removed at runtime) nor movable -->
+		<!-- Also, the buttons of the tool bar will not be customizable -->
+		<Bars NoCustomize="0">
+			<Menubar Show="0"/>
+			<Addressbar Show="0"/>
+			<Statusbar Show="0"/> 
+			<Toolbar Show="0">
+				<Back>1</Back>
+				<Forward>1</Forward>
+				<Stop>1</Stop>
+				<Refresh>1</Refresh>
+			</Toolbar>
+		</Bars>
+	</Browser>
+	<Browser Mode="ilinq" NoContextMenu="1" NoFullScreen="1" NoFileNew="1" NoFileOpen="1" NoPrinting="1" NoSearch="1" NoHistory="1" TopMost="0">
+		<Title>Service Browser</Title>
+		<!-- Command to run before opening the browser (This will start the service agent if it's not running) -->
+		<!-- The piped "echo" command logs a file which can be used to clear the Active Messaging RFS Icon status which should be cleared when the RFS application opens -->
+		<PreExec>cmd /c StartComp.bat -agent -nr -s| echo ServiceIcon = 1 > "%INSITE2_HOME%\Temp\idunnNotify"</PreExec>
+		<URL>%INSITE2_HOME%/RFS/rfsmain.html</URL>
+		<Position>
+			<X>0</X>
+			<Y>0</Y>
+		</Position>
+		<Size Resizable="0" MaximizeButton="0" MinimizeButton="0" Maximize="0">
+			<Height>740</Height>
+			<Width>1024</Width>
+		</Size> 
+		<!-- Only Toolbar will show -->
+		<Bars NoCustomize="1">
+			<Menubar Show="0"/>
+			<Addressbar Show="0"/>
+			<Statusbar Show="0"/> 
+			<Toolbar Show="1">
+				<Back>1</Back>
+				<Forward>1</Forward>
+				<Stop>0</Stop>
+				<Refresh>1</Refresh>
+			</Toolbar>
+		</Bars>
+	</Browser>
+	<Browser Mode="test" NoContextMenu="1" NoFullScreen="1" NoFileNew="1" NoFileOpen="1" NoPrinting="1" NoSearch="1" NoHistory="1" TopMost="1">
+		<Title></Title>
+		<URL>http://www.yahoo.com</URL>
+		<Position>
+			<X>0</X>
+			<Y>0</Y>
+		</Position>
+		<Size Resizable="0" MaximizeButton="0" MinimizeButton="0" Maximize="0">
+			<Height>740</Height>
+			<Width>1024</Width>
+		</Size> 
+		<!-- Only Toolbar will show -->
+		<Bars NoCustomize="1">
+			<Menubar Show="0"/>
+			<Addressbar Show="0"/>
+			<Statusbar Show="0"/> 
+			<Toolbar Show="1">
+				<Back>1</Back>
+				<Forward>1</Forward>
+				<Stop>0</Stop>
+				<Refresh>1</Refresh>
+			</Toolbar>
+		</Bars>
+	</Browser>
+</CustomBrowser>

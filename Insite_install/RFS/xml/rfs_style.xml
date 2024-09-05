@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleRFS>
+	<ALL>
+		<!-- ALL: Page -->
+		<constant name="PageBackground" value="#D3D3D3" />
+		<constant name="PageBorderColor" value="#808080" />
+		<constant name="PageBorderStyle" value="solid" />
+		<constant name="PageBorderWidth" value="1px" />
+		<constant name="PageFontFamily" value="Arial, Helvetica, sans-serif" />
+		<constant name="PageFontSize" value="small" />
+		<!-- ALL: Sections -->
+		<constant name="SectionBackground" value="#CCC" />
+		<constant name="SectionFontColor" value="#000" />
+		<!-- ALL: Section Headers -->
+		<constant name="HeaderBackground" value="#A9A9A9" />
+		<constant name="HeaderFontColor" value="#000" />
+		<!-- ALL: Normal Buttons -->
+		<constant name="ButtonBackground" value="#EEE" />
+		<constant name="ButtonBorderColor" value="#CCC" />
+		<constant name="ButtonFontColor" value="#000" />
+		<!-- ALL: Pushed Buttons -->
+		<constant name="ButtonPushedBackground" value="#ADD8E6" />
+		<constant name="ButtonPushedBorderColor" value="#ADD8E6" />
+		<!-- ALL: Buttons with Invalid Data -->
+		<constant name="ButtonInvalidBackground" value="#F88" />
+		<constant name="ButtonInvalidBorderColor" value="#F00" />
+		<!-- ALL: Normal Controls -->
+		<constant name="ControlBackground" value="#FFFFF0" />
+		<constant name="ControlBorderColor" value="#808080" />
+		<constant name="ControlFontColor" value="#000" />
+		<!-- ALL: Readonly Controls -->
+		<constant name="ControlReadonlyBackground" value="#E7E7E7" />
+		<constant name="ControlReadonlyFontColor" value="inherit" />
+		<!-- ALL: Controls with Invalid Data -->
+		<constant name="ControlInvalidBackground" value="#FCC" />
+		<constant name="ControlInvalidBorderColor" value="#F00" />
+		<!-- ALL: Asterisk for Required Fields -->
+		<constant name="AsteriskFontColor" value="#F00" />
+	</ALL>
+	<CDI>
+		<!-- CDI: Suggest Drop-down -->
+		<constant name="SuggestBackground" value="#FFFFF0" />
+		<constant name="SuggestBorderColor" value="#808080" />
+		<constant name="SuggestFontColor" value="#000" />
+		<constant name="SuggestHighlightedBackground" value="#EEE" />
+	</CDI>
+	<SAI />
+	<PTI />
+	<PDI>
+		<!-- PDI: Description Box -->
+		<constant name="DescriptionHeight" value="50px" />
+	</PDI>
+	<SCI />
+	<HELP>
+		<!-- HELP: Help -->
+		<constant name="HelpBackground" value="#EEE" />
+		<constant name="HelpBorderColor" value="#808080" />
+		<constant name="HelpFontColor" value="#000" />
+		<constant name="HelpHeight" value="150px" />
+		<!-- HELP: Help Tooltip -->
+		<constant name="HelpTooltipTitleBackground" value="#A9A9A9" />
+		<constant name="HelpTooltipBodyBackground" value="#EEE" />
+		<constant name="HelpTooltipBorderColor" value="#808080" />
+		<constant name="HelpTooltipFontColor" value="#000" />
+	</HELP>
+</styleRFS>

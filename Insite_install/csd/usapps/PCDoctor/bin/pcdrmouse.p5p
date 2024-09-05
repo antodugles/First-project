@@ -1,0 +1,93 @@
+﻿ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrmouse english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  June_Li
+  * @version $Id: //depot/mainline/Matrix_Projects/projects/modules/src/windows/diag/pcdrmouse
+  /pcdrmouse.p5p$
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Mouse Test
+Module.Description=This module tests mouse device 
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.MouseTest.Name=Interactive Test
+Test.MouseTest.Description=Mouse Interactive Test
+
+#EVENT_MOUSE_TEST_FAILED
+Event.MouseTestFailed.Message=The mouse test failed.
+Event.MouseTestFailed.EventCode=3
+
+#EVENT_ERROR_DURING_INIT
+Event.ErrorDuringInit.Message=An error occurred while initializing.
+Event.ErrorDuringInit.EventCode=4
+
+#MSG_DID_THE_TEST_PASS
+LocalizedString.DidTestPass=Did the test pass?
+
+#MSG_MOUSE_GROUP_BOX_INSTRUCTIONS
+LocalizedString.MsgMouseGroupBoxInstructions=Instructions
+
+#MSG_MOUSE_STATUS_DESCRIPTION
+LocalizedString.MsgMouseStatusDescription=The "Mouse Status" diagram indicates the cursor position and mouse button state. When a mouse button is depressed, the corresponding button in the diagram will change color.
+
+#MSG_MOUSE_DRAG_AND_DROP_DESCRIPTION
+LocalizedString.MsgMouseDragAndDropDescription=Drag the floppy onto the drive in the "Drag And Drop Test". If the action is successfully completed, a new floppy will appear.
+
+#MSG_MOUSE_DOUBLE_CLICK_DESCRIPTION
+LocalizedString.MsgMouseDoubleClickDescription= Double-click on the picture in the "Double Click Test". If a double-click is detected, the picture will change.
+
+#MSG_MOUSE_GROUP_BOX_MOUSE_STATUS
+LocalizedString.MsgMouseGroupBoxMouseStatus=Mouse Status
+
+#MSG_MOUSE_LABEL_POSOTION
+LocalizedString.MsgMouseLabelPosition=Position:
+
+#MSG_MOUSE_GROUP_BOX_DRAG_AND_DROP
+LocalizedString.MsgMouseGroupBoxDragAndDrop=Drag And Drop Test
+
+#MSG_MOUSE_GROUP_BOX_DOUBLE_CLICK
+LocalizedString.MsgMouseGroupBoxDoubleClick=Double Click Test
+
+#MSG_MOUSE_BUTTON_LABEL_MORE_INFO
+LocalizedString.MsgMouseButtonLabelMoreInfo=&More Info
+
+#MSG_MOUSE_BUTTON_LABEL_CLOSE
+LocalizedString.MsgMouseButtonLabelClose=&Close
+
+LocalizedString.MsgMouseMoreInfo3200=This test attempts to check mouse functionality.
+LocalizedString.MsgMouseMoreInfo3201=If your mouse does not work correctly in this test, try the following:
+LocalizedString.MsgMouseMoreInfo3202=Close all other applications and test again.
+LocalizedString.MsgMouseMoreInfo3203=Shut down your system and make sure the mouse is correctly plugged in. Restart your system and test again.
+LocalizedString.MsgMouseMoreInfo3204=Check that the mouse driver is correct via the Control Panel. If necessary, reinstall your mouse driver and test again.
+LocalizedString.MsgMouseMoreInfo3205=If another mouse is available, install and test it.
+LocalizedString.MsgMouseMoreInfo3206=Try using your mouse outside of this test. Your mouse may be incompatible with this test.
+LocalizedString.MsgMouseMoreInfo3207=Please note that Windows, mouse drivers, and other applications can modify mouse functionality. The middle button on a three button mouse, for example, may be modified to function as a left button double-click.
+LocalizedString.MsgMouseMoreInfo3208=This test may not detect or check all specialized mouse functionality, such as scrolling controls and additional buttons.
+LocalizedString.MsgMouseMoreInfoCopyRight=Copyright 2005 PC-Doctor, Inc.
+LocalizedString.MsgMouseMoreInfoButtonOk=OK
+
+

@@ -1,0 +1,72 @@
+﻿/* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * The pcdrmemory english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Chris_Matyas
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrmemory/pcdrmemory.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+
+Module.Name=Memory
+Module.Description=This module tests the system memory.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.PatternTest.Name=Pattern Test
+Test.PatternTest.Description=Memory Pattern Test
+
+Test.AdvancedPatternTest.Name=Advanced Pattern Test
+Test.AdvancedPatternTest.Description=Memory Advanced Pattern Test
+
+#MSG_MEMORY_ALLOCATION_ERROR 
+Event.CannotAllocateMemory.Message=Memory allocation error
+Event.CannotAllocateMemory.EventCode=1
+Event.CannotAllocateMemory.Tip1=Tip.RestartMachine
+
+#EVENT_PATTERN_MISMATCH_ERROR
+Event.PatternMismatch.Message=Incorrect data at offset {PhysicalAddressInHex}H ({PhysicalAddressInDecimal}) Wrote pattern {WritePattern}H, read back pattern {ReadPattern}H
+Event.PatternMismatch.EventCode=2
+
+#EVENT_TOO_MANY_ERRORS
+Event.TooManyErrors.Message=Too many errors. Test aborted.
+Event.TooManyErrors.EventCode=3
+
+#EVENT_NOT_ENOUGH_MEMORY
+Event.NoEnoughMemory.Message=Not enough memory.
+Event.NoEnoughMemory.EventCode=4
+
+#EVENT_SWAP_FILE_TOO_SMALL
+Event.SwapSizeTooSmall.Message= Swap file too small to perform test.
+Event.SwapSizeTooSmall.EventCode=5
+
+#EVENT_ERROR_READING_SWAP_FILE_SIZE
+Event.FailToReadSwapSize.Message=Error reading swap file size.
+Event.FailToReadSwapSize.EventCode=6
+
+Event.CannotOpenDriver.Message=Unable to open PC-Doctor driver!
+Event.CannotOpenDriver.EventCode=7
+
+LocalizedString.ProgInfo = Testing {TotalBlocks} KB block - current pattern is {PatternDone} of {TotalPatterns} ({CurrentPattern}H).
+

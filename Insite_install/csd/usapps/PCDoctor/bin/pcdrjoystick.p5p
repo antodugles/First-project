@@ -1,0 +1,139 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrjoystick english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  June_Li
+  * @version $Id: //depot/mainline/Matrix_Projects/projects/modules/src/windows/diag/pcdrjoystick
+  /pcdrjoystick.p5p$
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Joystick 
+Module.Description=Interactive test for the joystick
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.JoystickTest.Name=Interactive Test
+Test.JoystickTest.Description=Joystick Interactive Test
+
+#test events
+
+#NO_DEVICE_DRIVER
+Event.NoDeviceDriver.Message= No driver found. Use the Control Panel to install a driver.
+Event.NoDeviceDriver.EventCode=1
+
+#TIMER_NOT_SET
+Event.TimerNotSet.Message=Could not set timer, low on resources.
+Event.TimerNotSet.EventCode=3
+
+#MAX_AXIS_PERCENT
+Event.MaxAxisPercent.Message= The {Direction} axis moved {MaxPercent} of the way to its maximum value.   
+Event.MaxAxisPercent.EventCode=5
+
+#MIN_AXIS_PERCENT
+Event.MinAxisPercent.Message= The {Direction} axis moved {MinPercent} of the way to its minimum value.  
+Event.MinAxisPercent.EventCode=6
+
+#BUTTON_PASSED
+Event.ButtonPassed.Message= Button {Count} is functioning properly.
+Event.ButtonPassed.EventCode=7
+
+#BUTTON_STUCK
+Event.ButtonStuck.Message= Button {Count} got stuck in the depressed position.
+Event.ButtonStuck.EventCode=8
+
+#BUTTON_FAILED
+Event.ButtonFailed.Message= Button {Count} is not working or was not tested.
+Event.ButtonFailed.EventCode=9
+
+#POV_DIRECTION_PASSED
+Event.PovDirectionPassed.Message= Point of view control moves {Direction} properly.
+Event.PovDirectionPassed.EventCode=10
+
+#USER_CLICKED_PASSED
+Event.UserClickedPassed.Message=User clicked the Passed button.
+Event.UserClickedPassed.EventCode=11
+
+#USER_CLICKED_FAIL
+Event.UserClickedFail.Message= User clicked the Fail button.
+Event.UserClickedFail.EventCode=12
+
+#USER_CLICKED_FINISH
+Event.UserClickedFinished.Message= User clicked the Finish button.
+Event.UserClickedFinished.EventCode=13
+
+#USER_CLICKED_ABORT
+Event.UserClickedAbort.Message= User clicked the Abort button.
+Event.UserClickedAbort.EventCode=14
+
+#INVALID_PARAM
+Event.InvalidParam.Message= The test was not able to get the capabilities of the joystick. 
+Event.InvalidParam.EventCode=16
+
+#POV_DIRECTION_FAILED
+Event.PovDirectionFailed.Message= Point of view control does not move {Direction} properly or was not properly tested.
+Event.PovDirectionFailed.EventCode=20
+
+#UNKNOWN_ERROR
+Event.UnknownError.Message= An unknown error has occurred while getting the joystick capabilities.
+Event.UnknownError.EventCode=17
+
+#MSG_INSTRUCTIONS
+LocalizedString.MsgInstructions = Instructions
+
+#MSG_INST_Px
+LocalizedString.MsgInst_P1 = This test allows you to test the axes, buttons, and point of view controls on the joystick connected to your system.
+LocalizedString.MsgInst_P2 = By moving the joystick and point of view control (if you have one) and pressing the buttons, you should be able to see if a control is working.
+LocalizedString.MsgInst_P3 = If the controls below do not match the actual capabilities of the joystick, you may need to modify the joystick settings in the Control Panel. If the joystick is not functioning properly, try calibrating the joystick in the Control Panel.
+LocalizedString.MsgInst_C1 = This test allows you to test the axes, buttons, and point of view controls on the joystick connected to your system.
+LocalizedString.MsgInst_C2 =Please press all the buttons and move all the axes and point of view control all the way to the side in every direction it will go.
+LocalizedString.MsgInst_C3 =If the controls below do not match the actual capabilities of the joystick, you may need to modify the joystick settings in the Control Panel. If the joystick is not functioning properly, try calibrating the joystick in the Control Panel.
+
+#MSG_AXES_BOX
+LocalizedString.MsgAxesBox = Axes
+
+#MSG_X_Y_TEXT
+LocalizedString.Msg_X_Y_Text = 1 and 2 (x and y) 
+LocalizedString.Msg_Z_Text = 3 (z)
+LocalizedString.Msg_R_Text = 4 (r)
+LocalizedString.Msg_U_Text = 5 (u)
+LocalizedString.Msg_V_Text = 6 (v)
+
+#MSG_POV_BOX
+LocalizedString.MsgPovBox = Point of View
+
+#MSG_BUTTONS_BOX
+LocalizedString.MsgButtonsBox = Buttons
+
+#MSG_FINISH
+LocalizedString.MsgFinish = Finish
+
+#MSG_ABORT
+LocalizedString.MsgAbort = Abort
+
+#MSG_PASS
+LocalizedString.MsgPass = Pass
+
+#MSG_FAIL
+LocalizedString.MsgFail = Fail

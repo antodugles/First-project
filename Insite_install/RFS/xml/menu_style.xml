@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleMenu>
+	<!-- Page -->
+	<page>
+		<constant name="PageBackground" value="lightgrey" />
+	</page>
+	<!-- Menu -->
+	<menu>
+		<base>
+			<constant name="MenuBackground" value="darkgrey" />
+			<constant name="MenuBottomSeparatorColor" value="darkgrey" />
+			<constant name="MenuFontFamily" value="Arial, Helvetica, sans-serif" />
+			<constant name="MenuFontSize" value="10pt" />
+			<constant name="MenuFontWeight" value="bold" />
+			<constant name="MenuFontColor" value="black" />
+		</base>
+		<tabs>
+			<constant name="MenuTabSeparatorBorderColor" value="#FFF2BF" />
+			<constant name="MenuTabSeparatorBorderStyle" value="dotted" />
+			<constant name="MenuTabSeparatorBorderWidth" value="1px" />
+			<constant name="MenuTabActiveBorderColor" value="#FFF2BF" />
+		</tabs>
+	</menu>
+</styleMenu>

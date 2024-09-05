@@ -1,0 +1,6 @@
+<?xml version ="1.0" encoding="UTF-8" ?>
+<VirtualPkgs version="1.0">
+  <UpdateList type="CS_ULS_GIMLI_TEST" />
+  <UpdateList type="CS_ULS_NEZHA_TEST" />
+  <UpdateLIst type="CS_ULS_KYLIN_VIEWER" />
+</VirtualPkgs>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recentRFS>
+	<contact>
+		<Last>DOE</Last>
+		<First>JOHN</First>
+		<Phone>234-546-8765</Phone>
+		<Ext>9003</Ext>
+		<Email>John.Doe@ge.com</Email>
+	</contact>
+	<contact>
+		<Last>DOE</Last>
+		<First>JANE</First>
+		<Phone>321-563-6789</Phone>
+		<Email>Jane.Doe@ge.com</Email>
+	</contact>
+	<contact>
+		<Last>SIMPSON</Last>
+		<First>BART</First>
+		<Phone>414-645-3234</Phone>
+		<Ext>3938</Ext>
+		<Email>Bart.Simpson@ge.com</Email>
+	</contact>
+	<contact>
+		<Last>BROWN</Last>
+		<First>JAMES</First>
+		<Phone>250-334-0334</Phone>
+		<Ext>37</Ext>
+	</contact>
+	<contact>
+		<Last>MILLER</Last>
+		<First>DAVID</First>
+		<Phone>435-421-7895</Phone>
+		<Email>David.Miller@ge.com</Email>
+	</contact>
+</recentRFS>

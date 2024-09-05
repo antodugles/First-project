@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!-- Add Actives to trigger an RFS.  The EventLogReader will read
+	Actives from the EventLog and try to match the attributes
+	listed.  When an Active is found with the attributes listed
+	it will generate an RFS with the specified ExtraMessage and
+	other Active information (ID, Source, Description).
+	Note: all attributes are Optional and match if found in 
+	any part of the string (i.e. a description of "error" will
+      	match if "error" is found anywhere in the string). -->
+
+<Events>
+
+   <Option name="PrintDebug">
+   	<name>PrintDebug"></name>
+   	<value>no</value>
+   </Option>
+   <Option name="LogDebug">
+	   <name>LogDebug</name>
+	   <value>no</value>
+   </Option>
+   <Option name="DeleteTempFiles">
+	   <name>DeleteTempFiles</name>
+	   <value>yes</value>
+   </Option>
+   <Option name="CallRFS">
+	   <name>CallRFS</name>
+	   <value>yes</value>
+   </Option>
+   <Option name="HoursBack">
+	   <name>HoursBack</name>
+	   <value>yes</value>
+   </Option>
+
+   <Active>
+      <log>System</log>
+      <Source>MY_SOURCE</Source>
+      <id>MY_EVENT_ID</id>
+      <Description>MY_DESCRIPTION_SUBSTRING</Description>
+      <ExtraMessage>OPTIONAL MESSAGE</ExtraMessage>
+   </Active>
+
+   <Active>
+      <log>Application</log>
+      <Type>MY_ERROR</Type>
+      <ExtraMessage>Optional message</ExtraMessage>
+   </Active>
+</Events>

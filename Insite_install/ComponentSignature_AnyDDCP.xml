@@ -1,0 +1,58 @@
+<InstalledComponents>
+	<!-- -->
+	<!-- Check for the existence of the these environment variables. -->
+	<!--  List as many as you wish to look for. -->
+	<!-- -->
+	<EnvVariables>
+		<EnvVariable Name="" />
+	</EnvVariables>
+	<!-- -->
+	<!-- Check if any of these files exist. -->
+	<!--  NOTE: Paths may reference an environment variable by enclosing the -->
+	<!--   variable name in brackets (e.g. [INSITE2_HOME]).  Only ONE variable -->
+	<!--   can be specified and it must be at the very beginning of the path. -->
+	<!-- -->
+	<InstalledFiles>
+		<File Path="" />
+	</InstalledFiles>
+	<!-- -->
+	<!-- Check if any of these services are installed. -->
+	<!--  Each specified service can contain 1 of 3 query attribute types: -->
+	<!--   1) ServiceName="xxx" (exact match) -->
+	<!--   2) DisplayName="xxx" (exact match) -->
+	<!--   3) DisplayNameContains="xxx" -->
+	<!--  NOTE: These comparisons are case-sensitive. -->
+	<!-- -->
+	<InstalledServices>
+		<Service ServiceName="" />
+		<Service DisplayName="" />
+		<Service DisplayNameContains="" />
+	</InstalledServices>
+	<!-- -->
+	<!-- Check if any of these processes are currently running. -->
+	<!--  Each specified process can contain 1 of 2 query attribute types: -->
+	<!--   1) ModuleName="xxx" (exact match) -->
+	<!--   2) ModuleNameContains="xxx" -->
+	<!--  NOTE: These comparisons are NOT case-sensitive. -->
+	<!-- -->
+	<RunningProcesses>
+		<Process ModuleName="" />
+		<Process ModuleNameContains="" />
+	</RunningProcesses>
+	<!-- -->
+	<!-- Check the "Uninstall" registry for the following items. -->
+	<!-- (i.e. check HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall) -->
+	<!--  Each specified registry key can contain 1 of 4 query attribute types: -->
+	<!--   1) RegKeyName="xxx"   (exact match) -->
+	<!--   2) RegKeyNameContains="xxx" -->
+	<!--   3) DisplayName="xxx"  (exact match) -->
+	<!--   4) DisplayNameContains="xxx" -->
+	<!--  NOTE: These comparisons are case-sensitive. -->
+	<!-- -->
+	<UninstallRegistryItems>
+		<Item RegKeyName="" />
+		<Item RegKeyNameContains="" />
+		<Item DisplayName="" />
+		<Item DisplayNameContains="KylinViewer" />
+	</UninstallRegistryItems>
+</InstalledComponents>

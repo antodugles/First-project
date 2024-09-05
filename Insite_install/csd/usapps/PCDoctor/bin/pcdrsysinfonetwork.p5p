@@ -1,0 +1,259 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Shree S
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/sysinfo/pcdrsysinfonetwork/pcdrsysinfonetwork.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Network Card Device Information
+Module.Description=This module gathers Network Card information.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Property.MacAddress.Name=MAC Address
+Property.MacAddress.Description=MAC Address
+
+Property.IPAddress.Name=IP Address
+Property.IPAddress.Description=IP Address
+
+Property.IPMask.Name=IP Mask
+Property.IPMask.Description=IP Mask
+
+Property.Gateway.Name=Gateway IP Address
+Property.Gateway.Description=Gateway IP Address
+
+
+Property.HasDHCPServer.Name=Has DHCP Server
+
+Property.HasDHCPServer.Description=Has DHCP Server
+
+
+
+Property.DHCPServer.Name=DHCP Server
+
+Property.DHCPServer.Description=DHCP Server
+
+
+
+Property.HaveWins.Name=Have Wins
+
+Property.HaveWins.Description=Have Wins
+
+
+
+Property.HasPrimaryWINSServer.Name=Has Primary WINS Server
+
+Property.HasPrimaryWINSServer.Description=Has Primary WINS Server
+
+
+
+Property.PrimaryWINSServer.Name=Primary WINS Server
+
+Property.PrimaryWINSServer.Description=Primary WINS Server
+
+
+
+Property.HasSecondaryWINSServer.Name=Has Secondary WINS Server
+
+Property.HasSecondaryWINSServer.Description=Has Secondary WINS Server
+
+
+
+Property.SecondaryWINSServer.Name=Secondary WINS Server
+
+Property.SecondaryWINSServer.Description=Secondary WINS Server
+
+Property.Driver.Name=Driver
+Property.Driver.Description=Driver
+
+Property.DriverVersion.Name=Version
+Property.DriverVersion.Description=Version
+
+
+Property.AdapterType.Name=Adapter Type
+
+Property.AdapterType.Description=Adapter type
+
+
+
+Property.AdapterMTU.Name=Adapter MTU
+
+Property.AdapterMTU.Description=Adapter Maximum Transmission Unit (in Bytes)
+
+
+
+Property.OperatingStatus.Name=Operating Status
+
+Property.OperatingStatus.Description=Operating status
+
+
+
+Property.AdapterSpeed.Name=Current Speed
+
+Property.AdapterSpeed.Description=Current Adapter Speed
+
+
+
+Property.LeaseObtained.Name=Lease Obtanied
+
+Property.LeaseObtained.Description=Time when DHCP lease was obtained
+
+
+
+Property.LeaseExpires.Name=Lease Expires
+
+Property.LeaseExpires.Description=Time when DHCP lease expires
+
+
+
+Property.DeviceSystemName.Name=Device System Name
+
+Property.DeviceSystemName.Description=Device System Name
+
+
+
+Property.BytesIn.Name=Total Bytes Received
+
+Property.BytesIn.Description=Total Bytes received
+
+
+
+Property.TotalPacketsIn.Name=Total Packets Received
+
+Property.TotalPacketsIn.Description=Total packets received
+
+
+
+Property.TotalDiscardsIn.Name=Total Incoming Packets Discarded
+
+Property.TotalDiscardsIn.Description=Total incoming packets discarded even if they did not have errors
+
+
+
+Property.TotalErrorsIn.Name=Total Incoming Packet Errors
+
+Property.TotalErrorsIn.Description=Total incoming packets discarded because of errors
+
+
+
+Property.BytesOut.Name=Total Bytes Sent
+
+Property.BytesOut.Description=Total bytes sent
+
+
+
+Property.TotalPacketsOut.Name=Total Packets Sent
+
+Property.TotalPacketsOut.Description=Total packets sent
+
+
+
+Property.TotalDiscardsOut.Name=Total Outgoing Packets Discarded
+
+Property.TotalDiscardsOut.Description=Total outgoing packets discarded even if they did not have errors
+
+
+
+Property.TotalErrorsOut.Name=Total Outgoing Packet Errors
+
+Property.TotalErrorsOut.Description=Total outgoing packets discarded because of errors
+
+
+
+Property.AdapterDhcpEnabled.Name = Adapter DHCP Enabled
+
+Property.AdapterDhcpEnabled.Description = Specifies if DHCP is enabled
+
+
+
+Property.AdapterKey.Name = Adapter Key
+
+Property.AdapterKey.Description = Adapter Key
+
+
+
+Property.AdapterIndex.Name = Adapter Index
+
+Property.AdapterIndex.Description = Adapter Index
+
+
+Property.PhysicalMedium.Name = Physical Media 
+Property.PhysicalMedium.Description = Physical Media Supported by Network Adapter
+
+LocalizedString.AdapterNonOPerational = LAN Adapter Disabled
+
+LocalizedString.AdapterUnreachable = WAN Adapter not Connected
+
+LocalizedString.AdapterDisconnected = For LAN adapters: network cable disconnected. For WAN adapters: no carrier.
+
+LocalizedString.AdapterConnecting = WAN adapter in the process of connecting
+
+LocalizedString.AdapterRemote = WAN adapter connected to a remote peer
+
+LocalizedString.AdapterWorking = Operational
+
+
+LocalizedString.AdapterReady = Available and capable of sending and receiving data
+LocalizedString.AdapterInitializing = Initializing
+LocalizedString.AdapterReset = Resetting
+LocalizedString.AdapterClosing = Closing
+LocalizedString.AdapterNotReady = Not ready
+
+
+LocalizedString.PhysicalMediumWLAN = Wireless LAN
+
+
+LocalizedString.PhysicalMediumWWAN = Wireless WAN
+
+
+LocalizedString.PhysicalMediumCable = Cable
+
+
+LocalizedString.PhysicalMediumPhoneLine = Phone Line
+
+
+LocalizedString.PhysicalMediumPowerLine = Power Line
+
+
+LocalizedString.PhysicalMediumDSL = DSL
+
+
+LocalizedString.PhysicalMediumFibre = Fibre
+
+
+LocalizedString.PhysicalMedium1394 = 1394
+
+
+LocalizedString.PhysicalMediumUnknown = Unknown Physical Medium
+
+LocalizedString.GigaUnit = Gigabits per second
+
+LocalizedString.MegaUnit = Megabits per second
+
+LocalizedString.KiloUnit = Kilobits per second
+
+LocalizedString.BitUnit = bits per second
+

@@ -1,0 +1,92 @@
+/* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Garrett Jones
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrsound/pcdrsound.p5p#1 $
+
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+
+  * @.change $Change: 39950 $
+
+  * @.last   $Author: Dan_Lu $
+
+  * </file>
+  * </header>
+  */
+
+Module.Name=Sound
+Module.Description=Interactive test for the sound card and speakers
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.SurroundSoundTest.Name=Interactive Test
+Test.SurroundSoundTest.Description=Interactive sound test
+
+LocalizedString.MSG_INSTRUCTIONS = Select the speaker to play sound from. This makes sure that the speakers are set up correctly and that the sound drivers work. If you do not hear a sound when you click on one of the buttons, click on "More Info" for suggestions.
+
+NOTE: Low volume may occur with non-powered speakers (these do not plug into an AC outlet) .
+
+Please be sure to have the volume turned up.
+
+LocalizedString.MSG_MORE_INFO_1=This test attempts to play sounds on your computer.
+LocalizedString.MSG_MORE_INFO_2=If you do not hear WAV or MIDI sounds when you click on these buttons, please try to play sounds outside of this test. There may be incompatibilities between this test and your computer configuration.
+LocalizedString.MSG_MORE_INFO_3=If you cannot hear WAV or MIDI sounds inside or outside of this test, and you are sure you have a sound card, try these steps:
+LocalizedString.MSG_MORE_INFO_4=1. Check the volume adjustment on your sound card.
+LocalizedString.MSG_MORE_INFO_5=2. Check Windows internal volume (usually in Control Panel).
+LocalizedString.MSG_MORE_INFO_6=3. Reboot Windows.
+LocalizedString.MSG_MORE_INFO_7=4. Reinstall the sound drivers (usually via Control Panel)  and make sure that there are no I/O address, IRQ line or DMA line conflicts!
+LocalizedString.MSG_MORE_INFO_8=The internal speaker "Beep" button plays standard beep sound through the internal computer speaker. Your system (or Windows) may be configured to disable this sound.
+LocalizedString.MSG_COPYRIGHT=Copyright 2005 PC-Doctor Inc.
+LocalizedString.MSG_SOUND_MORE_INFO_OK=OK
+
+LocalizedString.MSG_FRONT_LEFT=Front Left
+LocalizedString.MSG_FRONT_RIGHT=Front Right
+LocalizedString.MSG_REAR_RIGHT=Rear Right
+LocalizedString.MSG_REAR_LEFT=Rear Left
+LocalizedString.MSG_REAR_CENTER=Rear Center
+LocalizedString.MSG_SIDE_RIGHT=Side Right
+LocalizedString.MSG_SIDE_LEFT=Side Left
+LocalizedString.MSG_CENTER=Center
+LocalizedString.MSG_SUBWOOFER=Subwoofer
+LocalizedString.MSG_TEST_ALL=Test All
+LocalizedString.MSG_STOP_PLAYING = Stop Playing
+LocalizedString.MSG_MORE_INFO=More Info
+LocalizedString.MSG_BEEP=Beep
+LocalizedString.MSG_PLAY_MIDI=Play MIDI
+LocalizedString.MSG_DIALOG_CAPTION = Sound Interactive Test
+LocalizedString.MSG_PASS = Pass
+LocalizedString.MSG_FAIL = Fail
+LocalizedString.MSG_CANCEL = Cancel
+LocalizedString.MSG_HELP = Help
+LocalizedString.MSG_INTERNAL_SPEAKER = InternalSpeaker
+
+Event.UserAborted.Message=The user aborted the test
+Event.UserAborted.EventCode=3019
+
+Event.UserClickedPass.Message=The user clicked the "Pass" button.
+Event.UserClickedPass.EventCode=3020
+
+Event.UserClickedFail.Message = The user clicked the "Fail" button.
+Event.UserClickedFail.EventCode=3021
+
+Event.TestStartFail.Message = The test fails to start. Make sure sound drivers are properly installed.
+Event.TestStartFail.EventCode= 1
+Event.TestStartFail.Tip = Make sure sound drivers are properly installed. Consult your sound card manual for detail

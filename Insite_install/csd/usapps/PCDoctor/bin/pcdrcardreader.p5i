@@ -1,0 +1,81 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdrcardreader
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+Test.PatternCardReaderTest.Enable = true
+
+Test.PatternCardReaderTest.EndRange = MAX
+
+Test.PatternCardReaderTest.MaxErrors = 10
+
+Test.PatternCardReaderTest.NumberOfPatterns = 2
+
+Test.PatternCardReaderTest.NumberOfSeeks = 1000
+
+Test.PatternCardReaderTest.PreserveData = true
+
+Test.PatternCardReaderTest.PromptUserForMedia = true
+
+Test.PatternCardReaderTest.SectorPercentToTest = 0.05
+
+Test.PatternCardReaderTest.StartRange = MIN
+
+Test.ScanCardReaderTest.Enable = true
+
+# The EndRange defines the testing parameter to where testing will end. 
+# Acceptable values are MAX {Last testable sector}, sector number {any valid
+# sector greater than StartRange},  percent {any valid % greater than StartRange}
+Test.ScanCardReaderTest.EndRange = MAX
+
+Test.ScanCardReaderTest.MaxErrors = 10
+
+# defined SectorPercentToTest will be set to 100.
+Test.ScanCardReaderTest.NumberOfSeeks = 1000
+
+Test.ScanCardReaderTest.PromptUserForMedia = true
+
+# The SectorPercentToTest testing parameter defines the testing coverage. 
+# Acceptable values are {any valid integer from 1-100} or {any decimal value}
+Test.ScanCardReaderTest.SectorPercentToTest = 2
+
+# The StartRange defines the testing parameter from where testing will start. 
+# Acceptable values are MIN {starting sector}, sector number {any valid sector}
+# and percent {1%}
+Test.ScanCardReaderTest.StartRange = MIN
+
+

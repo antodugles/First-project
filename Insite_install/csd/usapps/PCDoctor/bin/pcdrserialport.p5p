@@ -1,0 +1,186 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrserialport english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Dan_Lu
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrserialport/pcdrserialport.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+
+Module.Name=Serial Port Test
+Module.Description=This module tests serial port
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+
+Test.ExternalRegisterTest.Name=External Register Test
+Test.ExternalRegisterTest.Description=Serial Port External Register Test
+
+Test.ExternalLoopbackTest.Name=External Loopback Test
+Test.ExternalLoopbackTest.Description=Serial Port External Loopback Test
+
+Test.InternalRegisterTest.Name=Internal Register Test
+Test.InternalRegisterTest.Description=Serial Port Internal Register Test
+
+Test.InternalControlSignalsTest.Name=Internal Control Signals Test
+Test.InternalControlSignalsTest.Description=Serial Port Internal Control Signals Test
+
+Test.InternalSendAndReceiveTest.Name=Internal Send and Receive Test
+Test.InternalSendAndReceiveTest.Description=Serial Port Internal Data Send and Receive Test
+
+LocalizedString.Progress=Testing Port {PortNumber}.
+LocalizedString.TestComplete=Port {PortNumber}: test complete.
+LocalizedString.PrgsSendReceive=Sending and receiving at {BaudRate} baud .
+LocalizedString.LoopbackProgress=Testing baud rate {BaudRate} bps.
+LocalizedString.ValidityCheck=Ensuring port {PortNumber} is available for testing.
+
+
+Event.FramingError.Message=Framing Error detected on port {PortNumber}.
+Event.FramingError.EventCode=1
+
+
+Event.ParityError.Message=Parity Error detected on port {PortNumber}.
+Event.ParityError.EventCode=2
+
+
+Event.OverrunError.Message=Overrun Error detected on Port {PortNumber}.
+Event.OverrunError.EventCode=3
+
+Event.WritingDataCharsSent.Message=Writing data...{SentData} chars of {TotalData} sent.
+Event.WritingDataCharsSent.EventCode=4
+Event.WritingDataCharsSent.Tip1=Tip.RestartMachine
+
+Event.MiscompareError.Message=Miscompare on port {PortNumber}: Read {ReadData}H, Expected {ExpectedData}H.
+Event.MiscompareError.EventCode=5
+
+Event.BaudMiscompareError.Message=Miscompare on port {PortNumber} at {BaudRate} baud: Read {ReadData}H, Expected {ExpectedData}H.
+Event.BaudMiscompareError.EventCode=38
+
+Event.UnableToOpenPort.Message=Port {PortNumber} could not be opened. {ErrorDescription}
+Event.UnableToOpenPort.EventCode=6
+
+Event.FailedRegTest.Message=Port {PortNumber} failed registers test.
+Event.FailedRegTest.EventCode=7
+
+Event.NoSerialPortsFound.Message=No available serial ports were detected.
+Event.NoSerialPortsFound.EventCode=8
+
+Event.FailedControlSignalsTest.Message=Port {PortNumber} failed Control Signals test.
+Event.FailedControlSignalsTest.EventCode=9
+
+Event.FailedSendRecieveTest.Message=Port {PortNumber} failed Data_Send_Receive test.
+Event.FailedSendRecieveTest.EventCode=10
+
+Event.TransmitTimeout.Message=Timeout waiting to transmit data on port {PortNumber} at {BaudRate} Baud.
+Event.TransmitTimeout.EventCode=11
+
+Event.AccessDeniedFailure.Message=There may be a device attached to port {PortNumber}, such as a modem, which is preventing access.
+Event.AccessDeniedFailure.EventCode=12
+
+Event.DTR_StuckHigh.Message=Port {PortNumber}: DTR->DSR Failed. DTR stuck high.
+Event.DTR_StuckHigh.EventCode=14
+Event.DTR_StuckHigh.Tip1=Tip.RestartMachine
+
+Event.DTR_StuckLow.Message=Port {PortNumber}: DTR->DSR Failed. DTR stuck low.
+Event.DTR_StuckLow.EventCode=15
+Event.DTR_StuckLow.Tip1=Tip.RestartMachine
+
+Event.CTS_StuckHigh.Message=Port {PortNumber}: RTS->CTS Failed. CTS stuck high.
+Event.CTS_StuckHigh.EventCode=16
+Event.CTS_StuckHigh.Tip1=Tip.RestartMachine
+
+Event.CTS_STuckLow.Message=Port {PortNumber}:  RTS->CTS Failed. CTS stuck low.
+Event.CTS_STuckLow.EventCode=17
+Event.CTS_STuckLow.Tip1=Tip.Loopback
+
+Event.WriteCompletedShort.Message=Port {PortNumber}: Fewer bytes were successfully transmitted than expected. {TotalSent} bytes sent, {TotalExpected}bytes expected.
+Event.WriteCompletedShort.EventCode=18
+Event.WriteCompletedShort.Tip1=Tip.Loopback
+
+Event.IncorrectCharCount.Message=Port {PortNumber}: Incorrect character count.{DataRead} read, {DataWritten} written.
+Event.IncorrectCharCount.EventCode=19
+Event.IncorrectCharCount.Tip1=Tip.Tip.Loopback
+
+Event.ReadDataIncorrect.Message=Port {PortNumber}: Read data incorrect.
+Event.ReadDataIncorrect.EventCode=20
+Event.ReadDataIncorrect.Tip1=Tip.Loopback
+
+Event.WritingData.Message=Writing data...
+Event.WritingData.EventCode=21
+
+Event.BadDevicePointer.Message=The pointer to the requested device is invalid.  The device will not be tested.  This is an internal logic error.
+Event.BadDevicePointer.EventCode=22
+
+Event.SerialPortTestAborted.Message=Test aborted for port {PortNumber}.
+Event.SerialPortTestAborted.EventCode=23
+
+Event.DevicePropertyCollectionFailure.Message=Port was unable to collect property information.
+Event.DevicePropertyCollectionFailure.EventCode=24
+
+Event.DriverNotInstalled.Message=The PC-Doctor driver is not installed properly. Reinstallation is required.
+Event.DriverNotInstalled.EventCode=25
+
+Event.NoValidBaudRateConfig.Message=Baud rate list not properly configured in the configuration file.  No valid baud rates found.
+Event.NoValidBaudRateConfig.EventCode=26
+
+Event.InvalidBaudRateConfig.Message=Invalid baud rate found in configuration file at baud rate index {BaudRateIndex}.
+Event.InvalidBaudRateConfig.EventCode=27
+
+Event.NotTestable.Message=Port {PortNumber} can not be tested.
+Event.NotTestable.EventCode=28
+
+Event.FailedSetup.Message=Failed setting port {PortNumber} to baud rate {BaudRate}.
+Event.FailedSetup.EventCode=29
+
+Event.FailedGetBaudRate.Message=Failed getting current baud rate from port {PortNumber}.
+Event.FailedGetBaudRate.EventCode=30
+
+Event.NoSerialPortsDetected.Message=No available serial ports were detected.
+Event.NoSerialPortsDetected.EventCode=31
+
+Event.Testing.Message=Testing
+Event.Testing.EventCode=33
+
+Event.ReadingData.Message=Reading data ...
+Event.ReadingData.EventCode=34
+
+Event.Detected.Message=Detected. Checking type.
+Event.Detected.EventCode=35
+
+Event.CheckModem.Message=Checking for modem ...
+Event.CheckModem.EventCode=36
+
+Event.EnumerationError.Message="Unable to discover serial port through plug and play."
+Event.EnumerationError.EventCode=37
+
+Parameter.ErrorLimit.Name=Max Number of Errors
+Parameter.ErrorLimit.Description=Max Number of errors allowed before exiting the test.
+
+
+# Tips are optional
+
+Tip.RestartMachine=Restart the Machine
+Tip.Loopback=Make sure that loopback adaptor is attached to serial port.
+

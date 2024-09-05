@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<createRFS>
+	<SystemID/>
+	<OtherSystemID/>
+	<ProblemType>System</ProblemType>
+	<ProblemArea>3DProbe</ProblemArea>
+	<ContactDetail>
+		<FirstName>BART</FirstName>
+		<LastName>SIMPSON</LastName>
+		<ContactPhone>414-645-3234</ContactPhone>
+		<ContactEmail>Bart.Simpson@ge.com</ContactEmail>
+	</ContactDetail>
+	<ExamNumber></ExamNumber>
+	<SeriesNumber></SeriesNumber>
+	<ImageNumber></ImageNumber>
+	<ProblemDescription>This is a test 5. This is a test &lt; Case Please Ignore. This problem is missing a SystemID due to a missing or unconfigured Agent but is still archived.</ProblemDescription>
+	<RequestSource>ContactGE</RequestSource>
+	<Status>Not Sent</Status>
+</createRFS>

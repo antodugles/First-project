@@ -1,0 +1,10 @@
+
+<Script description="Inventory Tests Only">
+	<TestSet>
+		<Device type="InventoryTest" />
+		<Test key="ExactMatchInventory">
+			<Parameter key="InventoryFileName" value="InventoryTestSample.xml"/>
+			<Parameter key="ForceReEnumerate" value="false"/>
+		</Test>
+	</TestSet>
+</Script>

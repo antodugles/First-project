@@ -1,0 +1,113 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * The pcdr2d3dvideo english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Garrett_Jones
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdr2d3dvideo/pcdr2d3dvideo.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=2D/3D Video test
+Module.Description=This module tests video cards.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.VideoMemoryTest.Name=Memory test
+Test.VideoMemoryTest.Description=Video Memory test
+
+Test.FixedTLPipelineWireframeTest.Name = Wireframe Line test
+Test.FixedTLPipelineWireframeTest.Description = Test Direct3D line drawing using mesh wireframes
+
+Test.FixedTLPipelineTest.Name=Fixed Transformation and Lighting test
+Test.FixedTLPipelineTest.Description=Test Direct3D fixed transformation and lighting engine
+
+Test.TLPipelineStressTest.Name=Transformation and Lighting Stress Test
+Test.TLPipelineStressTest.Description = Perform a longer test than FixedTLPipelineTest with more special effects
+
+Test.TLPipelineWireframeStressTest.Name=Wireframe Stress Test
+Test.TLPipelineWireframeStressTest.Description = Perform a longer test than FixedTLPipelineWireframeTest
+
+LocalizedString.FPS = Frames Per Second {fps} 
+LocalizedString.GPUStats = Vertex Processing {VertexProcessingTimePercent}% Pixel Processing {PixelProcessingTimePercent}% OtherProcessing {OtherGPUProcessingTimePercent}% Idle {Idle}%
+LocalizedString.TimeProgress = Animation percent completion {percent}%
+LocalizedString.VertexProcessingMode = Using {type} Vertex Processing mode
+LocalizedString.Hardware = Hardware
+LocalizedString.Mixed = Mixed
+LocalizedString.Software = Software
+  
+LocalizedString.StatusMode = Mode: {width}x{height}x{depth}{endl}
+LocalizedString.StatusSurfaceDimensions = Surface dimensions:  {width}x{height}, {size} M{endl}
+LocalizedString.StatusSurfaceIndex = Surface {currentSurface} of {totalSurface}{endl}
+LocalizedString.StatusPercentDone = Tested {numTested} of {totalToTest} M of memory{endl}
+LocalizedString.StatusPattern = Pattern {nthPattern} of {totalPattern}, 0x{testHexPattern}{endl}
+LocalizedString.NonLocalVideoMemory = AGP video memory{endl}
+LocalizedString.LocalVideoMemory = Local video memory{endl}
+
+Parameter.Enable.Name=Enable
+Parameter.Enable.Description=Enable\Disable a test
+
+Parameter.MaximumAGPMemoryTested.Name=MaximumAGPMemoryTested
+Parameter.MaximumAGPMemoryTested.Description=Specifies the maximum amount of AGP Video Memory to test
+
+Parameter.TestAGPMemory.Name=TestAGPMemory
+Parameter.TestAGPMemory.Description=Enable/Disable AGP memory testing
+
+Parameter.DisplayStatus.Name=DisplayStatus
+Parameter.DisplayStatus.Description=Show/Hide display status information from the screen
+
+Parameter.DisplayDimensions.Name=DisplayDimensions
+Parameter.DisplayDimensions.Description=Show/Hide display dimension information from the screen
+
+Parameter.DisplayTotal.Name=DisplayTotal
+Parameter.DisplayTotal.Description=Show/hide total amount of memory tested 
+
+Parameter.DisplayMode.Name=DisplayMode
+Parameter.DisplayMode.Description=show/hide current test display mode
+
+Parameter.DisplayPattern.Name= DisplayPattern
+Parameter.DisplayPattern.Description=Show/hide display pattern information from screen
+
+Parameter.DisplaySurfaceNumber.Name=DisplaySurfaceNumber
+Parameter.DisplaySurfaceNumber.Description=Show/hide tested surface count update from screen
+
+Parameter.DisplaySurfaceType.Name=DisplaySurfaceType
+Parameter.DisplaySurfaceType.Description=Show/hide display surface type information
+
+Event.ErrorSetCooperativeLevel.Message=Couldn't set the cooperative level
+Event.ErrorSetCooperativeLevel.EventCode=1
+
+Event.ErrorNoDirectDrawSupport.Message=Direct Draw Support is not possible with the current driver.
+Event.ErrorNoDirectDrawSupport.EventCode=2
+
+Event.ErrorInputDiffersFromOutput.Message= Error at pixel {pixX} {pixY} : {lf} Input color {pixelColor} not equal to output color {testPattern}
+Event.ErrorInputDiffersFromOutput.EventCode=3
+
+Event.ErrorNoMode.Message=No video mode or device object passed in to the test
+Event.ErrorNoMode.EventCode=4
+
+Event.Mode.Message=Mode {width} x {height} x {depth}
+Event.Mode.EventCode=5
+
+Event.DirectXResult.Message = {DirectXString}
+Event.DirectXResult.EventCode = 6

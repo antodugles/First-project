@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MetaData>
+	<EntServers>
+		<Server name="DEVELOPMENT">
+			<EntURL>http://ins2d.med.ge.com:9005</EntURL>
+			<TunURL>http://ins2d.med.ge.com:9009</TunURL>
+		</Server>
+		<Server name="STAGING">
+			<EntURL>https://stg.us1-ws.service.gehealthcare.com:443</EntURL>
+			<TunURL>https://stg.us1-rd.service.gehealthcare.com:443</TunURL>
+		</Server>
+		<Server name="PILOT1">
+			<EntURL>https://plt.us1-ws.service.gehealthcare.com:443</EntURL>
+			<TunURL>https://plt.us1-rd.service.gehealthcare.com:443</TunURL>
+		</Server>
+		<Server name="PILOT2">
+			<EntURL>https://plt2-us1-ws.service.gehealthcare.com:443</EntURL>
+			<TunURL>https://plt2-us1-rd.service.gehealthcare.com:443</TunURL>
+		</Server>
+		<Server name="PRODUCT">
+			<EntURL>https://us0-ws.service.gehealthcare.com:443</EntURL>
+			<TunURL>https://us0-rd.service.gehealthcare.com:443</TunURL>
+		</Server>
+		<Server name="OTHER"/>
+	</EntServers>
+	<Continent>AFRICA</Continent>
+	<Continent>ANTARCTICA</Continent>
+	<Continent>ASIA</Continent>
+	<Continent>EUROPE</Continent>
+	<Continent>NORTH AMERICA</Continent>
+	<Continent>OCEANIA</Continent>
+	<Continent>SOUTH AMERICA</Continent>
+	<Country continent="AFRICA">
+		<Ct>ALGERIA</Ct>
+		<Ct>ANGOLA</Ct>
+		<Ct>BENIN</Ct>
+		<Ct>BOTSWANA</Ct>
+		<Ct>BURKINA FASO</Ct>
+		<Ct>BURUNDI</Ct>
+		<Ct>CAMEROON</Ct>
+		<Ct>CAPE VERDE</Ct>
+		<Ct>CENTRAL AFRICAN REPUBLIC</Ct>
+		<Ct>CHAD</Ct>
+		<Ct>COMOROS</Ct>
+		<Ct>CONGO</Ct>
+		<Ct>DJIBOUTI</Ct>
+		<Ct>EGYPT</Ct>
+		<Ct>EQUATORIAL GUINEA</Ct>
+		<Ct>ERITREA</Ct>
+		<Ct>ETHIOPIA</Ct>
+		<Ct>GABON</Ct>
+		<Ct>GAMBIA</Ct>
+		<Ct>GHANA</Ct>
+		<Ct>GUINEA</Ct>
+		<Ct>GUINEA-BISSAU</Ct>
+		<Ct>IVORY COAST</Ct>
+		<Ct>KENYA</Ct>
+		<Ct>LESOTHO</Ct>
+		<Ct>LIBERIA</Ct>
+		<Ct>LIBYA</Ct>
+		<Ct>MADAGASCAR</Ct>
+		<Ct>MALAWI</Ct>
+		<Ct>MALI</Ct>
+		<Ct>MAURITANIA</Ct>
+		<Ct>MAURITIUS</Ct>
+		<Ct>MOROCCO</Ct>
+		<Ct>MOZAMBIQUE</Ct>
+		<Ct>NAMIBIA</Ct>
+		<Ct>NIGER</Ct>
+		<Ct>NIGERIA</Ct>
+		<Ct>REUNION</Ct>
+		<Ct>RWANDA</Ct>
+		<Ct>SAO TOME AND PRINCIPE</Ct>
+		<Ct>SENEGAL</Ct>
+		<Ct>SEYCHELLES</Ct>
+		<Ct>SIERRA LEONE</Ct>
+		<Ct>SOMALIA</Ct>
+		<Ct>SOUTH AFRICA</Ct>
+		<Ct>SUDAN</Ct>
+		<Ct>SWAZILAND</Ct>
+		<Ct>TANZANIA</Ct>
+		<Ct>TOGO</Ct>
+		<Ct>TUNISIA</Ct>
+		<Ct>UGANDA</Ct>
+		<Ct>WESTERN SAHARA</Ct>
+		<Ct>ZAMBIA</Ct>
+		<Ct>ZIMBABWE</Ct>
+	</Country>
+	<Country continent="ANTARCTICA">
+		<Ct>ANTARCTICA</Ct>
+	</Country>
+	<Country continent="ASIA">
+		<Ct>AFGHANISTAN</Ct>
+		<Ct>ARMENIA</Ct>
+		<Ct>AZERBAIJAN</Ct>
+		<Ct>BAHRAIN</Ct>
+		<Ct>BANGLADESH</Ct>
+		<Ct>BHUTAN</Ct>
+		<Ct>BRUNEI</Ct>
+		<Ct>CAMBODIA</Ct>
+		<Ct>CHINA</Ct>
+		<Ct>EAST TIMOR</Ct>
+		<Ct>GEORGIA</Ct>
+		<Ct>INDIA</Ct>
+		<Ct>INDONESIA</Ct>
+		<Ct>IRAN</Ct>
+		<Ct>IRAQ</Ct>
+		<Ct>ISRAEL</Ct>
+		<Ct>JAPAN</Ct>
+		<Ct>JORDAN</Ct>
+		<Ct>KAZAKHSTAN</Ct>
+		<Ct>KOREA, DEMOCRATIC PEOPLES REPUBLIC</Ct>
+		<Ct>KOREA, REPUBLIC OF</Ct>
+		<Ct>KUWAIT</Ct>
+		<Ct>KYRGYZSTAN</Ct>
+		<Ct>LAOS</Ct>
+		<Ct>LEBANON</Ct>
+		<Ct>MALAYSIA</Ct>
+		<Ct>MALDIVES</Ct>
+		<Ct>MONGOLIA</Ct>
+		<Ct>MYANMAR</Ct>
+		<Ct>NEPAL</Ct>
+		<Ct>OMAN</Ct>
+		<Ct>PAKISTAN</Ct>
+		<Ct>PHILIPPINES</Ct>
+		<Ct>QATAR</Ct>
+		<Ct>SAUDI ARABIA</Ct>
+		<Ct>SINGAPORE</Ct>
+		<Ct>SRI LANKA</Ct>
+		<Ct>SYRIA</Ct>
+		<Ct>TAIWAN</Ct>
+		<Ct>TAJIKISTAN</Ct>
+		<Ct>THAILAND</Ct>
+		<Ct>TURKMENISTAN</Ct>
+		<Ct>UNITED ARAB EMIRATES</Ct>
+		<Ct>UZBEKISTAN</Ct>
+		<Ct>VIET NAM</Ct>
+		<Ct>YEMEN</Ct>
+	</Country>
+	<Country continent="EUROPE">
+		<Ct>ALBANIA</Ct>
+		<Ct>ANDORRA</Ct>
+		<Ct>AUSTRIA</Ct>
+		<Ct>BELARUS</Ct>
+		<Ct>BELGIUM</Ct>
+		<Ct>BOSNIA AND HERZEGOWINA</Ct>
+		<Ct>BULGARIA</Ct>
+		<Ct>CROATIA</Ct>
+		<Ct>CYPRUS</Ct>
+		<Ct>CZECH REPUBLIC</Ct>
+		<Ct>DENMARK</Ct>
+		<Ct>ESTONIA</Ct>
+		<Ct>FINLAND</Ct>
+		<Ct>FRANCE</Ct>
+		<Ct>GERMANY</Ct>
+		<Ct>GREECE</Ct>
+		<Ct>HUNGARY</Ct>
+		<Ct>ICELAND</Ct>
+		<Ct>IRELAND</Ct>
+		<Ct>ITALY</Ct>
+		<Ct>LATVIA</Ct>
+		<Ct>LIECHTENSTEIN</Ct>
+		<Ct>LITHUANIA</Ct>
+		<Ct>LUXEMBOURG</Ct>
+		<Ct>MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</Ct>
+		<Ct>MALTA</Ct>
+		<Ct>MOLDOVA</Ct>
+		<Ct>MONACO</Ct>
+		<Ct>NETHERLANDS</Ct>
+		<Ct>NORWAY</Ct>
+		<Ct>POLAND</Ct>
+		<Ct>PORTUGAL</Ct>
+		<Ct>ROMANIA</Ct>
+		<Ct>RUSSIA</Ct>
+		<Ct>SAN MARINO</Ct>
+		<Ct>SERBIA AND MONTENEGRO</Ct>
+		<Ct>SLOVAKIA</Ct>
+		<Ct>SLOVENIA</Ct>
+		<Ct>SPAIN</Ct>
+		<Ct>SWEDEN</Ct>
+		<Ct>SWITZERLAND</Ct>
+		<Ct>TURKEY</Ct>
+		<Ct>UKRAINE</Ct>
+		<Ct>UNITED KINGDOM</Ct>
+		<Ct>VATICAN CITY</Ct>
+	</Country>
+	<Country continent="NORTH AMERICA">
+		<Ct>ANTIGUA AND BARBUDA</Ct>
+		<Ct>BAHAMAS</Ct>
+		<Ct>BARBADOS</Ct>
+		<Ct>BELIZE</Ct>
+		<Ct>CANADA</Ct>
+		<Ct>COSTA RICA</Ct>
+		<Ct>CUBA</Ct>
+		<Ct>DOMINICA</Ct>
+		<Ct>DOMINICAN REPUBLIC</Ct>
+		<Ct>EL SALVADOR</Ct>
+		<Ct>GREENLAND</Ct>
+		<Ct>GRENADA</Ct>
+		<Ct>GUATEMALA</Ct>
+		<Ct>HAITI</Ct>
+		<Ct>HONDURAS</Ct>
+		<Ct>JAMAICA</Ct>
+		<Ct>MEXICO</Ct>
+		<Ct>NICARAGUA</Ct>
+		<Ct>PANAMA</Ct>
+		<Ct>PUERTO RICO</Ct>
+		<Ct>SAINT KITTS AND NEVIS</Ct>
+		<Ct>SAINT LUCIA</Ct>
+		<Ct>SAINT VINCENT AND THE GRENADINES</Ct>
+		<Ct>TRINIDAD AND TOBAGO</Ct>
+		<Ct>UNITED STATES</Ct>
+	</Country>
+	<Country continent="OCEANIA">
+		<Ct>AUSTRALIA</Ct>
+		<Ct>MELANESIA</Ct>
+		<Ct>MICRONESIA</Ct>
+		<Ct>NEW ZEALAND</Ct>
+		<Ct>POLINESIA</Ct>
+	</Country>
+	<Country continent="SOUTH AMERICA">
+		<Ct>ARGENTINA</Ct>
+		<Ct>BOLIVIA</Ct>
+		<Ct>BRAZIL</Ct>
+		<Ct>CHILE</Ct>
+		<Ct>COLOMBIA</Ct>
+		<Ct>ECUADOR</Ct>
+		<Ct>FRENCH GUIANA</Ct>
+		<Ct>GUYANA</Ct>
+		<Ct>PARAGUAY</Ct>
+		<Ct>PERU</Ct>
+		<Ct>SURINAME</Ct>
+		<Ct>URUGUAY</Ct>
+		<Ct>VENEZUELA</Ct>
+	</Country>
+	<State country="UNITED STATES">
+		<St>ALABAMA</St>
+		<St>ALASKA</St>
+		<St>ARIZONA</St>
+		<St>ARKANSAS</St>
+		<St>CALIFORNIA</St>
+		<St>COLORADO</St>
+		<St>CONNECTICUT</St>
+		<St>DELAWARE</St>
+		<St>FLORIDA</St>
+		<St>GEORGIA</St>
+		<St>HAWAII</St>
+		<St>IDAHO</St>
+		<St>ILLINOIS</St>
+		<St>INDIANA</St>
+		<St>IOWA</St>
+		<St>KANSAS</St>
+		<St>KENTUCKY</St>
+		<St>LOUISIANA</St>
+		<St>MAINE</St>
+		<St>MARYLAND</St>
+		<St>MASSACHUSETTS</St>
+		<St>MICHIGAN</St>
+		<St>MINNESOTA</St>
+		<St>MISSISSIPPI</St>
+		<St>MISSOURI</St>
+		<St>MONTANA</St>
+		<St>NEBRASKA</St>
+		<St>NEVADA</St>
+		<St>NEW HAMPSHIRE</St>
+		<St>NEW JERSEY</St>
+		<St>NEW MEXICO</St>
+		<St>NEW YORK</St>
+		<St>NORTH CAROLINA</St>
+		<St>NORTH DAKOTA</St>
+		<St>OHIO</St>
+		<St>OKLAHOMA</St>
+		<St>OREGON</St>
+		<St>PENNSYLVANIA</St>
+		<St>RHODE ISLAND</St>
+		<St>SOUTH CAROLINA</St>
+		<St>SOUTH DAKOTA</St>
+		<St>TENNESSEE</St>
+		<St>TEXAS</St>
+		<St>UTAH</St>
+		<St>VERMONT</St>
+		<St>VIRGINIA</St>
+		<St>WASHINGTON</St>
+		<St>WASHINGTON DC</St>
+		<St>WEST VIRGINIA</St>
+		<St>WISCONSIN</St>
+		<St>WYOMING</St>
+	</State>
+	<SvcCenter continent="NORTH AMERICA;SOUTH AMERICA">
+		<Svc>JROC</Svc>
+		<Svc>RPROC</Svc>
+	</SvcCenter>
+	<SvcCenter continent="EUROPE">
+		<Svc>EURO</Svc>
+	</SvcCenter>
+	<SvcCenter continent="OTHERS">
+		<Svc>OTHERS</Svc>
+	</SvcCenter>
+	<LogLevels>
+	  <Level>ERROR</Level>
+		<Level>INFO</Level>
+		<Level>WARN</Level>
+		<Level>TRACE</Level>
+	</LogLevels>	
+</MetaData>

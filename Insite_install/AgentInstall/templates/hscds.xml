@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HttpServerConnDS>
+   <Asset name="__SA_ASSET_NAME__"
+          password="__SA_ASSET_PASSWORD__">
+      <Connection>
+         <Name>__SA_ASSET_NAME__</Name>
+         <InitiateProperty>RAInitiate</InitiateProperty>
+         <StateProperty>RAConnectionState</StateProperty>
+         <EnterpriseTunnelURL>__TUN_URL__</EnterpriseTunnelURL>
+         <SslCertFile>__SSL_CERT_FILE__</SslCertFile> 
+         <SslCaFile>__HSC_SSL_CA_FILE__</SslCaFile>
+         <ServerSocketAddress>localhost:__RA_VNC_LOCALPORT__</ServerSocketAddress>
+         <PollInterval>10</PollInterval>
+         <ConnectionTimeout>1800</ConnectionTimeout>
+         <ConnectionType>UL_VNC</ConnectionType>
+         <NumConcurrentConnections>__VNC_CONNECTIONS__</NumConcurrentConnections>
+		 <ProxyServerAddress>__PROXY_SERVER__</ProxyServerAddress>
+		 <ProxyServerAuthorization>
+			<AuthScheme name="__PROXY_AUTH_SCHEME__">
+				<SharedLib>__INSTALL_DIR__\bin\authntlm.dll</SharedLib> 
+				<AuthFuncName>NtlmAuthFunc</AuthFuncName> 
+			</AuthScheme>
+			<Username>__PROXY_AUTH_USERNAME__</Username> 
+			<Password>__PROXY_AUTH_PASSWORD__</Password> 
+		</ProxyServerAuthorization>
+
+         <TransportTunnelCfg>
+            <BufSize>4096</BufSize>
+            <DuplexMode>FULL</DuplexMode>
+            <ReadTO>2000</ReadTO>
+            <InactivityTO>300</InactivityTO>
+         </TransportTunnelCfg>
+      </Connection>
+<!--	  <Connection>
+         <Name>__SA_ASSET_NAME__#UL_Telnet</Name>
+         <InitiateProperty>TelnetInitiate</InitiateProperty>
+         <StateProperty>TelnetConnectionState</StateProperty>
+         <EnterpriseTunnelURL>__TUN_URL__</EnterpriseTunnelURL>
+         <SslCertFile>__SSL_CERT_FILE__</SslCertFile>
+         <SslCaFile>__HSC_SSL_CA_FILE__</SslCaFile>
+         <ServerSocketAddress>localhost:__RA_TELNET_LOCALPORT__</ServerSocketAddress>
+         <PollInterval>10</PollInterval>
+         <ConnectionTimeout>1800</ConnectionTimeout>
+         <ConnectionType>UL_Telnet</ConnectionType>
+		 <ProxyServerAddress>__PROXY_SERVER__</ProxyServerAddress>
+		 <ProxyServerAuthorization>
+			<AuthScheme name="__PROXY_AUTH_SCHEME__">
+				<SharedLib>__INSTALL_DIR__\bin\authntlm.dll</SharedLib> 
+				<AuthFuncName>NtlmAuthFunc</AuthFuncName> 
+			</AuthScheme>
+			<Username>__PROXY_AUTH_USERNAME__</Username> 
+			<Password>__PROXY_AUTH_PASSWORD__</Password> 
+		</ProxyServerAuthorization>
+
+         <TransportTunnelCfg>
+            <BufSize>4096</BufSize>
+            <DuplexMode>FULL</DuplexMode>
+            <ReadTO>2000</ReadTO>
+            <InactivityTO>300</InactivityTO>
+         </TransportTunnelCfg>
+      </Connection>
+	  <Connection>
+         <Name>__SA_ASSET_NAME__#UL_CSD</Name>
+         <InitiateProperty>CSDInitiate</InitiateProperty>
+         <StateProperty>CSDConnectionState</StateProperty>
+         <EnterpriseTunnelURL>__TUN_URL__</EnterpriseTunnelURL>
+         <SslCertFile>__SSL_CERT_FILE__</SslCertFile>
+         <SslCaFile>__HSC_SSL_CA_FILE__</SslCaFile>
+         <ServerSocketAddress>localhost:__RA_CSD_LOCALPORT__</ServerSocketAddress>
+         <PollInterval>5</PollInterval>
+         <ConnectionTimeout>1800</ConnectionTimeout>
+         <ConnectionType>UL_CSD</ConnectionType>
+		 <NumConcurrentConnections>10</NumConcurrentConnections>
+		 <ProxyServerAddress>__PROXY_SERVER__</ProxyServerAddress>
+		 <ProxyServerAuthorization>
+			<AuthScheme name="__PROXY_AUTH_SCHEME__">
+				<SharedLib>__INSTALL_DIR__\bin\authntlm.dll</SharedLib> 
+				<AuthFuncName>NtlmAuthFunc</AuthFuncName> 
+			</AuthScheme>
+			<Username>__PROXY_AUTH_USERNAME__</Username> 
+			<Password>__PROXY_AUTH_PASSWORD__</Password> 
+		</ProxyServerAuthorization>
+
+         <TransportTunnelCfg>
+            <BufSize>4096</BufSize>
+            <DuplexMode>FULL</DuplexMode>
+            <ReadTO>2000</ReadTO>
+            <InactivityTO>300</InactivityTO>
+         </TransportTunnelCfg>
+      </Connection> -->
+   </Asset>
+</HttpServerConnDS>

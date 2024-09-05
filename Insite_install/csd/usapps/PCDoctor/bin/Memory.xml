@@ -1,0 +1,5 @@
+<Script >
+	<TestSet>
+		<Device type="Memory"/>
+	</TestSet>
+</Script>

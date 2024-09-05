@@ -1,0 +1,111 @@
+
+Module.Name=Input Device Information
+Module.Description=This module gathers information for system input devices (KeyBoard and Pointing Devices).
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Property.Manufacturer.Name=Manufacturer
+Property.Manufacturer.Description=Manufacturer
+
+Property.DeviceID.Name=Device ID
+Property.DeviceID.Description=Device ID
+
+Property.Class.Description=Class
+Property.Class.Name=Class
+
+Property.Description.Description=Device Description
+Property.Description.Name=Device Description
+
+Property.Enumerator.Description=Enumerator
+Property.Enumerator.Name=Enumerator
+
+Property.ObjectName.Description=Object Name
+Property.ObjectName.Name=ObjectName
+
+Property.Service.Name=Service
+Property.Service.Description=Service
+
+Property.DriverGroup.Name=Driver
+Property.DriverGroup.Description=Driver
+
+Property.DriverVersion.Description=Version
+Property.DriverVersion.Name=Driver Version
+
+Property.Driver.Description=Driver 
+Property.Driver.Name=Driver Path
+
+Property.DriverDescription.Description=Driver Description
+Property.DriverDescription.Name=Driver Description
+
+Property.DriverProvider.Description=Driver Provider
+Property.DriverProvider.Name=Driver Provider
+
+Property.DriverFile.Description=Driver 
+Property.DriverFile.Name=Driver 
+
+Property.DriverKey.Description=Driver Key
+Property.DriverKey.Name=Driver Key
+
+Property.DriverSigned.Description=Driver Signed by Micrsoft WHQL
+Property.DriverSigned.Name=Driver Signed by Micrsoft WHQL 
+
+Property.ManufacturerID.Description=Manufacturer ID
+Property.ManufacturerID.Name=Manufacturer ID
+
+Property.ProductID.Description=Product ID
+Property.ProductID.Name=Product ID
+
+Property.Number_of_Axes.Description=Number of Axes
+Property.Number_of_Axes.Name=Number of Axes
+
+Property.Number_of_Buttons.Description=Number of Buttons
+Property.Number_of_Buttons.Name=Number of Buttons
+
+Property.Point_of_View.Description=Point of View
+Property.Point_of_View.Name=Point of View
+
+Property.X_Axis_Min.Description=X Axis Minimum
+Property.X_Axis_Min.Name=X Axis Minimum
+
+Property.X_Axis_Max.Description=X Axis Maximum
+Property.X_Axis_Max.Name=X Axis Maximum
+
+Property.Y_Axis_Min.Description=Y Axis Minimum
+Property.Y_Axis_Min.Name=Y Axis Minimum
+
+Property.Y_Axis_Max.Description=Y Axis Maximum
+Property.Y_Axis_Max.Name=Y Axis Maximum
+
+Property.Z_Axis_Min.Description=Z Axis Minimum
+Property.Z_Axis_Min.Name=Z Axis Minimum
+
+Property.Z_Axis_Max.Description=Z Axis Maximum
+Property.Z_Axis_Max.Name=Z Axis Maximum
+
+Property.U_Axis_Min.Description=U Axis Minimum
+Property.U_Axis_Min.Name=U Axis Minimum
+
+Property.U_Axis_Max.Description=U Axis Maximum
+Property.U_Axis_Max.Name=U Axis Maximum
+
+Property.V_Axis_Min.Description=V Axis Minimum
+Property.V_Axis_Min.Name=V Axis Minimum
+
+Property.V_Axis_Max.Description=V Axis Maximum
+Property.V_Axis_Max.Name=V Axis Maximum
+
+Property.R_Axis_Min.Description=R Axis Minimum
+Property.R_Axis_Min.Name=R Axis Minimum
+
+Property.R_Axis_Max.Description=R Axis Maximum
+Property.R_Axis_Max.Name=R Axis Maximum
+
+Property.Polling_Interval_Min.Description=Polling Interval Minimum
+Property.Polling_Interval_Min.Name=Polling Interval Minimum
+
+Property.Polling_Interval_Max.Description=Polling Interval Maximum
+Property.Polling_Interval_Max.Name=Polling Interval Maximum
+
+Property.DeviceIndex.Description=Device Index
+Property.DeviceIndex.Name=Device Index
+

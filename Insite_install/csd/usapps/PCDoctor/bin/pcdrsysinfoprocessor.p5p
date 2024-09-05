@@ -1,0 +1,192 @@
+
+Module.Name=Processor Device Information
+Module.Description=This module gathers information about CPU.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Property.Processor.Name=Processor
+Property.Processor.Description=Processor
+
+Property.Speed(Windows).Name=Speed(Windows)
+Property.Speed(Windows).Description=Speed(Windows)
+
+Property.Model.Name=Model
+Property.Model.Description=Model
+
+Property.pBrandIDStr.Name=Brand-ID
+Property.pBrandIDStr.Description=Brand-ID
+
+Property.ExtendedFeatures.Name=Extended Features
+Property.ExtendedFeatures.Description=Extended Features
+
+Property.Family.Name=Family
+Property.Family.Description=Family
+
+Property.Stepping.Name=Stepping
+Property.Stepping.Description=Stepping
+
+Property.Instructions.Name=Instructions
+Property.Instructions.Description=Instructions
+
+Property.BrandID.Name=BrandID
+Property.BrandID.Description=BrandID
+
+Property.Type.Name=Type
+Property.Type.Description=Type
+
+Property.Specification.Name=Specification
+Property.Specification.Description=Specification
+
+Property.BrandName.Name=Name	
+Property.BrandName.Description=Name
+
+Property.VendorString.Name=Vendor
+Property.VendorString.Description = Vendor
+
+Property.HyperThreadingSupport.Name=HyperThreading Support
+Property.HyperThreadingSupport.Description=HyperThreading Support
+
+Property.NumLogicalProcessors.Name=Number of  LogicalProcessors
+Property.NumLogicalProcessors.Description=Number of LogicalProcessors
+
+Property.PhysicalID.Name=APIC ID
+Property.PhysicalID.Description=APIC ID
+
+Property.L1DataCacheSize.Name=Size
+Property.L1DataCacheSize.Description=Size
+
+Property.L1DataCacheAssociativity.Name=Associativity
+Property.L1DataCacheAssociativity.Description=Associativity
+
+Property.L1DataCacheLineSize.Name=Line Size
+Property.L1DataCacheLineSize.Description=Line Size
+
+Property.L1InstructionCacheSize.Name=Size
+Property.L1InstructionCacheSize.Description=Size
+
+Property.L1InstructionCacheAssociativity.Name=Associativity
+Property.L1InstructionCacheAssociativity.Description=Associativity
+
+Property.L1InstructioCacheLineSize.Name=Line Size
+Property.L1InstructioCacheLineSize.Description=Line Size
+
+Property.L2CacheSize.Name=Size
+Property.L2CacheSize.Description=Size
+
+Property.L2CacheAssociativity.Name=Associativity
+Property.L2CacheAssociativity.Description=Associativity
+
+Property.L2CacheLineSize.Name=Line Size
+Property.L2CacheLineSize.Description=Line Size
+
+Property.L1TraceCacheSize.Name=Size
+Property.L1TraceCacheSize.Description=Size
+
+Property.L1TraceCacheAssociativity.Name=Associativity
+Property.L1TraceCacheAssociativity.Description=Associativity
+
+Property.PrefetchSize.Name=Prefetch Size
+Property.PrefetchSize.Description=Prefetch Size
+
+Property.CurrentSpeed(TSCMethod).Name=Current Speed(TSC Method)
+Property.CurrentSpeed(TSCMethod).Description=Current Speed(TSC Method)
+
+Property.ExtendedFamily.Name=Extended Family
+Property.ExtendedFamily.Description=Extended Family
+
+Property.ExtendedModel.Name=Extended Model
+Property.ExtendedModel.Description=Extended Model
+
+
+Property.Cache.Name=Cache
+Property.Cache.Description=Cache
+
+Property.L1Cache.Name=L1 Cache 
+Property.L1Cache.Description=L1 Cache 
+
+Property.L1CacheConfiguration.Name =  L1 Cache Configuration
+Property.L1CacheConfiguration.Description=  L1 Cache Configuration
+
+Property.L1SupportedSRAMType.Name =  L1 Supported SRAMType
+Property.L1SupportedSRAMType.Description=  L1 Supported SRAMType
+
+Property.L1CurrentSRAMType.Name =  L1 Current SRAM Type
+Property.L1CurrentSRAMType.Description=  L1 Current SRAM Type
+
+Property.L1DataCache.Name=L1 Data Cache
+Property.L1DataCache.Description=L1 Data Cache
+
+Property.L1InstructionCache.Name=L1 Instruction Cache
+Property.L1InstructionCache.Description=L1 Instruction Cache
+
+Property.L1TraceCache.Name=L1 Trace Cache
+Property.L1TraceCache.Description=L1 Trace Cache
+
+Property.L2Cache.Name=L2 Cache
+Property.L2Cache.Description=L2 Cache
+
+Property.L2CacheConfiguration.Name =  L2 Cache Configuration
+Property.L2CacheConfiguration.Description=  L2 Cache Configuration
+
+Property.L2SupportedSRAMType.Name =  L2 Supported SRAMType
+Property.L2SupportedSRAMType.Description= L2 Supported SRAMType
+
+Property.L2CurrentSRAMType.Name =  L2 Current SRAM Type
+Property.L2CurrentSRAMType.Description= L2 Current SRAM Type
+
+Property.L3Cache.Name=L3 Cache 
+Property.L3Cache.Description=L3 Cache 
+
+Property.L3CacheSize.Name=Size
+Property.L3CacheSize.Description=Size
+
+Property.L3CacheAssociativity.Name=Associativity
+Property.L3CacheAssociativity.Description=Associativity
+
+Property.L3CacheLineSize.Name=Line Size
+Property.L3CacheLineSize.Description=Line Size
+
+Property.ProcessorType.Name =  Processor Type
+Property.ProcessorType.Description=  Processor Type
+
+Property.ProcessorFamily.Name =  Processor Family
+Property.ProcessorFamily.Description=  Processor Family
+
+Property.ProcessorVoltage.Name =  Processor Voltage
+Property.ProcessorVoltage.Description=  Processor Voltage
+
+Property.ExternalClock.Name =  External Clock
+Property.ExternalClock.Description=  External Clock
+
+Property.SockStatus.Name =  Socket Status
+Property.SockStatus.Description=  Socket Status
+
+Property.Upgrade.Name =  Upgrade
+Property.Upgrade.Description=  Upgrade
+
+Property.SocketDesig.Name =  Socket Designation
+Property.SocketDesig.Description=  Socket Designation
+
+Property.MaximumSpeed(SMBIOS).Name =  Maximum Speed (SMBIOS)
+Property.MaximumSpeed(SMBIOS).Description= Maximum Speed( SMBIOS)
+
+Property.CurrentSpeed(SMBIOS).Name =  Current Speed (SMBIOS)
+Property.CurrentSpeed(SMBIOS).Description=  Current Speed (SMBIOS)
+
+Property.AffinityMask.Name =  Affinity Mask
+Property.AffinityMask.Description= Affinity Mask
+
+Property.PhysicalCPU.Name =  Physical CPU
+Property.PhysicalCPU.Description=  Physical CPU
+
+Property.Speed.Name =  Speed
+Property.Speed.Description=  Speed
+
+Property.CPUCount.Name=CPU Count
+Property.CPUCount.Description=The number of CPUs on the system.
+
+Property.DeviceId.Name=Device Id
+Property.DeviceId.Description=The CPU Id.
+
+Property.CPUFlags.Name=Flags
+Property.CPUFlags.Description=The kernel flags associated with the CPU.

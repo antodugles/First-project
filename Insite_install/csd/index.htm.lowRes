@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+
+<title>Service Desktop UNIX machine</title>
+</head>
+<frameset rows="100,*,48" border = "0" framespacing = "0" >
+  <frame
+    name="pna"
+    src="primaryLowResNavigationBar.htm"
+    scrolling="no"
+    marginwidth="0"
+    marginheight="0" >
+  </frame>
+  <frame
+    name="paa"
+    scrolling="auto"
+    noresize
+    target="rbottom"
+    src="home/homePage.html">
+    </frame>
+  <frameset cols="256,*">
+    <frame
+      name="leftbase"
+      src="reset_cleanup.htm"
+      scrolling="no"
+      noresize
+      target="reset_cleanup"
+      marginwidth="0"
+      marginheight="0"
+      framespacing="0">
+    </frame>
+    <frame
+      name="rightbase"
+      src="status_bar.htm"
+      scrolling="no"
+      noresize
+      target="bottom"
+      marginwidth="0"
+      marginheight="0"
+    </frame>
+  </frameset>
+</frameset>
+
+<noframes>
+<body>
+Need Frames To Run....
+</body>
+</noframes>
+
+</html>

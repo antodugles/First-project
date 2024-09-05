@@ -1,0 +1,46 @@
+﻿ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrpccard english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Chris_Matyas
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrpccard/pcdrpccard.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=PC Card
+Module.Description=Tests PC-Card sockets and cards.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.PcmciaStatusTest.Name=Status Test
+Test.PcmciaStatusTest.Description=PCCard socket status test
+
+Test.CardBusStatusTest.Name=Status Test
+Test.CardBusStatusTest.Description=PCCard socket status test
+
+Event.StatusTestFail.Message=Status test failed.
+Event.StatusTestFail.EventCode=1
+
+
+

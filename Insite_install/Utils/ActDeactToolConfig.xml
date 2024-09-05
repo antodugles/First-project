@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ActDeactTool FileRev="2">
+	<!--  -->
+	<!-- Activate/De-activate Tool Application. -->
+	<!-- (Sometimes referred to as the InSite ExC console) -->
+	<!--  -->
+	<!-- All elements in this file are default values but should be -->
+	<!--  modified by the individual product teams as needed. -->
+	<!--  Some elements may also be modified at installation time -->
+	<!--  by other installation scripts. -->
+	<!--  -->
+	<PopupMenuItems>
+		<StartStopQSA  Enable="0"></StartStopQSA>
+		<StartStopVNC  Enable="0"></StartStopVNC>
+		<StartStopBoth Enable="1"></StartStopBoth>
+		<ContactGE     Enable="0"></ContactGE>
+		<ConnectToGE   Enable="1"></ConnectToGE>
+		<ConfigTool    Enable="1"></ConfigTool>
+		<BackupRestore Enable="1"></BackupRestore>
+		<Options       Enable="1"></Options>
+		<Exit          Enable="1"></Exit>
+	</PopupMenuItems>
+	<!--  -->
+	<!-- Time (in seconds) between connection status updates. -->
+	<!--  Valid range: 5 to 30 seconds -->
+	<LoopRate>10</LoopRate>
+	<!--  -->
+	<!-- These ports will be monitored for local QSA connections -->
+	<!--  as well as other remote connections. -->
+	<MonitoredPorts>
+		<port name="Telnet">23</port>
+		<port name="CSD">80</port>
+		<port name="VNC">5900</port>
+	</MonitoredPorts>
+	<!--  -->
+	<!-- Interface to the INCP Proxy Service (if needed). -->
+	<!--  Enable = "1" enables INCP Proxy Service interface. -->
+	<!--  Enable = "0" disables interface.  -->
+	<!-- Prefix = 2-letter prefix of this DDCP (should always = "AD") -->
+	<!--  -->
+	<!-- See INCP Proxy Service documentation for more information. -->
+	<!-- All values MUST match the corresponding values currently set -->
+	<!--  in the InCpProxyConfig.xml file.  -->
+	<InCpProxy Enable="0">
+		<Prefix>AD</Prefix>
+	</InCpProxy>
+</ActDeactTool>

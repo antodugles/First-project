@@ -1,0 +1,106 @@
+﻿ /* <header>
+
+  * <cr> 
+
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+
+  * </cr>
+
+  * <addr>
+
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+
+  *  All rights reserved. 
+
+  * </addr>
+
+  *
+
+  * <lic>
+
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+
+  * ("Confidential Information"). You shall not disclose such confidential
+
+  * information and shall use it only in accordance with the terms of the license
+
+  * agreement you entered into with PC-Doctor.
+
+  * </lic>
+
+  * 
+
+  * <desc>
+
+  *  The pcdr1394 english strings properties file
+
+  * </desc>
+
+  * 
+
+  * <file>
+
+  * @author  Chris_Matyas
+
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdr1394/pcdr1394.p5p#1 $
+
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+
+  * @.change $Change: 39950 $
+
+  * @.last   $Author: Dan_Lu $
+
+  * </file>
+
+  * </header>
+
+  */
+
+
+
+Module.Name=IEEE 1394
+Module.Description=Tests the IEEE 1394 bus.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.BusResetTest.Name = 1394 Bus Reset Test
+Test.BusResetTest.Description = Resets the 1394 bus and compares the before and after generation count.
+
+Test.ConfigROMTest.Name= 1394 Config ROM Test
+Test.ConfigROMTest.Description= Tests the 1394 Config ROM CRC.
+
+Event.ControllerNotFound.Message=Bus {ControllerNumber} The 1394 Controller was not found. Return code {ServiceReturnCode} Error code {LastServiceError}
+Event.ControllerNotFound.EventCode=0
+
+Event.BusResetFailure.Message =There was an error resetting the 1394 bus
+Event.BusResetFailure.EventCode=2
+
+Event.ConfigROMTestFailure.Message= Bus {ControllerNumber} The Controller CRC is not correct.
+Event.ConfigROMTestFailure.EventCode=15
+
+Event.InternalModuleError.Message= Bus {ControllerNumber}  Internal return code {ServiceReturnCode} error code {LastServiceError}.
+Event.InternalModuleError.EventCode=17
+
+
+Event.InternalModuleError_UB.Message= Internal module error .
+Event.InternalModuleError_UB.EventCode=1
+
+Event.ControllerNotFound_UB.Message=Bus {ControllerNumber} The 1394 Controller was not found.
+Event.ControllerNotFound_UB.EventCode=3
+
+Event.CouldnotLoadDriver.Message =Could not load device driver
+Event.CouldnotLoadDriver.EventCode=4
+
+Event.DriverInitFailure.Message =Driver initialization failure
+Event.DriverInitFailure.EventCode=5
+
+Event.CannotOpenController.Message =Bus {ControllerNumber} Cannot open 1394 controller
+Event.CannotOpenController.EventCode=6
+
+Event.CannotReadConfigROM.Message =Bus {ControllerNumber} Cannot read data from config ROM
+Event.CannotReadConfigROM.EventCode=7
+
+
+
+
+

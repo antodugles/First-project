@@ -1,0 +1,80 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdrcdrw
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+Test.ReadWriteTest.BlankMediaOnly = false
+
+# CheckForQualifiedMedia (true/false) Setting CheckForQualifiedMedia to true the
+# module  will check whether the media being used is on the manufacturers
+# qualifed media list  and will prompt to alert user when the test failed on
+# unqualified media. Setting it  to false will disable the prompt so end user
+# will not be alert of unqualified media.
+Test.ReadWriteTest.CheckForQualifiedMedia = false
+
+# DiscLeadInLeadOutTime (LEAD_IN_TIME,LEAD_OUT_TIME) A list of lead-in / lead-out
+# time  pairs that are used for checking for qualified media. Each pairs
+# represent the lead-in  lead-out time of each individual qualifed media.  NOTE:
+# All lead-in lead-out time are  seperated by commas and they must be in pairs
+# such as the following example:  DISC_1_Lead_In_Time, DISC_1_Lead_Out_Time, 
+# DISC_2_Lead_In_Time, DISC_2_Lead_Out_Time,  DISC_3_Lead_In_Time,
+# DISC_3_Lead_Out_Time,   Lead-In/Lead-Out time format = MINUTE:SECOND:FRAME
+Test.ReadWriteTest.DiscLeadInLeadOutTime =  97:26:66,97:59:73, 97:17:06,79:59:74, 97:26:65,79:59:74, 97:34:23,74:43:00, 97:27:00,74:12:00, 97:26:67,75:00:00, 97:27:66,79:59:71, 97:15:17,79:59:70, 97:34:23,79:59:73, 97:25:29,79:59:74, 97:24:01,79:59:73, 97:26:65,79:59:74, 97:17:01,79:59:74, 97:34:24,74:43:00, 97:26:67,79:59:64, 97:34:25,79:59:74, 97:26:66,79:59:71, 97:22:67,79:59:74, 97:25:35,79:59:74, 97:26:45,79:59:73, 97:25:29,74:30:00, 97:32:19,79:59:72, 97:32:19,79:59:71, 97:24:01,79:59:72, 97:15:05,79:59:74, 97:24:16,00:00:00, 97:24:16,79:59:74, 97:25:30,74:41:47, 97:32:11,79:59:74, 97:10:00,79:59:74, 97:25:30,79:59:73, 97:32:10,79:59:74, 97:10:00,79:59:74, 97:25:31,79:59:74, 97:10:03,79:59:74, 97:22:60,74:41:50
+
+Test.ReadWriteTest.Enable = true
+
+Test.ReadWriteTest.NumberOfRepetitions = 400
+
+Test.ReadWriteTest.PostMinimalErase = false
+
+Test.ReadWriteTest.PreEraseOnlyIfRequired = true
+
+Test.ReadWriteTest.PromptToEraseOnAbort = false
+
+Test.ReadWriteTest.PromptUserForMedia = true
+
+# ReRunTestOnFailure: (true/false) Setting ReRunTestOnFailure to true will 
+# generate a prompt to ask end user whether they would like to rerun the test 
+# when test failed. Setting it to false will not prompt end user to rerun on
+# failure.
+Test.ReadWriteTest.ReRunTestOnFailure = true
+
+Test.ReadWriteTest.SecondsForBlanking = 120
+
+Test.ReadWriteTest.WarnOnNonBlankMedia = true
+
+

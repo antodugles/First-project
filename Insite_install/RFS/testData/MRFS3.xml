@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<createRFS>
+	<SystemID>ILINQTEST1</SystemID>
+	<OtherSystemID>ILINQTEST2</OtherSystemID>
+	<ProblemType>System</ProblemType>
+	<ProblemArea>Image</ProblemArea>
+	<ContactDetail>
+		<FirstName>JAMES</FirstName>
+		<LastName>KAHN</LastName>
+		<ContactPhone>250-334-0345</ContactPhone>
+		<ContactEmail>James.Kahn@ge.com</ContactEmail>
+	</ContactDetail>
+	<ExamNumber></ExamNumber>
+	<SeriesNumber></SeriesNumber>
+	<ImageNumber></ImageNumber>
+	<ProblemDescription>This is a test case please ignore1. This is a test &lt; Case Please Ignore.</ProblemDescription>
+	<RequestSource>ContactGE</RequestSource>
+	<Status>Not Sent</Status>
+</createRFS>

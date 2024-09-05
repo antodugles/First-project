@@ -1,0 +1,673 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Raymond_Chow
+  
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/sysinfo/pcdrsysinfosystemboard/pcdrsysinfosystemboard.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=System Board Device Information
+Module.Description=This module gathers information about the System Board.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+LocalizedString.ManufactureDate=Week {week}, Year {year}
+
+Property.SCSIAddress.Name=SCSI Address
+Property.SCSIAddress.Description= SCSI Address
+
+Property.Handle.Name = SMBIOS Structure Handle
+Property.Handle.Description = SMBIOS Structure Handle
+
+Property.StrucLen.Name = SMBIOS Structure Length
+Property.StrucLen.Description = SMBIOS Structure Length
+
+Property.Type.Name = SMBIOS Structure Type
+Property.Type.Description = SMBIOS Structure Type
+
+Property.ReleaseDate.Name = Release Date
+Property.ReleaseDate.Description = Release Date
+
+Property.ROMSize.Name = ROM Size
+Property.ROMSize.Description = ROM Size
+
+Property.StartSegment.Name = Start Segment
+Property.StartSegment.Description = Start Segment
+
+Property.Vendor.Name = Vendor
+Property.Vendor.Description = Vendor
+
+Property.Version.Name = Version
+Property.Version.Description = Version
+
+Property.Characteristics.Name = Characteristics
+Property.Characteristics.Description = Characteristics
+
+Property.SysManufacturer.Name = System Manufacturer
+Property.SysManufacturer.Description = System Manufacturer
+
+Property.ProductName.Name = Product Name
+Property.ProductName.Description = Product Name
+
+Property.SysVersion.Name = System Version
+Property.SysVersion.Description = System Version
+
+Property.SysSerial.Name = System Serial Number
+Property.SysSerial.Description = System Serial Number
+
+Property.SysUUID.Name = System UUID(Universally Unique Identifier)
+Property.SysUUID.Description = System UUID(Universally Unique Identifier)
+
+Property.SysWakeType.Name = System Wake Type
+Property.SysWakeType.Description = System Wake Type
+
+Property.BoardManufacturer.Name = Manufacturer
+Property.BoardManufacturer.Description = Manufacturer
+
+Property.BoardProduct.Name = Name
+Property.BoardProduct.Description = Name
+
+Property.BoardVersion.Name = Version
+Property.BoardVersion.Description = Version
+
+Property.BoardSerial.Name = Serial
+Property.BoardSerial.Description = Serial
+
+Property.BoardAssetTag.Name = Asset Tag Number
+Property.BoardAssetTag.Description = Asset Tag Number
+ 
+Property.featuresFlag.Name = Features 
+Property.featuresFlag.Description = Features
+
+Property.ChassisType.Name = Type
+Property.ChassisType.Description = Type
+
+Property.BootState.Name = Boot State
+Property.BootState.Description = Boot State
+
+Property.ThermalState.Name = Thermal State
+Property.ThermalState.Description = Thermal State
+
+Property.PowerState.Name = Power State
+Property.PowerState.Description = Power State
+
+Property.SecurityStatus.Name = Security Status
+Property.SecurityStatus.Description = Security Status
+
+Property.OEMDefined.Name = OEM Defined String 
+Property.OEMDefined.Description = OEM Defined String 
+
+Property.Height.Name = Height
+Property.Height.Description = Height
+
+Property.Chords.Name = Chords
+Property.Chords.Description = Chords
+
+Property.ExternalRefDesignator.Name =  External Ref. Designator
+Property.ExternalRefDesignator.Description =  External Ref. Designator
+
+Property.InternalRefDesignator.Name = Internal Ref. Designator
+Property.InternalRefDesignator.Description = Internal Ref. Designator
+
+Property.ConnType.Name = Internal Connector Type
+Property.ConnType.Description = Internal Connector Type
+
+Property.ExtConnType.Name = External Connector Type
+Property.ExtConnType.Description = External Connector Type
+
+Property.PortType.Name = Type
+Property.PortType.Description = Type
+
+Property.Designation.Name = Designation
+Property.Designation.Description = Designation
+
+Property.SlotType.Name = Type
+Property.SlotType.Description = Type
+
+Property.SlotWidth.Name = Width
+Property.SlotWidth.Description = Width
+
+Property.CurrentUsage.Name = Current Usage
+Property.CurrentUsage.Description = Current Usage
+
+Property.SlotLength.Name = Length
+Property.SlotLength.Description = Length
+
+Property.SlotID.Name = ID
+Property.SlotID.Description = ID
+
+Property.Char1.Name = Characteristic 1
+Property.Char1.Description = Characteristic 1
+
+Property.Char2.Name = Characteristic 2
+Property.Char2.Description = Characteristic 2
+
+Property.OnBoardType.Name = OnBoardType
+Property.OnBoardType.Description = OnBoardType
+
+Property.Description.Name = Description
+Property.Description.Description = Description
+
+Property.OEMStrings.Name = OEM Strings
+Property.OEMStrings.Description = OEM Strings
+
+Property.NumStrings.Name = Total Number of Strings
+Property.NumStrings.Description = Total Number of Strings
+
+Property.Options.Name = Options
+Property.Options.Description = Options
+
+Property.TotalOptions.Name = Total Options
+Property.TotalOptions.Description = Total Options
+
+Property.NumInstallableLangs.Name = Total number of Installable Language(s)
+Property.NumInstallableLangs.Description = Total number of Installable Language(s)
+
+Property.BIOSLanguages.Name = Languages
+Property.BIOSLanguages.Description = Languages
+
+Property.Format.Name = Format
+Property.Format.Description = Format
+
+Property.Length.Name = Length
+Property.Length.Description = Length
+
+Property.HeaderStart.Name = Header Start
+Property.HeaderStart.Description = Header Start
+
+Property.DataStart.Name = Data Start
+Property.DataStart.Description = Data Start
+
+Property.AccessMethod.Name = Access Method
+Property.AccessMethod.Description = Access Method
+
+Property.logStatus.Name = Log Status
+Property.logStatus.Description = Log Status
+
+Property.headerFormat.Name = Header Format
+Property.headerFormat.Description = Header Format
+
+Property.NumSupportedHeaders.Name = Number of Supported Headers
+Property.NumSupportedHeaders.Description = Number of Supported Headers
+
+Property.LenSupportedHeaders.Name = Length of Supported Headers
+Property.LenSupportedHeaders.Description = Length of Supported Headers
+
+
+Property.NumMemDev.Name = Number of Memory Slots
+Property.NumMemDev.Description =  Number of Memory Slots
+
+Property.MemMaxCap.Name = Maximum Memory Capacity(Supported)
+Property.MemMaxCap.Description = Maximum Memory Capacity(Supported)
+
+Property.MemErrCorr.Name = Memory Error Correction
+Property.MemErrCorr.Description =  Memory Error Correction
+
+Property.TotalWidth.Name = Total Width
+Property.TotalWidth.Description = Total Width
+
+Property.DataWidth.Name = Data Width
+Property.DataWidth.Description = Data Width
+
+Property.Size.Name = Size
+Property.Size.Description = Size
+
+Property.formFactor.Name = Form Factor
+Property.formFactor.Description = Form Factor
+
+Property.deviceSet.Name = Device Set
+Property.deviceSet.Description = Device Set
+
+Property.Speed.Name = Speed
+Property.Speed.Description = Speed
+
+Property.memType.Name = Type
+Property.memType.Description = Type
+
+Property.TypeDetail.Name = Type Detail
+Property.TypeDetail.Description = Type Detail
+
+Property.DeviceLocation.Name = Device Location
+Property.DeviceLocation.Description = Device Location
+
+Property.BankLocation.Name = Bank Location
+Property.BankLocation.Description = Bank Location
+
+Property.Manufacturer.Name = Manufacturer
+Property.Manufacturer.Description = Manufacturer
+
+Property.Serial.Name = Serial Number 
+Property.Serial.Description =  Serial Number 
+
+Property.AssetTag.Name = Asset Tag Number
+Property.AssetTag.Description = Asset Tag Number
+
+Property.PartNum.Name = Part Number
+Property.PartNum.Description = Part Number
+
+Property.errorType.Name = Error Type
+Property.errorType.Description = Error Type
+
+Property.errorGranularity.Name = Error Granularity
+Property.errorGranularity.Description = Error Granularity
+
+Property.errorOpertation.Name = Error Opertation
+Property.errorOpertation.Description = Error Opertation
+
+Property.vendorSyndrome.Name = Vendor Syndrome
+Property.vendorSyndrome.Description = Vendor Syndrome
+
+Property.memArrayErrorAddress.Name = Memory Array Error Address
+Property.memArrayErrorAddress.Description = Memory Array Error Address
+
+Property.deviceErrorAddress.Name = Device Error Address
+Property.deviceErrorAddress.Description = Device Error Address
+
+Property.errorResolution.Name = Error Resolution
+Property.errorResolution.Description = Error Resolution
+
+Property.PartitionWidth.Name = PartitionWidth
+Property.PartitionWidth.Description = PartitionWidth
+
+Property.StartAddress.Name = Start Address
+Property.StartAddress.Description = Start Address
+
+Property.PartitionPos.Name = Partition Position
+Property.PartitionPos.Description = Partition Position
+
+Property.interleavePos.Name = Interleave Position
+Property.interleavePos.Description = Interleave Position
+
+Property.interleaveDepth.Name = Interleave Depth
+Property.interleaveDepth.Description = Interleave Depth
+
+Property.NumButtons.Name = Number of Buttons
+Property.NumButtons.Description = Number of Buttons
+
+Property.interface.Name = Interface
+Property.interface.Description = Interface
+
+Property.devType.Name = Device Type
+Property.devType.Description = Device Type
+
+Property.location.Name = Location
+Property.location.Description = Location
+
+Property.manu.Name = Manufacturer
+Property.manu.Description = Manufacturer
+
+Property.serial.Name = Serial Number
+Property.serial.Description = Serial Number
+
+Property.devName.Name = Device Name
+Property.devName.Description = Device Name
+
+Property.devChemistry.Name = Device Chemistry
+Property.devChemistry.Description = Device Chemistry
+
+Property.DesignCapacity.Name = Design Capacity
+Property.DesignCapacity.Description = Design Capacity
+
+Property.DesignVoltage.Name = Design Voltage
+Property.DesignVoltage.Description = Design Voltage
+
+Property.SBDSVersionNum.Name = SBDS Version Number
+Property.SBDSVersionNum.Description = SBDS Version Number
+
+Property.MaxPercentError.Name = Maximum Error Percentage
+Property.MaxPercentError.Description = Maximum Error Percentage
+
+Property.SBDSSerialNum.Name = SBDS Serial Number
+Property.SBDSSerialNum.Description = SBDS Serial Number
+
+Property.SBDDevChem.Name = SBD Device Chem
+Property.SBDDevChem.Description = SBD Device Chem
+
+Property.sbdManuDate.Name = SBD Manufacturing Date
+Property.sbdManuDate.Description = SBD Manufacturing Date
+
+Property.OEMstr.Name = OEM Defined String
+Property.OEMstr.Description = OEM Defined String
+
+Property.Status.Name = Status
+Property.Status.Description = Status
+
+Property.BootOption.Name = Boot Option
+Property.BootOption.Description = Boot Option
+
+Property.bootOptionOnLimit.Name = Boot Option On Limit
+Property.bootOptionOnLimit.Description = Boot Option On Limit
+
+Property.watchDogTimer.Name = Watch Dog Timer
+Property.watchDogTimer.Description = Watch Dog Timer
+
+Property.resetCount.Name = Reset Count
+Property.resetCount.Description = Reset Count
+
+Property.resetLimit.Name = Reset Limit
+Property.resetLimit.Description = Reset Limit
+
+Property.timeoutInterval.Name = Timeout Interval
+Property.timeoutInterval.Description = Timeout Interval
+
+Property.timeout.Name = Timeout
+Property.timeout.Description = Timeout
+
+Property.frontPanelResetStatus.Name = Front Panel Reset Status
+Property.frontPanelResetStatus.Description = Front Panel Reset Status
+
+Property.adminPassStatus.Name = Administrator Password Status
+Property.adminPassStatus.Description = Administrator Password Status
+
+Property.keyPassStatus.Name = Keyboard Password Status
+Property.keyPassStatus.Description = Keyboard Password Status
+
+Property.poweronpasswordstatus.Name = Power-On Password Status
+Property.poweronpasswordstatus.Description = Power-On Password Status
+
+Property.poweronmonth.Name = Power-On Month
+Property.poweronmonth.Description = Power-On Month
+
+Property.poweronday.Name = Power-On Day
+Property.poweronday.Description = Power-On Day
+
+Property.poweronhour.Name = Power-On Hour
+Property.poweronhour.Description = Power-On Hour
+
+Property.poweronminute.Name = Power-On Minute
+Property.poweronminute.Description = Power-On Minute
+
+Property.poweronsec.Name = Power-On Second
+Property.poweronsec.Description = Power-On Second
+
+Property.Desc.Name = Description
+Property.Desc.Description = Description
+
+Property.status.Name = Status
+Property.status.Description = Status
+
+Property.maxValue.Name = Maximum Value
+Property.maxValue.Description = Maximum Value
+
+Property.minValue.Name = Minimim Value
+Property.minValue.Description = Minimim Value
+
+Property.resolution.Name = Resolution
+Property.resolution.Description = Resolution
+
+Property.tolerance.Name = Tolerance
+Property.tolerance.Description = Tolerance
+
+Property.accuracy.Name = Accuracy
+Property.accuracy.Description = Accuracy
+
+Property.OEMStr.Name = OEM-Defined String
+Property.OEMStr.Description = OEM-Defined String
+
+Property.nominalVal.Name = Nominal Value
+Property.nominalVal.Description = Nominal Value
+
+
+Property.DeviceType.Name = Device Type
+Property.DeviceType.Description = Device Type
+
+Property.Cooling.Name = Cooling
+Property.Cooling.Description = Cooling
+
+Property.InBound.Name = In-Bound Connection
+Property.InBound.Description = In-Bound Connection
+
+Property.OutBound.Name = Out-Bound Connection
+Property.OutBound.Description = Out-Bound Connection
+
+Property.AddressingScheme.Name = Addressing Scheme
+Property.AddressingScheme.Description = Addressing Scheme
+
+Property.Address.Name = Address
+Property.Address.Description = Address
+
+Property.LowerNonCritical.Name = Lower Non-Critical Threshold
+Property.LowerNonCritical.Description = Lower Non-Critical Threshold
+
+Property.UpperNonCritical.Name = Upper Non-Critical Threshold
+Property.UpperNonCritical.Description = Upper Non-Critical Threshold
+
+Property.LowerCritical.Name = Lower Critical Threshold
+Property.LowerCritical.Description = Lower Critical Threshold
+
+Property.UpperCritical.Name = Upper Critical Threshold
+Property.UpperCritical.Description = Upper Critical Threshold
+
+Property.LowerNonRecoverable.Name = Lower Non-Recoverable Threshold
+Property.LowerNonRecoverable.Description = Lower Non-Recoverable Threshold
+
+Property.UpperNonRecoverable.Name = Upper Non-Recoverable Threshold
+Property.UpperNonRecoverable.Description = Upper Non-Recoverable Threshold
+
+Property.MaxChannelLoad.Name = Maximum Channel Load
+Property.MaxChannelLoad.Description = Maximum Channel Load
+
+Property.MaxDeviceCount.Name = Maximum Device Count
+Property.MaxDeviceCount.Description = Maximum Device Count
+
+Property.InterfaceType.Name = Interface Type
+Property.InterfaceType.Description = Interface Type
+
+Property.I2SlaveAddress.Name = I2 Slave Address
+Property.I2SlaveAddress.Description = I2 Slave Address
+
+Property.NVStorageAddress.Name = NV Storage Address
+Property.NVStorageAddress.Description = NV Storage Address
+
+Property.MaxPowerCapacity.Name = Maximum Power Capacity
+Property.MaxPowerCapacity.Description = Maximum Power Capacity
+
+Property.PowerGrp.Name = Power Group
+Property.PowerGrp.Description = Power Group
+
+Property.DeviceName.Name = Device Name
+Property.DeviceName.Description = Device Name
+
+Property.Model.Name = Model
+Property.Model.Description = Model
+
+Property.Revision.Name = Revision
+Property.Revision.Description = Revision
+
+Property.ChangeToken.Name = Change Token
+Property.ChangeToken.Description = Change Token
+
+Property.LogAccess.Name = Log Access
+Property.LogAccess.Description = Log Access
+
+Property.StructureLength.Name = Structure Length
+Property.StructureLength.Description = Structure Length
+
+Property.PhysicalMemArrayHandle.Name = Physical Memory Array Handle
+Property.PhysicalMemArrayHandle.Description = Physical Memory Array Handle
+
+Property.HeaderInfo.Name = Header Information
+Property.HeaderInfo.Description = Header Information
+
+Property.EndAddress.Name = End Address
+Property.EndAddress.Description = End Address
+
+Property.MemArrayHandle.Name = Memory Array Handle
+Property.MemArrayHandle.Description = Memory Array Handle
+
+Property.InternalConnectorType.Name = Internal Connector Type
+Property.InternalConnectorType.Description = Internal Connector Type
+
+Property.MemDeviceHandle.Name = Memory Device Handle
+Property.MemDeviceHandle.Description = Memory Device Handle
+
+Property.AvailablePhysicalMemory.Name = Free Physical Memory
+Property.AvailablePhysicalMemory.Description = Free Physical Memory
+
+Property.TotalPhysicalMemory.Name=Total Physical Memory 
+Property.TotalPhysicalMemory.Description=Total Physical Memory
+
+Property.AvailableVirtualMemory.Description=Free Virtual Memory
+Property.AvailableVirtualMemory.Name=Free Virtual Memory
+
+Property.TotalVirtualMemory.Description=Total Virtual Memory
+Property.TotalVirtualMemory.Name=Total Virtual Memory
+
+Property.PageFileSpace.Description=Page File Space
+Property.PageFileSpace.Name=Page File Space
+
+Property.PageFileLocation.Description=Page File Location 
+Property.PageFileLocation.Name=Page File 
+
+
+Property.Use.Description=Use
+Property.Use.Name=Use
+
+Property.MemLoc.Description=Memory Location
+Property.MemLoc.Name= Memory Location
+
+Property.TempProbeHandle.Description= Temparature Probe Handle
+Property.TempProbeHandle.Name=Temparature Probe Handle
+
+Property.NumStringspOEMStrings.Description=Number of OEM-Defined Strings
+Property.NumStringspOEMStrings.Name=Number of OEM-Defined Strings
+
+Property.SysName.Name=Model
+Property.SysName.Description=Model
+
+Property.FeaturesFlag.Name=Features
+Property.FeaturesFlag.Description=Features
+
+Property.MemErrCorrection.Name=Memory Error Correction
+Property.MemErrCorrection.Description=Memory Error Correction
+
+Property.SMBIOSGeneralInfo.Name = SMBIOS General Information
+Property.SMBIOSGeneralInfo.Description = SMBIOS General Information
+
+Property.SMBIOSEntryPointRevision.Name = SMBIOS Entry Point Revision
+Property.SMBIOSEntryPointRevision.Description = SMBIOS Entry Point Revision
+
+Property.SMBIOSVersion.Name = SMBIOS Version
+Property.SMBIOSVersion.Description = SMBIOS Version
+
+Property.SMBIOSStructureLength.Name = SMBIOS Structure Length
+Property.SMBIOSStructureLength.Description = SMBIOS Structure Length
+
+Property.SMBIOSMaxStructureSize.Name = SMBIOS Maximum Structure Size
+Property.SMBIOSMaxStructureSize.Description = SMBIOS Maximum Structure Size
+
+Property.DMIGeneralInfo.Name = DMI General Informatio
+Property.DMIGeneralInfo.Description = DMI General Informatio
+
+Property.DMISignature.Name = DMI Signature
+Property.DMISignature.Description = DMI Signature
+
+Property.DMIStrucTableLength.Name = DMI Strucure Table Length
+Property.DMIStrucTableLength.Description = DMI Strucure Table Length
+
+Property.DMINumStrucs.Name = Number of DMI Structures
+Property.DMINumStrucs.Description = Number of DMI Structures
+
+Property.DMIStructureTableAddress.Name = DMI Structure Table Address
+Property.DMIStructureTableAddress.Description = DMI Structure Table Address
+
+Property.totalMemChips.Name = Total Number of Memory Chips
+Property.totalMemChips.Description = Total Number of Memory Chips
+
+Property.DIMMCount.Name = Total Number Of DIMM slots
+Property.DIMMCount.Description = Total Number Of DIMM slots
+
+Property.DIMMFCount.Name = Total Number of Memory Chips
+Property.DIMMFCount.Description = Total Number of Memory Chips
+
+Property.CPUCount.Name = Total Number of CPUs
+Property.CPUCount.Description = Total Number of CPUs
+
+Property.HDDCount.Name = Total Number of Hard Drives 
+Property.HDDCount.Description = Total Number of Hard Drives
+
+Property.OpticalCount.Name = Total Number of Optical Drives 
+Property.OpticalCount.Description = Total Number of Optical Drives
+
+Property.VidCount.Name = Total Number of Video Cards 
+Property.VidCount.Description = Total Number of Video Cards
+
+Property.PCIDevCount.Name = Total Number of PCI Devices
+Property.PCIDevCount.Description = Total Number of PCI Devices
+
+Property.TotalMemory.Name = Total Physical Memory 
+Property.TotalMemory.Description = Total Physical Memory 
+
+
+Property.MemoryModuleSize.Name             = Memory Size
+Property.MemoryModuleSize.Description      = Size of the module in MB.
+
+Property.MemoryType.Name                   = Memory Type
+Property.MemoryType.Description            = Type of memory module e.g. DDR-SDRAM, module rating e.g. PC3200, and max operating frequency.
+
+Property.MemoryManufacturer.Name           = Memory Manufacturer
+Property.MemoryManufacturer.Description    = Manufacturer name corresponding to the chips JEDEC manufacturer id. 
+
+Property.MemoryManufactureDate.Name        = Memory Manufacture Date
+Property.MemoryManufactureDate.Description = Date memory module was manufactured.
+
+Property.MemoryPartNumber.Name             = Memory Part Number
+Property.MemoryPartNumber.Description      = Part number provided on memory chip.
+
+
+Property.MemorySerialNumber.Name           = Memory Serial Number
+Property.MemorySerialNumber.Description    = Serial number provided on memory chip - decoded as an Intel DWORD.
+
+Property.MemoryRevisionCode.Name           = Memory Revision Code
+Property.MemoryRevisionCode.Description    = Manufacturer specific revision code
+
+
+Property.HPModel.Name = Model Name
+Property.HPModel.Description = Model Name
+
+Property.HPProduct.Name = Product Number
+Property.HPProduct.Description = Product Number
+
+Property.HPSerial.Name = Serial Number
+Property.HPSerial.Description = Serial Number
+
+Property.HPSWBuild.Name = Software Build
+Property.HPSWBuild.Description = Software Build
+
+Property.HPHWBOM.Name = Hardware BOM
+Property.HPHWBOM.Description = Hardware BOM
+
+Property.HPSWBOM.Name = Software BOM
+Property.HPSWBOM.Description = Software BOM
+
+Property.HPServiceID.Name = Service ID 
+Property.HPServiceID.Description = Service ID
+
+LocalizedString.MemoryCaption = System Memory
+
+LocalizedString.ChassisCaption = Chassis
+
+LocalizedString.SystemBoardCaption = System Board

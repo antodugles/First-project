@@ -1,0 +1,217 @@
+
+(C) Copyright 2000-2005 PC-Doctor Inc. All Rights Reserved.
+
+
+The PC-Doctor 5 text mode user interface provides a simple interface
+to the PC-Doctor diagnostics architecture. With it you can view
+system devices and diagnostic tests, run diagnostic tests, view system
+information, and view testing results.
+
+
+QUICK START:
+
+How to start the tmui:
+
+  1)  First change directories to the <install directory>/bin
+  2)  Run the command pcd ui
+      Note: If in a Unix environment and the bin directory is not in the 
+            path you will need to prepend pcd with ./
+            e.g.  ./pcd ui
+  3)  The user interface will enumerate and then it is ready for use.
+
+How to run a test:
+
+  1)  Select the test you want to run from the "Devices and Tests" pane on
+      the left by using the arrow keys to move the cursor up and down.
+  2)  Then press the "Enter" key to add the test to the test script on the
+      right pane.
+  3)  Now press the "r" key to start testing.
+  4)  The view will automatically change to the log view and you will see
+      progress information and eventually the result of the test.
+  5)  To return to the script editor press the "x" key.
+
+How to delete a test from the current script:
+
+  1)  If the script editor is not visible press the "x" key to go back to it.
+  2)  Now hit the "Tab" key until the "Test Script" pane is highlighted.
+  3)  Then you need to use the up and down arrow keys to select the test
+      you want to delete.  Then hit the "delete" key to remove the test
+      from the script.
+
+How to save a script:
+
+  1)  Creating a script using the above methods.
+  2)  Now hit the "f" key to pull down the "File" menu.
+  3)  Now hit the "s" key to open the save dialog.
+  4)  Now either hit "enter" to save as the default name, or type in a name
+      to save the script as and then hit enter
+
+How to run a script from the command line:
+
+  1)  Create and save a script as described above.
+  2)  Exit the UI if it is open.
+  3)  Run the script from the command line by typing:
+         pcd ui -f <name of script>
+         e.g.  pcd ui -f QuickTest.xml
+  4)  The tmui will open the script and immediately begin running the
+      tests.
+
+How to close the tmui:
+
+  1) Press the 'f' key to pull down the File menu.
+  2) Press the 'e' key to exit.
+  3) Press the 'Enter' key to respond yes that you want to exit.
+
+
+GETTING STARTED:
+
+Script Editor:
+
+The script editor window consists of two panes. The "Devices and Tests" pane and 
+"Test Script" pane.  To select a pane and make it active, press the "TAB" key 
+until the title of the desired pane is bolded. The items displayed in a pane may 
+be scrolled up or down by using the arrow keys on the keyboard.
+
+  Devices and Tests: This pane displays the system devices that were found
+    on the current system in bold.  Indented and underneath each device is a
+    list of the possible diagnostic tests that can be run on each device.
+    From here the user can add tests to the current test script shown in the
+    right pane called the "Test Script" pane. To add a test move up
+    or down to the preferred test and press the "Enter" key.
+
+  Test Script: This pane displays tests in the currently open test script. To
+    get to this pane press the "Tab" key until the title of this pane is
+    highlighted.  If you want to delete tests from this script, press the up
+    and down arrow keys to move to the test you want to delete and then when
+    the test is highlighted press the "delete" key.
+
+  Note: To run the tests that are currently shown in the test script, press the
+    "r" key.
+
+Script List:
+
+The script list window consists of two panes.  The "Script List" pane and the 
+"Test Script" pane.  To select a pane and make it active, press the "TAB" key 
+until the title of the desired pane is bolded. The items displayed in a pane may 
+be scrolled up or down by using the arrow keys on the keyboard.
+
+  Script List: This pane displays specific pre-created scripts that were found
+    on the current system in bold.  The Devices and tests that will be run when
+    this script is run are shown in the "Test Script" pane on the right.  You can 
+    scroll up and down through these scripts to view each in turn. 
+    
+  Test Script: This pane displays tests in the current test script. To
+    get to this pane press the "Tab" key until the title of this pane is
+    highlighted.  If the script goes off the screen you can scroll through it with
+    the up and down arrows.
+
+  Note: To run the currently selected script press the "r" key.
+
+
+MENU COMMANDS:
+
+The tmui presents most of its functionality through the menu.  Here is a
+list of the menu commands and their functionality.
+
+<F>ile: Pressing the "F" key will pull down the file menu.
+
+  <O>pen Script: This will open the file chooser dialog box.  Select the
+  PC-Doctor XML script file that you want to open and hit the "ENTER"
+  key.  These files need to end in the ".xml" extension.  This will load the
+  saved script into the Test Script Pane.
+
+  <C>lose Script: This will close the current script and prompt the user to
+  save the script if has not been saved.
+
+  <S>ave Script: This will open the save dialog box where the user can
+  enter a name for the script and pressing "Enter" will save the current
+  script to the specified file.
+
+  <S>ave SysInfo: This will open the save dialog box where the user can
+  enter a name for the file to save the system system information to and
+  pressing "Enter" will save system information to the specified file.  
+
+  Save <L>og File: This will open the save dialog box where the user can 
+  enter a name to save the current log file.
+
+  <E>xit: Closes and exits the Text Mode UI.
+
+<E>dit: Pressing the "e" key will pull down the edit menu
+
+  Add <T>est: Adds the currently selected test from the left pane to the
+  test script in the right pane.  This can also be done while the
+  Devices and Tests pane is highlighted and hitting the enter key.
+
+  <D>elete Test: Deletes the currently selected test in the Test Script
+  pane.  This can also be done by selecting the test to be deleted and
+  hitting the delete key.
+
+  Clear <S>cript: Removes all the tests from the Test Script Pane.
+
+  Clear <L>og File: Deletes all the previous logged events in the test
+   log view.
+
+<D>iags: Pressing the "d" key will pull down the diags menu
+
+  <R>un Script: Pressing the "r" key will run the tests listed in
+  the "Test Script" pane.
+
+  <S>top Script: Pressing the "s" key will stop the currently running script.
+
+
+<V>iew: Pressing the "v" key will pull down the view menu
+
+  <L>og File: Opens the log file for you to view.  This is were testing
+  information is output during testing.
+
+  <S>cript Editor: Changes the current view to the script editor.
+  
+  S<c>ript List: Changes the current view to the script list viewer.
+
+  System <I>nformation: Begins the collection of system information.
+  When all the information is obtained it is displayed in the system
+  information screen.  To exit this screen press the "q" or "ESC" key.
+
+<H>elp: Pressing the "H" key will pull down the help menu.
+
+  <V>iew Help: Shows the help screen. To exit help, press the "q" or
+  "ESC" key.
+
+  <A>bout PC-Doctor: Opens the about PC-Doctor dialog box.  This dialog
+  box contains version and contact information for PC-Doctor.  To exit this
+  screen, press the "ESC" key.
+
+
+EXAMPLE:
+
+An example PC-Doctor session using the text user interface
+might go as follows. First, the user starts PC-Doctor with the command:
+
+pcd ui
+
+Note: If in a Unix environment if the bin directory is not in the path you
+      will need to prepend pcd with ./
+      e.g.  ./pcd ui
+
+This will enumerate all system devices and start the user interface. The user
+will be presented with two panes: "Devices and Tests" and  "Test Script".
+In this example we will run all the diagnostic tests on one CPU, find where
+one of your CPU's is listed in the "Devices and Tests" pane. There will be
+multiple subtests listed beneath it:
+
+General Registers Test
+Floating-Point Registers Test
+Parallel Integer (MMX) Test
+Parallel Floating-Point (SIMD) Test
+Cache Test
+
+To add these tests to the "Test Script" pane, scroll down to the "General
+Registers Test" selection and press the "Enter" key. The "General Registers
+Test" should now be in the "Test Script" pane. To add the rest of the tests,
+repeat this procedure by scrolling down to each one and pressing the
+"Enter" key. Once all the tests listed are in the "Test Script" pane,  run
+these tests by pressing the "r" key.
+
+As the script is running, the percentage complete for each test will be listed
+once the test has finished running, and the "Result" column will
+display whether the test passed or failed.

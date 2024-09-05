@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\TelnetServer\1.0]
+"ListenToSpecificIpAddr"=hex(2):31,00,32,00,37,00,2e,00,30,00,2e,00,30,00,2e,\
+  00,31,00,00,00

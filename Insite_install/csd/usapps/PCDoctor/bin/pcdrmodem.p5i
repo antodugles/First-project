@@ -1,0 +1,70 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdrmodem
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+DisableForWin64 = false
+
+bGUIPromptSupported = true
+
+bPromptEnable = true
+
+Test.DialToneTest.Enable = true
+
+Test.DialToneTest.NumRepeatOnFailure = 1
+
+Test.DialToneTest.StandardTimeout = 15000
+
+Test.FaxCommandTest.Enable = true
+
+Test.FaxCommandTest.StandardTimeout = 5000
+
+Test.LastCallTest.Enable = true
+
+Test.LastCallTest.StandardTimeout = 5000
+
+Test.ModemLoopbackTest.AnalogLoopBack = true
+
+Test.ModemLoopbackTest.AnalogLoopBackWithSelfTest = true
+
+Test.ModemLoopbackTest.Enable = true
+
+Test.ModemLoopbackTest.StandardTimeout = 15000
+
+Test.ModemLoopbackTest.StopOnFail = false
+
+

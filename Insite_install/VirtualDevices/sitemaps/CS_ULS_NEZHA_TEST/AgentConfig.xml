@@ -1,0 +1,66 @@
+<ModificationMap>
+	<replace>
+		<!-- ServiceAgent profile -->
+		<text symbol="__SA_ASSET_TYPE_NAME__">CS_ULS_NEZHA_TEST</text>
+		<text symbol="__SA_ASSET_TYPE_MANUFACTURER__">GE_Healthcare</text>
+		<text symbol="__SA_ASSET_TYPE_PRODUCT__">NEZHA</text>
+		<text symbol="__SA_ASSET_TYPE_MODEL__">NEZHA</text>
+		<text symbol="__SA_ASSET_TYPE_VERSION__">2.0A</text>
+		<text symbol="__SA_VIRTUAL_ASSET_NAME__" userconfig="false">__DEVNAME__</text>
+		<text symbol="__SA_ASSET_PASSWORD__">test1234</text>
+		<text symbol="__SA_ASSET_SERIAL_NUMBER__" userconfig="false">__CRMNUM__</text>
+		<text symbol="__SA_ASSET_FRIENDLY_NAME__" userconfig="true"></text>
+		<text symbol="__SA_ASSET_DESCRIPTION__" userconfig="true"></text>
+		<text symbol="__BACKEND__INTEGRATION__"></text>
+		<text symbol="__SA_POLLINTERVAL__">30</text>
+		<!-- Address -->
+
+		<!-- Release 2.0 Device Properties (Mandatory, Static)-->
+		<text symbol="__SA_MODALITY__">ULS</text>
+		<text symbol="__SA_OP_SYSTEM__">WINXP</text>
+		<text symbol="__SA_OP_REVISION__">__OPREV__</text>
+		<text symbol="__SA_AP_REVISION__">__APREV__</text>
+		<text symbol="__SA_SRV_REVISION__">__SVREV__</text>
+		<text symbol="__SA_POLLTYPE__">MANUAL</text>
+		<text symbol="__SA_HRFS_SUPPORT__">FALSE</text>
+		<text symbol="__SA_MRFS_SUPPORT__">FALSE</text>
+		<text symbol="__SA_SWRLOAD_SUPPORT__">FALSE</text>
+		<text symbol="__SA_SWDLOAD_SUPPORT__">FALSE</text>
+		<text symbol="__SA_ALERT_LVL3__"></text>
+		<text symbol="__SA_ALERT_LVL2__"></text>
+		<text symbol="__SA_ALERT_LVL1__">EMAIL ALERT LEVEL 1</text>
+		<!-- Release 2.0 Device Properties (Optional, Static)-->
+		<text symbol="__SA_GHST_REVISION__">1.0</text>
+		<!-- OCM -->
+
+		<!-- Misc -->
+		<text symbol="__INSTALL_DIR__">%INSITE2_ROOT_DIR%</text>
+		<text symbol="__DATA_DIR__">%INSITE2_ROOT_DIR%\Virtuals\__SVCNAME__</text>
+		<text symbol="__FILE_REPOS_DIR__" userconfig="true">%INSITE2_ROOT_DIR%\Virtuals\__SVCNAME__\etc</text>
+		<text symbol="__VIRTUAL_DIR_ALIAS__">DEVLOG</text>
+		<text symbol="__VIRTUAL_DIR__">%INSITE2_ROOT_DIR%\Virtuals\Logs\__DEVNAME__</text>
+		<text symbol="__CUSTOM_LOG_DIR__">D:\log</text>
+		<text symbol="__VNC_CONNECTIONS__">1</text>
+		<!-- Software director -->
+		<text symbol="__SWD_DIR__">%INSITE2_ROOT_DIR%\swd</text>
+		<text symbol="__ADMINUSERNAME__">admin</text>
+		<text symbol="__ADMINPASSWORD__">admin</text>
+		<text symbol="__HTML_SERVER_LOCALPORT__">__HTTPPORT__</text>
+            <text symbol="__IPC_LISTENER_PORT__">__IPCPORT__</text>
+		<text symbol="__WEBAPP_SCHEME__">http</text>
+	</replace>
+	<delete>
+		<node>/ServiceAgent/ContactInfo/ServiceAgentProfile/LatLonCoordinates</node>
+		<!-- Optional CS_GSP_PXY_ADD property -->
+		<node>/ServiceAgent/ContactInfo/ServiceAgentProfile/Property[@name='CS_GSP_PXY_ADD']</node>
+		<!-- Optional CS_GSP_GHSTREV property -->
+		<!--node>/ServiceAgent/ContactInfo/ServiceAgentProfile/Property[@name='CS_GSP_GHSTREV']</node-->
+      </delete>
+	<replace>
+		<!-- Windows libs/directories-->
+		<text symbol="/lib/lib">\bin\</text>
+		<text symbol="/etc/">\etc\</text>
+		<text symbol="/etc">\etc</text>
+		<text symbol=".so">.dll</text>
+	</replace>
+</ModificationMap>

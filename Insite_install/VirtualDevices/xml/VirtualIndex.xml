@@ -1,0 +1,15 @@
+<?xml version ="1.0" encoding="UTF-8" ?>
+<VirtualAgents version="1.0">
+  <AssetTypeLookup type="GIMLI" master="FALSE" incrm="TRUE">CS_ULS_GIMLI_TEST</AssetTypeLookup>
+  <AssetTypeLookup type="NEZHA" master="FALSE" incrm="TRUE">CS_ULS_NEZHA_TEST</AssetTypeLookup>
+  <AssetTypeLookup type="KYLINVIEWER" master="TRUE" incrm="FALSE">CS_ULS_KYLIN_VIEWER</AssetTypeLookup>
+  <DeviceList>
+  </DeviceList>
+  <NextPortNo type="IPC">8481</NextPortNo>
+  <NextPortNo type="HTTP">8021</NextPortNo>
+  <NextSvcName>qsa001</NextSvcName>
+  <NextMRFSIndex>101</NextMRFSIndex>
+  <Prefix type="CS_ULS_GIMLI_TEST">GIM</Prefix>
+  <Prefix type="CS_ULS_NEZHA_TEST">NEZ</Prefix>
+  <Prefix type="CS_ULS_KYLIN_VIEWER">KVW</Prefix>
+</VirtualAgents>

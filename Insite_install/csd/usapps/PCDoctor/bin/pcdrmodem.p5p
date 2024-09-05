@@ -1,0 +1,370 @@
+/* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Garrett Jones
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrmodem/pcdrmodem.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Modem
+Module.Description=Tests the modem.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+Test.DialToneTest.Name=Dial Tone Test
+Test.DialToneTest.Description=Modem Dialtone Test
+Test.ModemLoopbackTest.Name=Modem Loopback Test
+Test.ModemLoopbackTest.Description=Modem Loopback Test
+Test.FaxCommandTest.Name=Fax Command Test
+Test.FaxCommandTest.Description=Modem Fax Command Test
+Test.LastCallTest.Name=Last Call Test
+Test.LastCallTest.Description=Modem Last Call Test
+
+Test.SimpleConnectionTest.Name=Simple Connection Test
+Test.SimpleConnectionTest.Description=Modem Simple Connection Test
+
+Test.ConnectionQualityTest.Name=Connection Quality Test
+Test.ConnectionQualityTest.Description=Modem Connection Quality Test
+
+
+LocalizedString.ATZ=Testing reset ATZ
+LocalizedString.SendingATCommand=Sending AT-command {atCommand}
+LocalizedString.ReceivingATReply=Modem command {atCommand} returned {atReply}
+LocalizedString.TestingForDialTone=Testing for dialtone
+LocalizedString.CheckingTapiLine=Checking TAPI Line {line}
+LocalizedString.SelectTapiDevice = TAPI Device {line}
+LocalizedString.RunningLoopback = Running V.54 Loop 3 analog loopback test.
+LocalizedString.RunningSelftestLoopback = Running V.54 Loop 3 analog loopback with self test
+LocalizedString.TestingModemFaxCommand = Testing FAX commands
+LocalizedString.NoUnimodemSupport = The modem does not support the Unimodem command to get diagnostic information for the last call
+LocalizedString.NoUnimodemData = Some modem diagnostic information could not be obtained. This may happen if the modem is configured to be reset after hanging up.
+LocalizedString.DialtoneNotDetected=The test was unable to detect a dial tone for your modem.  Please check the following:{crlf}{crlf}1) Verify that the PC modem phone cord is plugged into the phone jack and the PC. Also remove any attached phone line splitter from the wall's phone jack.{crlf}{crlf}2) If the PC modem cord is connected, remove it from the phone jack and plug a telephone into the phone jack. Lift the receiver and listen for a dial tone.{crlf}{crlf}3) If you do not hear a dial tone, make sure no other PC modems, fax machine, answering machines or cordless phones are using the phone line. If there are no other devices on the line, the problem may be with the phone line.{crlf}{crlf}4) If you hear a dial tone, unplug the telephone, plug in the PC modem cord, ensure it is securely connected to the PC, and run the test again. If the dial tone test still fails, call customer support.{crlf}{crlf} Press "OK" to retry the test or "Cancel" to abort testing.
+LocalizedString.CheckPhoneLineConnection=Please check phone line connection
+LocalizedString.TestingModemSpecificCommand=Testing modem specific commands
+
+Event.NoDialTone.Message=Device {modemName}: dialtone not detected.
+Event.NoDialTone.EventCode=1
+
+Event.DeviceName.Message= Device {deviceName}
+Event.DeviceName.EventCode=2
+
+Event.ScanningTAPIPorts.Message=Scanning TAPI ports for modem
+Event.ScanningTAPIPorts.EventCode=3
+
+Event.ErrorInitializingTAPI.Message = Error initializing telephone software.
+Event.ErrorInitializingTAPI.EventCode = 3336
+
+Event.ErrorTAPIDeviceResetFailure.Message = TAPI device ATZ reset failed.
+Event.ErrorTAPIDeviceResetFailure.EventCode = 3022
+
+Event.UnknownATFailure.Message=Modem command {atCommand} failed for unknown reason.
+Event.UnknownATFailure.EventCode=4
+
+Event.ReadFailure.Message=Read failed: {message}
+Event.ReadFailure.EventCode=5
+
+Event.WriteFailure.Message=Write failed: {message}
+Event.WriteFailure.EventCode=6
+
+Event.DataCompareError.Message = Data compare error: wrote {output}, received {input} at index {index}
+Event.DataCompareError.EventCode=7
+
+Event.AT&T8TestReturnedError.Message= AT&T8 test returned ERROR. Test may not be supported by your modem. Please check your documentation.
+Event.AT&T8TestReturnedError.EventCode = 3094
+
+Event.AnalogLoopbackWithSelfTestFaiulre.Message = Local analog loopback V.54 Loop 3 with self test failed
+Event.AnalogLoopbackWithSelfTestFaiulre.EventCode=8
+
+Event.NoModemFoundFailure.Message=No Modem Found
+Event.NoModemFoundFailure.EventCode=9
+
+Event.ModemCommandTimeout.Message= Modem command {atCommand} timed out.
+Event.ModemCommandTimeout.EventCode=10
+
+Event.UnsupportedFaxClassError.Message = Warning: Modem Does not support FAX Class {faxClass} as claimed.
+Event.UnsupportedFaxClassError.EventCode=11
+
+Event.UnimodemSetupNoPreviousCall.Message=Call setup result indicates no previous call.
+Event.UnimodemSetupNoPreviousCall.EventCode=12
+
+Event.UnimodemSetupNoDialtone.Message=Call setup result indicates no dial tone was detected.
+Event.UnimodemNoPreviousCall.EventCode=13
+
+Event.UnimodemSetupBusySignal.Message=Call setup result indicates a busy signal was detected.
+Event.UnimodemSetupBusySignal.EventCode=14
+
+Event.UnimodemSetupNetworkBusy.Message=Call setup result indicates call could not be set up because network was busy.
+Event.UnimodemSetupNetworkBusy.EventCode=15
+
+Event.UnimodemSetupNoRecognizedSignal.Message=Call setup result indicates no recognized signal was detected.
+Event.UnimodemSetupNoRecognizedSignal.EventCode=16
+
+Event.UnimodemSetupVoice.Message=Call setup result indicates voice was detected.
+Event.UnimodemSetupVoide.EventCode=17
+
+Event.UnimodemSetupTextTelephoneSignal.Message=Call setup result indicates a text telephone was detected.
+Event.UnimodemSetupTextTelephoneSignal.EventCode=18
+
+Event.UnimodemSetupDataAnsweringSignal.Message=Call setup result indicates a data answering signal was detected.
+Event.UnimodemSetupDataAnsweringSignal.EventCode=19
+
+Event.UnimodemSetupDataCallingSignal.Message=Call setup result indicates a data calling signal was detected.
+Event.UnimodemSetupDataCallingSignal.EventCode=20
+
+Event.UnimodemSetupFaxAnsweringSignal.Message=Call setup result indicates a fax answering signal was detected.
+Event.UnimodemSetupFaxAnsweringSignal.EventCode=21
+
+Event.UnimodemSetupFaxCallingSignal.Message=Call setup result indicates a fax calling signal was detected.
+Event.UnimodemSetupFaxCallingSignal.EventCode=22
+
+Event.UnimodemSetupV8BisSignal.Message=Call setup result indicates a V.8bis signal was detected.
+Event.UnimodemSetupV8BisSignal.EventCode=23
+
+Event.UnimodemTerminationCauseUnidentified.Message=Termination result indicates disconnect cause unidentified.
+Event.UnimodemTerminationCauseUnidentified.EventCode=24
+
+Event.UnimodemTerminationNoPreviousCall.Message=Termination result indicates no previous call.
+Event.UnimodemTerminationNoPreviousCall.EventCode=25
+
+Event.UnimodemTerminationCallInProgress.Message=Termination result indicates call still in progress.
+Event.UnimodemTerminationCallInProgress.EventCode=26
+
+Event.UnimodemTerminationCallWaitingSignal.Message=Termination result indicates disconnect because call waiting signal was detected.
+Event.UnimodemTerminationCallWaitingSignal.EventCode=27
+
+Event.UnimodemTerminationDelayed.Message=Termination result indicates termination delayed.
+Event.UnimodemTerminationDelayed.EventCode=28
+
+Event.UnimodemTerminationNMSInitiatedDialCall.Message=Termination result indicates disconnect because NMS initiated dial call.
+Event.UnimodemTerminationNMSInitiatedDialCall.EventCode=29
+
+Event.UnimodemTerminationPowerLoss.Message=Termination result indicates disconnect because of power loss.
+Event.UnimodemTerminationPowerLoss.EventCode=30
+
+Event.UnimodemTerminationNMSInitiatedLeaseLineRestoral.Message=Termination result indicates disconnect because NMS initiated leased line restoral.
+Event.UnimodemTerminationNMSInitiatedLeaseLineRestoral.EventCode=31
+
+Event.UnimodemTerminationNMSInitiatedRedial.Message=Termination result indicates disconnect because NMS initiated redial.
+Event.UnimodemTerminationNMSInitiatedRedial.EventCode=32
+
+Event.UnimodemTerminationNMSInitiatedDialDisconnect.Message=Termination result indicates disconnect because NMS initiated dial disconnect.
+Event.UnimodemTerminationNMSInitiatedDialDisconnect.EventCode=33
+
+Event.UnimodemTerminationEquipmentFailure.Message=Termination result indicates disconnect because of equipment failure.
+Event.UnimodemTerminationEquipmentFailure.EventCode=34
+
+Event.UnimodemTerminationFrontPanelDisconnect.Message=Termination result indicates disconnect because front panel disconnect requested.
+Event.UnimodemTerminationFrontPanelDisconnect.EventCode=35
+
+Event.UnimodemTerminationFrontPanelLeasedLineRestoral.Message=Termination result indicates disconnect because of front panel leased line restoral.
+Event.UnimodemTerminationFrontPanelLeasedLineRestoral.EventCode=36
+
+Event.UnimodemTerminationAutomaticLeasedLineRestoral.Message=Termination result indicates disconnect because of automatic leased line restoral.
+Event.UnimodemTerminationAutomaticLeasedLineRestoral.EventCode=37
+
+Event.UnimodemTerminationInactivityTimerExpired.Message=Termination result indicates disconnect because inactivity timer expired.
+Event.UnimodemTerminationInactivityTimerExpired.EventCode=38
+
+Event.UnimodemTerminationCCT108IsOff.Message=Termination result indicates disconnect because CCT108 is off which inhibits dialing.
+Event.UnimodemTerminationCCT108IsOff.EventCode=39
+
+Event.UnimodemTerminationCCTV108TurnedOff.Message=Termination result indicates disconnect because CCT108 is turned off.
+Event.UnimodemTerminationCCTV108TurnedOff.EventCode=40
+
+Event.UnimodemTerminationNoNumberProvided.Message=Termination result indicates disconnect because no number was provided.
+Event.UnimodemTerminationNoNumberProvided.EventCode=41
+
+Event.UnimodemTerminationBlacklistedNumber.Message=Termination result indicates disconnect because of a blacklisted number.
+Event.UnimodemTerminationBlacklistedNumber.EventCode=42
+
+Event.UnimodemTerminationCallAttemptsLimitExceeded.Message=Termination result indicates disconnect because call attempts limit was exceeded.
+Event.UnimodemTerminationCallAttemptsLimitExceeded.EventCode=43
+
+Event.UnimodemTerminationExtensionPhoneOffHook.Message=Termination result indicates disconnect because an extension phone was off hook.
+Event.UnimodemTerminationExtensionPhoneOffHook.EventCode=44
+
+Event.UnimodemTerminationCallSetupTimerExpired.Message=Termination result indicates call setup failed because timer expired.
+Event.UnimodemTerminationCallSetupTimerExpired.EventCode=45
+
+Event.UnimodemTerminationIncomingCallDetected.Message=Termination result indicates disconnect because incoming call was detected.
+Event.UnimodemTerminationIncomingCallDetected.EventCode=46
+
+Event.UnimodemTerminationLoopCurrentInterrupted.Message=Termination result indicates disconnect because loop current was interrupted.
+Event.UnimodemTerminationLoopCurrentInterrupted.EventCode=47
+
+Event.UnimodemTerminationNoDialTone.Message=Termination result indicates no dial tone.
+Event.UnimodemTerminationNoDialTone.EventCode=48
+
+Event.UnimodemTerminationVoiceDetected.Message=Termination result indicates disconnect because voice was detected.
+Event.UnimodemTerminationVoiceDetected.EventCode=49
+
+Event.UnimodemTerminationReorderTone.Message=Termination result indicates disconnect because of reorder tone.
+Event.UnimodemTerminationReorderTone.EventCode=50
+
+Event.UnimodemTerminationSitTone.Message=Termination result indicates disconnect because of sit tone.
+Event.UnimodemTerminationSitTone.EventCode=51
+
+Event.UnimodemTerminationEngagedTone.Message=Termination result indicates disconnect because of engaged tone.
+Event.UnimodemTerminationEngagedTone.EventCode=52
+
+Event.UnimodemTerminationLongSpaceDisconnect.Message=Termination result indicates disconnect because of long space disconnect.
+Event.UnimodemTerminationLongSpaceDisconnect.EventCode=53
+
+Event.UnimodemTerminationCarrierLost.Message=Termination result indicates disconnect because carrier lost.
+Event.UnimodemTerminationCarrierLost.EventCode=54
+
+Event.UnimodemTerminationTrainingFailed.Message=Termination result indicates disconnect because connection training failed.
+Event.UnimodemTerminationTrainingFailed.EventCode=55
+
+Event.UnimodemTerminationNoModulationCommon.Message=Termination result indicates disconnect because no modulation in common.
+Event.UnimodemTerminationNoModulationCommon.EventCode=56
+
+Event.UnimodemTerminationRetrainFailed.Message=Termination result indicates disconnect because connection retrain failed.
+Event.UnimodemTerminationRetrainFailed.EventCode=57
+
+Event.UnimodemTerminationRetrainAttemptCountExceeded.Message=Termination result indicates disconnect because retrain attempt count was exceeded.
+Event.UnimodemTerminationRetrainAttemptCountExceeded.EventCode=58
+
+Event.UnimodemTerminationGSTNCleardownReceived.Message=Termination result indicates disconnect because GSTN cleardown was received.
+Event.UnimodemTerminationGSTMCleardownReceived.EventCode=59
+
+Event.UnimodemTerminationFaxDetected.Message=Termination result indicates disconnect because fax was detected.
+Event.UnimodemTerminationFaxDetected.EventCode=60
+
+Event.UnimodemTerminationInTestMode.Message=Termination result indicates disconnect because in test mode.
+Event.UnimodemTerminationInTestMode.EventCode=61
+
+Event.UnimodemTerminationIntrusiveSelfTestInitiated.Message=Termination result indicates disconnect because intrusive self test was initiated.
+Event.UnimodemTerminationIntrusiveSelfTest.EventCode=62
+
+Event.UnimodemTerminationAnyKeyAbort.Message=Termination result indicates disconnect because of any key abort.
+Event.UnimodemTerminationAnyKeyAbort.EventCode=63
+
+Event.UnimodemTerminationDTEHangupCommand.Message=Termination result indicates disconnect because of DTE hangup command.
+Event.UnimodemTerminationDETHangupCommand.EventCode=64
+
+Event.UnimodemTerminationFrameReject.Message=Termination result indicates disconnect because of frame reject.
+Event.UnimodemTerminationFrameReject.EventCode=65
+
+Event.UnimodemTerminationDTEResetCommand.Message=Termination result indicates disconnect because of DTE reset command.
+Event.UnimodemTerminationDTEResetCommand.EventCode=66
+
+Event.UnimodemTerminationNoErrorControlEstablished.Message=Termination result indicates disconnect because no error control was established.
+Event.UnimodemTerminationNoErrorControlEstablished.EventCode=67
+
+Event.UnimodemTerminationProtocolViolation.Message=Termination result indicates disconnect because of protocol violation.
+Event.UnimodemTerminationProtocolViolation.EventCode=68
+
+Event.UnimodemTerminationN400Exceeded.Message=Termination result indicates disconnect because N400 was exceeded.
+Event.UnimodemTerminationN400Exceeded.EventCode=69
+
+Event.UnimodemTerminationNegotiationFailed.Message=Termination result indicates disconnect because negotiation failed.
+Event.UnimodemTerminationNegotiationFailed.EventCode=70
+
+Event.UnimodemTerminationDisconnectFrameReceived.Message=Termination result indicates disconnect because disconnect frame was received.
+Event.UnimodemTerminationDisconnectFrameReceived.EventCode=71
+
+Event.UnimodemTerminationSABMEFrameReceived.Message=Termination result indicates disconnect because SABME frame was received.
+Event.UnimodemTerminationSABMEFrameReceived.EventCode=72
+
+Event.UnimodemTerminationLossOfSynchronization.Message = Termination result indicates disconnect because of loss of synchronization.
+Event.UnimodemTerminationLossOfSynchronization.EventCode=73
+
+Event.UnimodemTransCarrierSymbolRate.Message = The transmit carrier symbol rate was {n} symbols per second.
+Event.UnimodemTransCarrierSymbolRate.EventCode = 74
+
+Event.UnimodemRecvCarrierSymbolRate.Message = The receive carrier symbol rate was {n} symbols per second.
+Event.UnimodemRecvCarrierSymbolRate.EventCode=75
+
+Event.UnimodemInitialTransCarrierDataRate.Message = The initial transmit carrier data rate was {n} bits per second.
+Event.UnimodemInitialTransCarrierDatarate.EventCode=76
+
+Event.UnimodemInitialRecvCarrierDataRate.Message= The initial receive carrier data rate was {n} bits per second.
+Event.UnimodemInitialRecvCarrierDataRate.EventCode=77
+
+Event.UnimodemFinalTransCarrierDataRate.Message = The final transmit carrier data rate was {n} bits per second.
+Event.UnimodemFinalTransCarrierDataRate.EventCode= 78
+
+Event.UnimodemFinalRecvCarrierDataRate.Message = The final receive carrier data rate was {n} bits per second.
+Event.UnimodemFinalRecvCarrierDataRate.EventCode= 79
+
+Event.UnimodemTransCharsSentFromDTE.Message= The transmitted characters sent from DTE count is {char}.
+Event.UnimodemTransCharsSentFromDTE.EventCode= 80
+
+Event.UnimodemRecvCharsSentToDTE.Message= The received characters sent to DTE count is {char}.
+Event.UnimodemRecvCharsSentToDTE.EventCode= 81
+
+Event.UnimodemTransCharsLostDueToOverrun.Message= The count of transmitted characters lost due to overrun from DTE is {char}.
+Event.UnimodemTransCharsLostDueToOverrun.EventCode= 82
+
+Event.UnimodemRecvCharsLostDueToOverrun.Message= The count of received characters lost due to overrun from DTE is {char}.
+Event.UnimodemRecvCharsLostDueToOverrun.EventCode= 83
+
+Event.UnimodemTransIFrameCount.Message= The count of transmitted I-frames is {frame}.
+Event.UnimodemTransIFrameCount.EventCode= 84
+
+Event.UnimodemRecvIFrameCount.Message= The count of received I-frames is {frame}.
+Event.UnimodemRecvIFrameCount.EventCode= 85
+
+Event.UnimodemTransIFrameErrorCount.Message= The error count for transmitted I-frames is {count}.
+Event.UnimodemTransIFrameErrorCount.EventCode= 86
+
+Event.UnimodemRecvIFrameErrorCount.Message= The error count for received I-frames is {count}.
+Event.UnimodemRecvIFrameErrorCount.EventCode= 87
+
+Event.LookingForModem.Message = Looking for modem
+Event.LookingForModem.EventCode=88
+
+Event.DialingTemporaryConnection.Message = Dialing temporary connection
+Event.DialingTemporaryConnection.EventCode= 89
+
+Event.DialingConnection.Message = Dialing connection {connection}
+Event.DialingConnection.EventCode= 90
+
+Event.Connected.Message = Connected
+Event.Connected.EventCode= 91
+
+Event.SendingPackets.Message = Sending packet {nthPacket} of {numPacket}.
+Event.SendingPackets.EventCode= 92
+
+Parameter.Enable.Name= Enable or Disable flag
+Parameter.Enable.Description= Enables a test if true. Disables the test otherwise
+
+Parameter.NumRepeatOnFailure.Name = RepeatCount
+Parameter.NumRepeatOnFailure.Description = # of repetition of a test when it returns failure
+
+Parameter.StandardTimeout.Name= AT IO timeout
+Parameter.StandardTimeout.Description= Timeout, in miliseconds, for AT command to write and read from IO buffer
+
+Parameter.AnalogLoopBack.Name = Analog Loopback Test Enable/Disable
+Parameter.AnalogLoopback.Description = Enables analog loopback test if true. Disables test otherwise 
+
+Parameter.AnalogLoopBackWithSelfTest.Name = Analog Loopback With Self Test Enable/Disable
+Parameter.AnalogLoopbackWithSelfTest.Description = Enables analog loopback with self test if true. Disables test otherwise 
+
+Parameter.StopOnFail.Name=Stop on AT failure
+Parameter.StopOnFail.Description = Stops the execution of next sendAtCommand when the last AT command fails
+
+Parameter.DisableForWin64.Name = Disables tests in Windows 64 bit
+Parameter.DisableForWin64.Description = Disables tests in Windows 64 bit

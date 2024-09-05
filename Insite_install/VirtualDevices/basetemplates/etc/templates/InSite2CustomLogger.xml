@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<InSite2CustomLogger>
+	<FileLogging>
+		<LoggerConfigProp>__DATA_DIR__\etc\log-config.txt</LoggerConfigProp>
+	</FileLogging>
+	<Script>dir</Script>
+	<FileMessages>
+		<OpenMessage>
+			<Message>File Listing started</Message>
+			<Message>File Upload started</Message>
+			<Message>File Download started</Message>
+		</OpenMessage>
+		<CloseMessage>
+			<Message>File Upload completed</Message>
+			<Message>File Download completed</Message>
+			<Message>File Listing completed</Message>
+			<Message>File Listing failed</Message>
+			<Message>File Upload failed</Message>
+			<Message>File Download failed</Message>
+		</CloseMessage>
+	</FileMessages>
+	<TunnelMessags>
+		<OpenMessage>
+			<Message>Connection Established</Message>
+		</OpenMessage>
+		<CloseMessage>
+			<Message>Connection Closed (session complete or abort)</Message>
+		</CloseMessage>
+		<AbortMessage>Tunnels Aborted</AbortMessage>
+	</TunnelMessags>
+	<ListnerSet>
+		<RDListner>RemoteDetection</RDListner>
+		<TunnelListner>TunnelListner</TunnelListner>
+		<FileListner>FileLogging</FileListner>
+	</ListnerSet>
+	<RSMResumeStatusFile>__DATA_DIR__\etc\RsmResume.xml</RSMResumeStatusFile>
+</InSite2CustomLogger>

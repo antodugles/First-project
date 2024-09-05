@@ -1,0 +1,5 @@
+file-size=5000000
+no_of_days=30
+LogLevel=info
+STDOUT=file
+log-file-path=__CUSTOM_LOG_DIR__\qsa.log

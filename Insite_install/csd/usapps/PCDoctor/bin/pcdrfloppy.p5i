@@ -1,0 +1,114 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdrfloppy
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+Test.FunnelSeekTest.Enable = true
+
+Test.FunnelSeekTest.EndRange = MAX
+
+Test.FunnelSeekTest.MaxErrors = 3
+
+Test.FunnelSeekTest.NumberOfSeeks = 160
+
+Test.FunnelSeekTest.PromptUserForMedia = true
+
+Test.FunnelSeekTest.StartRange = MIN
+
+Test.LinearSeekTest.Enable = true
+
+# The EndRange defines the testing parameter to where testing will end. Acceptable
+# values are MAX {Last testable sector}, sector number {any valid sector greater
+# than StartRange}, percent {any valid % greater than StartRange}
+Test.LinearSeekTest.EndRange = MAX
+
+Test.LinearSeekTest.MaxErrors = 3
+
+# defined SectorPercentToTest will be set to 100.
+Test.LinearSeekTest.NumberOfSeeks = 160
+
+Test.LinearSeekTest.PromptUserForMedia = true
+
+# The StartRange defines the testing parameter from where testing will start.
+# Acceptable values are MIN {starting sector}, sector number {any valid sector}
+# and percent {1%}
+Test.LinearSeekTest.StartRange = MIN
+
+Test.PatternTest.Enable = true
+
+Test.PatternTest.EndRange = MAX
+
+Test.PatternTest.MaxErrors = 3
+
+Test.PatternTest.NumberOfPatterns = 2
+
+Test.PatternTest.NumberOfSeeks = 16
+
+Test.PatternTest.PreserveData = true
+
+# Add detection of write-protected disks.
+Test.PatternTest.PromptOnWriteProtect = false
+
+Test.PatternTest.PromptUserForMedia = true
+
+Test.PatternTest.StartRange = MIN
+
+Test.RandomSeekTest.Enable = true
+
+Test.RandomSeekTest.EndRange = MAX
+
+Test.RandomSeekTest.MaxErrors = 3
+
+Test.RandomSeekTest.NumberOfSeeks = 150
+
+Test.RandomSeekTest.PromptUserForMedia = true
+
+Test.RandomSeekTest.StartRange = MIN
+
+Test.SurfaceScanTest.Enable = true
+
+Test.SurfaceScanTest.EndRange = MAX
+
+Test.SurfaceScanTest.MaxErrors = 3
+
+Test.SurfaceScanTest.PromptUserForMedia = true
+
+Test.SurfaceScanTest.SectorPercentToTest = 100
+
+Test.SurfaceScanTest.StartRange = MIN
+
+

@@ -1,0 +1,200 @@
+body {
+	background-color: PageBackgroundColor;
+	font-family: PageFontFamily; 
+	color: PageFontColor;
+}
+
+/* All Tables */
+table
+{
+	font-size: PageFontSize;
+}
+
+/* Table Style */
+div.scrolltable
+{
+	border: TableBorderWidth TableBorderColor TableBorderStyle;
+}
+	
+div.scrolltable tr#header
+{
+	font-size: PageFontSize;
+	background-color: Table1HeaderBackgroundColor;
+}
+
+div.scrolltable th
+{
+	border-bottom: 1px TableBorderColor TableBorderStyle;
+	border-right: 1px TableBorderColor TableBorderStyle;
+	border-left: 1px TableBorderStyle PageBackgroundColor;
+}
+
+div.scrolltable th a
+{
+	color: HeaderFontColor;
+}
+
+div.scrolltable th a:hover
+{
+	color: PageBackgroundColor;
+}
+
+/* Filter Buttons */
+div.scrolltable th input.normal, div.scrolltable th input.red
+{
+	border-left: 1px solid PageBackgroundColor;
+	border-top: 1px solid PageBackgroundColor;
+}
+
+div.scrolltable th input.normal
+{
+	background-color: HeaderBackgroundColor;
+}
+
+div.scrolltable tr
+{
+	background-color: TableBackgroundColor;
+}
+
+div.scrolltable tr.altrow
+{
+	background-color: TableAltRowColor;
+}
+
+div.scrolltable tr.selected
+{
+	background-color: TableSelRowColor;
+	color: TableSelRowFontColor;
+}
+
+col.LastName
+{
+	width: LastNameColumnWidth;
+}
+
+col.FirstName
+{
+	width: FirstNameColumnWidth;
+}
+
+col.Status
+{
+	width: StatusColumnWidth;
+}
+
+col.Description 
+{
+	width: DescriptionColumnWidth;
+}
+
+col.RfsNumber
+{
+	width: RefNoColumnWidth;
+}
+
+col.Date
+{
+	width: DateColumnWidth;
+}
+
+ul#FilterList 
+{
+	background: TableBackgroundColor;
+	border: 1px TableBorderColor solid;
+}
+
+ul#FilterList li a 
+{
+	color: PageFontColor;
+	font-size: PageFontSize;
+}
+	
+ul#FilterList li a:hover 
+{
+	background: TableAltRowColor;
+}
+
+/* Buttons */
+div.buttons input.button
+{
+	border: 3px outset ButtonBorderColor;
+	background: ButtonBackgroundColor;
+	color: ButtonFontColor;
+	font-size: PageFontSize;
+	width: ButtonWidth;
+	height: ButtonHeight;
+}
+
+div#root input.pushed 
+{
+	background: ButtonBorderColor;
+}
+
+/* RFS view */
+#oRFSView table
+{
+	background-color: Table1HeaderBackgroundColor;
+	border: TableBorderWidth TableBorderColor TableBorderStyle;
+}
+
+#oRFSView td
+{
+	border: 1px TableBorderColor TableBorderStyle;
+	font-size: PageFontSize;
+	background-color: TableBackgroundColor;
+}
+
+#oRFSView td.label
+{
+	color: HeaderFontColor;
+	font-size: PageFontSize;
+	background-color: Table2HeaderBackgroundColor;
+}
+
+div.Description h5
+{
+	color: HeaderFontColor;
+	font-size: PageFontSize;
+}
+
+div.Description textarea
+{
+	color: PageFontColor;
+	border: TableBorderWidth TableBorderColor TableBorderStyle;
+	background-color: TableBackgroundColor;
+	font-size: PageFontSize;
+	font-family: PageFontFamily;
+	height: DescriptionHeight;
+}
+
+#oRFSView td input
+{
+	background-color: TableBackgroundColor;
+	color: PageFontColor;
+	font-size: PageFontSize;
+}
+
+#oRFSView td input.editmode,
+div.Description textarea.editmode
+{
+	background-color: TableSelRowColor;
+	color: TableSelRowFontColor;
+}
+
+/* Floating Status Bar */
+div#root div#statusbar {
+	border-color: TableBorderColor;
+}
+div#root div#statusbar div {
+	border-color: TableBorderColor;
+	font-family: PageFontFamily;
+	color: PageFontColor;
+	background: TableAltRowColor;
+}
+div#root div#statusbar div p {
+	background: TableAltRowColor;
+}
+div#root div#statusbar div input {
+	background: ButtonBackgroundColor;
+	border-color: ButtonBorderColor;
+}

@@ -1,0 +1,24 @@
+Module.Name=Modem Device Information
+
+Module.Description=This module gathers information about the Modems in a system.
+
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+
+
+Property.Model.Name=Model
+Property.Model.Description=Model
+
+
+Property.Driver.Name=Driver 
+
+Property.Driver.Description=Driver
+
+
+
+Property.DriverVersion.Name=Driver Version
+Property.DriverVersion.Description=Driver Version
+
+Property.DriverKey.Name=Driver Key
+Property.DriverKey.Description=Driver Key

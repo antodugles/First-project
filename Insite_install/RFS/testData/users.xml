@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usersRFS>
+	<contact>
+		<Last>KANT</Last>
+		<First>ANDY</First>
+		<Phone>414-555-5555</Phone>
+		<Ext>9000</Ext>
+		<Email>Andrew.Kant@ge.com</Email>
+	</contact>
+	<contact default="true">
+		<Last>OH</Last>
+		<First>JUNG</First>
+		<Phone>414-721-3938</Phone>
+		<Email>Jung.Oh@ge.com</Email>
+	</contact>
+	<contact>
+		<Last>KAHN</Last>
+		<First>JAMES</First>
+		<Phone>250-334-0345</Phone>
+		<Email>James.Kahn@ge.com</Email>
+	</contact>
+</usersRFS>

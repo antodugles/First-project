@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+<style type="text/css">
+body {color: #000; font-size:8pt}
+th  {font-size:10pt}
+td  {font-size:8pt}
+input {font-size:8pt}
+select {font-size:8pt}
+.invalid {color: red}
+.invisible {display:none}
+.warning{font-weight:bold; color:red}
+.wait{font-size:24pt;weight:bold;text-align:center;vertical-align:middle;font-family:Arial}
+</style>
+
+<!--  <script src="/service/fileio.js" type="text/javascript"> -->
+<script src="scripts/fileio.js" type="text/javascript"></script>
+
+<!--  <script src="/service/ShowAgentConfigTool.js" type="text/javascript"> -->
+<script src="scripts/AgentConfig.js" type="text/javascript"></script>
+
+    <title></title>
+  </head>
+
+	<body onload="" bgcolor="#B5B5B5">
+    <div id="ConfigForm" class="">
+		<form id="oform" action="" name="oform" >
+      <!--  <input name="DeviceName" value="" type="hidden"> -->
+      <table cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <th colspan="4" align="center">
+              <b>Agen<span onclick="AgentConfig.enableFields();">t</span> Configuration</b>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <b>Device Name</b>:
+            </td>
+            <td>
+              <input name="DeviceName" size="16" value=""
+							 disabled="disabled" type="text">
+            </td>
+            <td>
+              <b>CRM No.</b>:
+            </td>
+            <td>
+              <input name="SerialNumber" size="16" value="" disabled="true"
+              type="text" onchange="AgentConfig.valueChanged('serialNumber');">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Display Name:
+            </td>
+            <td>
+              <input name="FriendlyName" size="16" value="" type=
+              "text" onchange="AgentConfig.valueChanged('displayName');">
+            </td>
+            <td>
+              Description:
+            </td>
+            <td>
+              <input name="AgentDescription" size="32" value=""
+              type="text" onchange="AgentConfig.valueChanged('agentDescription');">
+            </td>
+          </tr>
+        </tbody>
+      </table><br>
+      <table cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+              <b>Continent</b>:
+            </td>
+            <td>
+              <select size="1" name="Continent" onchange="AgentConfig.continentChanged();" />
+            </td>
+            <td>
+              <b>Country</b>:
+            </td>
+            <td colspan="3">
+              <select size="1" name="Country" onchange="AgentConfig.valueChanged('country');AgentConfig.loadState();" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Addr Line1:
+            </td>
+            <td colspan="5">
+              <input name="AddressLine1" size="40" value="" type=
+              "text" onchange="AgentConfig.valueChanged('addressLine1');" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Addr Line2:
+            </td>
+            <td colspan="5">
+              <input name="AddressLine2" size="40" value="" type="text" 
+							onchange="AgentConfig.valueChanged('addressLine2');" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>City</b>:
+            </td>
+            <td>
+              <input name="City" size="20" value=""	type="text" onchange="alert('testing');" 
+							onkeyup="AgentConfig.valueChanged('city');AgentConfig.capitalAllCharsInput(this);"							
+							onchange="AgentConfig.valueChanged('city');AgentConfig.capitalAllCharsInput(this);"
+							/>
+            </td>
+            <td>
+              <b>State(Prov)</b>:
+            </td>
+            <td>
+              <select size="1" name="State" id="State"
+							onkeyup="AgentConfig.valueChanged('state');AgentConfig.capitalAllCharsInput(this);"
+							onchange="AgentConfig.valueChanged('state');AgentConfig.capitalAllCharsInput(this);">
+                <option value="">
+                </option>
+              </select>
+            </td>
+            <td>
+              Postal Code:
+            </td>
+            <td>
+              <input name="PostalCode" size="7" value=""
+              type="text" 
+							onkeyup="AgentConfig.valueChanged('postal');AgentConfig.capitalAllCharsInput(this);"
+							onchange="AgentConfig.valueChanged('postal');AgentConfig.capitalAllCharsInput(this);">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Latitude:
+            </td>
+            <td>
+              <input name="Latitude" size="5" value=""
+							type="text" 
+							onchange="AgentConfig.valueChanged('latitude');var x=AgentConfig.checkLatitude(); if(x){alert(x)};">
+            </td>
+            <td>
+              Longitude:
+            </td>
+            <td>
+              <input name="Longitude" size="5" value=""
+              type="text" 
+							onchange="AgentConfig.valueChanged('longitude');var x=AgentConfig.checkLongitude(); if(x){alert(x)};">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Institution</b>:
+            </td>
+            <td>
+              <input name="Institution" size="20"
+              value="" type="text" 
+							onkeyup="AgentConfig.valueChanged('institution');AgentConfig.capitalAllCharsInput(this);"
+							onchange="AgentConfig.valueChanged('institution');AgentConfig.capitalAllCharsInput(this);">
+            </td>
+            <td>
+              Department:
+            </td>
+            <td>
+              <input name="Department" size="20"
+              value="" type="text"
+							onkeyup="AgentConfig.valueChanged('department');AgentConfig.capitalAllCharsInput(this);"
+							onchange="AgentConfig.valueChanged('department');AgentConfig.capitalAllCharsInput(this);">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Building:
+            </td>
+            <td>
+              <input name="Building" size="7"
+              value="" type="text"
+							onkeyup="AgentConfig.valueChanged('building');AgentConfig.capitalAllCharsInput(this);"
+							onchange="AgentConfig.valueChanged('building');AgentConfig.capitalAllCharsInput(this);">
+            </td>
+            <td>
+              Floor:
+            </td>
+            <td>
+              <input name="Floor" size="7"
+              value="" type="text"
+							onkeyup="AgentConfig.valueChanged('theFloor');AgentConfig.capitalAllCharsInput(this);"
+							onchange="AgentConfig.valueChanged('theFloor');AgentConfig.capitalAllCharsInput(this);">
+            </td>
+            <td>
+              Room:
+            </td>
+            <td>
+              <input name="Room" size="7"
+              value="" type="text"
+							onkeyup="AgentConfig.valueChanged('room');AgentConfig.capitalAllCharsInput(this);"
+							onchange="AgentConfig.valueChanged('room');AgentConfig.capitalAllCharsInput(this);">							
+            </td>
+          </tr>
+        </tbody>
+      </table>
+			<input name="LocalUserEntURL" value="" type="hidden">
+			<input name="LocalUserTunURL" value="" type="hidden">
+      <table cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <th colspan="6" align="center">
+              <b>Advanced Configuration</b>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <b>Enterprise Server</b>:
+            </td>
+            <td>
+              <select size="1" name="EntServer" onchange=
+              "AgentConfig.valueChanged('entURL');AgentConfig.valueChanged('tunURL');AgentConfig.fillURLFields(this);">
+                </select>
+            </td>
+            <td>
+              <b>Service Center</b>:
+            </td>
+            <td>
+              <select size="1" name="SvcCenter"
+							 onchange="AgentConfig.valueChanged('serviceCenter');">
+                <option value="">
+                </option>
+              </select>
+            </td>
+            <td>
+              Log Level:
+            </td>
+            <td>
+              <select size="1" name="LogLevel" 
+							 onchange="AgentConfig.valueChanged('logLevel');">
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Enterprise Server URL:
+            </td>
+            <td colspan="5">
+              <input name="UserEntURL" size="75" value=""
+							onchange="AgentConfig.valueChanged('entURL');AgentConfig.changedURL();"
+							readonly="readonly"
+							type="text">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Enterprise Tunnel URL:
+            </td>
+            <td colspan="5">
+              <input name="UserTunURL" size="75" value=""
+							onchange="AgentConfig.valueChanged('tunURL');AgentConfig.changedURL();"
+							readonly="readonly"
+							type="text">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              File Repository:
+            </td>
+            <td colspan="5">
+              <input name="FileRepository" size="75" value="" title=""
+							onchange="AgentConfig.valueChanged('reposDir');"
+							onmouseover="AgentConfig.setToolTipFileRepos();"
+							type="text">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+              <b>File Watcher</b>:
+            </td>
+            <td>
+              <select size="1" name="WatchEnable" onchange=
+              "AgentConfig.switchWatcher(this.value)">
+                <option value="0">
+                  Disable
+                </option>
+                <option value="1">
+                  Enable
+                </option>
+              </select>
+            </td>
+            <td>
+              Dir:
+            </td>
+            <td colspan="3">
+              <input name="WatchDir" size="45" value=""
+              disabled="disabled" type="text"
+							onchange="AgentConfig.valueChanged('watcherDir');"
+							onmouseover="AgentConfig.setToolTipFileWatcher();">
+            </td>
+            <td>
+              Filter:
+            </td>
+            <td>
+              <input name="WatchFilter" size="4" value=""
+              disabled="disabled" type="text" 
+							onchange="AgentConfig.valueChanged('watcherFilter');">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+			<table>
+			  <tbody>
+          <tr> 
+						<th align="center">
+              <b>Proxy Configuration</b>
+            </th>
+          </tr>
+					<tr>
+      			<td>
+  						<table border="0" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td>
+                      <b>Proxy</b>:
+                    </td>
+                    <td>
+                      <select size="1" name="ProxyEnable" onchange=
+                      "AgentConfig.switchProxyControls(this.value)">
+                        <option value="0">
+                          Disable
+                        </option>
+                        <option value="1">
+                          Enable
+                        </option>
+                      </select>
+                    </td>
+         					</tr>
+        					<tr>
+                    <td>
+        						  <label for="ProxyName">Name:</label>
+        						</td>
+        						<td colspan="3">
+        						  <select size="1" name="ProxyName" id="ProxyName" 
+											onchange="AgentConfig.loadSavedProxy(this.value);" />
+											  <!-- Options are added dynamically -->
+
+        							<input name="ProxyButton1" id="ProxyButton1" type="button"
+											 value="New" onclick="AgentConfig.proxyButton1(this.value);"/>
+
+        						  <input name="ProxyButton2" id="ProxyButton2" type="button"
+											 value="Edit" onclick="AgentConfig.proxyButton2(this.value);"/>
+      
+			  						  <input name="ProxyButton3" id="ProxyButton3" type="button"
+											 value="Delete" onclick="AgentConfig.proxyButton3(this.value);"/>							
+        						</td>						
+                  </tr>
+        					<tr><td colspan="4" id="ProxyMessage" class="invisible"></td></tr>
+									<tr>
+        						<td>
+                      <label for="ProxyIP">IP Addr:</label>
+                    </td>
+                    <td>
+											<input name="ProxyIP" size="20" value="" type="text" disabled="true"
+    									 onchange="AgentConfig.valueChanged('proxyServer');"/>
+                      <label for="ProxyPort">Port:</label><span>
+											<input name="ProxyPort" size="4" value="" type="text" disabled="true"
+											 onchange="AgentConfig.valueChanged('proxyServer');"/></span>
+											<input name="ProxyServer" type="hidden"/>
+        						</td>						
+        					</tr>
+                </tbody>
+              </table>
+						</td>
+					</tr>
+					<tr>      			
+            <td>
+  						<table id="ProxySettingsTable" border="0" cellpadding="2" cellspacing="2">
+                <tbody>				
+        					<tr>
+                    <td>
+                      <b><label for="AuthEnable">Proxy Authentication</label></b>
+                    </td>
+                    <td>
+                      <select size="1" name="AuthEnable" id="AuthEnable" disabled="true"
+											onchange="AgentConfig.switchAuth(this.value);">
+                        <option value="0">
+                          Disable
+                        </option>
+                        <option value="1">
+                          Enable
+                        </option>
+                      </select>
+                    </td>
+                    <td>
+                      <label for="AuthScheme">Scheme:</label>
+                    </td>
+                    <td>
+                      <select size="1" name="AuthScheme" disabled="true" 
+											 onchange="AgentConfig.valueChanged('authScheme');">
+                        <option value="NONE" id="NONE">NONE</option>
+                        <option value="NTLM" id="NTLM">NTLM</option>
+                        <option value="Digest" id="Digest">Digest</option>
+                        <option value="Basic" id="Basic">Basic</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">
+                      <label for="AuthUser">Proxy User:</label>
+                    </td>
+                    <td>
+                      <input name="AuthUser" size="15" value="" type="text" disabled="true"
+	 										 onchange="AgentConfig.valueChanged('authUsername');">
+                    </td>
+                    <td>
+                      <label for="AuthPassword">Password:</label>
+                    </td>
+                    <td>
+                      <input name="AuthPassword" size="12" value="" type="password" disabled="true"
+											 onchange="AgentConfig.valueChanged('authPassword');">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+						</td>
+					<tr>
+				</tbody>
+			</table>
+			<input name="CurrentName" value="" type="hidden">
+			<input name="PrevFlag" value="" type="hidden">
+			<input name="UserLevel" value="" type="hidden">
+      <table>
+			  <tbody>    
+					<tr>
+            <td>
+              <input id="SubmitButton" type="button" value="Submit Changes" onclick="AgentConfig.submitForm();"/>
+            </td>
+            <td>
+              <input id="ResetButton" type="button" value="Reset Form" onclick="AgentConfig.initForm();"/>
+            </td>
+						<td>
+						  <input class="invisible" type="button" value="Test" onclick="AgentConfig.testing();"/>
+						</td>
+          </tr>
+				</tbody>
+			</table>			
+    </form></div>
+		<div id="WaitMessage" class="invisible">
+		  <br />
+			<p>Saving Configuration.</p>
+			<p>Please wait...</p>
+		</div>
+		<script language="JavaScript" type="text/javascript">
+		  AgentConfig.initForm();
+		</script>
+  </body>
+</html>

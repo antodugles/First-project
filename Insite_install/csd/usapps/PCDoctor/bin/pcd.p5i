@@ -1,0 +1,55 @@
+#<header>
+#
+# <cr>
+#  Copyright (c) 2000-2005 PC-Doctor, Inc.
+# </cr>
+#
+# <addr>
+#  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+#  All rights reserved.
+# </addr>
+#
+# <lic>
+#  This software is the confidential and proprietary information of PC-Doctor, Inc.
+#  ("Confidential Information"). You shall not disclose such confidential
+#  information and shall use it only in accordance with the terms of the license
+#  agreement you entered into with PC-Doctor.
+# </lic>
+#
+# <desc>
+#  The PC-Doctor command line interface settings file
+# </desc>
+#
+# <file>
+#  @author  Chris_Matyas
+#  @version $Id$
+#  @.date   $DateTime$
+#  @.change $Change$
+#  @.last   $Author$
+# </file>
+#
+#</header>
+
+
+# This is the starting view of the UI that will be used :  ScriptList(default) or ScriptEditor
+Pcd.Ui.StartView = ScriptList
+
+Pcd.Ui.ScriptList.ScriptFilter = Motherboard.xml,System.xml,Storage.xml,Optical.xml,Video.xml,Audio.xml,Communications.xml,Other.xml,Quick.xml,Full.xml,Memory.xml
+
+# To disable logging to a file 
+Pcd.Ui.Log.AutoSave = true
+Pcd.Ui.Log.FileName = pcdoctor5.log
+Pcd.Ui.Log.AppendDateTimeToFileName = false
+Pcd.Ui.Log.AppendPidToFileName = false
+Pcd.Ui.Log.Overwrite = false
+
+# If you want to see all devices discovered by PC-Doctor in the script creation window then set this to true
+Pcd.Ui.ShowDevicesWithNoTests = false
+
+# If you want add your own version do so here
+#Pcd.Ui.3rdPartyVersion = .1
+
+#This value is temporarily disabling reenumeration due to known issues with some systems
+Pcd.Ui.Debug.DisableReEnumeration = true
+
+

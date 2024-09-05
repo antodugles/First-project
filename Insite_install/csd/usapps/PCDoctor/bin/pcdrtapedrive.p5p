@@ -1,0 +1,106 @@
+#<header>
+# <cr>
+#  Copyright (c) 2000-2005 PC-Doctor, Inc.
+# </cr>
+# <addr>
+#  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+#  All rights reserved.
+# </addr>
+#
+# <lic>
+#  This software is the confidential and proprietary information of PC-Doctor, Inc.
+#  ("Confidential Information"). You shall not disclose such confidential
+#  information and shall use it only in accordance with the terms of the license
+#  agreement you entered into with PC-Doctor.
+# </lic>
+#
+# <desc>
+#  The pcdrtapedrive english strings properties file
+# </desc>
+#
+# <file>
+#  @author  Chris_Matyas
+#  @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrtapedrive/pcdrtapedrive.p5p#1 $
+#  @.date   $DateTime: 2005/06/16 13:46:33 $
+#  @.change $Change: 39950 $
+#  @.last   $Author: 
+# </file>
+#</header>
+
+
+Module.Name=Tape Drive Test
+Module.Description=This module tests Tape drives.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.LinearSeekTest.Name=Linear Seek Test
+Test.LinearSeekTest.Description=Tape Drive Linear Seek Test
+
+Test.BackupTest.Name=Backup Test
+Test.BackupTest.Description=Tape Drive Backup Test
+
+
+LocalizedString.InsertMediaPrompt=Please insert a tape into the drive.
+
+LocalizedString.InsertMediaTitle=Tape Drive Test - Insert Media
+
+LocalizedString.ProgressTapeLoad=Loading the tape.
+
+LocalizedString.ProgressMoveToEndOfData=Moving to end of tape data.
+
+LocalizedString.ProgressMoveToStartOfData=Moving to start of tape data.
+
+LocalizedString.ProgressScanning=Scanning to block {block1} of {block2}
+
+LocalizedString.ProgressReadAndWrite=Reading and writing files.
+
+
+Event.LinearSeekTestAborted.Message=The Tape Drive Linear Seek test was aborted.
+Event.LinearSeekTestAborted.EventCode=2
+
+Event.BackupTestAborted.Message=The Tape Drive Backup Test was aborted.
+Event.BackupTestAborted.EventCode=25
+
+Event.EventErrorNoMedia.Message=No tape is in the drive.
+Event.EventErrorNoMedia.EventCode=17
+
+Event.EventErrorDriveInUse.Message=Currently being used by another process.
+Event.EventErrorDriveInUse.EventCode=21
+
+Event.EventErrorStartingDrive.Message=An error occured while attempting to start the drive.
+Event.EventErrorStartingDrive.EventCode=23
+
+Event.EventErrorTapeLoadFailed.Message=Error loading tape.
+Event.EventErrorTapeLoadFailed.EventCode=1
+
+Event.EventErrorSettingTapePositionFailed.Message=Error setting tape position.
+Event.EventErrorSettingTapePositionFailed.EventCode=8
+
+Event.EventErrorGetTapePositionFailed.Message=Failure reading tape position.
+Event.EventErrorGetTapePositionFailed.EventCode=9
+
+Event.EventErrorNoDataOnTape.Message=No data detected on tape.  Test could not run.
+Event.EventErrorNoDataOnTape.EventCode=18
+
+Event.EventErrorRewindFailed.Message=Tape rewind failed.
+Event.EventErrorRewindFailed.EventCode=14
+
+Event.EventErrorMemoryAllocationError.Message=Memory allocation error.
+Event.EventErrorMemoryAllocationError.EventCode=5
+
+Event.EventErrorReadFromTapeFailed.Message=Error reading from tape.
+Event.EventErrorReadFromTapeFailed.EventCode=15
+
+Event.EventErrorWriteToTapeFailed.Message=Error writing to tape.
+Event.EventErrorWriteToTapeFailed.EventCode=12
+
+Event.EventErrorDataMiscompare.Message=Data miscompare writing and reading from tape.
+Event.EventErrorDataMiscompare.EventCode=13
+
+Event.EventErrorErasingDataFailed.Message=Error erasing test data.
+Event.EventErrorErasingDataFailed.EventCode=24
+
+
+
+
+

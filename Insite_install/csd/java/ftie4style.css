@@ -1,0 +1,12 @@
+a { color: black }
+a { text-decoration: none }
+a:hover { color: red; font-weight: bold; }
+BODY {background-color: #C0C0C0}
+.c  {
+                        background-color : #C0C0C0;
+                 }
+
+.nc  {
+                        background-color : yellow;
+                 }
+

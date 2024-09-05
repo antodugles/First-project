@@ -1,0 +1,80 @@
+;-------------------------------------------------------------------------
+; PCDRNDISUIO.INF -- PCDRNDISUIO Usermode I/O Driver
+;
+; Copyright (c) 2000, Microsoft Corporation
+;-------------------------------------------------------------------------
+[version]
+Signature   = "$Windows NT$"
+Class       = NetTrans
+ClassGUID   = {4d36e975-e325-11ce-bfc1-08002be10318}
+Provider    = %Msft%
+LayoutFile  = layout.inf
+DriverVer   = 10/01/2002,6.0.4063.0
+
+[Manufacturer]
+%Msft%=MSFT,NTx86,NTia64,NTamd64
+
+[MSFT]
+%PCDRNDISUIO_Desc%=Install, PCDR_PCDRNDISUIO
+
+[MSFT.NTx86]
+%PCDRNDISUIO_Desc%=Install, PCDR_PCDRNDISUIO
+
+[MSFT.NTia64]
+%PCDRNDISUIO_Desc%=Install, PCDR_PCDRNDISUIO
+
+[MSFT.NTamd64]
+%PCDRNDISUIO_Desc%=Install, PCDR_PCDRNDISUIO
+;-------------------------------------------------------------------------
+; Installation Section
+;-------------------------------------------------------------------------
+[Install]
+AddReg=Inst_Ndi
+Characteristics=0x28 ; NCF_HIDDEN | NCF_NOT_USER_REMOVABLE
+;CopyFiles=CpyFiles_Sys
+
+;-------------------------------------------------------------------------
+; Ndi installation support
+;-------------------------------------------------------------------------
+[Inst_Ndi]
+HKR,Ndi,Service,,"PcdrNdisuio"
+HKR,Ndi,HelpText,,%PCDRNDISUIO_HelpText%
+HKR, Ndi\Interfaces, UpperRange,, noupper
+HKR,"Ndi\Interfaces","LowerRange",,"ndis5,ndis4,ndis5_uio"
+
+;-------------------------------------------------------------------------
+; Service installation support
+;-------------------------------------------------------------------------
+[Install.Services]
+AddService=PcdrNdisuio,,PcdrNDISUIO_Service_Inst
+
+[PcdrNdisuio_Service_Inst]
+DisplayName     = %PCDRNDISUIO_Desc%
+ServiceType     = 1 ;SERVICE_KERNEL_DRIVER
+StartType       = 3 ;SERVICE_MANUAL_START
+ErrorControl    = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\pcdrndisuio.sys
+LoadOrderGroup  = NDIS
+Description     = %PCDRNDISUIO_Desc%
+
+[Install.Remove.Services]
+DelService=PcdrNdisuio
+
+;-------------------------------------------------------------------------
+; Declare Destination Directories for file copy/deletion
+;-------------------------------------------------------------------------
+[DestinationDirs]
+CpyFiles_Sys    = 12    ; DIRID_DRIVERS
+
+
+;-------------------------------------------------------------------------
+; Files to Copy/Delete - Referenced by Install and Remove sections above
+;-------------------------------------------------------------------------
+[CpyFiles_Sys]
+PcdrNdisuio.sys,,,2
+
+[Strings]
+Msft = "Microsoft"
+PCDRNDISUIO_Desc = "PCDRNDISUIO Usermode I/O Protocol"
+PCDRNDISUIO_HelpText = "A PC-Doctor driver to support user-mode I/O on NDIS devices"
+

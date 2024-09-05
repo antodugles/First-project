@@ -1,0 +1,8 @@
+<Script >
+	<TestSet>
+		<Device type="Motherboard"/>
+	</TestSet>
+	<TestSet>
+		<Device type="CMOS"/>
+	</TestSet>
+</Script>

@@ -1,0 +1,52 @@
+
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.74 [en] (Windows NT 5.0; U) [Netscape]">
+   <meta name="Author" content="Insite Account">
+   <title>CleanUD</title>
+   <style type="text/css">
+	body {color: #000;}
+   </style>
+<script language=javascript>
+
+function startTlnt()
+{
+
+	url="/uscgi-bin/StartTlnt.cgi?action=start"
+	location.href=url
+}
+function stopTlnt()
+{
+	url="/uscgi-bin/StartTlnt.cgi?action=stop"
+	location.href=url
+}
+</script>
+</head>
+<body bgcolor=lightyellow>
+&nbsp;
+<center><table BORDER=6 CELLSPACING=0 CELLPADDING=0 SIZE=80%>
+<tr>
+<td>
+<center><h1>&nbsp Telnet Server&nbsp</h1></center>
+
+<center>
+   <table BORDER=0 CELLSPACING=0 CELLPADDING=10 >
+      <tr>
+          <TD><form name=f1><input type=button onClick=startTlnt() value="Start"></form></TD>
+          <TD><form name=f2><input type=button onClick=stopTlnt() value="Stop"></form></TD>
+      </tr>
+   </table>
+</center>
+</td>
+</tr>
+<TR><TD><Center>XXX</Center></TD></TR>
+</table></center>
+
+<br><br><br>
+<center><table BORDER=0 CELLSPACING=0 CELLPADDING=0 SIZE=80%>
+   <TR><TD><Center>YYY</Center></TD></TR>
+</table></center>
+
+</body>
+</html>

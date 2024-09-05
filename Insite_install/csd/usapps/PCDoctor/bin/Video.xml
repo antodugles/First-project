@@ -1,0 +1,8 @@
+<Script >
+	<TestSet>
+		<Device type="VideoCard"/>
+	</TestSet>
+	<TestSet>
+		<Device type="Monitor"/>
+	</TestSet>
+</Script>

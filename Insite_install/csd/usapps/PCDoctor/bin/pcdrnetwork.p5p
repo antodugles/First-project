@@ -1,0 +1,175 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Shree Sahasrabudhe
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrnetwork/pcdrnetwork.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Network 
+Module.Description=Performs various network card and communications tests.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.NetworkTCPIPCommunicationTest.Name=TCP/IP Network Communication Test
+Test.NetworkTCPIPCommunicationTest.Description=TCP/IP Network Communication Test
+
+Test.NetworkTCPIPInternalLoopbackTest.Name=TCP/IP Internal Loopback Test
+Test.NetworkTCPIPInternalLoopbackTest.Description=TCP/IP Internal Loopback Test
+
+Test.NetworkLinkTest.Name=Network Link Test
+Test.NetworkLinkTest.Description=Network Link Test
+
+Test.NetworkExternalLoopbackTest.Name= Network External Loopback Test
+Test.NetworkExternalLoopbackTest.Description= Network External Loopback Test
+
+Test.NetworkCableTest.Name=Network Cable Test
+Test.NetworkCableTest.Description=Network Cable Test
+
+Test.WirelessSignalStrengthTest.Name = Wireless Signal Strength Test
+Test.WirelessSignalStrengthTest.Description = Wireless Signal Strength Test
+
+Test.WirelessConnectivityTest.Name = Wireless Connectivity Test
+Test.WirelessConnectivityTest.Description = Wireless Connectivity Test
+
+
+LocalizedString.ProgInfo= Testing address {RemoteAddressIndex} of {NumRemoteAddresses}: sending packet {PacketIndex} of {NumPackets}
+LocalizedString.LinkTestCableConnectPromptMsgBody= Please make sure that the adapter is connected to a working network device such as a hub, switch, or router.
+LocalizedString.LinkTestCableConnectPromptMsgTitle= Network Link Test
+LocalizedString.LinkTestProgInfo= Sent and Received {PacketIndex} of {NumPackets}
+LocalizedString.ExtLoopbackTestCableConnectPromptMsgTitle= Network External Loopback Test
+LocalizedString.ExtLoopbackTestCableConnectPromptMsgBody= Please make sure that the network loopback adapter is connected to your network adapter, then click "OK" to continue testing, or click "Cancel" to abort testing.
+LocalizedString.CableTestCableConnectMsgBody= No network cable was detected. Connect your network cable, then click "OK" to continue testing, or click "Cancel" to abort testing.
+LocalizedString.CableTestCableConnectMsgTitle= Network Cable Test
+LocalizedString.WirelessConnectivityTestConnectMsgBody= No network connection was detected. Connect your network adapter to a wireless network, then click "OK" to continue testing, or click "Cancel" to abort testing.
+LocalizedString.WirelessConnectivityTestConnectMsgTitle= Wireless Connectivity Test
+LocalizedString.Excellent=Excellent
+LocalizedString.VeryGood=Very Good
+LocalizedString.Good=Good
+LocalizedString.Low=Low
+LocalizedString.VeryLow=Very Low
+LocalizedString.NoSignal=No Signal
+LocalizedString.NoBSSID=<No Broadcast SSID>
+LocalizedString.NoWirelessNetworks=<No Wireless Networks>
+LocalizedString.WirelessSignalStrengthLowMsgBody = The wireless signal strength for this adapter is {RssiStr} ({RssiPercent}%). This may happen if you are at a distance from the access point.
+LocalizedString.WirelessSignalStrengthLowMsgTitle = Wireless Signal Strength
+LocalizedString.MACAddress=MAC Address
+LocalizedString.Strength=Strength
+LocalizedString.BroadcastSSID=Broadcast SSID
+
+
+#EVENT_NO_REMOTE_HOST_FOUND
+Event.eventNoRemoteHostFound.Message=Could not find remote host for testing.
+Event.eventNoRemoteHostFound.EventCode=5
+
+#EVENT_ERROR_WRITING_TO_NETWORK
+Event.eventErrorWritingToNetwork.Message=Error writing data to network.
+Event.eventErrorWritingToNetwork.EventCode=6
+
+#EVENT_ERROR_READING_FROM_NETWORK
+Event.eventErrorReadingFromNetwork.Message=Error reading data from network.
+Event.eventErrorReadingFromNetwork.EventCode=7
+
+#EVENT_ERROR_CONFIGURING_NETWORK
+Event.eventErrorConfiguringNetwork.Message=Error configuring network for testing.
+Event.eventErrorConfiguringNetwork.EventCode=10
+
+#EVENT_COMMUNICATION_TEST_ABORTED
+Event.eventCommunicationTestAborted.Message=Communication test aborted
+Event.eventCommunicationTestAborted.EventCode=12
+
+#EVENT_ERROR_INITIALIZING_NETWORK
+Event.eventErrorInitializingNetwork.Message=Error initializing network.
+Event.eventErrorInitializingNetwork.EventCode=13
+
+#EVENT_ONLY_PINGING_LOCAL_LOOPBACK_ADDRESS
+Event.eventOnlyPingingLocalLoopbackAddress.Message=No remote address was found on the local subnet. The test will ping the local loopback address instead. If you are running a wireless network in ad-hoc mode this is normal. If you are not running a wireless network, you may not be logged on or your network settings may be incorrect. If the test passes but your network still cannot communicate, please check that you are logged on and that your network settings are correct.
+Event.eventOnlyPingingLocalLoopbackAddress.EventCode=16
+
+#EVENT_COMMUNICATION_FAILED
+Event.eventCommunicationFailed.Message=Could not communicate with remote host.
+Event.eventCommunicationFailed.EventCode=8
+
+#EVENT_CARD_HAS_NO_VALID_ADDRESS
+Event.eventCardHasNoValidAddress.Message=Card does not have a valid address. This is normal for wireless network cards when there are no wireless network receivers nearby or if an existing network has not yet been configured.
+Event.eventCardHasNoValidAddress.EventCode=15
+
+#EVENT_CABLETEST_ABORTED
+Event.NetworkCableTestAborted.Message = Network Cable Test aborted.
+Event.NetworkCableTestAborted.EventCode =17
+
+#EVENT_LINKTEST_ABORTED
+Event.NetworkLinkTestAborted.Message = Network Link Test aborted.
+Event.NetworkLinkTestAborted.EventCode = 18
+
+#EVENT_CABLETEST_FAILED
+Event.NetworkCableTestFail.Message = Network Cable Test failed. No cable detected or the network cable is not connected to a working network device such as hub, switch, router...etc.
+Event.NetworkCableTestFail.EventCode = 19
+
+#EVENT_LINKTEST_FAILED
+Event.NetworkLinkTestFail.Message = Network Link Test failed. Percentage of packets passed: {PercentPacketsPassed}. Percentage of passed packets required for Network Link Test to pass: {RequiredPercentPassed}.
+Event.NetworkLinkTestFail.EventCode = 20
+
+#EVENT_EXTERNAL_LOOPBACK_TEST_ABORTED
+Event.NetworkExtLoopbackTestAborted.Message = Network External Loopback Test aborted.
+Event.NetworkExtLoopbackTestAborted.EventCode =23
+
+#EVENT_EXTERNAL_LOOPBACK_TEST_FAILED
+# event code for this one is 23 in 4x, which is same as EVENT_EXTERNAL_LOOPBACK_TEST_ABORTED, so I changed it to 24
+Event.NetworkExtLoopbackTestFail.Message = Network External Loopback Test failed. Percentage of packets passed: {PercentPacketsPassed}. Percentage of passed packets required for External Loopback Test to pass: {RequiredPercentPassed}.
+Event.NetworkExtLoopbackTestFail.EventCode = 24
+
+#EVENT_NETWORK_DRIVER_INSTALL_FAILED
+Event.NetworkDriverInstallFailed.Message=Failed to install drivers. Problems installing drivers or the driver files are missing.
+Event.NetworkDriverInstallFailed.EventCode=25
+
+#EVENT_NETWORK_ADAPTER_NOT_CONNECTED
+Event.NetworkAdapterNotConnected.Message=Network adapter not connected
+Event.NetworkAdapterNotConnected.EventCode=26
+
+#EVENT_WIRELESS_CONNECTIVITY_TEST_ABORTED
+Event.WirelessConnectivityTestAborted.Message = Wireless Connectivity Test aborted.
+Event.WirelessConnectivityTestAborted.EventCode =27
+
+EVENT_WIRELESS_CONNECTIVITY_TEST_FAILED
+Event.WirelessConnectivityTestFail.Message = Wireless Connectivity Test failed. Wireless network card is not connected to a working network device such as hub, switch, router...etc.
+These are the available Wireless Networks to which you may be able to connect:
+{BSSIDs}
+Event.WirelessConnectivityTestFail.EventCode = 28
+
+#EVENT_WIRELESS_SIGNAL_STRENGTH_TEST_ABORTED
+Event.WirelessSignalStrengthAborted.Message = Wireless Signal Strength Test aborted.
+Event.WirelessSignalStrengthAborted.EventCode = 29
+
+#EVENT_WIRELESS_ADAPTER_NOT_CONNECTED
+Event.WirelessAdapterNotConnected.Message = Wireless network card is not connected to a working network device such as hub, switch, router...etc. 
+These are the available Wireless Networks to which you may be able to connect:
+{BSSIDs}
+Event.WirelessAdapterNotConnected.EventCode = 30
+
+#EVENT_WIRELESS_SIGNAL_STRENGTH
+Event.WirelessReceivedSignalStrength.Message = Received Wireless Signal Strength: {RssiStr} [{RssiPercent}%].
+Event.WirelessReceivedSignalStrength.EventCode = 31
+

@@ -1,0 +1,141 @@
+ /* <header>
+ * <cr>
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved.
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  *
+  * <desc>
+  *  SMART diagnostic module for HardDrives
+  * </desc>
+  *
+  * <file>
+  * @author  
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrsmart/pcdrsmart.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=SMART 
+Module.Description=SMART low-level drive test.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.SCSISMARTStatusTest.Name=Status Test
+Test.SCSISMARTStatusTest.Description=SMART Status Test
+
+Test.AMIRAIDSMARTStatusTest.Name=Status Test
+Test.AMIRAIDSMARTStatusTest.Description=SMART Status Test
+
+Test.SMARTStatusTest.Name=Status Test
+Test.SMARTStatusTest.Description=SMART Status Test
+
+Test.SMARTShortSelfTest.Name=Short Self-Test
+Test.SMARTShortSelfTest.Description=SMART Short Self-Test
+
+Test.SMARTExtendedSelfTest.Name=Extended Self-Test
+Test.SMARTExtendedSelfTest.Description=SMART Extended Self-Test
+
+
+#New Event - This event is not in Dapi4
+LocalizedString.ShortSMARTSelfTestEstimatedRunTime = Short SMART Self Test will take approximately {EstimatedShortSelfTestTime} minute(s) to complete.
+
+
+#New Event - This event is not in Dapi4
+LocalizedString.ExtendedSMARTSelfTestEstimatedRunTime = Extended SMART Self Test will take approximately {EstimatedExtendedSelfTestTime} minute(s) to complete.
+
+
+#New Event - This event is not in Dapi4
+Event.SelfTestTimedOut.EventCode = 3
+Event.SelfTestTimedOut.Message = The SMART self-test operation timed out. Please ensure that no other process is performing disk operations and run the test again. 
+
+#New Event - This event is not in Dapi4
+Event.SelfTestEstimatedTimeFail.EventCode = 4
+Event.SelfTestEstimatedTimeFail.Message = Unable to get estimated completion time for SMART self-test from the disk. Test will use approximate time as estimated finish time. 
+
+Event.SmartThresholdExceeded.EventCode = 8
+Event.SmartThresholdExceeded.Message = Failure prediction threshold exceeded.
+
+Event.InvalidSmartCondition.EventCode = 14
+Event.InvalidSmartCondition.Message = Error reading failure prediction - Invalid Condition.
+
+Event.ErrorRetrievingSmartStatus.EventCode = 16
+Event.ErrorRetrievingSmartStatus.Message = SMART Status NOT Checked.
+
+Event.ErrorRetrievingSmartDriveData.EventCode = 17
+Event.ErrorRetrievingSmartDriveData.Message = Error reading SMART drive data
+
+Event.SelfTestAbortedByHost.EventCode = 18
+Event.SelfTestAbortedByHost.Message = Self Test routine was aborted by the host.
+ 
+Event.SelfTestResetByHost.EventCode = 19
+Event.SelfTestResetByHost.Message = Self Test routine was interrupted by the host with a hard or soft reset.
+
+Event.SelfTestFailedElementUnknown.EventCode = 20
+Event.SelfTestFailedElementUnknown.Message = Test element failed - element unknown.
+ 
+Event.SelfTestFailedElectricalElement.EventCode = 21
+Event.SelfTestFailedElectricalElement.Message = The electrical element of the test failed.
+
+Event.SelfTestFailedServoElement.EventCode = 22
+Event.SelfTestFailedServoElement.Message = The servo (and/or seek) test element of the test failed.
+
+Event.SelfTestFailedReadElement.EventCode = 23
+Event.SelfTestFailedReadElement.Message = The read element of the test failed.
+
+Event.FailedStartingSelfTest.EventCode = 25
+Event.FailedStartingSelfTest.Message = An error occurred while attempting to start the SMART self test.
+
+Event.SmartStatusNotSupported.EventCode = 45
+Event.SmartStatusNotSupported.Message = The drive does not support retrieval of SMART information.
+
+Event.SelfTestFatalError.EventCode = 36
+Event.SelfTestFatalError.Message = Fatal or unknown test error. Unable to complete self-test.
+
+Event.BadDevicePointer.EventCode = 46
+Event.BadDevicePointer.Message = A device pointer that was passed to the Test was invalid. The device will not be tested. This is an internal logic error.
+
+Event.ErrorOpeningDriveHandle.EventCode = 47
+Event.ErrorOpeningDriveHandle.Message = An error occured while attempting to open a handle to the drive being tested.
+
+Event.ErrorRetrievingSmartVersion.EventCode = 48
+Event.ErrorRetrievingSmartVersion.Message = An error occured while attempting to retrieve the SMART version supported.
+
+Event.BadSmartReadDataParameter.EventCode = 49
+Event.BadSmartReadDataParameter.Message = An internal logic error has occured. An attempt was made to access an invalid data pointer.
+
+Event.ErrorRetrievingScsiSmartStatus.EventCode = 54
+Event.ErrorRetrievingScsiSmartStatus.Message = An error occured while attempting to retrieve the SMART status of the SCSI drive.
+
+Event.SelfTestCompletedSuccessfully.EventCode = 50
+Event.SelfTestCompletedSuccessfully.Message = The self test operation completed successfully.
+
+Event.SelfTestFailedUnknownResult.EventCode = 51
+Event.SelfTestFailedUnknownResult.Message = The self test operation failed with an unknown result.
+
+Event.ErrorStoppingSelfTest.EventCode = 52
+Event.ErrorStoppingSelfTest.Message = An error occurred while attempting to stop the self test operation.
+
+Event.ShortSelfTestAborted.EventCode = 53
+Event.ShortSelfTestAborted.Message = The SMART short self-test operation was aborted.
+
+Event.DriverReportingError.EventCode = 62
+Event.DriverReportingError.Message = The device driver is reporting that there is a problem with the device.
+
+Event.ExtendedSelfTestAborted.EventCode = 55
+Event.ExtendedSelfTestAborted.Message = The SMART extended self-test operation was aborted.
+
+Event.LiveTVActive.EventCode = 63
+Event.LiveTVActive.Message =A Live TV, Radio or TV Recorder process is active. This prevents the full hard drive tests from running.  

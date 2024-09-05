@@ -1,0 +1,88 @@
+#<header>
+# <cr>
+#  Copyright (c) 2000-2004 PC-Doctor, Inc.
+# </cr>
+# <addr>
+#  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+#  All rights reserved.
+# </addr>
+#
+# <lic>
+#  This software is the confidential and proprietary information of PC-Doctor, Inc.
+#  ("Confidential Information"). You shall not disclose such confidential
+#  information and shall use it only in accordance with the terms of the license
+#  agreement you entered into with PC-Doctor.
+# </lic>
+#
+# <desc>
+#  The pcdrexec english strings properties file
+# </desc>
+#
+# <file>
+#  @author  Chris_Matyas
+#  @version $Id: //depot/Builds/Matrix/20050330_GEHealth_BDB2849/Matrix_Projects/projects/modules/src/multi/diag/pcdrexec/pcdrexec.p5p#1 $
+#  @.date   $DateTime: 2005/03/30 16:58:17 $
+#  @.change $Change: 32890 $
+#  @.last   $Author: Dan_Lu $
+# </file>
+#</header>
+
+Module.Name=Exec
+Module.Description=This module executes external scripts.
+Module.Copyright=Copyright (c) 2004 PC-Doctor, Inc. All Rights Reserved.
+
+Test.MyTest.Name=Execute test MyTest
+Test.MyTest.Description=Execute test MyTest
+
+Test.MyTest2.Name=Execute test MyTest2
+Test.MyTest2.Description=Execute test MyTest2
+
+Test.MyTest3.Name=Execute test MyTest3
+Test.MyTest3.Description=Execute test MyTest3
+
+Event.MissingProgName.Message=Exec Test Script Name was not set in the p5i file.
+Event.MissingProgName.EventCode=0
+
+Event.MissingDebugOutputFileName.Message=Debug Output File Name was not set in the p5i file.
+Event.MissingDebugOutputFileName.EventCode=1
+
+Event.CouldNotExec.Message=Could not execute {file}  
+Event.CouldNotExec.EventCode=2
+
+Event.TestFailed.Message=Error {returnResult}: {returnString}  
+Event.TestFailed.EventCode=3
+
+Event.WarnScriptExitedAbnormally.Message=The script exited abnormally
+Event.WarnScriptExitedAbnormally.EventCode=4
+
+                 
+; Device Description
+Parameter.DeviceTypeToTest.Name=Device Type
+Parameter.DeviceTypeToTest.Description=Device Type
+
+Event.EACCES.Message=Execute permission is denied for the script file. (or) The filesystem is mounted noexec.
+Event.EACCES.EventCode=6
+
+Event.StartTest.Message=Starting Test..
+Event.StartTest.EventCode=7
+
+Event.DeviceTypeNotSet.Message=DeviceType parameter for this test is not set in p5i file
+Event.DeviceTypeNotSet.Eventcode=8
+
+Event.DeviceNameNotSet.Message=DeviceName parameter for this test is not set in p5i file
+Event.DeviceNameNotSet.Eventcode=9
+
+Event.NoFileExists.Message=The script file {file} does not exist
+Event.NoFileExists.Eventcode=10
+
+
+; Program or Script to Run
+Parameter.ProgramOrScriptToRun.Name=Program To Test
+Parameter.ProgramOrScriptToRun.Description=Program name that should be tested.
+
+Parameter.DebugOutputFile.Name=Debug Output File
+Parameter.DebugOutputFile.Description=Debug Output File
+
+
+
+

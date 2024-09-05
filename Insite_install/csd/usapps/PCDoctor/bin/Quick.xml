@@ -1,0 +1,33 @@
+<Script>
+    <TestSet>
+        <Device type="PciBus" />
+        <Test key="ConfigTest" />
+    </TestSet>
+    <TestSet>
+        <Device type="Systemboard" />
+        <Test key="RTCAccuracyTest" />
+        <Test key="RTCRolloverTest" />
+    </TestSet>
+    <TestSet>
+        <Device type="CMOS" />
+        <Test key="ChecksumTest" />
+        <Test key="PatternTest" />
+    </TestSet>
+    <TestSet>
+        <Device type="SerialPort" />
+        <Test key="InternalRegisterTest" />
+    </TestSet>
+    <TestSet>
+        <Device type="ParallelPort" />
+        <Test key="RegistersTest" />
+    </TestSet>
+    <TestSet>
+        <Device type="CPU" />
+        <Test key="RegisterTest" />
+        <Test key="MathRegisterTest" />
+    </TestSet>
+    <TestSet>
+        <Device type="HardDrive" />
+        <Test key="RandomSeekTest" />
+    </TestSet>
+</Script>

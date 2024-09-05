@@ -1,0 +1,112 @@
+ /* <header>
+
+  * <cr> 
+
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+
+  * </cr>
+
+  * <addr>
+
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+
+  *  All rights reserved. 
+
+  * </addr>
+
+  *
+
+  * <lic>
+
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+
+  * ("Confidential Information"). You shall not disclose such confidential
+
+  * information and shall use it only in accordance with the terms of the license
+
+  * agreement you entered into with PC-Doctor.
+
+  * </lic>
+
+  * 
+
+  * <desc>
+
+  *  The ADSL english strings properties file
+
+  * </desc>
+
+  * 
+
+  * <file>
+
+  * @author  Chris_Matyas
+
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdradsl/pcdradsl.p5p#1 $
+
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+
+  * @.change $Change: 39950 $
+
+  * @.last   $Author: Dan_Lu $
+
+  * </file>
+
+  * </header>
+
+  */
+
+
+
+Module.Name=ADSL Test
+
+Module.Description=This module tests ADSL modem configuration
+
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+
+Module.Company=PC-Doctor, Inc.
+
+
+
+Test.ConfigurationTest.Name=Configuration Test
+
+Test.ConfigurationTest.Description=PCDrADSL Configuration Test
+
+
+
+Test.ConnectionTest.Name=Connection Test
+
+Test.ConnectionTest.Description=PCDrADSL Connection Test
+
+
+
+Event.ConfigurationTestFail.Message =PCDrADSL Configuration test failure
+
+Event.ConfigurationTestFail.EventCode=1
+
+Event.ConfigurationTestFail.Tip1=Tip.RestartMachine
+
+
+
+Event.ConnectionTestFail.Message=Connection test failure
+
+Event.ConnectionTestFail.EventCode=2
+
+
+
+Event.InternalModuleError.Message=Internal module error in the driver
+
+Event.InternalModuleError.EventCode=3
+
+Event.InternalModuleError.Tip1=Tip.RestartMachine
+
+
+
+
+
+# Tips are optional
+
+Tip.RestartMachine =Restart the Machine
+
+
+

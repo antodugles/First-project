@@ -1,0 +1,108 @@
+﻿ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+
+  * 
+  * <desc>
+  *  The pcdrcpu english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  June_Li
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrcpu/pcdrcpu.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+
+
+Module.Name=CPU
+Module.Description=Tests the processor and mathprocessor.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.RegisterTest.Name=Register Test
+Test.RegisterTest.Description=CPU Register Test
+
+Test.CacheTest.Name= Level 2 Cache Test
+Test.CacheTest.Description= CPU Level 2 Cache Test
+
+Test.MathRegisterTest.Name=Math Register Test
+Test.MathRegisterTest.Description=CPU Math Register Test
+
+Test.MMXTest.Name=MMX Test
+Test.MMXTest.Description=CPU MMX Test
+
+Test.SSETest.Name=SSE Test
+Test.SSETest.Description=CPU SSE Test
+
+Test.SSE2Test.Name=SSE2 Test
+Test.SSE2Test.Description=CPU SSE2 Test
+
+# MSG_REGISTER_TEST_FAILED
+Event.RegisterTestFail.Message= Registers {Register}H failed.
+Event.RegisterTestFail.EventCode=1
+
+#EVENT_ARITHMETIC_TEST_FAILED
+Event.ArithmeticTestFail.Message= Arithmetics operation {OpCode}H failed for test set {Pattern}
+Event.ArithmeticTestFail.EventCode=2
+
+#EVENT_STRINGOPERATION_TEST_FAILED
+Event.StringOperationFail.Message= String move code {OpCode}H failed.
+Event.StringOperationFail.EventCode=3
+
+#EVENT_LOGICALOPERATION_TEST_FAILED
+Event.LogicalOperationFail.Message= Logical operation code {OpCode}H failed.
+Event.LogicalOperationFail.EventCode=4
+
+#EVENT_MATHREGISTER_TEST_FAILED
+Event.MathRegisterTestFail.Message= Math coprocessor register code {OpCode}H failed.
+Event.MathRegisterTestFail.EventCode=5
+
+#EVENT_MATHCOMMAND_TEST_FAILED
+Event.MathCommandTestFail.Message= Math coprocessor commands code {OpCode}H failed.
+Event.MathCommandTestFail.EventCode=6
+
+#EVENT_MATHARITHMETIC_TEST_FAILED
+Event.MathArithmeticTestFail.Message= Math coprocessor arithmetics code {OpCode}H failed.
+Event.MathArithmeticTestFail.EventCode=7
+
+#EVENT_MATHTRANSCENDENTAL_TEST_FAILED
+Event.MathTranscendentalTestFail.Message= Math coprocessor transcendental code {OpCode}H failed.
+Event.MathTranscendentalTestFail.EventCode=8
+
+#EVENT_MMX_TEST_FAILED
+Event.MmxTestFail.Message= MMX instruction {Instruction} failed ({OpCode}).
+Event.MmxTestFail.EventCode=10
+
+#EVENT_LEVEL2CACHE_TEST_FAILED
+Event.CacheTestFail.Message= Level 2 cache test failed.
+Event.CacheTestFail.EventCode=11
+
+#EVENT_SSE_TEST_FAILED
+Event.SSETestFail.Message= SSE instruction {Instruction} failed ({OpCode}).
+Event.SSETestFail.EventCode=12
+
+#EVENT_SSE2_TEST_FAILED
+Event.SSE2TestFail.Message= SSE2 instruction {Instruction} failed ({OpCode}).
+Event.SSE2TestFail.EventCode=13
+
+#MSG_CPU_STATUS
+#@jl This string is empty(=%0) in 4x so I didn't include it in 5x

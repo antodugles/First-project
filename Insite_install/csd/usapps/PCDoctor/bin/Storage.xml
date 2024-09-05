@@ -1,0 +1,20 @@
+<Script >
+	<TestSet>
+		<Device type="HardDrive"/>
+	</TestSet>
+	<TestSet>
+		<Device type="TapeDrive"/>
+	</TestSet>
+	<TestSet>
+		<Device type="FloppyDrive"/>
+	</TestSet>
+	<TestSet>
+		<Device type="LSDRIVE"/>
+	</TestSet>
+	<TestSet>
+		<Device type="CardReader"/>
+	</TestSet>
+	<TestSet>
+		<Device type="RemovableStorage"/>
+	</TestSet>
+</Script>

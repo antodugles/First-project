@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HtmlServer>
+
+   <!-- Set to TRUE for Browser-based authentication. Set to FALSE if the -->
+   <!-- web application does authentication or it is not needed           -->
+   <HttpAuthEnabled>FALSE</HttpAuthEnabled>
+
+   <!-- The HTML server has an interface for authentication, so this may  -->
+   <!-- be used even if the HttpAuthEnabled is FALSE.                     -->
+   <Users>
+      <User name="__ADMINUSERNAME__" password="__ADMINPASSWORD__"/>
+   </Users>
+
+   <!-- Only enable the following block if using https (SSL).   -->
+   <!-- If using HTTPS, you must have a valid certificate file. -->
+   <SslCertFile>__SSL_CERT_FILE__</SslCertFile>
+   <SslCaFile>__QSAUI_SSL_CA_FILE__</SslCaFile>
+
+   <HttpPort>localhost:__HTML_SERVER_LOCALPORT__</HttpPort>
+   <Protocol>__WEBAPP_SCHEME__</Protocol>
+   <RootDir>__INSTALL_DIR__/webapp</RootDir>
+   <DefaultPage>autoLogin.html</DefaultPage>
+
+   <SessionTimeout>-1</SessionTimeout>
+   <MaxSessions>5</MaxSessions>
+
+   <RawPages>
+     <Page uri="/scripts/css/content.css" ctype="text/css"/>
+     <Page uri="/scripts/css/explorer.css" ctype="text/css"/>
+     <Page uri="/scripts/css/menu.css" ctype="text/css"/>
+     <Page uri="/images/company_logo.gif" ctype="image/gif"/>
+     <Page uri="/images/small_company_logo.gif" ctype="image/gif"/>
+     <Page uri="/images/tab_body_selected.gif" ctype="image/gif"/>
+     <Page uri="/images/tab_left_selected.gif" ctype="image/gif"/>
+     <Page uri="/images/tab_right_selected.gif" ctype="image/gif"/>
+     <Page uri="/images/tablecorner_lt.gif" ctype="image/gif"/>
+     <Page uri="/images/tablecorner_rt.gif" ctype="image/gif"/>
+     <Page uri="/images/cal.gif" ctype="image/gif"/>
+     <Page uri="/images/bullet.gif" ctype="image/gif"/>
+     <Page uri="/images/bullet_on.gif" ctype="image/gif"/>
+     <Page uri="/images/poweredbyquestra.gif" ctype="image/gif"/>
+     <Page uri="/images/tab_right_line.gif" ctype="image/gif"/>
+     <Page uri="/images/menudivider.gif" ctype="image/gif"/>
+     <Page uri="/images/check.gif" ctype="image/gif"/>
+     <Page uri="/images/cross.gif" ctype="image/gif"/>
+     <Page uri="/images/help.gif" ctype="image/gif"/>
+     <Page uri="/help/ServiceAgentUserGuide.pdf" ctype="application/pdf"/>
+     <Page uri="/favicon.ico" ctype="image/x-icon"/>
+   </RawPages>
+
+   <HandlerSource>
+      <SharedLib>__INSTALL_DIR__/lib/libsahtmlhandlers.so</SharedLib>
+      <InitParam>__DATA_DIR__/etc/swdpolicies.xml</InitParam>
+      <StartupFuncName>A2BSAUIStartup</StartupFuncName>
+      <ShutdownFuncName>A2BSAUIShutdown</ShutdownFuncName>
+      <MarkupHandlerEx tag="PrintSession" f="DHHPrintSession"/>
+      <MarkupHandlerEx tag="LOGINERROR" f="DHHPrintLoginError"/>
+      <MarkupHandlerEx tag="ERRORMSG" f="DHHPrintErrorMsg"/>
+      <MarkupHandlerEx tag="ERRORTITLE" f="DHHPrintErrorTitle"/>
+      <MarkupHandlerEx tag="LOGINUSERNAMEINERROR" f="DHHPrintLoginUserNameInError"/>
+      <MarkupHandlerEx tag="LOGINPASSWORDINERROR" f="DHHPrintLoginPasswordInError"/>
+      <MarkupHandlerEx tag="LOGINUSERAS" f="DHHPrintLoginAs"/>
+      <MarkupHandlerEx tag="LISTASSETS" f="DHHListAssets"/>
+      <MarkupHandlerEx tag="CONTEXT" f="DHHPrintContext"/>
+      <MarkupHandlerEx tag="CONTEXTID" f="DHHPrintContextId"/>
+      <MarkupHandlerEx tag="SAVERSION" f="DHHGetSAVersion"/>
+      <MarkupHandlerEx tag="LISTUPDATES" f="DHHListUpdates"/>
+      <MarkupHandlerEx tag="SHOWUPDATEPROFILE" f="DHHPrintUpdateProfile"/>
+      <MarkupHandlerEx tag="PKG_CONFIGURATIONS" f="DHHPrintConfigurations"/>
+      <MarkupHandlerEx tag="SOFTPKG_REVISIONS" f="DHHPrintRevisions"/>
+      <MarkupHandlerEx tag="SOFTPKG_PKGDEPENDENCIES" f="DHHPrintPkgDependencies"/>
+      <MarkupHandlerEx tag="SOFTPKG_DEP_PLATFORMS" f="DHHPrintDeploymentPlatforms"/>
+      <MarkupHandlerEx tag="SELECTED_SOFTPKGS" f="DHHPrintSelectedSoftPkgs"/>
+      <MarkupHandlerEx tag="VIEW_DEFAULT_POLICY_CHECKBOX" f="DHHPrintDefaultPolicyCheckbox"/>
+      <MarkupHandlerEx tag="VIEW_DOWNLOAD_POLICY" f="DHHPrintDownloadPolicy"/>
+      <MarkupHandlerEx tag="VIEW_INSTALL_POLICY" f="DHHPrintInstallPolicy"/>
+      <MarkupHandlerEx tag="VIEW_ACTIVATE_POLICY" f="DHHPrintActivatePolicy"/>
+      <MarkupHandlerEx tag="DNLD_RECUR_INTERVAL" f="DHHPrintDownloadRecurInterval"/>
+      <MarkupHandlerEx tag="INST_RECUR_INTERVAL" f="DHHPrintInstallRecurInterval"/>
+      <MarkupHandlerEx tag="ACTV_RECUR_INTERVAL" f="DHHPrintActivateRecurInterval"/>
+      <MarkupHandlerEx tag="DNLD_STARTDATE" f="DHHPrintDownloadStartDate"/>
+      <MarkupHandlerEx tag="INST_STARTDATE" f="DHHPrintInstallStartDate"/>
+      <MarkupHandlerEx tag="ACTV_STARTDATE" f="DHHPrintActivateStartDate"/>
+      <MarkupHandlerEx tag="DNLD_STARTTIME" f="DHHPrintDownloadStartTime"/>
+      <MarkupHandlerEx tag="INST_STARTTIME" f="DHHPrintInstallStartTime"/>
+      <MarkupHandlerEx tag="ACTV_STARTTIME" f="DHHPrintActivateStartTime"/>
+      <MarkupHandlerEx tag="DNLD_WEEKLY_DETAIL" f="DHHPrintDownloadWeeklyDetail"/>
+      <MarkupHandlerEx tag="INST_WEEKLY_DETAIL" f="DHHPrintInstallWeeklyDetail"/>
+      <MarkupHandlerEx tag="ACTV_WEEKLY_DETAIL" f="DHHPrintActivateWeeklyDetail"/>
+      <MarkupHandlerEx tag="DNLD_MONTHLY_DETAIL" f="DHHPrintDownloadMonthlyDetail"/>
+      <MarkupHandlerEx tag="INST_MONTHLY_DETAIL" f="DHHPrintInstallMonthlyDetail"/>
+      <MarkupHandlerEx tag="ACTV_MONTHLY_DETAIL" f="DHHPrintActivateMonthlyDetail"/>
+      <MarkupHandlerEx tag="DNLD_YEARLY_DETAIL" f="DHHPrintDownloadYearlyDetail"/>
+      <MarkupHandlerEx tag="INST_YEARLY_DETAIL" f="DHHPrintInstallYearlyDetail"/>
+      <MarkupHandlerEx tag="ACTV_YEARLY_DETAIL" f="DHHPrintActivateYearlyDetail"/>
+      <MarkupHandlerEx tag="VALIDATE_SESSION" f="DHHValidateSession"/>
+      <MarkupHandlerEx tag="LISTDEVPACKAGES" f="DHHListDevicePackages"/>
+      <MarkupHandlerEx tag="UPDATE_STAGE" f="DHHPrintUpdateStage"/>
+      <MarkupHandlerEx tag="UPDATE_BUTTONS" f="DHHPrintUpdateButtons"/>
+      <PostHandlerEx action="/login" f="DHHLogin"/>
+      <PostHandlerEx action="/viewUpdatePackage" f="DHHViewUpdatePackage"/>
+      <PostHandlerEx action="/postUpdateAction" f="DHHPostUpdateAction"/>
+      <PostHandlerEx action="/declineUpdates" f="DHHDeclineUpdates"/>
+      <PostHandlerEx action="/downloadUpdates" f="DHHDownloadUpdates"/>
+      <PostHandlerEx action="/installUpdates" f="DHHInstallUpdates"/>
+      <PostHandlerEx action="/activateUpdates" f="DHHActivateUpdates"/>
+      <PostHandlerEx action="/deleteUpdates" f="DHHDeleteUpdates"/>
+      <PostHandlerEx action="/updateStatus" f="DHHUpdateStatus"/>
+      <PostHandlerEx action="/updateDefaultPolicyCheckbox" f="DHHUpdateDefaultPolicyCheckbox"/>
+      <PostHandlerEx action="/updateDownloadPolicy" f="DHHUpdateDownloadPolicy"/>
+      <PostHandlerEx action="/updateInstallPolicy" f="DHHUpdateInstallPolicy"/>
+      <PostHandlerEx action="/updateActivatePolicy" f="DHHUpdateActivatePolicy"/>
+      <PostHandlerEx action="/saveDownloadSchedule" f="DHHSaveDownloadSchedule"/>
+      <PostHandlerEx action="/saveInstallSchedule" f="DHHSaveInstallSchedule"/>
+      <PostHandlerEx action="/saveActivateSchedule" f="DHHSaveActivateSchedule"/>
+      <PostHandlerEx action="/viewPolicies" f="DHHViewPolicies"/>
+      <PostHandlerEx action="/updateContext" f="DHHUpdateContext"/>
+      <PostHandlerEx action="/getHttpHeaderValues" f="DHHGetHttpHeaderValues"/>
+      <PostHandlerEx action="/setHttpHeaderValue" f="DHHSetHttpHeaderValue"/>
+      <PostHandlerEx action="/setSessionParam" f="DHHSetSessionParam"/>
+      <PostHandlerEx action="/createRequest" f="DHHCreateEntRequest"/>
+   </HandlerSource>
+</HtmlServer>

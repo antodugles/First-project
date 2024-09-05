@@ -1,0 +1,113 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdrnetwork
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+# Parameter to control prompting
+PromptUserForMedia = true
+
+Test.NetworkCableTest.Enable = true
+
+Test.NetworkCableTest.MsgBoxTimeout = 30
+
+Test.NetworkCableTest.OsUpdateWaitAfterInsert = 5
+
+Test.NetworkExternalLoopbackTest.Enable = false
+
+Test.NetworkExternalLoopbackTest.MsgBoxTimeout = 30
+
+Test.NetworkExternalLoopbackTest.NumPacketsToTry = 100
+
+Test.NetworkExternalLoopbackTest.OsUpdateWaitAfterInsert = 5
+
+Test.NetworkExternalLoopbackTest.PercentPacketsReceivedForTestPass = 100
+
+Test.NetworkLinkTest.Enable = true
+
+Test.NetworkLinkTest.MsgBoxTimeout = 30
+
+Test.NetworkLinkTest.NumPacketsToTry = 100
+
+Test.NetworkLinkTest.OsUpdateWaitAfterInsert = 5
+
+Test.NetworkLinkTest.PercentPacketsReceivedForTestPass = 100
+
+Test.NetworkTCPIPCommunicationTest.Enable = true
+
+Test.NetworkTCPIPCommunicationTest.MaxPacketSize = 512
+
+Test.NetworkTCPIPCommunicationTest.MaxSequentialPacketFailures = 10
+
+Test.NetworkTCPIPCommunicationTest.NumBroadcastAttempts = 5;
+
+Test.NetworkTCPIPCommunicationTest.NumPacketsToTry = 100
+
+Test.NetworkTCPIPCommunicationTest.PercentPacketsReceivedForTestPass = 90
+
+Test.NetworkTCPIPCommunicationTest.PingLoopbackIfNoRemoteAddrFound = 0
+
+Test.NetworkTCPIPCommunicationTest.ReceiveRetriesPerPacket = 10
+
+Test.NetworkTCPIPCommunicationTest.SendReceiveTimeout = 100
+
+Test.NetworkTCPIPInternalLoopbackTest.Enable = true
+
+Test.NetworkTCPIPInternalLoopbackTest.MaxPacketSize = 512
+
+Test.NetworkTCPIPInternalLoopbackTest.MaxSequentialPacketFailures = 10
+
+Test.NetworkTCPIPInternalLoopbackTest.NumBroadcastAttempts = 5;
+
+Test.NetworkTCPIPInternalLoopbackTest.NumPacketsToTry = 100
+
+Test.NetworkTCPIPInternalLoopbackTest.PercentPacketsReceivedForTestPass = 90
+
+Test.NetworkTCPIPInternalLoopbackTest.PingLoopbackIfNoRemoteAddrFound = 0
+
+Test.NetworkTCPIPInternalLoopbackTest.ReceiveRetriesPerPacket = 10
+
+Test.NetworkTCPIPInternalLoopbackTest.SendReceiveTimeout = 100
+
+Test.WirelessConnectivityTest.Enable = true
+
+Test.WirelessConnectivityTest.MsgBoxTimeout = 30
+
+Test.WirelessConnectivityTest.OsUpdateWaitAfterInsert = 5
+
+Test.WirelessSignalStrengthTest.Enable = true
+
+

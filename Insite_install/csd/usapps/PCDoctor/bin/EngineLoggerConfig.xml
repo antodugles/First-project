@@ -1,0 +1,15 @@
+<pcd:logger>
+   
+	<logger name="Root" priority="Error" >
+		<appender type="stream" name="ConsoleErr" out="err" priority="Fatal"/>
+		<appender type="file" name="EngineLogFile" priority="Debug" dir="logs" usepid="true" out="engine.log" overwrite="true" />
+	 </logger>
+
+	<logger name="IPC" priority="Error" />
+	<logger name="SharedMemoryImp" priority="Error" />
+
+	<logger name="Benchmarking" priority="Error" >
+		<appender type="file" name="EngineBenchLogFile" priority="Info" dir="logs" usepid="true" out="engine_benchmarks.log" overwrite="true" />
+	 </logger>
+	
+</pcd:logger>

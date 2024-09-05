@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Insite2>
+	<!--Action can be install/UnInstall-->
+		<software name="CookieMonster" action="Install">
+				<pkg path="CookieMonster.msi" install_path="C:\CKM"></pkg>
+				<enable-feature>php,service</enable-feature>
+		</software>
+		<software name="Questra" action="Install">
+				<pkg path="Insite2setup.exe" install_path="C:\Questra"></pkg>
+		</software>
+</Insite2>

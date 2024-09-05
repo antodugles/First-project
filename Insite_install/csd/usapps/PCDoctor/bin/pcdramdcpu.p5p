@@ -1,0 +1,166 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdramdcpu english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Chris_Matyas
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdramdcpu/pcdramdcpu.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=AMD CPU Test
+Module.Description=This module tests AMD CPU
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.FPUTest.Name= AMD FPU Test
+Test.FPUTest.Description= AMD FPU Test
+
+Test.MMXTest.Name= AMD MMXTest
+Test.MMXTest.Description= AMD MMX Test
+
+Test.SSETest.Name= AMD SSE Test
+Test.SSETest.Description= AMD SSE Test
+
+Event.FPUTestAborted.Message=FPU test aborted
+Event.FPUTestAborted.EventCode=1
+
+Event.FPUTestTimeOut.Message=FPU test reached time out limit before completion.
+Event.FPUTestTimeOut.EventCode=2
+
+Event.GetReturnCodeError.Message = Error retrieving return code.
+Event.GetReturnCodeError.EventCode=3
+
+# FPU test fail event
+Event.FPUFistOpsFailed.Message= Failed testing FPU FIST operations, Code 11
+Event.FPUFistOpsFailed.EventCode=6
+
+Event.FPUFmulOpsFailed.Message= Failed testing FPU FMUL operations, Code 12
+Event.FPUFmulOpsFailed.EventCode=7
+
+Event.FPUCombination_1_OpsFailed.Message= Failed testing FPU combination 1 operations, code 13
+Event.FPUCombination_1_OpsFailed.EventCode=8
+
+Event.FPUCombination_2_OpsFailed.Message= Failed testing FPU combination 2 operations, code 14
+Event.FPUCombination_2_OpsFailed.EventCode=9
+
+Event.FPUCombination_3_OpsFailed.Message= Failed testing FPU combination 3 operations, code 15
+Event.FPUCombination_3_OpsFailed.EventCode=10
+
+Event.FPUCombination_4_OpsFailed.Message= Failed testing FPU combination 4 operations, code 16
+Event.FPUCombination_4_OpsFailed.EventCode=11
+
+Event.FPUFxchOpsFailed.Message= Failed testing FPU FXCH operations, code 17.
+Event.FPUFxchOpsFailed.EventCode=12
+
+Event.FPUFcmovOpsFailed.Message= Failed testing FPU FCMOV operations, code 18.
+Event.FPUFcmovOpsFailed.EventCode=13
+
+Event.FPUFdivCombination_1_OpsFailed.Message= Failed testing FPU FDIV combination 1 operations, code 19.
+Event.FPUFdivCombination_1_OpsFailed.EventCode=14
+
+Event.FPUFdivCombination_2_OpsFailed.Message= Failed testing FPU FDIV combination 2 operations, code 20.
+Event.FPUFdivCombination_2_OpsFailed.EventCode=15
+
+Event.FPUFdivCombination_3_OpsFailed.Message= Failed testing FPU FDIV combination 3 operations, code 21.
+Event.FPUFdivCombination_3_OpsFailed.EventCode=16
+ 
+Event.FPU_ZE_Exceptions.Message= FPU ZE exceptions occurred, code 22.
+Event.FPU_ZE_Exceptions.EventCode=17
+
+Event.FPU_SF_Exceptions.Message= FPU SF exceptions occurred, code 23.
+Event.FPU_SF_Exceptions.EventCode=18
+
+Event.FPU_IE_Exceptions.Message=  FPU IE exceptions occurred, code 24.
+Event.FPU_IE_Exceptions.EventCode=19
+
+Event.FPU_UE_Exceptions.Message= FPU UE exceptions occurred, code 25.
+Event.FPU_UE_Exceptions.EventCode=20
+
+Event.FPU_OE_Exceptions.Message= FPU OE execptions occurred, code 26.
+Event.FPU_OE_Exceptions.EventCode=21
+
+
+#MMX test message
+Event.MMXTestTimeOut.Message= MMX test reached time out limit before completion. 
+Event.MMXTestTimeOut.EventCode=4
+
+Event.MMXTestAborted.Message=MMX test aborted.
+Event.MMXTestAborted.EventCode=22
+
+Event.MMXCombinedOpsFailed.Message= Failed testing combined MMX opertions, code 11.
+Event.MMXCombinedOpsFailed.EventCode=23
+
+Event.MMXPandOpsFailed.Message= Failed testing MMX PAND operations, code 12.
+Event.MMXPandOpsFailed.EventCode=24
+
+Event.MMXPmulOpsFailed.Message= Failed testing MMX PMUL operations, code 13.
+Event.MMXPmulOpsFailed.EventCode=25
+
+Event.MMXPshiftOpsFailed.Message= Failed testing MMX PSHIFT operations, code 14.
+Event.MMXPshiftOpsFailed.EventCode=26
+
+Event.MMXPsubOpsFailed.Message= Failed testing MMX PSUB operations, code 15.
+Event.MMXPsubOpsFailed.EventCode=27
+
+Event.MMXGeneralRegistersMovdOpsFailed.Message= Failed general registers with MOVD MMX operations, code 16.
+Event.MMXGeneralRegistersMovdOpsFailed.EventCode=28
+
+# SSE Test error event
+Event.SSETestTimeOut.Message= SSE test reached time out limit before completion.
+Event.SSETestTimeOut.EventCode=5
+
+Event.SSETestAborted.Message=SSE test aborted.
+Event.SSETestAborted.EventCode=29
+
+Event.SSEPattern_01_Failed.Message= Failed SSE pattern 01, code 11.
+Event.SSEPattern_01_Failed.EventCode=30
+
+Event.SSEPattern_02_Failed.Message= Failed SSE pattern 02, code 12.
+Event.SSEPattern_02_Failed.EventCode=31
+
+Event.SSEPattern_03_Failed.Message= Failed SSE pattern 03, code 13.
+Event.SSEPattern_03_Failed.EventCode=32
+
+Event.SSEPattern_04_Failed.Message= Failed SSE pattern 04, code 14.
+Event.SSEPattern_04_Failed.EventCode=33
+
+Event.SSEPattern_05_Failed.Message= Failed SSE pattern 05, code 15.
+Event.SSEPattern_05_Failed.EventCode=34
+
+Event.SSEPattern_06_Failed.Message= Failed SSE pattern 06, code 16.
+Event.SSEPattern_06_Failed.EventCode=35
+
+Event.SSEPattern_07_Failed.Message= Failed SSE pattern 07, code 17.
+Event.SSEPattern_07_Failed.EventCode=36
+
+Event.SSEPattern_08_Failed.Message= Failed SSE pattern 08, code 18.
+Event.SSEPattern_08_Failed.EventCode=37
+
+Event.SSEComparingMemoryFailed.Message= Failed SSE comparing memory, code 19.
+Event.SSEComparingMemoryFailed.EventCode=38
+
+# Event code for this event is marked incorrectly as 38 in 4X
+Event.ExecutableNotFound.Message= Cannot locate the external test executable.
+Event.ExecutableNotFound.EventCode=39
+

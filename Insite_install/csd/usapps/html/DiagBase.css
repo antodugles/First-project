@@ -1,0 +1,24 @@
+body {
+	background-color: #C0C0C0;
+	color: #000;
+	margin: 2px;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 13px;
+}
+
+body.running, body.running div.control p.label {
+	background-color: yellow;
+}
+
+body.passed, body.passed div.control p.label {
+	background-color: limegreen ;
+}
+
+body.failed, body.failed div.control p.label {
+	background-color: red;
+}
+
+.none {
+	display: none;
+}

@@ -1,0 +1,95 @@
+/* <header>
+ * <cr> 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * </cr>
+ * <addr>
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * </addr>
+ *
+ * <lic>
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * </lic>
+ * 
+ * <desc>
+ * libAuth Implementation
+ * </desc>
+ * 
+ * <file>
+ * @author  Jyoti Gandhe
+ * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/common/src/libAuth/src/localizedResources/libAuthDetailed.p5p#1 $
+ * @.date   $DateTime: 2005/06/16 13:46:33 $
+ * @.change $Change: 39950 $
+ * @.last   $Author: 
+ * </file>
+ * </header>
+ */
+
+Error.Manufacturer.Description = This version of PC-Doctor is licensed to run on {manufacturer} systems only. Please use PC-Doctor on {manufacturer} system.
+
+Error.Model.Description = This version of PC-Doctor is licensed to run on {model} systems only. Please use PC-Doctor on {model} system.
+
+Error.USBDongle.Description = This version of PC-Doctor requires a USB key (dongle) to run. The USB key was not detected. Please insert USB key to run PC-Doctor.
+
+Error.USBDongleSilent.Description=Unable to connect to USB Dongle found in system. Please remove and reinsert USB Dongle into same USB Port and relaunch product. If the dongle is still not recognized, reboot and try again.
+
+Error.USBDongleBadInstall.Description=Unable to connect to USB Dongle found in system. Automatic installation of driver failed. Please refer to documentation on manual installation of the USB Dongle driver.
+
+Error.ParallelDongle.Description = This version of PC-Doctor requires a parallel port dongle to run. The  dongle was not detected. Please insert it to run PC-Doctor.
+
+Error.LanguageProhibit.Description = This version of PC-Doctor cannot be run in  {locale} locale. Please switch to a different locale to run PC-Doctor.
+
+Error.LanguageAllow.Description =  This version of PC-Doctor can be run in  {locale} locale only. Please set appropriate locale to run PC-Doctor.
+
+Error.ExpiryDateSystem.Description = The license for this version of PC-Doctor expired on {expdate}. Please renew your license to run PC-Doctor.
+
+Error.EvalNotBegun.Description = The license for this version of PC-Doctor does not begin till {expdate}. Please use PC-Doctor from {expdate}.
+
+Error.SysDateSetBack.Description = System date on this machine has been set back. Please use a different machine to run PC-Doctor. 
+
+Error.ExpiryDateDongle.Description = {message}
+
+Error.UserName.Description = This version of PC-Doctor can only be used by {username}. Please login as {username} to run PC-Doctor.
+
+Error.MACAddress.Description = This version of PC-Doctor is licensed to run on system with MAC {address} only. Please use the correct system to run PC-Doctor.
+
+Error.MemorySize.Description = This version of PC-Doctor is licensed to run on systems with {size} main memory. Please switch to appropriate system to run PC-Doctor.
+
+Error.CPUSpeed.Description  = This version of PC-Doctor can run only on processors with {speed} speed. Please use appropriate system to run PC-Doctor.
+
+Error.NetworkFactoryClient.Description = {error}
+
+Error.USBDongleSerial.Description = This version of PC-Doctor can run only with USB Dongle(s) having serial number(s) {numbers}. Please use appropriate dongle to run PC-Doctor.
+
+Error.SystemSerialAllow.Description = This version of PC-Doctor is licensed to run on systems with serial number(s) {serial}. Please use appropriate system to run PC-Doctor.
+
+Error.SystemSerialProhibit.Description = This version of PC-Doctor is not licensed to run on systems with serial number(s) {serial}. Please use appropriate system to run PC-Doctor.
+
+Error.SystemVersionAllow.Description = This version of PC-Doctor is licensed to run on systems with version number(s) {version}. Please use appropriate system to run PC-Doctor.
+
+Error.SystemVersionProhibit.Description = This version of PC-Doctor is not licensed to run on systems with version number(s) {version}. Please use appropriate system to run PC-Doctor.
+
+Error.DesktopProhibit.Description = This version of PC-Doctor is not licensed on desktops. Please use appropriate system to run PC-Doctor.
+
+Error.NotebookProhibit.Description = This version of PC-Doctor is not licensed to run on laptops. Please use appropriate system to run PC-Doctor.
+
+Error.OSProhibit.Description = This version of PC-Doctor is not licensed to run on {operatingSystem}. Please use a different operating system for running PC-Doctor.
+
+Error.PCIProhibit.Description = This version of PC-Doctor is not licensed to run on systems without PCI Device {VendorID}. Please use the correct system configuration for running PC-Doctor.
+
+Error.SigMissing.Description = License File format is invalid. Please make sure that {filename} has not been corrupted and you have permission to read it. 
+
+Error.InvalidSig.Description = License File verification failed. Please make sure that {filename} has not been corrupted and you have permission to read it. 
+
+Error.InvalidLicense.Description = The Signature for {filename} is incorrect. Please ensure that {filename} exists and has not been corrupted.
+
+Error.PCDError.Description = An exception occured during authentication. Please contact PC-Doctor to resolve this issue.
+
+Error.UnknownError.Description = Unknown Error occured during authentication. Please contact PC-Doctor to resolve this issue.
+
+Error.LicenseFileOpenFailed.Description = Unable to open PC-Doctor License file: {filename}.  Please ensure that {filename} exists and you have permission to read it.
+
+Error.NotLicensed.Description=This version of PC-Doctor is not licensed to run on this system.

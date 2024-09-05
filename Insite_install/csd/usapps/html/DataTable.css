@@ -1,0 +1,277 @@
+table.datatable {
+	position: relative;
+	border: 0;
+	padding: 0;
+	margin: 0 auto;
+	width: 90%;
+	border: 1px solid #999;
+	}
+	table.datatable tr.header {
+		}
+		table.datatable tr th {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background: #D7D7D7;
+			white-space: nowrap;
+			border-bottom: 1px solid #999;
+			cursor: pointer;
+			}
+		table.datatable tr th.filter {
+			background: #D7FFD7;
+			}
+		table.datatable tr th:hover,
+		table.datatable tr th.over {
+			background: #D7D7FF;
+			}
+			table.datatable tr th div.container {
+				position: relative;
+				margin: 0;
+				padding: 0;
+				}
+			table.datatable tr th p {
+				position: relative;
+				margin: 0 20px 0 0;
+				padding: 0;
+				line-height: 20px;
+				height: 20px;
+				white-space: nowrap;
+				border-right: 1px solid #999;
+				border-top: 1px solid #E3E3E3;
+				border-bottom: 1px solid #CBCBCB;
+				text-align: left;
+				overflow: hidden;
+				}
+			table.datatable tr th p.nofilter {
+				margin: 0;
+				}
+			table.datatable tr th p.lastfilter {
+				margin: 0 19px 0 0;
+				}
+			table.datatable tr th.filter p {
+				border-top: 1px solid #E3FFE3;
+				border-bottom: 1px solid #CBFFCB;
+				}
+			table.datatable tr th:hover p,
+			table.datatable tr th.over p {
+				border-top: 1px solid #E3E3FF;
+				border-bottom: 1px solid #CBCBFF;
+				}
+				table.datatable tr th p span {
+					margin: 0;
+					padding: 0;
+					overflow: hidden;
+					}
+					table.datatable tr th p span span {
+						margin: 0;
+						padding: 0 0.5em;
+						display: block;
+						float: left;
+						}
+					table.datatable tr th p span span.sort {
+						margin: 0;
+						padding: 0;
+						background: none;
+						display: block;
+						float: left;
+						opacity: 0.35;
+						-moz-opacity: 0.35;
+						-khtml-opacity: 0.35;
+						filter: alpha(opacity=35);
+						}
+					table.datatable tr th p.ascending span span.sort {
+						background: url(images/iconAsc.png) left center no-repeat;
+						}
+					table.datatable tr th p.descending span span.sort {
+						background: url(images/iconDesc.png) left center no-repeat;
+						}
+			table.datatable tr th div.filter {
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin: 0;
+				padding: 0 5px;
+				background: #C7C7C7;
+				border-right: 1px solid #999;
+				border-top: 1px solid #D3D3D3;
+				border-bottom: 1px solid #BBBBBB;
+				}
+			table.datatable tr th.filter div.filter {
+				background: #C3FFC3;
+				border-top: 1px solid #CFFFCF;
+				border-bottom: 1px solid #B7FFB7;
+				}
+				table.datatable tr th div.filter span {
+					display: block;
+					margin: 0;
+					padding: 0;
+					line-height: 20px;
+					height: 20px;
+					font-size: xx-small;
+					width: 9px;
+					background: url(images/iconDesc.png) left center no-repeat;
+					}
+			table.datatable tr th:hover div.filter,
+			table.datatable tr th.over div.filter {
+				background: #C3C3FF;
+				border-top: 1px solid #CFCFFF;
+				border-bottom: 1px solid #B7B7FF;
+				}
+			table.datatable tr th .last {
+				border-right: none;
+				}
+		table.datatable tr.hide {
+			display: none;
+			}
+		table.datatable tr td {
+			margin: 0;
+			padding: 0;
+			background: #F3F3F3;
+			border-top: 1px solid #FFFFFF;
+			border-bottom: 1px solid #E7E7E7;
+			cursor: default;
+			}
+		table.datatable tr td.container {
+			margin: 0;
+			padding: 0;
+			background: transparent;
+			border-top: none;
+			border-bottom: none;
+			}
+		table.datatable tr td.col_datetime {
+			background: #EFEFEF;
+			border-top: 1px solid #FBFBFB;
+			border-bottom: 1px solid #E3E3E3;
+			}
+		table.datatable tr.zebra td {
+			background: #EBEBEB;
+			border-top: 1px solid #F7F7F7;
+			border-bottom: 1px solid #DFDFDF;
+			}
+		table.datatable tr.zebra td.col_datetime {
+			background: #E3E3E3;
+			border-top: 1px solid #DFDFDF;
+			border-bottom: 1px solid #D7D7D7;
+			}
+		table.datatable tr:hover td,
+		table.datatable tr.over td {
+			background: #E3E3FF;
+			border-top: 1px solid #EFEFFF;
+			border-bottom: 1px solid #D7D7FF;
+			}
+		table.datatable tr:hover td.col_datetime,
+		table.datatable tr.over td.col_datetime {
+			background: #DBDBFF;
+			border-top: 1px solid #E7E7FF;
+			border-bottom: 1px solid #CFCFFF;
+			}
+		table.datatable tr.selected td {
+			background: #D3D3FF;
+			border-top: 1px solid #DFDFFF;
+			border-bottom: 1px solid #C7C7FF;
+			}
+		table.datatable tr.selected td.col_datetime {
+			background: #CBCBFF;
+			border-top: 1px solid #D7D7FF;
+			border-bottom: 1px solid #BFBFFF;
+			}
+			table.datatable tr td p {
+				margin: 0;
+				padding: 0.1em 0.5em;
+				}
+	table.datatable tr.filters {
+		position: relative !important;
+		position: absolute;
+		margin: -1px -1px 0 -1px;
+		padding: 0;
+		height: 0;
+		border: none;
+		overflow: visible;
+		overflow-x: hidden;
+		}
+		table.datatable tr.filters td,
+		table.datatable tr.filters td:hover {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			height: 0;
+			background: transparent;
+			border: none !important;
+			overflow: hidden;
+			}
+			table.datatable tr.filters td ul {
+				position: absolute;
+				display: none;
+				margin: 0 -1px;
+				padding: 0;
+				left: auto !important;
+				left: 0;
+				list-style: none;
+				overflow: auto;
+				border: 1px solid #999;
+				max-height: 100px;
+				height: auto;
+				}
+				table.datatable tr.filters td ul li {
+					display: block;
+					margin: 0;
+					padding: 0;
+					overflow: hidden;
+					}
+					table.datatable tr.filters td ul li a,
+					table.datatable tr.filters td ul li a.out {
+						display: block;
+						color: #000;
+						font-weight: normal;
+						text-decoration: none;
+						padding: 0 0.5em;
+						margin: 0;
+						font-size: 90%;
+						text-align: left;
+						background: #E7FFE7;
+						border-top: 1px solid #F3FFF3;
+						border-bottom: 1px solid #DBFFDB;
+						cursor: pointer;
+						}
+					table.datatable tr.filters td ul li.zebra a,
+					table.datatable tr.filters td ul li.zebra a.out {
+						background: #DBFFDB;
+						border-top: 1px solid #E7FFE7;
+						border-bottom: 1px solid #CFFFCF;
+						}
+					table.datatable tr.filters td ul li.all a {
+						}
+					table.datatable tr.filters td ul li.active a {
+						font-weight: bold;
+						font-style: italic;
+						}
+					table.datatable tr.filters td ul li a:hover,
+					table.datatable tr.filters td ul li a.over {
+						background: #E3E3FF;
+						border-top: 1px solid #EFEFFF;
+						border-bottom: 1px solid #D7D7FF;
+						}
+	/* Scrolling table body - Internet Explorer */
+	table.datatable table {
+		position: relative;
+		border: 0;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		}
+	table.datatable tr td div {
+		position: relative;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		overflow: auto;
+		overflow-x: hidden;
+		}
+	/* Scrolling table body - Mozilla Firefox */
+	table.datatable > tbody.scrollable {
+		margin: 0;
+		padding: 0;
+		overflow: auto;
+		overflow-x: hidden;
+		}

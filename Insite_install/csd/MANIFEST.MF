@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Created-By: Apache Ant 1.5
+Implementation-Version: CSD-3.0
+Build-Date: July 13 2007
+

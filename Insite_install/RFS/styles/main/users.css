@@ -1,0 +1,58 @@
+body {
+	background: PageBackground;
+	font-family: PageFontFamily;
+	font-size: PageFontSize;
+	color: PageFontColor;
+	}
+	div#root input.text,
+	div#root input.valid {
+		border-color: ControlBorderColor;
+		background: ControlBackground;
+		color: ControlFontColor;
+		font-family: PageFontFamily;
+		}
+	div#root input.invalid {
+		border-color: ControlInvalidBorderColor;
+		background: ControlInvalidBackground;
+		}
+	div#root em {
+		font-family: Verdana, PageFontFamily;
+		color: AsteriskFontColor;
+		}
+	div#root table {
+		border-color: TableBorderColor;
+		}
+	div#root table tr {
+		background-color: TableRowBackgroundColor;
+		}
+	div#root table tr.header {
+		background-color: TableHeaderRowBackgroundColor;
+		}
+	div#root table tr.altrow {
+		background-color: TableAlternateRowBackgroundColor;
+		}
+	div#root table tr.actions {
+		background-color: TableActionsRowBackgroundColor;
+		}
+	div#root table tr.editrow {
+		background-color: TableEditRowBackgroundColor;
+		}
+		div#root table tr.header th {
+			border-bottom-color: TableBorderShadowColor;
+			border-right-color: TableBorderShadowColor;
+			border-left-color: TableBorderHighlightColor;
+			}
+		div#root table tr a {
+			color: ActionFontColor;
+			}
+				div#root div#adduser p input.button,
+				div#root div#adduser p input.button.released {
+					border-color: ButtonBorderColor;
+					background: ButtonBackground;
+					color: ButtonFontColor;
+					font-family: PageFontFamily;
+					}
+				div#root div#adduser p input.button.pushed {
+					border-color: ButtonPushedBorderColor;
+					background: ButtonPushedBackground;
+					}

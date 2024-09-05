@@ -1,0 +1,75 @@
+/* ViewXML stylesheet				*/
+/*	Author:		Andrew.Kant@ge.com	*/
+/*	Date:		Jun.06.2006			*/
+/*	Modified:	Jun.09.2006			*/
+div.ViewXML {
+	position: relative;
+	margin: 10px auto;
+	padding: 10px;
+	min-width: 90%;
+	width: auto !important;
+	width: 90%;
+	background: #F6F6F6;
+	border: 1px dashed #000;
+	color: #900;
+	font-weight: normal;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	min-height: 0.5em;
+	height: auto !important;
+	height: 0.5em;
+	}
+	div.ViewXML * {
+		position: relative;
+		z-index: 5;
+		}
+	div.ViewXML div.ghost {
+		position: absolute;
+		right: 0.25ex !important;
+		right: 0;
+		top: 0;
+		color: #CCC;
+		font-size: 14pt;
+		font-style: italic;
+		font-weight: bold;
+		cursor: default;
+		z-index: 1;
+		}
+	div.ViewXML div.timestamp {
+		position: absolute;
+		right: 6em;
+		top: 0;
+		color: #CCC;
+		font-size: 8pt;
+		font-style: normal;
+		font-weight: bold;
+		cursor: default;
+		z-index: 1;
+		}
+	div.ViewXML span {
+		font-weight: normal;
+		font-style: normal;
+		}
+		/* Symbol */
+		div.ViewXML span.symbol {
+			color: #00F;
+			}
+		/* Processing Instruction */
+		div.ViewXML span.pi {
+			color: #00F;
+			}
+		/* Data */
+		div.ViewXML span.data {
+			color: #000;
+			font-weight: bold;
+			}
+		/* Comment */
+		div.ViewXML span.comment {
+			color: #888;
+			font-style: italic;
+			}
+	/* Child element */
+	div.ViewXML div div {
+		margin-left: 4em;
+		}

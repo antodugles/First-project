@@ -1,0 +1,57 @@
+#<header>
+# <cr>
+#  Copyright (c) 2000-2004 PC-Doctor, Inc.
+# </cr>
+# <addr>
+#  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+#  All rights reserved.
+# </addr>
+#
+# <lic>
+#  This software is the confidential and proprietary information of PC-Doctor, Inc.
+#  ("Confidential Information"). You shall not disclose such confidential
+#  information and shall use it only in accordance with the terms of the license
+#  agreement you entered into with PC-Doctor.
+# </lic>
+#
+# <desc>
+#  The pcdrharddrive setttings file
+# </desc>
+#
+# <file>
+#  @author  Chris_Matyas
+#  @version $Id: //depot/Builds/Matrix/20050330_GEHealth_BDB2849/Matrix_Projects/projects/modules/src/multi/diag/pcdrexec/windows/pcdrexec.p5i#1 $
+#  @.date   $DateTime: 2005/03/30 16:58:17 $
+#  @.change $Change: 32890 $
+#  @.last   $Author: Dan_Lu $
+# </file>
+#</header>
+                                                                                                                                                                                                     
+Module.DisableAllTests=true
+ 
+
+Test.1.Name = MyTest
+Test.2.Name = MyTest2
+Test.3.Name = MyTest3
+
+
+
+Test.MyTest.Enable=true
+Test.MyTest.ProgramOrScriptToRun=test.bat
+Test.MyTest.DebugOutputFile=pcdrexec.debug.txt
+Test.MyTest.DeviceTypesToTest = System
+
+Test.MyTest2.Enable= false
+Test.MyTest2.ProgramOrScriptToRun =test1.bat
+Test.MyTest2.DebugOutputFile =pcdrexec.debug.txt
+Test.MyTest2.DeviceTypesToTest = IDE | HardDrive
+
+Test.MyTest3.Enable=false
+Test.MyTest3.ProgramOrScriptToRun=test2.bat
+Test.MyTest3.DebugOutputFile=pcdrexec.debug.txt
+Test.MyTest3.DeviceTypesToTest = FloppyDrive
+
+
+Test.ErrorMessage.3 = Error writing to sound card memory.
+Test.ErrorMessage.23 = Error reading from sound card memory.
+Test.ErrorMessage.72 = Error clearing sound card buffer.

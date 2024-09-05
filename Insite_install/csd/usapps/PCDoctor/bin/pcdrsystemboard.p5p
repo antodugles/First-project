@@ -1,0 +1,51 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Raymond Chow
+  * @version $Id:
+  * @.date   $DateTime:
+  * @.change $Change:
+  * @.last   $Author:
+  * </file>
+  * </header>
+  */
+
+[EN]
+
+Module.Name=System Board Test
+Module.Description=This module tests System Board
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.RTCRolloverTest.Name=RTC Rollover Test
+Test.RTCRolloverTest.Description=System Board RTC Rollover Test
+
+Test.RTCAccuracyTest.Name=RTC Accuracy Test
+Test.RTCAccuracyTest.Description=System Board RTC Accuracy Test
+
+Event.szFailedGetSystemTime.Message=Failed getting system time.
+Event.szFailedSetSystemTime.Message=Failed setting system time.
+Event.szNoHighResCounter.Message=System does not support High-Resolution Performance counter.
+Event.szRTCRolloverTestFailed.Message=System failed RTC Rollover Test.
+Event.szRTCAccuracyTestFailed.Message=System failed RTC Accuracy Test.
+
+
+

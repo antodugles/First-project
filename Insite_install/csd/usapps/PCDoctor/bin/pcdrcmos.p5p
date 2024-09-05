@@ -1,0 +1,82 @@
+﻿ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrCMOS english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Chris_Matyas
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrcmos/pcdrcmos.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=CMOS
+Module.Description=This module tests CMOS
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.ChecksumTest.Name=Checksum Test
+Test.ChecksumTest.Description=CMOS Check Sum Test
+
+Test.PatternTest.Name=Pattern Test
+Test.PatternTest.Description=CMOS Pattern Test
+
+#MSG_FAILED_CHECKSUM
+Event.ChecksumFail.Message=CMOS failed checksum test.
+Event.ChecksumFail.EventCode=1
+
+#MSG_FAILED_PATTERNS
+Event.PatternTestFail.Message= CMOS failed patterns test:
+Event.PatternTestFail.EventCode=2
+
+#MSG_WRITE_READ_FAILED
+Event.PatternReadWriteFail.Message= Write/Read failed at address {Address}H:  wrote {Write}H, read {Read}H.
+Event.PatternReadWriteFail.EventCode=3
+
+#MSG_UNABLE_TO_ALLOCATE_MEMORY
+Event.MemoryAllocationError.Message= Unable to allocate memory.
+Event.MemoryAllocationError.EventCode=6
+
+#MSG_PCDR_DRIVER_NOT_INSTALLED
+Event.DriverNotInstalled.Message= The PC Doctor driver is not installed properly.  Reinstallation is required.
+Event.DriverNotInstalled.EventCode=7
+
+#MSG_PATTERN_TEST_UNKNOWN_ERR
+Event.UnknownError.Message= Unknown error occurred, possibly an access violation.
+Event.UnknownError.EventCode=8
+
+#MSG_PATTERN_TEST_ABORTED
+Event.PatternTestAborted.Message= The CMOS Pattern test was aborted.
+Event.PatternTestAborted.EventCode=9
+
+#MSG_CHECKSUM_TEST_ABORTED
+Event.ChecksumTestAborted.Message= The CMOS Checksum test was aborted.
+Event.ChecksumTestAborted.EventCode=10
+
+#MSG_PATTERN_PROGRESS
+#removed "=" from 4x string, because the "=" will cause a "can't find string" error
+LocalizedString.ProgressInfo= Testing CMOS with pattern {PatternDone} of {TotalPatterns}, pattern:{TestingPattern}H.
+
+#MSG_PATTERN_COMPLETE
+LocalizedString.PatternTestComplete= CMOS Pattern test complete.
+
+#MSG_CHECKSUM_PROGRESS
+LocalizedString.ChecksumProgress= Validating CMOS Checksum.

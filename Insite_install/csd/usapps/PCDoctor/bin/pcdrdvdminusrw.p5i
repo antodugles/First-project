@@ -1,0 +1,79 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdrdvdminusrw
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+Test.ReadWriteTest.BlankMediaOnly = false
+
+# CheckForQualifiedMedia (true/false) Setting CheckForQualifiedMedia to true the
+# module  will check whether the media being used is on the manufacturers
+# qualifed media list  and will prompt to alert user when the test failed on
+# unqualified media. Setting it  to false will disable the prompt so end user
+# will not be alert of unqualified media.
+Test.ReadWriteTest.CheckForQualifiedMedia = false
+
+# DiscID (ID1,ID2) A list of DVD-RW disc manufacturer IDs in pairs that are used
+# for  checking for qualified media. Each pairs represent the manufacturer IDs in
+# the DVD-RW  pre-recorded information on each individual qualifed media.  NOTE:
+# All DiscID are  seperated by commas and they must be in pairs such as the
+# following example:  DISC1_ID1, DISC1ID2,  DISC2_ID1, DISC2ID2,  DISC3_ID1,
+# DISC3ID2,   In the case there is only one DiscID available for the disc, do the
+# following:  DISC1_ID1, ,   ,DISC2_ID2  basically put an empty space between the
+# commas in place for the missing ID.   DiscID can be any ASCII string.
+Test.ReadWriteTest.DiscID =  MCC 01,RW11N9, Prodis,cG02, TAIYOY,UDEN, MXL RG,2, MCC 01,RG20, TY01, , CMC MA,G.AE1, MXL RG,3, MCC 02,RG20, TY02, , MCC 00,RW11N9, TDK501,sakul3, MCC 01,RW11N9, TDK502,sakuM3, MCC 01,RW4X, TDK601,saku, BeAll,G00001, CMC00R,G300, CMC MA,G.AF01, RITEKG,3, SONY, , TDKG02,0, CMC MA,G.AF1, FUJIFI,LM02, Prodis,cS03, RITEKG,4, SONY04,D1, TTG01, , FUJIFI,LM03, Prodis,cS04, Prodis,cF01, RITEKG,5, SONY08,D1, TTG02, , Prodis,cDVDRW, RITEK,V11, CMCW02, , Prodis,cDW04, RITEKW,1, RITEKW,4
+
+Test.ReadWriteTest.Enable = true
+
+Test.ReadWriteTest.NumberOfRepetitions = 200
+
+Test.ReadWriteTest.PostMinimalErase = false
+
+Test.ReadWriteTest.PromptToEraseOnAbort = false
+
+Test.ReadWriteTest.PromptUserForMedia = true
+
+# ReRunTestOnFailure: (true/false) Setting ReRunTestOnFailure to true will 
+# generate a prompt to ask end user whether they would like to rerun the test 
+# when test failed. Setting it to false will not prompt end user to rerun on
+# failure.
+Test.ReadWriteTest.ReRunTestOnFailure = true
+
+Test.ReadWriteTest.SecondsForBlanking = 30
+
+Test.ReadWriteTest.WarnOnNonBlankMedia = true
+
+

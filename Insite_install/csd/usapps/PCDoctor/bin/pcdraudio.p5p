@@ -1,0 +1,57 @@
+/* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Garrett Jones
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdraudio/pcdraudio.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Audio Test
+Module.Description=This module tests audio devices
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+
+Test.RoughAudioTest.Name=Rough Audio Test
+Test.RoughAudioTest.Description=General audio reproduction capability testing 
+
+Event.ErrorNoMixer.Message = No mixer device found.
+Event.ErrorNoMixer.EventCode = 0
+
+
+Event.ErrorNoWaveInDevide.Message = No wave in device found.
+Event.ErrorNoWaveInDevice.EventCode=1
+
+
+Event.ErrorNoWaveOutDevide.Message = No wave out device found.
+Event.ErrorNoWaveOutDevice.EventCode=2
+
+
+Event.ErrorNoLoopback.Message = Input/Output validation failed--Loopback cable may not be installed.
+Event.ErrorNoLoopback.EventCode = 3
+
+
+Event.ErrorRoughAudioTestFail.Message= Rough Audio Test Failed--Loopback cable may not be installed.
+Event.ErrorRoughAudioTestFail.EventCode = 31

@@ -1,0 +1,60 @@
+﻿ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrusb english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  June_Li
+  * @version $Id: //depot/mainline/Matrix_Projects/projects/modules/src/windows/diag/pcdrusb
+  /pcdrusb.p5p$
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=USB 
+Module.Description=Tests the USB Configuration.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.StatusTest.Name=Status Test
+Test.StatusTest.Description=USB Status Test
+
+#EVENT_DEVICE_NOT_CONNECTED
+Event.DeviceNotConnected.Message=Device not connected.
+Event.DeviceNotConnected.EventCode=0
+
+#EVENT_DEVICE_NOT_INSTALLED
+Event.DeviceNotInstalled.Message=Device not installed.
+Event.DeviceNotInstalled.EventCode=1
+
+#MSG_DEVICE_IS_DISABLED
+Event.DeviceIsDisabled.Message=Device is disabled
+Event.DeviceIsDisabled.EventCode=2
+
+#MSG_CHILD_DEVICE_IS_DISABLED
+Event.ChildDeviceIsDisabled.Message=Child device is disabled
+Event.ChildDeviceIsDisabled.EventCode=4
+
+#MSG_CHILD_DEVICE_HAS_UNKNOWN_PROBLEM
+Event.ChildDeviceHasUnknownProblem.Message =Child device has an unknown problem.
+Event.ChildDeviceHasUnknownProblem.EventCode=5
+
+

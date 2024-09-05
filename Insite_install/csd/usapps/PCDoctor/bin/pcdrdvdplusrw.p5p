@@ -1,0 +1,241 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * The pcdrdvdplusrw english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Bob_Zaretsky
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrdvdplusrw/pcdrdvdplusrw.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=DVD+RW Drive Test
+Module.Description=Tests the DVD+RW drive.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.ReadWriteTest.Name=Read Write Test
+Test.ReadWriteTest.Description=DVD+RW Drive Read Write Test
+
+#MSG_ERROR_EJECTING_MEDIA
+Event.ErrorEjectingMedia.Message=Error ejecting media - {ScsiError}.
+Event.ErrorEjectingMedia.EventCode=1
+
+#MSG_ERROR_STARTING_DRIVE
+Event.ErrorStartingDrive.Message=Failure starting the drive - {ScsiError}
+Event.ErrorStartingDrive.EventCode=2
+
+#MSG_TEST_CANCELLED_NO_MEDIA
+Event.TestCancelledNoMedia.Message=Test canceled by user.  No media or wrong media type detected.
+Event.TestCancelledNoMedia.EventCode=3
+
+#MSG_ERROR_NO_MEDIA
+Event.ErrorNoMedia.Message=No disc is in the drive.
+Event.ErrorNoMedia.EventCode=4
+
+#MSG_DISC_NOT_DVDRW
+Event.DiscNotDvdPlusRw.Message=The CD you inserted isn't a DVD+RW disc.  Please insert a DVD+RW disc.
+Event.DiscNotDvdPlusRw.EventCode=5
+
+#MSG_ERROR_MEMORY_ALLOCATION_ERROR
+Event.MemoryAllocationError.Message=Memory allocation error
+Event.MemoryAllocationError.EventCode=6
+
+#MSG_ERROR_CHECKING_DISC_CAPABILITIES
+Event.ErrorCheckingDiscCapabilities.Message=Error checking disc capabilities - {ScsiError}
+Event.ErrorCheckingDiscCapabilities.EventCode=7
+
+#MSG_ERROR_FORMATTING_THE_DISC
+Event.ErrorErasingTheDisc.Message=Failure formatting the disc - {ScsiError}
+Event.ErrorErasingTheDisc.EventCode=8
+
+#MSG_ERROR_WRITING_BLOCK
+Event.ErrorWritingBlock.Message=Error writing to block {WriteBlock} - SCSI Error {ScsiError}H.
+Event.ErrorWritingBlock.EventCode=9
+
+#MSG_ERROR_READING_BLOCK
+Event.ErrorReadingBlock.Message=Error reading block {ReadBlock} - SCSI Error {ScsiError}H.
+Event.ErrorReadingBlock.EventCode=10
+
+#MSG_ERROR_CHECKING_BLOCK
+Event.ErrorCheckingBlock.Message=Error checking block {CheckBlock} - SCSI Error {ScsiError}H.
+Event.ErrorCheckingBlock.EventCode=11
+
+#MSG_TEST_CANCELED_MEDIA_NOT_BLANK
+Event.TestCanceledMediaNotBlank.Message=Test canceled by user.  Media to test was not blank.
+Event.TestCanceledMediaNotBlank.EventCode=12
+
+#MSG_DISC_NOT_EMPTY_PROMPT
+Event.DiscNotEmpty.Message=The CD you inserted is not empty.  Please insert a blank DVD+RW disc.
+Event.DiscNotEmpty.EventCode=13
+
+#MSG_ERROR_SYNCHRONIZING_CACHE
+Event.ErrorSynchronizeCache.Message=Error Synchronizing Cache - SCSI Error {ScsiError}H.
+Event.ErrorSynchronizeCache.EventCode=16
+
+#MSG_DISC_NOT_EMPTY_PROMPT
+LocalizedString.DiscNotEmptyPrompt=The CD you inserted is not empty.  Please insert a blank DVD+RW disc.
+
+#MSG_READ_WRITE_TEST_ABORTED
+#Event.ReadWriteTestAborted.Message=The test was aborted.
+
+#MSG_DISC_NOT_DVDRW
+LocalizedString.DiscNotDvdPlusRwPrompt=The CD you inserted isn't a DVD+RW disc.  Please insert a DVD+RW disc.
+
+#MSG_EJECTING_MEDIA
+LocalizedString.EjectingMedia=Ejecting Media.
+
+#MSG_LOADING_DVD
+LocalizedString.LoadingDVD=Loading DVD.
+
+#MSG_INSERT_MEDIA
+LocalizedString.InsertMedia=DVD+RW Test - Insert Media
+
+#MSG_LOGIC_ERROR
+#Event.InternalLogicError.Message=An internal error has occured.
+#Event.InternalLogicError.EventCode=<bz>
+
+#MSG_ERROR_NO_MEDIA
+LocalizedString.ErrorNoMediaString=No disc is in the drive.
+
+#MSG_FAILURE_DRIVE_IN_USE
+#Event.DriveInUse.Message=Currently being used by another process.
+#Event.DriveInUse.EventCode=<bz>
+
+#MSG_FAILED_ACTION
+#Event.FailedAction.Message=Failed action 
+#Event.FailedAction.EventCode=<bz>
+
+#MSG_EMPTY = %0
+#Event.Empty.Message= 
+
+#MSG_WAITING_FOR_MEDIA
+LocalizedString.WaitingForMedia=Waiting for user to insert media.
+
+#MSG_WAITING_FOR_UNIT_READY
+LocalizedString.WaitingForUnitReady=Waiting for unit to become ready.
+
+#MSG_WARN_BEFORE_ERASING_PROMPT
+LocalizedString.WarnBeforeErasingPrompt=The DVD you inserted is not empty.  All data on the disc will be erased. Press OK to continue testing or Cancel to abort.
+
+#MSG_OBTAININE_DRIVE_CAPACITY
+LocalizedString.ObtainingDriveCapacity=Obtaining drive capacity. 
+
+#MSG_ABORT_DETECTED_DISC_WILL_BE_ERASED
+LocalizedString.AbortDetectedDiscWillBeErased=Abort detected.  The disc will be erased before exiting.  This may take several minutes.
+
+#MSG_DVDRW_TEST
+LocalizedString.DvdPlusRwTest=DVD+RW Test
+
+#MSG_PROGRESS_FORMATTING_DISC
+LocalizedString.ProgressFormattingDisc=Formatting the disc - This could take several minutes.
+
+#MSG_ERROR_TOO_MANY_ERRORS
+#Event.TooManyErrors.Message=Too many errors, aborting.
+#Event.TooManyErrors.EventCode=<bz>
+
+#MSG_WRITING_TO_BLOCK
+#LocalizedString.WritingToBlock={RunningAtWriteSpeedString} Writing to block {WriteBlock} (of {TotalBlocks}).
+LocalizedString.WritingToBlock=Writing to block {WriteBlock} (of {TotalBlocks}).
+
+#MSG_CHECKING_BLOCK_X_OF_Y = %1!s!Checking block %2!lu! (of %3!i!).%0
+LocalizedString.CheckingBlockXofY=Checking block {WriteBlock} (of {TotalBlocks}).
+
+#MSG_ACTION_PROGRESS = %1!s!%0
+#Event.ActionProgress.Message=<bz>
+#Event.ActionProgress.EventCode=<bz>
+
+#MSG_FLUSHING_THE_DRIVE_BUFFER = %1!s!flushing the drive's buffer.%0
+LocalizedString.FlushingTheDriveBuffer=Flushing the drive's buffer.
+
+#MSG_TIMED_OUT_WAITING_FOR_UNIT
+LocalizedString.TimedOutWaitingForUnit=Waiting for unit to become ready timed out.
+
+#MSG_COMMAND_NOT_SUPPORTED
+LocalizedString.CommandNotSupported=Unit does not support the command.
+
+#MSG_LOGICAL_BLOCK_ADDRESS_OUT_OF_RANGE
+LocalizedString.LogicalBlockAddressOutOfRange=Logical block address out of range.
+
+#MSG_DEVICE_IS_BUSY
+LocalizedString.DeviceIsBusy=Device is busy.
+
+#MSG_INVALID_SCSI_COMMAND_BLOCK
+LocalizedString.InvalidScsiCommandBlock=Invalid field in SCSI command block.
+
+#MSG_INVALID_SCSI_PARAMETER_LIST
+LocalizedString.InvalidScsiParameterList=Invalid field in SCSI parameter list.
+
+#MSG_MEDIA_WRITE_PROTECTED
+LocalizedString.MediaWriteProtected=Media is write-protected.
+
+#MSG_SCSI_ERROR = SCSI Error %04XH.
+LocalizedString.ScsiError=SCSI Error {ScsiErrorCode}H.
+
+#MSG_NO_MEDIA_PROMPT
+LocalizedString.NoMediaPrompt=Please insert a DVD+RW disc.
+
+#MSG_MEDIA_NAME
+LocalizedString.MediaName=DVD+RW
+
+#MSG_PROMPT_RERUN_TEST
+LocalizedString.ReRunTestPrompt=The {MediaName} test has failed.  The failure could be caused by a scratched, dirty or defective media, or it could be an actual hardware problem.  Click "Yes" if you would like to rerun the test with a different media, or click "No" to continue without rerunning the test.
+
+#MSG_MEDIA_NOT_QUALIFIED_PROMPT
+LocalizedString.MediaNotQualifiedPrompt=The {MediaName} test has failed.  Before placing a call to HP Technical Support, it's important to know that most optical drive failures are due to uncertified, defective or damaged media ({MediaName}). Run the test again using either a different brand of media, or HP Branded media.
+
+Parameter.BlankMediaOnly.Name=Blank Media Only
+Parameter.BlankMediaOnly.Description=Allow testing only if media is blank
+
+Parameter.PostMinimalErase.Name=Post Mimimal Erase
+Parameter.PostMinimalErase.Description=Erase the media upon test completion (Minimal Erase).
+
+Parameter.PreEraseOnlyIfRequired.Name=Erase Only If Required
+Parameter.PreEraseOnlyIfRequired.Description=Specifies that test will only blank the media if it is deemed necessary by the test.  If this key is not set then blanking will occur upon each test execution.
+
+Parameter.PromptToEraseOnAbort.Name=Prompt To Erase On Abort
+Parameter.PromptToEraseOnAbort.Description=On a user abort, informs the user that the media will be erased.  Only valid if bPostMinimalErase is set.
+
+Parameter.PromptUserForMedia.Name=Prompt User For Media
+Parameter.PromptUserForMedia.Description=Prompt the user to insert the correct media if required media is not detected.
+
+Parameter.WarnOnNonBlankMedia.Name=Warn On Non-Blank Media
+Parameter.WarnOnNonBlankMedia.Description=Provide a warning to the user if the media being used is not blank.  The user will have the opportunity to cancel or continue testing (only valid if bBlankMediaOnly is not set).
+
+Parameter.NumberOfRepetitions.Name=Number Of Writes
+Parameter.NumberOfRepetitions.Description=Specifies the number of sectors on the media to be used for testing.
+
+Parameter.SecondsForBlanking.Name=Estimated Seconds For Blanking
+Parameter.SecondsForBlanking.Description=Estimated number of seconds required for blanking/formatting portion of the test.
+
+Parameter.FormatOnlyIfRequired.Name=Format Only If Required
+Parameter.FormatOnlyIfRequired.Description=Format the disc only if required for testing
+
+#Required
+
+Parameter.PercentToTest.Name=Percent To Test
+Parameter.PercentToTest.Description=The percent of the Drive that should be tested.
+
+Parameter.ErrorLimit.Name=Max Number of Errors
+Parameter.ErrorLimit.Description=Max Number of errors allowed before exiting the test.
+
+#Tip.RestartMachine=Restart the Machine

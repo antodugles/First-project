@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<VncConfig FileRev="1">
+	<!-- -->
+	<!-- VNC Module EXE information. -->
+	<!-- -->
+	<ModuleInformation>
+		<!-- <ModuleName> defines the name of the VNC executable (e.g. winvnc4.exe). -->
+		<!--  Path information must NOT be included.  This element can NOT be blank. -->
+		<!-- -->
+		<!-- <ModulePath> defines the path to the VNC executable.  Contains path -->
+		<!--  information only (i.e. does not include the EXE module name which -->
+		<!--  is already define above). -->
+		<!-- NOTE: Can optionally contain one Environment Variable at the beginning -->
+		<!--  of the path (e.g. %INSITE2_HOME%\VNC).  If not, the specfied path -->
+		<!--  must be an absolute path. -->
+		<!-- -->
+		<ModuleName>winvnc.exe</ModuleName>
+		<ModulePath>%INSITE2_HOME%\UltraVNC</ModulePath>
+		<!-- -->
+		<!-- Define command arguments to be passed to the VNC executable for -->
+		<!--  various tasks.  These elements can be blank (or missing) -->
+		<!--  if no special command arguments are needed for a given task. -->
+		<!-- -->
+		<CommandArgs Task="StartProcess">-service</CommandArgs>
+	</ModuleInformation>
+	<!-- -->
+	<!-- VNC Service information. -->
+	<!-- -->
+	<ServiceInformation>
+		<!-- Service name (if VNC is installed as a service). -->
+		<ServiceName>winvnc</ServiceName>	
+		<!-- -->
+		<!-- List all Windows Platforms where VNC can run as a service. -->
+		<!--  The current platform MUST match one of these exactly. -->
+		<!-- NOTE: The 'Name' attribute is listed only to help identify -->
+		<!--  the 'Version'.  It is not processed. -->
+		<!-- -->
+		<ValidPlatforms>
+			<Platform Version="5.0" Name="Win2K" />
+			<Platform Version="5.1" Name="WinXP" />
+			<Platform Version="5.1" ServicePack="1" Name="WinXP" />
+			<Platform Version="5.1" ServicePack="2" Name="WinXP" />
+      <Platform Version="5.2" ServicePack="2" Name="Server 2003" />
+      <Platform Version="6.0" ServicePack="2" Name="Server 2008" />
+      <!-- Platform Version="6.0" Name="Vista" / -->
+		</ValidPlatforms>
+	</ServiceInformation>
+</VncConfig>

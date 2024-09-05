@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<createRFS>
+	<SystemID>ILINQTEST1</SystemID>
+	<OtherSystemID>ILINQTEST2</OtherSystemID>
+	<ProblemType>Application</ProblemType>
+	<ProblemArea>Service</ProblemArea>
+	<ContactDetail>
+		<FirstName>DAVID</FirstName>
+		<LastName>MILLER</LastName>
+		<ContactPhone>435-421-7895</ContactPhone>
+		<ContactEmail>David.Miller@ge.com</ContactEmail>
+	</ContactDetail>
+	<ExamNumber></ExamNumber>
+	<SeriesNumber></SeriesNumber>
+	<ImageNumber></ImageNumber>
+	<ProblemDescription>Service connection problem</ProblemDescription>
+	<RequestSource>ContactGE</RequestSource>
+	<Status>Not Sent</Status>
+</createRFS>

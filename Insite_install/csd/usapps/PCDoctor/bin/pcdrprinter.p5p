@@ -1,0 +1,150 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrprinter english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Chris_Matyas
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrprinter/pcdrprinter.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Printer Test
+Module.Description=This module tests printing capability
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.PrinterTest.Name=Printer Interactive Test
+Test.PrinterTest.Description=Tests printing capabilities
+
+Event.MSG_PRINTING_CANCELLED_BY_USER.Message=The test was cancelled by user.
+Event.MSG_PRINTING_CANCELLED_BY_USER.EventCode=7
+
+Event.MSG_SETUP_AS_FAX.Message=The printer you have selected is set up as a Fax and will not be tested.  Please select another printer.
+Event.MSG_SETUP_AS_FAX.EventCode=9
+
+Event.MSG_COULD_NOT_INITIALIZE_PRINTER.Message=The printer could not be initialized.
+Event.MSG_COULD_NOT_INITIALIZE_PRINTER.EventCode=6
+
+Event.MSG_COULD_NOT_PRINT_PAGE.Message=The page could not be printed.
+Event.MSG_COULD_NOT_PRINT_PAGE.EventCode=1
+
+Event.TestAborted.Message=The test was canceled by user.
+Event.TestAborted.EventCode=5
+
+
+Event.TestFailed.Message=The test failed.
+Event.TestFailed.EventCode=4
+
+Event.InternalError.Message=There was an internal error.
+Event.InternalError.EventCode=8
+
+
+
+
+
+
+Tip.RestartMachine =Restart the Machine
+
+LocalizedString.MSG_INSTRUCTIONS=Instructions
+
+LocalizedString.MSG_INSTRUCTIONS_1=This is an interactive test for your printer. This program will create a test page that checks various aspects of a printer.
+
+LocalizedString.MSG_INSTRUCTIONS_2=To run the test, click on the "Test" button. After you do so, you will be able to select a printer on which to perform the test.
+
+LocalizedString.MSG_INSTRUCTIONS_3=To exit the printer test, click on the "Close" button.
+
+LocalizedString.MSG_TEST=&Test
+
+LocalizedString.MSG_CLOSE=&Close
+
+LocalizedString.MSG_PRINTING=Print: Printing
+
+LocalizedString.MSG_SUBTITLE=Printer Test
+
+LocalizedString.MSG_FONT_SIZE= {FontSize} point
+
+LocalizedString.MSG_ARIAL=Arial
+
+LocalizedString.MSG_COURIER_NEW=Courier New
+
+LocalizedString.MSG_SYMBOL=Symbol
+
+LocalizedString.MSG_TIMES_NEW_ROMAN=Times New Roman
+
+LocalizedString.MSG_WINGDINGS=Wingdings
+
+LocalizedString.MSG_FONT_NAME=This is {FontName}:
+
+LocalizedString.MSG_YELLOW=Yellow
+
+LocalizedString.MSG_RED=Red
+
+LocalizedString.MSG_BLUE=Blue
+
+LocalizedString.MSG_3001=Printer Test Instructions: There are five items to check on this page.
+
+LocalizedString.MSG_3003=1. The two circular graphics at the top of the page allow you to determine the relative resolution of your printer.  The greater the resolution of your printer, the more clearly you will be able to see the rays of the circle.
+
+LocalizedString.MSG_3008=2. This is a sampling of TrueType fonts as they appear on your printer.
+
+LocalizedString.MSG_3046=3. Use the appearance of the three color boxes to verify the color printing capabilities of your color printer.
+
+LocalizedString.MSG_3010=4. This is a sampling of different font sizes.
+
+LocalizedString.MSG_3011=5. A black horizontal bar going across the bottom of the page.  It allows you to check the consistency of your printer toner and toner drum across the entire page.
+
+LocalizedString.MSG_TEST_NAME=Printer Interactive Test
+
+LocalizedString.MSG_DID_THE_TEST_PASS=Did the test pass?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

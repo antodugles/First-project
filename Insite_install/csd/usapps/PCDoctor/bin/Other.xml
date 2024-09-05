@@ -1,0 +1,11 @@
+<Script >
+	<TestSet>
+		<Device type="Mouse"/>
+	</TestSet>
+	<TestSet>
+		<Device type="Keyboard"/>
+	</TestSet>
+	<TestSet>
+		<Device type="Printer"/>
+	</TestSet>
+</Script>

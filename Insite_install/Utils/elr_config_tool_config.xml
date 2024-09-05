@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configRFS>
+	<settings>
+		<!-- The XML save path -->
+		<!-- RFS will replace * with an incremented number -->
+		<XMLpath>queue\MRFS*.xml</XMLpath>
+		<!-- Language to view page in -->
+		<!-- Overrides the value in dictionary.xml -->
+		<lang>en-US</lang>
+		<!-- Language to store data in -->
+		<!-- Page view language is specified in lang -->
+		<datalang>en-US</datalang>
+		<!-- Enable or disable the use of Machine Generated RFS -->
+		<machineRFS>false</machineRFS>
+	</settings>
+	<page>
+		<!-- Context help messages are 0-255 characters and are optional -->
+		<!-- Every strings element can occur multiple times for different languages -->
+		<CDI>
+			<EventID show="true" />
+			<Description show="true" />
+			<ExtraMessage show="true" />
+			<SystemID show="true" />
+			<OtherSystemID show="true" />
+		</CDI>
+		<SAI show="true" />
+		<PTI show="true">
+			<strings xml:lang="en-US">
+				<!-- IF (SAI.show == true) AND (PTI.show == true) -->
+				<ServiceList>
+					<!-- 0..n items -->
+					<item value="Hardware">This is a contextual help message for hardware problems.</item>
+					<item value="Network">This is a contextual help message for network problems.</item>
+					<item value="Software">This is a contextual help message for software problems.</item>
+				</ServiceList>
+				<ApplicationsList>
+					<item value="Hardware">This is a contextual help message for hardware problems.</item>
+					<item value="Network">This is a contextual help message for network problems.</item>
+					<item value="Software">This is a contextual help message for software problems.</item>
+				</ApplicationsList>
+				<!-- ELSE IF (SAI.show == false) AND (PTI.show == true) -->
+				<GenericList>
+					<item value="Hardware">This is a contextual help message for hardware problems.</item>
+					<item value="Network">This is a contextual help message for network problems.</item>
+					<item value="Software">This is a contextual help message for software problems.</item>
+				</GenericList>
+				<!-- ELSE nothing -->
+			</strings>
+			<strings xml:lang="es-ES">
+				<ServiceList>
+					<item value="Hardware">Esto es un mensaje del contexto de la ayuda para los problemas del hardware.</item>
+					<item value="Interconectar">Esto es un mensaje del contexto de la ayuda para los problemas de la red.</item>
+					<item value="Software">Esto es un mensaje del contexto de la ayuda para los problemas de programación.</item>
+				</ServiceList>
+				<ApplicationsList>
+					<item value="Hardware">Esto es un mensaje del contexto de la ayuda para los problemas del hardware.</item>
+					<item value="Interconectar">Esto es un mensaje del contexto de la ayuda para los problemas de la red.</item>
+					<item value="Software">Esto es un mensaje del contexto de la ayuda para los problemas de programación.</item>
+				</ApplicationsList>
+				<GenericList>
+					<item value="Hardware">Esto es un mensaje del contexto de la ayuda para los problemas del hardware.</item>
+					<item value="Interconectar">Esto es un mensaje del contexto de la ayuda para los problemas de la red.</item>
+					<item value="Software">Esto es un mensaje del contexto de la ayuda para los problemas de programación.</item>
+				</GenericList>
+			</strings>
+		</PTI>
+		<PDI>
+			<DateTime show="true" />
+		</PDI>
+		<SCI />
+		<HELP show="true">
+			<UseTooltip>true</UseTooltip>
+		</HELP>
+		<QSTA show="true" />
+	</page>
+	<SendOptions>
+		<!-- Increase the agent polling rate upon a successful send (Period in seconds, Duration in minutes) -->
+		<ConnectToGE enable="true">
+			<ForcePollPeriod>30</ForcePollPeriod>
+			<ForcePollDuration>30</ForcePollDuration>
+		</ConnectToGE>
+		<!-- ContactGE (RFS send process) configuration (in seconds) -->
+		<ContactGE>
+			<RetryCount>3</RetryCount>
+			<RetryPeriod>15</RetryPeriod>
+			<Timeout>60</Timeout>
+		</ContactGE>
+		<Preprocessor enable="true" commandPath="preprocessor\preprocess.bat"/>
+	</SendOptions>
+	<!-- The RFS Queue page configurations -->
+    <Queue id="Default">
+		<!-- Example Date Formats: "mm/dd/yy"="12/20/06", "dd/mm/yy"="20/12/06", "mm-dd-yyyy"="12-20-2006" -->
+		<!-- Example Time Formats: "am/pm"="1:30 PM", "military"="13:30" -->
+		<!-- Example DateTime Formats: "Date Time"="12/20/2006 1:30 PM", "Time, Date"="1:30 PM, 12/20/2006" -->
+		<DateTimeFormat Date="mm/dd/yyyy" Time="am/pm">Date Time</DateTimeFormat>
+		<!-- Enable or disable Export and Import buttons -->
+		<Export enable="false" commandPath="export.bat" />
+		<Import enable="false" commandPath="import.bat" />
+		<!-- Queue table configurations -->
+		<!-- sort1 is the primary sort and sort2 is the secondary sort -->
+		<!-- Do not change the "id" attributes -->
+		<Table sort1="Status" sort1order="ascending" sort2="DateTime" sort2order="descending" maxheight="200">
+			<Column id="LogName" headertext="Log Name" show="true" enablefilter="true" order="1"/>
+			<Column id="SourceName" headertext="Source Name" show="true" enablefilter="true" order="2"/>
+			<Column id="Date" headertext="Date/Time" show="true" enablefilter="false" order="3"/>
+			<Column id="Description" headertext="Description" show="true" enablefilter="false" order="4" maxcharacters="30"/>
+			<Column id="ExtraMessage" headertext="Extra Message" show="true" enablefilter="false" order="4" maxcharacters="30"/>
+			<Column id="Status" headertext="Status" show="true" enablefilter="true" order="5"/>
+			<Column id="RfsNumber" headertext="Reference Number" show="true" enablefilter="false" order="6"/>
+		</Table>
+		<!-- RFS view configurations -->
+		<!-- Do not change the "id" attributes -->
+		<RFSView>
+			<CustomerInfo>
+				<Row id="Name" labeltext="From" show="true" order="1"/>
+				<Row id="ContactType" labeltext="Type" show="true" order="2"/>
+				<Row id="ContactDescription" labeltext="E-mail" show="true" order="3"/>
+				<Row id="SystemID" labeltext="System ID" show="true" order="4"/>
+				<Row id="OtherSystemID" labeltext="Other System ID" show="true" order="5"/>
+			</CustomerInfo>
+			<OtherInfo>
+				<Row id="Date" labeltext="Date" show="true" order="1"/>
+				<Row id="ProblemType" labeltext="Problem Type" show="true" order="2"/>
+				<Row id="ProblemArea" labeltext="Problem Area" show="true" order="3"/>
+				<Row id="Status" labeltext="Status" show="true" order="4"/>
+				<Row id="RfsNumber" labeltext="Ref.#" show="true" order="5"/>
+			</OtherInfo>
+			<Description labeltext="Description" show="true"/>
+			<EditButton show="true"/>
+		</RFSView>
+	</Queue>
+	<!-- The Machine Generated RFS Queue page configurations -->
+	<!-- If a particular configuration element doesn't exist, -->
+	<!-- the configuration element from the "RFS Queue" will be used as the default.-->
+	<Queue id="Machine">
+		<RFSView>
+			<EditButton show="true"/>
+		</RFSView>
+		<!-- The XML save path -->
+		<!-- RFS will replace * with an incremented number -->
+		<XMLpath>mqueue\MMRFS*.xml</XMLpath>
+	</Queue>
+	<Menu>
+		<RFS />
+		<Queue show="true" />
+		<MachineQueue show="true" />
+		<Users show="true" />
+		<Events show="true" />
+	</Menu>
+</configRFS>

@@ -1,0 +1,64 @@
+body {
+	background: lightgrey;
+}
+
+/* Menu Style */
+ul.menu 
+{
+	list-style: none;
+	padding: 8px 0 6px 0;
+	margin: 0;
+	width: 100%;
+	text-align: left; /*set value to "right" for example to align menu to the right of page*/
+}
+
+ul.menu li 
+{
+	list-style: none;
+	padding: 3px 0;
+	background: darkgray;
+	display: inline;
+}
+
+ul.menu li a 
+{
+	padding: 0 13px 0 12px;
+	text-decoration: none;
+	font-weight: bold; 
+	font-size: 10pt;
+	font-family: Arial, Helvetica, sans-serif; 
+	color: black;
+	border: 2px dotted darkgray;
+	border-left: 1px dotted #FFF2BF;
+}
+ul.menu li a.rfs
+{
+	border-left: 1px solid darkgray;
+}
+
+ul.menu li a:hover, ul.menu li a:active
+{
+	padding: 0 12px 0 12px;
+	color: black;
+	border: 2px solid #FFF2BF;
+	border-style: outset;
+}
+
+ul.menu li a.disabled, ul.menu li a.disabled:hover, ul.menu li a.disabled:active
+{
+	color: gray;
+}
+
+html>body ul.menu li a:active 
+{ /* Apply mousedown effect only to NON IE browsers */
+	border-style: inset;
+}
+
+hr#oBaseLine 
+{
+	position: relative;
+	top: -13px;
+	height: 5px;
+	color: darkgray;
+	z-index: -1;
+}

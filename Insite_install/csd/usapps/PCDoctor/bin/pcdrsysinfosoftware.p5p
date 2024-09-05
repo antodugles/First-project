@@ -1,0 +1,82 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/sysinfo/pcdrsysinfosoftware/pcdrsysinfosoftware.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Software Information
+Module.Description=This module lists all installed software on a system.
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Property.Name.Name = Name
+Property.Name.Description= Name
+
+Property.Version.Name=Version
+Property.Version.Description=Version
+
+Property.OSName.Name = Name
+Property.OSName.Description= Operating System Name
+
+Property.SystemName.Name=System Name
+Property.SystemName.Description=System Name
+
+Property.UserName.Name =Name
+Property.UserName.Description= User Name
+
+Property.SystemDir.Name=System Directory
+Property.SystemDir.Description= Windows System Directory
+
+Property.WinDir.Name = Windows Directory
+Property.WinDir.Description= Windows Directory
+
+Property.ServicePack.Name=Service Pack
+Property.ServicePack.Description=Service Pack
+
+Property.BuildNumber.Name=Build Number
+Property.BuildNumber.Description=Build Number
+
+Property.SystemDefaultLocaleID.Name = System Default Locale ID
+Property.SystemDefaultLocaleID.Description= System Default Locale ID
+
+Property.SystemDefaultLocale.Name=System Default Locale
+Property.SystemDefaultLocale.Description=System Default Locale
+
+Property.UserDefaultLocaleID.Name = User Default Locale ID
+Property.UserDefaultLocaleID.Description= User Default Locale ID
+
+Property.UserDefaultLocale.Name = User Default Locale 
+Property.UserDefaultLocale.Description= User Default Locale 
+
+Property.CountryCode.Name= Country Code
+Property.CountryCode.Description=Country Code
+
+Property.CountryName.Name = Country Name
+Property.CountryName.Description = Country Name
+
+Property.DirectXVersion.Name = DirectX Version
+Property.DirectXVersion.Description = DirectX Version

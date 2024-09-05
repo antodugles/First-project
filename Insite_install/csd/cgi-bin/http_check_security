@@ -1,0 +1,4 @@
+#!PERL_HOME\bin\perl 
+
+print "1";
+exit;

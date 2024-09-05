@@ -1,0 +1,236 @@
+﻿ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrwav english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  June_Li
+  * @version $Id: //depot/mainline/Matrix_Projects/projects/modules/src/windows/diag/pcdrwav
+  /pcdrwav.p5p$
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=WAV 
+Module.Description=Interactive test for the sound card and speakers
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.WavTest.Name=Interactive Test
+Test.WavTest.Description=Wav Interactive Test
+
+#MSG_MEMORY_ALLOCATION_ERROR
+Event.MemoryAllcoationError.Message=Memory allocation error in the requested function 
+Event.MemoryAllcoationError.EventCode=2
+
+#MSG_ERROR_OPENING_WAVE_PLAYER
+Event.ErrorOpeningWavePlayer.Message=Unable to open the WAVE player
+Event.ErrorOpeningWavePlayer.EventCode=5
+
+#MSG_ERROR_GETTING_PLAYER_VOLUME_SETTINGS
+Event.ErrorGettingPlayerVolumeSettngs.Message=An error was detected while getting WAVE Player volume settings.
+Event.ErrorGettingPlayerVolumeSettngs.EventCode=6
+
+#MSG_ERROR_PREPARING_SOUND_PLAYBACK_DATA
+Event.ErrorPreparingSoundPlaybackData.Message=An error was detected while preparing sound data for playback.
+Event.ErrorPreparingSoundPlaybackData.EventCode=7
+
+#MSG_ERROR_ISSUING_SOUND_PLAY_COMMAND
+Event.ErrorIssuingSoundPlayCommand.Message=An error was detected while issuing sound play command.
+Event.ErrorIssuingSoundPlayCommand.EventCode=8
+
+# MSG_ERROR_READING_SOUND_FILE_FORMAT_DATA
+Event.ErrorReadingSoundFileFormatData.Message=An error was detected while reading sound file format data.
+Event.ErrorReadingSoundFileFormatData.EventCode=12
+
+#MSG_ERROR_READING_FORMAT_DATA
+Event.ReadingFormatDataError.Message=Unable to read format data.
+Event.ReadingFormatDataError.EventCode=15
+
+#MSG_COULD_NOT_ALLOCATE_BUFFER_FOR_SOUND_DATA
+Event.CouldNotAllocateBufferForSoundData.Message =Could not allocate a buffer for the wave sound data. Perhaps the file is too large to fit in memory. Close some programs and try again. PC-Doctor is unable to continue with the sound test.
+Event.CouldNotAllocateBufferForSoundData.EventCode=16
+
+#MSG_COULD_NOT_LOCATE_WAV_FILE_TO_PLAY
+Event.CouldNotLocateWavFileToPlay.Message=Could not locate a WAV file to use for playing. Unable to run this test.
+Event.CouldNotLocateWavFileToPlay.EventCode=19
+
+#MSG_ERROR_COULD_NOT_LOCATE_MIDI_FILE
+Event.ErrorCouldNotLocateMidiFile.Message=Could not locate a MIDI file to use for playing. Unable to run this test.
+Event.ErrorCouldNotLocateMidiFile.EventCode=29
+
+#MSG_WAV_TEST_FAILED
+Event.WavTestFailed.Message=The PCDrWav Test failed.
+Event.WavTestFailed.EventCode=31
+
+#MSG_COULD_NOT_LOCATE_PCBEEPEXE
+Event.CouldNotLocatePcbeepExe.Message=Could not locate pcbeep.exe for Internal speaker test.
+Event.CouldNotLocatePcbeepExe.EventCode=33
+
+#MSG_ERROR_DETECTING_WAVE_PLAYER_CAPABILITY
+Event.ErrorDetectingWavePlayerCapability.Message=An error was detected while determining WAVE Player device capabilities. An error was detected while Opening WAVE Player.
+Event.ErrorDetectingWavePlayerCapability.EventCode=34
+
+#MSG_ERROR_COULD_NOT_OPEN_FOR_PLAYING
+Event.CouldNotOpenForPlaying.Message= Could not open the sound file for playing. The file could be in use by another program. PCDrWav is unable to continue with the sound test. Encountered an unknown error while reading the format data for the WAVE file. Perhaps the file is corrupted? PC-Doctor is unable to continue with the sound test.
+Event.CouldNotOpenForPlaying.EventCode=35
+
+#Localized string
+LocalizedString.MsgMemoryAllocationError =Memory allocation error in the requested function
+LocalizedString.MsgErrorOpeningWavePlayer = Unable to open the WAVE player
+LocalizedString.MsgErrorGettingPlayerVolumeSetting = An error was detected while getting WAVE Player volume settings.
+LocalizedString.MsgErrorPreparingSoundPlaybackData = An error was detected while preparing sound data for playback.
+LocalizedString.MsgIssuingSoundPlayCommand = An error was detected while issuing sound play command.
+LocalizedString.MsgErrorReadingSoundFileFormatData = An error was detected while reading sound file format data.
+LocalizedString.MsgReadingFormatDataError = Unable to read format data.
+LocalizedString.MsgCouldNotAllocateBufferForSoundData = Could not allocate a buffer for the wave sound data. Perhaps the file is too large to fit in memory. Close some programs and try again. PC-Doctor is unable to continue with the sound test.
+LocalizedString.MsgCouldNotOpenForPlaying = Could not open the sound file for playing. The file could be in use by another program. PCDrWav is unable to continue with the sound test. Encountered an unknown error while reading the format data for the WAVE file. Perhaps the file is corrupted? PC-Doctor is unable to continue with the sound test.
+LocalizedString.MsgErrorDetectingWavePlayerCapability = An error was detected while determining WAVE Player device capabilities. An error was detected while Opening WAVE Player.
+
+#MSG_DID_THE_TEST_PASS
+LocalizedString.DidTestPass = Did the test pass?
+
+#MSG_INSTRUCTIONS
+LocalizedString.Instruction = Instructions
+
+#Please be noticed: MSG_INSTRUCTIONS_STR from dapi4 is broke into two strings: InstructionStr1 and InstructionStr2, 
+#Please update it in string database
+#MSG_INSTRUCTIONS_STR 
+LocalizedString.InstructionStr1 = Select the speaker to play sound from. This makes sure that the speakers are set up correctly and that the sound drivers work. 
+LocalizedString.InstructionStr2 =If you do not hear a sound when you click on one of the buttons, click on "More Info" for suggestions.
+
+#MSG_LEFT_CHANNEL
+LocalizedString.LeftChannel = Left Channel
+
+#MSG_RIGHT_CHANNEL
+LocalizedString.RightChannel =  Right Channel
+
+#MSG_BOTH_CHANNELS
+LocalizedString.BothChannels = Both Channels
+
+#MSG_INTERNAL_SPEAKER
+LocalizedString.InternalSpeaker = Internal Speaker
+
+#MSG_BEEP
+LocalizedString.Beep = Beep
+
+#MSG_MORE_INFO
+LocalizedString.MoreInfo = &More Info
+
+#MSG_CLOSE
+LocalizedString.Close = &Close
+
+#MSG_ERROR_LR_SPEAKER_VOLUME_NOT_SUPPORTED
+LocalizedString.MsgLRSpeakerVolumeNotSupported = Left/Right Speaker Volume not supported.
+
+#MSG_ERROR_DETECTED
+LocalizedString.MsgErrorDetected =  Error Detected.
+
+#MSG_WAV_MORE_INFO_OK
+LocalizedString.MsgWavMoreInfoOk = OK
+
+#MSG_3014
+LocalizedString.Msg3014 = Perhaps you don't have a sound card, or the driver for it is installed incorrectly. If everything should be fine, try rebooting. If you still get this error message, and you can play sounds just fine outside of this program, then the issue must be an incompatibility between this test program and your system configuration. If you can't play any sounds outside of this program, and you have rebooted your system, check the volume setting on the sound card and in the Control Panel.
+
+#MSG_3018
+LocalizedString.Msg3018 = If the problem still persists, install the drivers for your sound card again. Use the Control Panel to reload the drivers.
+
+# MSG_3030
+LocalizedString.Msg3030 =This sound card (or its device driver) does not support separate setting of the left and right speaker volumes. This prevents playing sounds from one speaker only.
+
+#MSG_3034
+LocalizedString.Msg3034 = WAV File Open Failed.
+
+#MSG_3036
+LocalizedString.Msg3036 = File Read Error
+
+#MSG_3038
+LocalizedString.Msg3038 = Memory Allocation Error
+
+#MSG_3040
+LocalizedString.Msg3040 = File Read Error
+
+#MSG_3041
+LocalizedString.Msg3041 = The current sound driver appears not to support stereophonic setting of the sound volume level. This test uses that capability during sound production. You might be able to play mono sounds, however the left/right speaker stereophonic playback will not work. Also, the volume setting used by this program might be either too low or a little too high. 
+
+#MSG_SOUND_VOLUME_SETTINGS_FAILED
+LocalizedString.MsgSoundVolumeSettingFailed = Sound Volume Setting Failed.
+
+#MSG_ERROR_COULD_NOT_LOCATE_MIDI_FILE
+LocalizedString.MsgCouldNotLocateMidiFile = Could not locate a MIDI file to use for playing. Unable to run this test.
+
+#MSG_COULD_NOT_LOCATE_PCBEEPEXE
+LocalizedString.MsgCouldNotLocatePcbeepExe = Could not locate pcbeep.exe for Internal speaker test.
+
+# MSG_ERROR_OPENING_MIXER
+LocalizedString.MsgErrorOpenningMixer = Error opening the mixer.
+
+#MSG_ERROR_OPENING_MIXER
+LocalizedString.MsgErrorGettingAudioLineInfo = Error getting audio line info.
+
+#MSG_ERROR_GETTING_LINE_CONROLS
+LocalizedString.MsgErrorGettingLineControls = Error getting line controls.
+
+#MSG_ERROR_SETTING_3D_SOUND_STATUS
+LocalizedString.MsgErrorSetting3DSoundStatus = Error setting 3D sound status.
+
+#MSG_ERROR_SETTING_MIDI_VOLUME
+LocalizedString.MsgErrorSettingMidiVolume = Error setting MIDI volume.
+
+#MSG_ERROR_DOES_NOT_SUPPORT_STEREOPHONIC
+LocalizedString.MsgDoesNotSupportSteroPhonic = The current sound driver does not appear to support stereophonic setting of the MIDI volume level.  This test uses that capability during MIDI playback.  You might hear the MIDI file in mono, however the left/right speaker stereophonic playback will not work.  Also, the volume setting used by this program might be  either too low or a little too high.
+
+#MSG_COULD_NOT_LOCATE_WAV_FILE_TO_PLAY
+LocalizedString.MsgCouldNotLocateWavFileToPlay = Could not locate a WAV file to use for playing. Unable to run this test.
+
+#MSG_3064
+LocalizedString.Msg3064 = Copyright 2004 PC-Doctor Inc.
+
+#MSG_3081
+LocalizedString.Msg3081 = If MIDI playback functions correctly outside of this program, then there is likely an incompability issue between this program and your computer's configuration.
+
+#MSG_3084
+LocalizedString.Msg3084 = Perhaps you do not have a sound card installed.
+
+#MSG_3200
+LocalizedString.Msg3200 = This test attempts to play sounds on your computer.
+
+#MSG_3201
+LocalizedString.Msg3201 = If you do not hear WAV or MIDI sounds when you click on these buttons, please try to play sounds outside of this test. There may be incompatibilities between this test and your computer configuration.
+
+#MSG_3205
+LocalizedString.Msg3205 = If you cannot hear WAV or MIDI sounds inside or outside of this test, and you are sure you have a sound card, try these steps:
+
+#MSG_3208
+LocalizedString.Msg3208 = 1. Check the volume adjustment on your sound card.
+
+#MSG_3209
+LocalizedString.Msg3209 = 2. Check Windows internal volume (usually in Control Panel).
+
+#MSG_3210
+LocalizedString.Msg3210 = 3. Reboot Windows.
+
+#MSG_3211
+LocalizedString.Msg3211 = 4. Reinstall the sound drivers (usually via Control Panel)  and make sure that there are no I/O address, IRQ line or DMA line conflicts!
+
+#MSG_3214
+LocalizedString.Msg3214 = The internal speaker "Beep" button plays standard beep sound through the internal computer speaker. Your system (or Windows) may be configured to disable this sound. 
+

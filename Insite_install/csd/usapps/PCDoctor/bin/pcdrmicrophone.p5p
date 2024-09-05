@@ -1,0 +1,133 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrmicrophone english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Chris_Matyas
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrmicrophone/pcdrmicrophone.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=Microphone Test
+Module.Description=This module tests recording capability
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.MicrophoneTest.Name=Microphone Interactive Test
+Test.MicrophoneTest.Description=Tests recording capabilities
+
+
+Event.MSG_REPLAY_NOT_SUPPORTED.Message=Could not replay, device does not support replay.
+Event.MSG_REPLAY_NOT_SUPPORTED.EventCode=1
+
+Event.MSG_NOT_OPEN_WAV_FILE.Message=Could not open WAVE file.
+Event.MSG_NOT_OPEN_WAV_FILE.EventCode=2
+
+Event.MSG_COULD_NOT_OPEN_DEVICE.Message=Could not open device.
+Event.MSG_COULD_NOT_OPEN_DEVICE.EventCode=3
+
+Event.MSG_NOT_SET_TIME_FORMAT.Message=Could not set time format.
+Event.MSG_NOT_SET_TIME_FORMAT.EventCode=4
+
+Event.MSG_DOES_NOT_SUPPORT_RECORDING.Message=Could not record, device does not support recording.
+Event.MSG_DOES_NOT_SUPPORT_RECORDING.EventCode=5
+
+Event.MSG_FAILED_CREATING_SOUND_FILE.Message=Failed while trying to create sound file.
+Event.MSG_FAILED_CREATING_SOUND_FILE.EventCode=6
+
+Event.MSG_FILE_NOT_SAVED.Message=File could not be saved, unknown error.
+Event.MSG_FILE_NOT_SAVED.EventCode=7
+
+Event.TestAborted.Message=The test was canceled by user.
+Event.TestAborted.EventCode=8
+
+Event.TestFailed.Message=The test failed.
+Event.TestFailed.EventCode=9
+
+
+Event.InternalError.Message=There was an internal error.
+Event.InternalError.EventCode=10
+
+# will need change description for this event later
+Event.MSG_SET_PCM_FORMAT_FAIL.Message=Could not set PCM format.
+Event.MSG_SET_PCM_FORMAT_FAIL.EventCode=11
+
+Tip.RestartMachine =Restart the Machine
+
+LocalizedString.MSG_CAPTION_INSTRUCTIONS=Instructions
+
+LocalizedString.MSG_INSTRUCTIONS_1=If the PCDr Microphone test is not recording or playing sound make sure that the properties for the microphone is not muted. The sound volume properties, including the microphone, can be found by double-clicking the horn next to the system clock.
+
+LocalizedString.MSG_INSTRUCTIONS_2=This is a test for your microphone.  Please note before you can record from the microphone it must be selected as the record source in your mixer application.
+
+LocalizedString.MSG_INSTRUCTIONS_4=To test, follow these steps:
+
+LocalizedString.MSG_INSTRUCTIONS_5=1. Click on "Record" to record a 3 second sound file.
+
+LocalizedString.MSG_INSTRUCTIONS_6=2. Click on "Play" to replay the recorded sound. You can re-record by clicking on "Record" again.
+
+LocalizedString.MSG_INSTRUCTIONS_7=3. To exit, click "Close".
+
+LocalizedString.MSG_BUTTON_LABEL_RECORD=&Record
+
+LocalizedString.MSG_BUTTON_LABEL_PLAY=&Play
+
+LocalizedString.MSG_BUTTON_LABEL_CLOSE=&Close
+
+LocalizedString.MSG_TEST_NAME=Microphone Interactive Test
+
+LocalizedString.MSG_DID_THE_TEST_PASS=Did the test pass?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

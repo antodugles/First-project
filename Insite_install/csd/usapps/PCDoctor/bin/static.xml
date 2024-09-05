@@ -1,0 +1,6 @@
+<pcd:logger>
+    <logger name="Root" priority="Error" >
+		<appender type="stream" name="ConsoleErr" out="err" priority="Error"/>
+		<appender type="file" name="staticLogger" priority="Error" dir="logs" usepid="true" out="static.log" overwrite="true" />
+	</logger>
+</pcd:logger>

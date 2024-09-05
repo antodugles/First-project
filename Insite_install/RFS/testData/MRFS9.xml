@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" standalone="no"?>
+<createRFS>
+	<SystemID>ILINQTEST1</SystemID>
+	<OtherSystemID/>
+	<ProblemType>Applications</ProblemType>
+	<ProblemArea>Software</ProblemArea>
+	<ContactDetail>
+		<FirstName>BART</FirstName>
+		<LastName>SIMPSON</LastName>
+		<ContactPhone>123-456-8854;x3938</ContactPhone>
+		<ContactEmail>bart.simpson@yahoo.com</ContactEmail>
+	</ContactDetail>
+	<ExamNumber/>
+	<SeriesNumber/>
+	<ImageNumber/>
+	<ProblemDescription>Test</ProblemDescription>
+	<RequestSource>ContactGE</RequestSource>
+	<RfsNumber>II00000164</RfsNumber>
+	<RequestCovered>NO</RequestCovered>
+	<NextOpeningHour>7:30AM(US Central Time)</NextOpeningHour>
+	<NextWorkingDate>September, 14&lt;sup&gt;th&lt;/sup&gt; (Thursday).</NextWorkingDate>
+	<PhoneNumbers>1800-437-1171 (CARES)</PhoneNumbers>
+	<ResponseException/>
+	<Status>Sent</Status>
+</createRFS>

@@ -1,0 +1,18 @@
+
+# global properties
+Customer = PC-Doctor
+Variant = generic
+#PromptEnable = true
+
+# ipc properties
+Ipc.UniquePrefix = Pcd1
+
+# sisapi properties
+Sisapi.ParallelEnumerationEnabled = true
+
+pcdrmouse.PromptEnable = false
+pcdraudio.PromptEnable = false
+pcdravi.PromptEnable = false
+pcdrjoystick.PromptEnable = false
+pcdrkeyboard.PromptEnable = false
+pcdrsound.PromptEnable = false

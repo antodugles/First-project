@@ -1,0 +1,111 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  * Description...
+  * </desc>
+  * 
+  * <file>
+  * @author  Shree Sahasrabudhe
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrkeyboard/pcdrkeyboard.p5p#1 $
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+
+[EN]
+Module.Name=Keyboard 
+Module.Description=Interactive keyboard keys test
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+
+Test.KeyboardTest.Name=Keyboard 
+Test.KeyboardTest.Description=Keyboard 
+
+#MSG_INVALID_LAYOUT
+Event.InvalidLayout.Message= The keyboard type that you selected is not supported by PC-Doctor.
+Event.InvalidLayout.EventCode= 103
+
+#MSG_LAYOUT_LOAD_FAILED
+Event.LayoutLoadFailed.Message= Keyboard Load Failed.
+Event.LayoutLoadFailed.EventCode= 109
+
+#MSG_KEYBOARD_DESCRIPTION
+Event.UserClickedAbort.Message= User clicked the Abort button.
+Event.UserClickedAbort.EventCode= 105
+
+#MSG_USER_CLICKED_FINISH
+Event.UserClickedFinish.Message= User clicked the Finish button.
+Event.UserClickedFinish.EventCode= 106
+
+#MSG_USER_CLICKED_PASS
+Event.UserClickedPass.Message= User clicked the Pass button.
+Event.UserClickedPass.EventCode= 107
+
+#MSG_USER_CLICKED_FAIL
+Event.UserClickedFail.Message=User clicked the Fail button.
+Event.UserClickedFail.EventCode= 108
+
+
+#MSG_FN_INSTRUCTIONS
+LocalizedString.msgFnInstructions = To test Fn key, press Fn key with the Insert/Prt Sc key.
+
+#MSG_INSTRUCTIONS
+LocalizedString.msgInstructions = Instructions
+
+#MSG_INSTRUCTIONS_C1
+LocalizedString.msgInstructionsC1 = This test allows you to check the keys on your keyboard.  When you press a key, the corresponding key on-screen is removed if the key is functioning properly.
+
+#MSG_INSTRUCTIONS_C2
+LocalizedString.msgInstructionsC2 = Please press every key on your keyboard.  When you have finished click the Finish button.  If there are any keys left visible on the screen the test will fail.  To abort you can press Alt-X
+
+#MSG_INSTRUCTIONS_P1
+LocalizedString.msgInstructionsP1 = This test allows you to check the keys on your keyboard.  When you press a key, the corresponding key onscreen is removed if the key is functioning properly.
+
+#MSG_INSTRUCTIONS_P2
+LocalizedString.msgInstructionsP2 = Please press the keys you wish to test.  If all the keys you pressed were removed from the dialog then click the PASS button.  If a key does not disappear when you press it, click the FAIL button. To abort, click the Abort button or press Alt-X.
+
+#MSG_KEYBOARD_TYPE
+LocalizedString.msgKeyboardType = Keyboard Type
+
+#MSG_ABORT
+LocalizedString.msgAbort = Abort (Alt-X)
+
+#MSG_RESET
+LocalizedString.msgReset = Start (Alt-S)
+
+#MSG_PASS
+LocalizedString.msgPass = Pass (Alt-P)
+
+#MSG_FAIL
+LocalizedString.msgFail = Fail (Alt-F)
+
+#MSG_FINISH
+LocalizedString.msgFinish = Finish
+
+LocalizedString.msgEvalCap = Keyboard Layout Customization
+
+LocalizedString.msgEval = This is an evaluation version of the PC-Doctor Keyboard Test.
+The keyboard layout being used is a standard keyboard layout 
+and may not match your specific keyboard.
+
+Press OK to continue
+
+

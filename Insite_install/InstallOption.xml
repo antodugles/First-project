@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InstallOption rev="4.0.A">
+  <!-- This element decides which components will be installed and how they will be installed. -->
+  <ComponentConfig>
+    <!-- Install Attribute:                                                              -->
+    <!-- 0 - The component will not be installed. All the sub-elements will be ignored in this case. -->
+    <!--     Alternatively, you can just delete the entire element to not install the component. -->
+    <!-- 1 - The component will be installed. The sub-elements decide how the component will be installed. -->
+    <!-- StartMode Element:                                                              -->
+    <!-- AutoService - Start as a service everytime the system starts. -->
+    <!--               Note: For VNC, use this option with a caution. It means that the OLC -->
+    <!--                     will be able to VNC to the system through the Questra agent without the user's confirmation. -->
+    <!-- ManualService - Register as a manual service. -->
+    <!--                 The service will not start automatically when the system starts. -->
+    <!--                 The user is responsible for starting the service when it's needed. -->
+    <!-- AutoProcess - Start as a process everytime the system starts. -->
+    <!--               This is achieved by adding the component starting application in Windows Run registry key. -->
+    <!--               If the system is an ultrasound machine based on GE global software platform, Windows RunStart registry key is used instead. -->
+    <!--               Note: For VNC, use this option with a caution for the same reason as for AutoService option. -->
+    <!-- User        - The install script will just install the component and will not configure the starting mode. -->
+    <!--               The user is responsible for starting and stopping and whether it will run as a process or a service. -->
+    <!--               ComponentControl.exe in \InSite2\bin folder can ease starting, stoping and registering as a service. -->
+    <!-- CookieMonster (Apache/Tomcat) Web Server-->
+    <WebServer Install="0">
+      <!-- AutoService and ManualService options are not recommended for WebServer yet -->
+      <StartMode>AutoProcess</StartMode>
+    </WebServer>
+    <ShortCut Install="0">
+      <!-- StartMode is not applicable here. -->
+    </ShortCut>
+    <!-- If this is set to 1, create an uninstall entry in Add/Remove Programs -->
+    <AddRemovePrograms Install="1">
+      <!-- StartMode is not applicable here. -->
+    </AddRemovePrograms>
+    <!-- Questra Agent -->
+    <QuestraAgent Install="1">
+      <StartMode>AutoService</StartMode>
+    </QuestraAgent>
+    <!-- VNC Server -->
+    <VNC Install="0">
+      <!-- If AutoService or AutoProcess will be used, read the Note above for security concerns. -->
+      <!-- Important: In a closed system (no windows desktop), only use AutoService or ManualService options. -->
+      <!--			The VNC server doesn't function normally if it's run as a process due to some registry access problem. -->
+      <StartMode>ManualService</StartMode>
+      <RemoveBackground>1</RemoveBackground>
+    </VNC>
+    <!-- Telnet Server -->
+    <!-- Note: The install script will not actually install Telnet. If Install attribute is 1 for Telnet, -->
+    <!--       it will assume that Windows Telnet Server is installed and it will just configure its properties. -->
+    <Telnet Install="0">
+      <!-- A login ID called "GEService" with password "Hel" will be created for the exclusive use of Telnet. -->
+      <!-- AutoService, ManualService and User are the only options for Telnet's StartMode. -->
+      <!-- Telnet Server cannot be started as a process. -->
+      <!-- AutoService will change the start type of the service to automatic. -->
+      <!-- ManualService and User will change the start type of the service to manual. -->
+      <!-- Windows Telnet Server must be installed -->
+      <StartMode>AutoService</StartMode>
+    </Telnet>
+    <!-- CSD Web Applications -->
+    <!-- Note: If the web applications will be installed, the web server must be configured to be installed also. -->
+    <WebApps Install="0">
+      <!-- StartMode is not applicable here. -->
+    </WebApps>
+    <!-- Use of Disruptive Mode in CSD -->
+    <!-- This option is applicable only if WebApps is configured to be installed. -->
+    <!-- Disruptive Mode should be always used in CSD unless the customer manually starts Questra Agent -->
+    <!-- and the remote service workflow of the product is safe without using Disruptive Mode -->
+    <NoDisruptiveMode Install="0">
+      <!-- StartMode is not applicable here. -->
+    </NoDisruptiveMode>
+    <!-- RFS (Contact GE) -->
+    <RFS Install="0">
+      <!-- StartMode is not applicable here. -->
+    </RFS>
+    <!-- RFS Service -->
+    <!-- RFS Service attepts to send unsent RFSs periodically. -->
+    <RFSService Install="0">
+      <!-- AutoService and ManualService are the only options. -->
+      <StartMode>AutoService</StartMode>
+      <!-- Polling interval in minutes -->
+      <PollingInterval>60</PollingInterval>
+      <!-- Set the type of RFSs to be sent. -->
+      <!-- Machine: Send only machine generated RFSs. -->
+      <!-- Human: Send only Human generated RFSs. -->
+      <!-- All: Send all RFSs. -->
+      <SendMode>All</SendMode>
+      <!-- Maximum number of machine generated RFSs to be kept. -->
+      <!-- Value bigger than 1000 is not recommended. -->
+      <MaxMachineRFS>1000</MaxMachineRFS>
+    </RFSService>
+    <!-- Event Log Reader Service -->
+    <!-- Event Log Reader is an optional feature responsible for reading the Windows Event Log and calling -->
+    <!-- the Request for Service (RFS) API to generate “machine-generated” RFSs for specific events. -->
+    <EventLogReader Install="0">
+      <!-- AutoService and ManualService are the only options. -->
+      <StartMode>AutoService</StartMode>
+      <!-- Polling interval in minutes -->
+      <PollingInterval>60</PollingInterval>
+    </EventLogReader>
+    <!-- Distinct Network Monitor (Network Sniffing Tool) -->
+    <!-- Note: This application can only be installed in C drive. -->
+    <!--       This application can only be uninstalled using Add or Remove Programs in Control Panel. -->
+    <Distinct Install="0">
+      <!-- StartMode is not applicable here. -->
+    </Distinct>
+    <!-- Custom Browser is a utility that creates an instance of a restricted Internet Explorer. -->
+    <!-- This browser can be used to browse CSD or any web apps when a restricted web browser is needed. -->
+    <!-- Use a separate "CustomBrowser" node to override the default restriction configuration. -->
+    <CustomBrowser Install="1">
+      <!-- StartMode is not applicable here. -->
+    </CustomBrowser>
+    <!-- Install Software Management related files. -->
+    <SWManagement Install="0">
+      <!-- StartMode is not applicable here. -->
+    </SWManagement>
+    <unzipJava Install="0">
+      <!-- When set to 1 it unzips, instead of installing, Java/JRE into the Java subdirectory -->
+      <!-- This is useful when product and CSD use different versions of Java/JRE.  Rarely needed -->
+    </unzipJava>
+    <!-- New features for LSS FE Laptop and Release 2.5 -->
+    <ActDeactTool Install="1">
+      <AutoStart>1</AutoStart>
+      <DesktopShortcut>1</DesktopShortcut>
+      <StartMenuShortcut>1</StartMenuShortcut>
+    </ActDeactTool>
+    <BackupRestore Install="1"></BackupRestore>
+    <StandaloneAgentConfig Install="1"></StandaloneAgentConfig>
+  </ComponentConfig>
+  <!-- Any system environment variables needed for the service software can be defined in this element. -->
+  <!-- These are the variables that will end up in the System Control Panel. -->
+  <SystemEnvVars>
+    <!-- The following optional environment variables can be used to extend or modify the functions of CSD's Common Ultilities -->
+    <!-- Refer to "CSDIntegration.doc" for the definitions of these environment variables. -->
+    <!-- Uncomment and set the values as necessary. -->
+    <!-- <EnvVar varname="USER_LOG_PATHS"></EnvVar> -->
+    <!-- <EnvVar varname="IMAGE_FILE_PATH"></EnvVar> -->
+    <!-- <EnvVar varname="IMAGE_FILE_EXT"></EnvVar> -->
+    <!-- <EnvVar varname="IMAGE_VIEW_EXT"></EnvVar> -->
+    <!-- <EnvVar varname="IMAGE_ZIP_HOME"></EnvVar> -->
+    <!-- INSITE2_DATA_DIR defines the directory where the Questra Agent configuration files will be stored. -->
+    <!-- If the product has a dedicated partition for storing configuration data (presets), this directory should be in that drive. -->
+    <!-- If this environment variable is used, uninstallation will not delete this directory, and the subsquent installs will restore -->
+    <!-- from sitemap.xml from this directory that the previous agent settings will be restored. -->
+    <!-- If the directory doesn't exist, Service Platform install will create it. -->
+    <!-- Note: The folder hierarchy must be delimited using "\" instead of "/".  Ex: D:\InSite2Data - Good, D:/InSite2Data - Bad -->
+    <!--          If this environment variable is not set, the original agent configuration directory defined by INSITE2_ROOT_DIR will be used -->
+    <!-- EnvVar varname="INSITE2_DATA_DIR">D:\InSite2Data</EnvVar -->
+  </SystemEnvVars>
+  <!-- Local environment variables (environment variables effective only during the installation) are defined in this element. -->
+  <!-- A batch file called InstallEnvVars.bat containing "set" command-lines will be created to set these variables. -->
+  <!-- This batch file will be copied to %INSITE2_HOME% directory for reference. -->
+  <!-- These local environment variables will be used with ReplaceEnvVars.pl to update httpd.conf file of Apache, -->
+  <!-- web.xml file of CSD web apps and Questra Agent configuration files -->
+  <!-- If the evironment variable with the same name exists already, the existing one will be used instead of creating a new one. -->
+  <!-- This is to provide a way to override the values defined here. -->
+  <LocalEnvVars>
+    <!-- Image export directory (used to update httpd.conf file of Apache and Questra Agent configuration files)-->
+    <!-- This environment variable is not needed and will be ignored if neither WebApps nor QuestraAgent -->
+    <!-- is configured to be installed in ComponentConfig element above. -->
+       <EnvVar varname="ExportDir">C:\export</EnvVar>
+    <!-- Log Directory -->
+    <!-- Log Directory is used in the following features: -->
+    <!-- 1.  Global Ultrasound Software Platform based Log Viewer servlet of CSD -->
+    <!-- 2.  Legacy Diagnostic servlet (including PC Doctor Diagnostics) of CSD -->
+    <!-- 3.  QuestraAgent's Log Directory -->
+    <!-- 4.  QuestraAgent's Virtual Directory -->
+    <!-- 5.  Distinct Network Monitor -->
+    <!-- This environment variable is not needed and will be ignored if CSD, QuestraAgent and Distinct Network Monitor -->
+    <!-- are not configured to be installed in ComponentConfig element above. -->
+    <EnvVar varname="LogDir">C:\InSite2\log</EnvVar>
+    <!-- Change the following port numbers if the default ports cannot be used for the servers. -->
+    <EnvVar varname="WebPort">80</EnvVar>
+    <EnvVar varname="VNCPort">5900</EnvVar>
+    <EnvVar varname="TelnetPort">23</EnvVar>
+    <EnvVar varname="HTMLPort">8011</EnvVar>
+    <!-- This sets the prefix that will be used to automatically create DeviceName and SerialNumber (CRM#) in QuestraAgentConfig. -->
+    <!-- The prefix should be unique for the device type.  For Ultrasound products, the prefix must match the System ID prefix. -->
+    <EnvVar varname="Prefix">MU</EnvVar>
+    <!-- The following environment variables are used to configure QuestraAgentConfig section -->
+    <EnvVar varname="DeviceType">CS_DCR_MUSE_SERVER_02.0A</EnvVar>
+    <EnvVar varname="ProductName">MUSE</EnvVar>
+  </LocalEnvVars>
+  <!-- This element is used to update Questra Agent Configuration Files(qsaconfig.xml and hscds.xml) -->
+  <!-- Note: If QuestraAgent is not configured to be installed in ComponentConfig element above, this element -->
+  <!-- is not needed and will be ignored. -->
+  <QuestraAgentConfig>
+    <!-- If %<EnvVar>% syntax is used in the value, the value will be replaced with the specified environment variable value. -->
+    <!-- See __FILE_REPOS_DIR__ for the example of the use of %<EnvVar>% syntax. -->
+    <!-- ServiceAgent Profile -->
+    <text symbol="__SA_ASSET_TYPE_NAME__">%DeviceType%</text>
+    <text symbol="__SA_ASSET_TYPE_MANUFACTURER__">GE_Healthcare</text>
+    <text symbol="__SA_ASSET_TYPE_PRODUCT__">%ProductName%</text>
+    <text symbol="__SA_ASSET_TYPE_MODEL__">SERVER</text>
+    <text symbol="__SA_ASSET_TYPE_VERSION__">02.0A</text>
+    <!-- DeviceName (__SA_ASSET_NAME__) has to be unique for each machine.  Device Name should be the 2-4 character prefix (for a Vivid e, it would 'VE') concatenated with the
+		"rating plate" serial number (12345WX9). Therefore for this example, it would be "VE+"12345WX9" or "VE12345WX9). All characters
+		should be capitalized.  
+ 
+		If either __SA_ASSET_NAME__ or __SA_ASSET_SERIAL_NUMBER__ value is set to "UNKNOWN", DeviceName will be automatically generated using "GetSerialNumber" command. 
+		The product team has to provide "GetSerialNumber" command that returns the serial number or a unique number.
+		A default batch script, "GetSerialNumber.bat" is provided and will be installed in "%INSITE2_HOME%\bin" directory.  This batch script will read "C:\serialNo.txt" file and return the content to the standard output.
+		The product team can use this script as-is or modify or create their own script.
+		In addition to providing "GetSerialNumber" command, %Prefix% environment variable must be uncommented and set in LocalEnvVars element above. -->
+    <!-- Precedence of getting DeviceName:
+		1. The actual value entered here, if it's not "UNKNOWN".
+		2. %Prefix%_ + return value of "GetSerialNumber" command -->
+    <text symbol="__SA_ASSET_NAME__">UNKNOWN</text>
+    <!-- SerialNumber (__SA_ASSET_SERIAL_NUMBER__) has to be unique for each machine. 
+		SerialNumber must be set to the CRM# (Customer Relation Management Number).  In the above example that value would be constructed in much the same way as 
+		DeviceName with a small exception, only the numbers up to the manufacturer code in the serial number would be used: "VE"+"12345" or "VE12345".
+		If the product does not use manufacturer code in the serial number, SerialNumber would be the same as DeviceName unless SerialNumber is capped by the maximum length.
+		The maximun length of SerialNumber is 15 characters. 
+		
+		If either __SA_ASSET_NAME__ or __SA_ASSET_SERIAL_NUMBER__ value is set to "UNKNOWN", SerialNumber will be automatically generated using "GetSerialNumber" command. 
+		The product team has to provide "GetSerialNumber" command that returns the serial number or a unique number.
+		For GE Ultrasound Platform based products, if the product uses manufacturing code in the serial number, only the numbers up to the manufacturer code in the serial number should be used in SerialNumber.
+		To accomplish this, provide "-nomanufcode" option in "GetSerialNumber" command.
+		The default batch script, "GetSerialNumber.bat" will assume that the last three characters are manufacturing codes and they will be trimmed if "-nomanufcode" option is used. 
+		In addition to providing "GetSerialNumber" command, %Prefix% environment variable must be uncommented and set in LocalEnvVars element above. -->
+    <!-- Precedence of getting SerialNumber:
+		1. The actual value entered here, if it's not "UNKNOWN".
+		2. %Prefix% + return value of "GetSerialNumber -nomanufcode" command -->
+    <text symbol="__SA_ASSET_SERIAL_NUMBER__">UNKNOWN</text>
+    <text symbol="__SA_ASSET_PASSWORD__">test1234</text>
+    <!-- Any description that may help identifying the device -->
+    <text symbol="__SA_ASSET_DESCRIPTION__"></text>
+    <!-- OCM -->
+    <text symbol="__SCHEME__">https</text>
+    <!-- The following elements determine which Questra Enterprise Server will be used to register the device.  
+             The values of these elements must be set to specific URLs depending on the development stages of the enterprise servers 
+             and product development milestones and these values will be informed to the product teams.
+             The following URLs are being used or planned to be used:
+             -For Development Enterprise Server:
+             __ENT_URL__  http://ins2d.med.ge.com:9005
+             __TUN_URL__  http://ins2d.med.ge.com:9009
+			-For Staging Enterprise Server:
+             __ENT_URL__  https://stg.us1-ws.service.gehealthcare.com:443
+             __TUN_URL__  https://stg.us1-rd.service.gehealthcare.com:443
+             -For Pilot1 Enterprise Server:
+             __ENT_URL__  https://plt.us1-ws.service.gehealthcare.com:443
+             __TUN_URL__  https://plt.us1-rd.service.gehealthcare.com:443
+			 -For Pilot2 Enterprise Server:
+             __ENT_URL__  https://plt2.us1-ws.service.gehealthcare.com:443
+             __TUN_URL__  https://plt2.us1-rd.service.gehealthcare.com:443
+             -For Production Enterprise Server:
+             __ENT_URL__  https://us0-ws.service.gehealthcare.com:443
+             __TUN_URL__  https://us0-rd.service.gehealthcare.com:443 -->
+    <text symbol="__ENT_URL__">https://us0-ws.service.gehealthcare.com:443</text>
+    <text symbol="__TUN_URL__">https://us0-rd.service.gehealthcare.com:443</text>
+    <text symbol="__LOG_LEVEL__">WARN</text>
+    <!-- Service Agent polling interval in seconds.  DO NOT modify this value without consulting Global Service Platform team. -->
+    <text symbol="__SA_POLLINTERVAL__">60</text>
+    <!-- Server Port Numbers -->
+    <text symbol="__RA_CSD_LOCALPORT__">%WebPort%</text>
+    <text symbol="__RA_VNC_LOCALPORT__">%VNCPort%</text>
+    <text symbol="__RA_TELNET_LOCALPORT__">%TelnetPort%</text>
+    <text symbol="__HTML_SERVER_LOCALPORT__">%HTMLPort%</text>
+    <!-- Misc -->
+    <text symbol="__DATA_DIR__">%INSITE2_DATA_DIR%</text>
+    <text symbol="__FILE_REPOS_DIR__">%INSITE2_DATA_DIR%\etc</text>
+    <text symbol="__FILE_WATCHER_ALIAS__">Export</text>
+    <text symbol="__FILE_WATCHER_DIR__">%ExportDir%</text>
+    <text symbol="__VIRTUAL_DIR_ALIAS__">Log</text>
+    <text symbol="__VIRTUAL_DIR__">%LogDir%</text>
+    <text symbol="__FILE_WATCHER_FILTER__">*.*</text>
+    <!-- QuestraAgent Log Directory (Not Used - Reserved for Future Use) -->
+    <text symbol="__CUSTOM_LOG_DIR__">%LogDir%</text>
+    <!-- Set to "NA" if there's no back end integration -->
+    <text symbol="__BACKEND__INTEGRATION__">UL</text>
+    <!-- Number of concurrent VNC connections -->
+    <text symbol="__VNC_CONNECTIONS__">1</text>
+    <!-- Release 2.0 Device Properties (Mandatory) -->
+    <!-- CS_GSP_MODALITY (Modality) Property: -->
+    <!-- Acceptable values are: -->
+    <!-- "DCR" - DCAR -->
+    <!-- "INV" - Interventional -->
+    <!-- "LUN" - Lunar -->
+    <!-- "LSS" - Life Supporting Systems -->
+    <!-- "MON" - Patient Monitoring -->
+    <!-- "ULS" - Ultrasound -->
+    <text symbol="__SA_MODALITY__">DCR</text>
+    <!-- CS_GSP_OPSYSTEM (Operating System) Property: -->
+    <!-- Acceptable values are: -->
+    <!-- "WINXP" -->
+    <!-- "WIN2K" -->
+    <!-- "WINNT" -->
+    <!-- "WINVISTA" -->
+    <!-- "WINCE" -->
+    <!-- "WINOTHER" -->
+    <!-- "LINUX" -->
+    <!-- "UNIX" -->
+    <!-- "OTHER" -->
+    <text symbol="__SA_OP_SYSTEM__">WINOTHER</text>
+    <!-- CS_GSP_OPREV (Operating System Revision) Property: -->
+    <text symbol="__SA_OP_REVISION__"></text>
+    <!-- CS_GSP_APREV (Application Software Revision) Property: -->
+    <text symbol="__SA_AP_REVISION__"></text>
+    <!-- CS_GSP_HRFS_SUPPORT (Human RFS Support) Property: -->
+    <text symbol="__SA_HRFS_SUPPORT__">FALSE</text>
+    <!-- CS_GSP_MRFS_SUPPORT (Machine RFS Support) Property: -->
+    <text symbol="__SA_MRFS_SUPPORT__">FALSE</text>
+    <!-- CS_GSP_SWRLOAD_SUPPORT (Software Reload Support) Property: -->
+    <text symbol="__SA_SWRLOAD_SUPPORT__">FALSE</text>
+    <!-- CS_GSP_SWDLOAD_SUPPORT (Software Download Support) Property: -->
+    <text symbol="__SA_SWDLOAD_SUPPORT__">FALSE</text>
+    <!-- CS_GSP_ALERT_EMAIL_LVL3 (Event and Alarm Alert Level 3 - 3 being lowest and 1 being highest) Property: -->
+    <!-- Set the value to an empty string if events and alarms are not supported or email alert of this level is not used. -->
+    <!-- If this email alert level is used, both email alert level 2 and 1 have to be used as well. -->
+    <!-- Acceiptable values are: "EMAIL ALERT LEVEL 3" or "" -->
+    <text symbol="__SA_ALERT_LVL3__"></text>
+    <!-- CS_GSP_ALERT_EMAIL_LVL2 (Event and Alarm Alert Level 2 - 3 being lowest and 1 being highest) Property: -->
+    <!-- Set the value to an empty string if events and alarms are not supported or email alert of this level is not used. -->
+    <!-- If this email alert level is used, email alert level 1 has to be used as well. -->
+    <!-- Acceiptable values are: "EMAIL ALERT LEVEL 2" or "" -->
+    <text symbol="__SA_ALERT_LVL2__"></text>
+    <!-- CS_GSP_ALERT_EMAIL_LVL1 (Event and Alarm Alert Level 1 - 3 being lowest and 1 being highest) Property: -->
+    <!-- Set the value to an empty string if events and alarms are not supported or email alert is not used. -->
+    <!-- Acceiptable values are: "EMAIL ALERT LEVEL 1" or "" -->
+    <text symbol="__SA_ALERT_LVL1__">EMAIL ALERT LEVEL 1</text>
+    <!-- Release 2.0 Device Properties (Optional)-->
+    <!-- CS_GSP_GHSTREV (Base Image Ghost Revision) Property: -->
+    <text symbol="__SA_GHST_REVISION__">1.0</text>
+    <!-- The following node is commented out to enable CS_GSP_GHSTREV property. To disable it, uncomment the node. -->
+    <!--node>/ServiceAgent/ContactInfo/ServiceAgentProfile/Property[@name='CS_GSP_GHSTREV']</node-->
+    <!-- FileWatcher nodes -->
+    <!-- The following node is commented out to enable File Watcher. To disable it, uncomment the node. -->
+    <!--node>/ServiceAgent/ContactInfo/ServiceAgentProfile/FileRepository/FileWatcher</node-->
+  </QuestraAgentConfig>
+  <!-- Additional properties in versions.txt file. -->
+  <!-- Symbols defined in <QuestraAgentConfig> element above can be used as the values. -->
+  <DevicePropertyFile>
+    <ConfigProperty varname="OpSys">__SA_OP_SYSTEM__</ConfigProperty>
+    <ConfigProperty varname="OpSysRev">__SA_OP_REVISION__</ConfigProperty>
+    <ConfigProperty varname="AppSWRev">__SA_AP_REVISION__</ConfigProperty>
+    <ConfigProperty varname="ServiceSWRev">__SA_SRV_REVISION__</ConfigProperty>
+    <ConfigProperty varname="ImageSWRev">__SA_GHST_REVISION__</ConfigProperty>
+  </DevicePropertyFile>
+  <!-- This element is used to update CustomBrowserConfig.xml file. -->
+  <!-- If Custom Browser will not be used, ignore this element. -->
+  <CustomBrowser>
+    <Browser Mode="service" NoContextMenu="1" NoFullScreen="1" NoFileNew="1" NoFileOpen="1" NoPrinting="1" NoSearch="1" NoHistory="1" TopMost="0">
+      <!-- Title of the window.  If not provided, the default title will be used -->
+      <Title>Service Browser</Title>
+      <!-- Command to run before opening the browser (This will start the web server if it's not running)-->
+      <PreExec>cmd /c StartComp.bat -webserver -nr -s</PreExec>
+      <URL>http://localhost:%WebPort%/modality-csd/</URL>
+      <!-- If position is not provided, the window will be positioned randomly. -->
+      <Position>
+        <!-- Integer values for the position coordinates. -->
+        <X>0</X>
+        <Y>0</Y>
+      </Position>
+      <!-- When Resizable attribute is 0, MaximizeButton attribute has no effect.
+			Maximize button is always disabled when the window is not resizable.
+			Maximize attribute 1 will maximize the window but the window will be still movable. -->
+      <Size Resizable="0" MaximizeButton="0" MinimizeButton="0" Maximize="0">
+        <!-- Integer values for the size when the window is not maximized. -->
+        <Height>740</Height>
+        <Width>1024</Width>
+      </Size>
+      <!-- The service browser will have no bars -->
+      <!-- If NoCustomize attriute is 1, the bars are not customizable (cannot be added or removed at runtime) nor movable -->
+      <!-- Also, the buttons of the tool bar will not be customizable -->
+      <Bars NoCustomize="0">
+        <Menubar Show="0" />
+        <Addressbar Show="0" />
+        <Statusbar Show="0" />
+        <Toolbar Show="0">
+          <Back>1</Back>
+          <Forward>1</Forward>
+          <Stop>1</Stop>
+          <Refresh>1</Refresh>
+        </Toolbar>
+      </Bars>
+    </Browser>
+    <Browser Mode="ilinq" NoContextMenu="1" NoFullScreen="1" NoFileNew="1" NoFileOpen="1" NoPrinting="1" NoSearch="1" NoHistory="1" TopMost="0">
+      <Title>Service Browser</Title>
+      <!-- Command to run before opening the browser (This will start the service agent if it's not running) -->
+      <!-- The piped "echo" command logs a file which can be used to clear the Active Messaging RFS Icon status which should be cleared when the RFS application opens -->
+      <PreExec>cmd /c StartComp.bat -agent -nr -s| echo ServiceIcon = 1 &gt; "%INSITE2_HOME%\Temp\idunnNotify"</PreExec>
+      <URL>%INSITE2_HOME%/RFS/rfsmain.html</URL>
+      <Position>
+        <X>0</X>
+        <Y>0</Y>
+      </Position>
+      <Size Resizable="0" MaximizeButton="0" MinimizeButton="0" Maximize="0">
+        <Height>740</Height>
+        <Width>1024</Width>
+      </Size>
+      <!-- Only Toolbar will show -->
+      <Bars NoCustomize="1">
+        <Menubar Show="0" />
+        <Addressbar Show="0" />
+        <Statusbar Show="0" />
+        <Toolbar Show="1">
+          <Back>1</Back>
+          <Forward>1</Forward>
+          <Stop>0</Stop>
+          <Refresh>1</Refresh>
+        </Toolbar>
+      </Bars>
+    </Browser>
+    <Browser Mode="test" NoContextMenu="1" NoFullScreen="1" NoFileNew="1" NoFileOpen="1" NoPrinting="1" NoSearch="1" NoHistory="1" TopMost="1">
+      <Title></Title>
+      <URL>http://www.yahoo.com</URL>
+      <Position>
+        <X>0</X>
+        <Y>0</Y>
+      </Position>
+      <Size Resizable="0" MaximizeButton="0" MinimizeButton="0" Maximize="0">
+        <Height>740</Height>
+        <Width>1024</Width>
+      </Size>
+      <!-- Only Toolbar will show -->
+      <Bars NoCustomize="1">
+        <Menubar Show="0" />
+        <Addressbar Show="0" />
+        <Statusbar Show="0" />
+        <Toolbar Show="1">
+          <Back>1</Back>
+          <Forward>1</Forward>
+          <Stop>0</Stop>
+          <Refresh>1</Refresh>
+        </Toolbar>
+      </Bars>
+    </Browser>
+  </CustomBrowser>
+</InstallOption>

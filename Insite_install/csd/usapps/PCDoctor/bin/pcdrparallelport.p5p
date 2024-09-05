@@ -1,0 +1,86 @@
+ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrparallel port english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  Dan_Lu
+  * @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/windows/diag/pcdrparallelport/pcdrparallelport.p5p#1 $
+
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+
+  * @.change $Change: 39950 $
+
+  * @.last   $Author: Dan_Lu $
+
+  * </file>
+  * </header>
+  */
+
+Module.Name=Parallel Port Test
+
+Module.Description=This module tests parallel port
+
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.InternalTest.Name=Internal Read and Write Test
+Test.InternalTest.Description=Parallel Port Internal Read and Write Test
+
+Test.LoopbackTest.Name=External Read and Write Test
+Test.LoopbackTest.Description=Parallel Port External Read and Write Test
+
+LocalizedString.Progress=Testing port {PortName}.
+
+Event.MiscompareError.Message=Miscompare on port {PortName}: Read {ReadData}H, Expected {ExpectedData}H.
+Event.MiscompareError.EventCode=1
+
+
+Event.Set0Fail.Message=Port (PortName}: testing  {CheckType}  Failed.
+Event.Set0Fail.EventCode=2
+
+
+Event.NoPortsFound.Message=No available parallel ports were found.
+Event.NoPortsFound.EventCode=3
+
+Event.ExternalReadWriteFailed.Message=Port {PortName}: failed external read-write test.
+Event.ExternalReadWriteFailed.EventCode=4
+
+Event.InternalReadWriteFailed.Message=Port {PortName}: failed internal read-write test.
+Event.InternalReadWriteFailed.EventCode=5
+
+Event.PcdrDriverNotInstalled.Message=The PC-Doctor driver is not properly installed.  Reinstallation is required.  
+Event.PcdrDriverNotInstalled.EventCode=6
+
+Event.DevicePropertyCollectionFailure.Message=The port was unable to collect property information.  
+Event.DevicePropertyCollectionFailure.EventCode=7
+
+Event.ParallelPortTestAborted.Message=The test on {PortName} was aborted.
+Event.ParallelPortTestAborted.EventCode=8
+
+Event.BadDevicePointer.Message=The pointer to the requested device is invalid.  The device will not be tested.  This is an internal logic error. 
+Event.BadDevicePointer.EventCode=9
+
+Event.TestComplete.Message=Port {PortNumber}: test complete.
+Event.TestComplete.EventCode=11
+
+Event.EnumerationError.Message="Unable to discover parallel port through plug and play."
+Event.EnumerationError.EventCode=12
+
+# Tips are optional
+Tip.RestartMachine =Restart the Machine

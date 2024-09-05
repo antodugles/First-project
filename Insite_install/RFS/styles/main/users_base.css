@@ -1,0 +1,240 @@
+/*##############################################################################################################################
+#*
+#* Copyright (c) 2005 The General Electric Company
+#*
+#* Author		: 
+#*
+#* File			: users_base.css
+#*
+#* Objective	: RFS Users Screen Sytle sheet
+#*
+#* Modifications:
+#*
+#*   Date        Programmer         Description
+#*   -----------------------------------------------------------------------------------------------------------------------
+#*   06JUN2009   R Siddineni        RFS users Alignment Issue on IE7 Modification 
+#*									div#root table tr.actions td div#adduser{width: 100%;}
+##############################################################################################################################*/
+
+
+body {
+	margin: 0;
+	padding: 10px;
+	background: #D3D3D3;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-weight: normal;
+	color: #000;
+	}
+form {
+	margin: 0;
+	padding: 0;
+	}
+div#root {
+	width: 90%;
+	margin: 0 auto;
+	padding: 0;
+	}
+	div#root input.text,
+	div#root input.valid {
+		border: 1px solid #808080;
+		padding: 3px;
+		background: #FFFFF0;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: normal;
+		color: #000;
+		}
+	div#root input.invalid {
+		border: 2px solid #F00;
+		padding: 2px;
+		background: #FCC;
+		}
+	div#root em {
+		margin: 0 4px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: inherit;
+		font-weight: bold;
+		color: #F00;
+		}
+	div#root table {
+		width: 100%;
+		border: 1px solid gray;
+		}
+	div#root table tr {
+		background-color: #FFFFF0;
+		}
+	div#root table tr.header {
+		font-weight: bold;
+		background-color: darkgray;
+		}
+	div#root table tr.title {
+		font-size: 120%;
+		}
+	div#root table tr.altrow {
+		background-color: #EEE;
+		}
+	div#root table tr.actions {
+		background-color: #E3E3E3;
+		}
+	div#root table tr.editrow {
+		background-color: lightblue;
+		}
+	div#root table tr#default {
+		color: #F60000;
+		}
+		div#root table tr.header th {
+			border-bottom: 1px solid gray;
+			border-right: 1px solid gray;
+			border-left: 1px solid lightgrey;
+			margin: 0;
+			padding: 1px 0;
+			}
+		div#root table tr td {
+			margin: 0;
+			padding: 1px 4px;
+			}
+		div#root table tr.actions td {
+			text-align: center;
+			padding: 8px;
+			font-size: 110%;
+			}
+		div#root table tr.actions td div{
+			width: 33%;
+			float: left;
+			text-align: left;
+			}
+		div#root table tr.actions td div#adduser{
+			width: 100%;
+			}
+		div#root div#recent_table table tr.actions td div{
+			width: 50%;
+			}
+		div#root table tr.actions td div a{
+			margin-left: 0;
+			}
+		div#root table tr th.cbox,
+		div#root table tr td.cbox {
+			width: 4%;
+			text-align: center;
+			}
+		div#root table tr td.cbox {
+			padding: 1px;
+			}
+		div#root table tr th.actions,
+		div#root table tr td.actions {
+			width: 6%;
+			}
+		div#root table tr th.thirtyfive,
+		div#root table tr td.thirtyfive {
+			width: 35%;
+			}
+		div#root table tr th.thirty,
+		div#root table tr td.thirty {
+			width: 30%;
+			}
+		div#root table tr th.twenty,
+		div#root table tr td.twenty {
+			width: 20%;
+			}
+		div#root table tr th.ten,
+		div#root table tr td.ten {
+			width: 10%;
+			}
+		div#root table tr a {
+			color: #333;
+			text-decoration: none;
+			font-weight: bold;
+			}
+		div#root table tr a.disabled {
+			color: gray;
+			}
+		div#root table tr a:hover {
+			text-decoration: underline;
+			}
+		div#root table tr a.disabled:hover {
+			text-decoration: none;
+			}
+		div#root table tr td.actions a {
+			margin: 2px 4px;
+			width: 13px;
+			height: 13px;
+			display: block;
+			float: left;
+			text-indent: -5000px;
+			overflow: none;
+			}
+		div#root table tr td.actions a.edit {
+			margin: 2px 14px; 
+			background: url(icons.png) -30px 0 no-repeat;
+			}
+		div#root table tr td.actions a.save {
+			background: url(icons.png) 0 0 no-repeat;
+			}
+		div#root table tr td.actions a.cancel {
+			background: url(icons.png) -15px 0 no-repeat;
+			}
+		div#root table tr.actions a {
+			margin: 0 16px;
+			}
+		div#root table tr.editrow td input.edit {
+			display: block;
+			width: 95%;
+			margin: 2px auto;
+			}
+		div#root div#adduser {
+			margin: 4px 0 0 0;
+			display: none;
+			}
+			div#root div#adduser p {
+				margin: 0;
+				padding: 4px 0 0 0;
+				clear: both;
+				}
+			div#root div#adduser p.buttons {
+				text-align: center;
+				}
+				div#root div#adduser p span {
+					display: block;
+					text-align: right;
+					width: 36%;
+					float: left;
+					margin: 2px 8px 2px 0;
+					}
+				div#root div#adduser p input {
+					display: block;
+					width: 30%;
+					float: left;
+					}
+				div#root div#adduser p input.button,
+				div#root div#adduser p input.button.released {
+					margin: 0 auto;
+					float: none;
+					width: 8em;
+					padding: 0 10px !important;
+					padding: 0 5px;
+					border: 3px outset #AAA;
+					background: #CCC;
+					color: #000;
+					font-weight: bold;
+					font-family: Arial, Helvetica, sans-serif;
+					font-size: 110%;
+					cursor: pointer;
+					}
+				div#root div#adduser p input.button.pushed {
+					border: 3px inset #ADD8E6;
+					background: #ADD8E6;
+					}
+				div#root div#adduser p input.enabled {
+					filter: alpha(opacity=100);
+					-moz-opacity: 1.0;
+					opacity: 1.0;
+					}
+				div#root div#adduser p input.disabled {
+					filter: alpha(opacity=25);
+					-moz-opacity: 0.25;
+					opacity: 0.25;
+					}
+	div#root div#recent_table {
+		margin: 16px 0 0 0;
+		}

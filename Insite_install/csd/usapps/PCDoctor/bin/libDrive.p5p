@@ -1,0 +1,303 @@
+#<header>
+# <cr>
+#  Copyright (c) 2000-2005 PC-Doctor, Inc.
+# </cr>
+# <addr>
+#  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+#  All rights reserved.
+# </addr>
+#
+# <lic>
+#  This software is the confidential and proprietary information of PC-Doctor, Inc.
+#  ("Confidential Information"). You shall not disclose such confidential
+#  information and shall use it only in accordance with the terms of the license
+#  agreement you entered into with PC-Doctor.
+# </lic>
+#
+# <desc>
+#  Media module strings
+# </desc>
+#
+# <file>
+#  @author  Chris_Matyas
+#  @version $Id: //depot/Builds/Matrix/20050616_BDB3012_GE_MEDICAL/Matrix_Projects/projects/modules/src/multi/common/libDrive/libDrive.p5p#1 $
+#  @.date   $DateTime: 2005/06/16 13:46:33 $
+#  @.change $Change: 39950 $
+#  @.last   $Author: Dan_Lu $
+# </file>
+#</header>
+
+#All the events
+
+Event.UNABLE_TO_GET_DRIVE_GEOMETRY.Description=Unable to get drive geometry.
+Event.UNABLE_TO_GET_DRIVE_GEOMETRY.Message=There was an error obtaining drive geometry.
+Event.UNABLE_TO_GET_DRIVE_GEOMETRY.EventCode=1
+Event.UNABLE_TO_GET_DRIVE_GEOMETRY.Tip1=Restart the system.
+Event.UNABLE_TO_GET_DRIVE_GEOMETRY.Tip2=Launch device manager and check under Disk Drives to make sure the system can recognize the device.
+
+Event.TOTAL_SECTOR_GREATER_THAN_ZERO.Description=The total number of sectors must be greater than zero.
+Event.TOTAL_SECTOR_GREATER_THAN_ZERO.Message=There was an error getting the total number of sectors.
+Event.TOTAL_SECTOR_GREATER_THAN_ZERO.EventCode=2
+Event.TOTAL_SECTOR_GREATER_THAN_ZERO.Tip1=Restart the system.
+Event.TOTAL_SECTOR_GREATER_THAN_ZERO.Tip2=Launch device manager and check under Disk Drives to make sure the system can recognize the device.
+
+Event.END_RANGE_GREATER_THAN_START_RANGE.Description=The end range must be greater than the start range.
+Event.END_RANGE_GREATER_THAN_START_RANGE.Message=There was an error setting up the configuration file for start and end range.
+Event.END_RANGE_GREATER_THAN_START_RANGE.EventCode=3
+Event.END_RANGE_GREATER_THAN_START_RANGE.Tip1=Check test parameters in configuration file.
+Event.END_RANGE_GREATER_THAN_START_RANGE.Tip2=If the parameters were passed in as command line, make sure the start and end range is valid.
+
+Event.END_RANGE_SMALLER_THAN_TOTAL_SECTORS.Description=The end range must be smaller than total number of sectors.
+Event.END_RANGE_SMALLER_THAN_TOTAL_SECTORS.Message=There was an error setting up the configuration file for start and end range.
+Event.END_RANGE_SMALLER_THAN_TOTAL_SECTORS.EventCode=4
+Event.END_RANGE_SMALLER_THAN_TOTAL_SECTORS.Tip1=Check test parameters in configuration file.
+Event.END_RANGE_SMALLER_THAN_TOTAL_SECTORS.Tip2=If the parameters were passed in as command line, make sure the start and end range is valid.
+
+Event.TOTAL_SECTORS_GREATER_THAN_DIFFERENCE.Description=The difference between the start and end range must be greater than total sector to test.
+Event.TOTAL_SECTORS_GREATER_THAN_DIFFERENCE.Message=There was an error setting up the configuration file for start and end range.
+Event.TOTAL_SECTORS_GREATER_THAN_DIFFERENCE.EventCode=5
+Event.TOTAL_SECTORS_GREATER_THAN_DIFFERENCE.Tip1=Check test parameters in configuration file.
+Event.TOTAL_SECTORS_GREATER_THAN_DIFFERENCE.Tip2=If the parameters were passed in as command line, make sure the start and end range is valid.
+
+Event.INTERNAL_ERROR.Description=An internal logic error has occurred.
+Event.INTERNAL_ERROR.Message=An internal logic error has occurred.
+Event.INTERNAL_ERROR.EventCode=6
+Event.INTERNAL_ERROR.Tip1=Let PC-Doctor know
+Event.INTERNAL_ERROR.Tip2=Let PC-Doctor know
+
+Event.UNABLE_TO_GET_DRIVE_LETTER.Description=Unable to obtain drive letter.
+Event.UNABLE_TO_GET_DRIVE_LETTER.Message=There was an error obtaining drive letter.
+Event.UNABLE_TO_GET_DRIVE_LETTER.EventCode=7
+Event.UNABLE_TO_GET_DRIVE_LETTER.Tip1=Restart the system.
+Event.UNABLE_TO_GET_DRIVE_LETTER.Tip2=Launch device manager and check under Disk Drives to make sure the system can recognize the device.
+
+Event.SYSTEM_DRIVE.Description=Unable to run the test on system drive.
+Event.SYSTEM_DRIVE.Message=PC-Doctor Hard Drive Pattern Test does not run on system drive(s).
+Event.SYSTEM_DRIVE.EventCode=8
+Event.SYSTEM_DRIVE.Tip1=Disable Pattern Test.
+Event.SYSTEM_DRIVE.Tip2=Disable Pattern Test.
+
+Event.INVALID_BUFFER_SIZE.Description=Invalid buffer size.
+Event.INVALID_BUFFER_SIZE.Message=The buffer size was invalid.
+Event.INVALID_BUFFER_SIZE.EventCode=9
+Event.INVALID_BUFFER_SIZE.Tip1=
+Event.INVALID_BUFFER_SIZE.Tip2=
+
+Event.MSG_ERROR_ALLOCATING_MEMORY.Description=Unable to allocate memory necessary to execute the test.
+Event.MSG_ERROR_ALLOCATING_MEMORY.Message=There was an error allocating memory.
+Event.MSG_ERROR_ALLOCATING_MEMORY.EventCode=10
+Event.MSG_ERROR_ALLOCATING_MEMORY.Tip1=Restart the system.
+Event.MSG_ERROR_ALLOCATING_MEMORY.Tip2=Restart the system.
+
+Event.BYTES_PER_SECTOR_GREATER_THAN_ZERO.Description=There was an error obtaining bytes per sector.
+Event.BYTES_PER_SECTOR_GREATER_THAN_ZERO.Message=The bytes per sector must be greater than zero.
+Event.BYTES_PER_SECTOR_GREATER_THAN_ZERO.EventCode=11
+Event.BYTES_PER_SECTOR_GREATER_THAN_ZERO.Tip1=Restart the system.
+Event.BYTES_PER_SECTOR_GREATER_THAN_ZERO.Tip2=Launch device manager and check under Disk Drives to make sure the system can recognize the device.
+
+Event.SECTORS_PER_TRACK_GREATER_THAN_ZERO.Description=There was an error obtaining sectors per track.
+Event.SECTORS_PER_TRACK_GREATER_THAN_ZERO.Message=The sectors per track must be greater than zero.
+Event.SECTORS_PER_TRACK_GREATER_THAN_ZERO.EventCode=11
+Event.SECTORS_PER_TRACK_GREATER_THAN_ZERO.Tip1=Restart the system
+Event.SECTORS_PER_TRACK_GREATER_THAN_ZERO.Tip2=Launch device manager and check under Disk Drives to make sure the system can recognize the device
+
+Event.IO_SEEK_FAILURE.Description=Seeking to a sector failed.
+Event.IO_SEEK_FAILURE.Message=There was an error seeking to sector {SeekSector}. Seeking to a sector failed.
+Event.IO_SEEK_FAILURE.EventCode=12
+Event.IO_SEEK_FAILURE.Tip1=Restart the system
+Event.IO_SEEK_FAILURE.Tip2=Launch device manager and check under Disk Drives to make sure the system can recognize the device
+
+Event.IO_READ_FAILURE.Description=Reading to a sector failed.
+Event.IO_READ_FAILURE.Message=There was an error reading sector {ReadSector}.
+Event.IO_READ_FAILURE.EventCode=13
+Event.IO_READ_FAILURE.Tip1=Restart the system
+Event.IO_READ_FAILURE.Tip2=Launch device manager and check under Disk Drives to make sure the system can recognize the device
+
+Event.IO_WRITE_FAILURE.Description=Writing to a sector failed
+Event.IO_WRITE_FAILURE.Message=There was an error writing to sector {WriteSector}.
+Event.IO_WRITE_FAILURE.EventCode=14
+Event.IO_WRITE_FAILURE.Tip1=Restart the system
+Event.IO_WRITE_FAILURE.Tip2=Launch device manager and check under Disk Drives to make sure the system can recognize the device
+
+Event.INVALID_DRIVE_HANDLE.Description=Invalid drive handle
+Event.INVALID_DRIVE_HANDLE.Message=There was an error obtaining drive handle.
+Event.INVALID_DRIVE_HANDLE.EventCode=15
+Event.INVALID_DRIVE_HANDLE.Tip1=Restart the system
+Event.INVALID_DRIVE_HANDLE.Tip2=Launch device manager and check under Disk Drives to make sure the system can recognize the device
+
+Event.TEST_ABORTED_ON_SECTOR.Description=The test was canceled.
+Event.TEST_ABORTED_ON_SECTOR.Message=The {TestName} was canceled while testing block {TestSector} (of {EndSector}).
+Event.TEST_ABORTED_ON_SECTOR.EventCode=16
+
+Event.DATA_COMPARE_FAILED.Description=Data compare failed
+Event.DATA_COMPARE_FAILED.Message=A miscompare occurred reading sector {TestSector}.
+Event.DATA_COMPARE_FAILED.EventCode=17
+
+Event.MAX_ERRORS_EXCEEDED.Description=Maximum error exceeded.
+Event.MAX_ERRORS_EXCEEDED.Message=Maximum errors of {MaxError} exceeded. Canceling test.
+Event.MAX_ERRORS_EXCEEDED.EventCode=18
+Event.MAX_ERRORS_EXCEEDED.Tip1=The media might have some problems
+Event.MAX_ERRORS_EXCEEDED.Tip2=Check the media for problems or run the test with a different media.
+
+Event.TEST_FAILED_ON_SECTOR.Description=Test failed.
+Event.TEST_FAILED_ON_SECTOR.Message=The {TestName} failed on sector {TestSector} (of {EndSector}).
+Event.TEST_FAILED_ON_SECTOR.EventCode=19
+Event.TEST_FAILED_ON_SECTOR.Tip1=The media might have some problems
+Event.TEST_FAILED_ON_SECTOR.Tip2=Check the media for problems or run the test with a different media.
+
+Event.UNABLE_TO_RESTORE_SECTOR.Description=Test failed to restore
+Event.UNABLE_TO_RESTORE_SECTOR.Message=The {TestName} failed to restore sector {TestSector} (of {EndSector}).
+Event.UNABLE_TO_RESTORE_SECTOR.EventCode=20
+Event.UNABLE_TO_RESTORE_SECTOR.Tip1=The media might have some problems
+Event.UNABLE_TO_RESTORE_SECTOR.Tip2=Check the media for problems or run the test with a different media.
+
+Event.MSG_PATTERN_MISMATCH_ERROR.Description=Pattern mismatch error
+Event.MSG_PATTERN_MISMATCH_ERROR.Message=A discrepancy has been found between test data written to block {TestSector} and data read back from the same location.
+Event.MSG_PATTERN_MISMATCH_ERROR.EventCode=21
+Event.MSG_PATTERN_MISMATCH_ERROR.Tip1=The media might have some problems
+Event.MSG_PATTERN_MISMATCH_ERROR.Tip2=Check the media for problems or run the test with a different media.
+
+
+Event.TEST_ABORTED.Description=The test was canceled.
+Event.TEST_ABORTED.Message=The test was canceled.
+Event.TEST_ABORTED.EventCode=22
+
+Event.NO_MEDIA_PRESENT.Description=There is no media in the drive.
+Event.NO_MEDIA_PRESENT.Message=There is no {MediaName} disc present.
+Event.NO_MEDIA_PRESENT.EventCode=23
+Event.NO_MEDIA_PRESENT.Tip1=Please insert a {MediaName} media.
+Event.NO_MEDIA_PRESENT.Tip2=Make sure the {MediaName} can be accessed from Windows.
+
+Event.MEDIA_IS_WRITE_PROTECTED.Description=Write protected media.
+Event.MEDIA_IS_WRITE_PROTECTED.Message=The {MediaName} is write protected.
+Event.MEDIA_IS_WRITE_PROTECTED.EventCode=24
+Event.MEDIA_IS_WRITE_PROTECTED.Tip1=Please insert a {MediaName} disc that is not write protected.
+Event.MEDIA_IS_WRITE_PROTECTED.Tip2=Make sure the {MediaName} media can be written to from Windows.
+
+Event.INVALID_BUFFER.Description=The buffer was invalid.
+Event.INVALID_BUFFER.Message=The buffer passed to the module by the library was Invalid.
+Event.INVALID_BUFFER.EventCode=25
+Event.INVALID_BUFFER.Tip1=
+Event.INVALID_BUFFER.Tip2=
+
+Event.INCORRECT_MEDIA_INSERTED.Description=The media is not correct.
+Event.INCORRECT_MEDIA_INSERTED.Message=The media you inserted isn't a {MediaName1} disc.  Please insert a {MediaName2} disc.
+Event.INCORRECT_MEDIA_INSERTED.EventCode=26
+
+Event.TEST_CANCELLED_NO_MEDIA.Description=Test canceled by user.
+Event.TEST_CANCELLED_NO_MEDIA.Message=Test canceled by user.  No media or wrong media type detected.
+Event.TEST_CANCELLED_NO_MEDIA.EventCode=27
+
+Event.ERROR_EJECTING_MEDIA.Description=Error ejecting media
+Event.ERROR_EJECTING_MEDIA.Message=Error ejecting media - {ScsiError}
+Event.ERROR_EJECTING_MEDIA.EventCode=28
+
+Event.ERROR_STARTING_DRIVE.Description=Failure starting the drive
+Event.ERROR_STARTING_DRIVE.Message=Failure starting the drive - {ScsiError}
+Event.ERROR_STARTING_DRIVE.EventCode=29
+
+Event.ERROR_NO_MEDIA.Description=No disk is in the drive.
+Event.ERROR_NO_MEDIA.Message=No disk is in the drive.
+Event.ERROR_NO_MEDIA.EventCode=30
+
+Event.NOT_ENOUGH_DATA_ON_DISC.Description=The media does not have enough data for testing.
+Event.NOT_ENOUGH_DATA_ON_DISC.Message=The {MediaName1} you inserted does not have enough data for testing.  Please insert a {MediaName2} with more data.
+Event.NOT_ENOUGH_DATA_ON_DISC.EventCode=31
+
+Event.DRIVE_SCSI_READ_FAILURE.Description=Reading to a sector failed.
+Event.DRIVE_SCSI_READ_FAILURE.Message=There was a SCSI error reading sector {ReadSector} SCSI Error {ScsiError1}H and {ScsiError2}H.
+Event.DRIVE_SCSI_READ_FAILURE.EventCode=32
+Event.DRIVE_SCSI_READ_FAILURE.Tip1=The media might have some problems
+Event.DRIVE_SCSI_READ_FAILURE.Tip2=Check the media for problems or run the test with a different media.
+
+Event.DRIVE_SCSI_WRITE_FAILURE.Description=Writing to a sector failed.
+Event.DRIVE_SCSI_WRITE_FAILURE.Message=There was a SCSI error writing to sector {WriteSector} SCSI Error {ScsiError1}H and {ScsiError2}H.
+Event.DRIVE_SCSI_WRITE_FAILURE.EventCode=33
+Event.DRIVE_SCSI_WRITE_FAILURE.Tip1=The media might have some problems
+Event.DRIVE_SCSI_WRITE_FAILURE.Tip2=Check the media for problems or run the test with a different media.
+
+Event.DRIVE_IO_READ_TIMEOUT.Description=Writing to a sector failed.
+Event.DRIVE_IO_READ_TIMEOUT.Message=There was a SCSI timeout error reading sector {ReadSector} SCSI Error {ScsiError1}H and {ScsiError2}H.
+Event.DRIVE_IO_READ_TIMEOUT.EventCode=34
+Event.DRIVE_IO_READ_TIMEOUT.Tip1=The media might have some problems
+Event.DRIVE_IO_READ_TIMEOUT.Tip2=Check the media for problems or run the test with a different media.
+
+Event.DRIVE_IO_MEDIA_NOT_PRESENT.Description=No disk is in the drive.
+Event.DRIVE_IO_MEDIA_NOT_PRESENT.Message=There is no {MediaName} disc present.
+Event.DRIVE_IO_MEDIA_NOT_PRESENT.EventCode=35
+
+Event.DRIVE_IO_READ_FAILURE.Description=Failed to read a sector.
+Event.DRIVE_IO_READ_FAILURE.Message=Failed to read sector {ReadSector}. SCSI Error {ScsiError1}H and {ScsiError2}H.
+Event.DRIVE_IO_READ_FAILURE.EventCode=36
+
+Event.DRIVE_ERROR_STARTING_DRIVE.Description=Failed to start drive.
+Event.DRIVE_ERROR_STARTING_DRIVE.Message=Failed starting the device. SCSI Error {ScsiError1}H and {ScsiError2}H.
+Event.DRIVE_ERROR_STARTING_DRIVE.EventCode=37
+
+Event.DRIVE_IO_READ_TOC_FAILURE.Description=Failed to read table of content.
+Event.DRIVE_IO_READ_TOC_FAILURE.Message=Error reading table of contents. SCSI Error {ScsiError1}H and {ScsiError2}H.
+Event.DRIVE_IO_READ_TOC_FAILURE.EventCode=38
+
+
+#Localized Strings
+LocalizedString.READ_SECTOR=Testing sector {ReadSector} (of {EndSector})
+
+LocalizedString.READ_SECTOR_FUNNEL=Testing sector {ReadSector1} and {ReadSector2} (of {EndSector})
+
+LocalizedString.LINEAR_SEEK_TEST=Linear Seek Test
+
+LocalizedString.MSG_INSERT_MEDIA=Please insert {MediaName} media into the drive.
+
+LocalizedString.RANDOM_SEEK_TEST=Random Seek Test
+
+LocalizedString.FUNNEL_SEEK_TEST=Funnel Seek Test
+
+LocalizedString.SURFACE_SCAN_TEST=Surface Scan Test
+
+LocalizedString.PATTERN_TEST=Pattern Test
+
+LocalizedString.LINEAR_READ_COMPARE_TEST=Linear Read Compare Test
+
+LocalizedString.INSERT_MEDIA_WITH_DATA=Please insert a {MediaName} disc. 
+
+LocalizedString.LOADING_MEDIA=Loading {MediaName}.
+
+LocalizedString.INCORRECT_MEDIA_INSERTED=The media you inserted isn't a {MediaName1}.  Please insert a {MediaName2}.
+
+LocalizedString.NOT_ENOUGH_DATA_IN_DISC=The {MediaName1} you inserted does not have enough data for testing.  Please insert a {MediaName2} with more data.
+
+LocalizedString.WAITING_FOR_UNIT_READY=Waiting for unit to become ready.
+
+LocalizedString.EJECTING_MEDIA=Ejecting Media.
+
+LocalizedString.WAITING_FOR_USER_TO_INSERT_MEDIA=Waiting for user to insert media.
+
+LocalizedString.OBTAINING_DRIVE_CAPACITY=Obtaining drive capacity. 
+
+LocalizedString.TIMED_OUT_WAITING_FOR_UNIT=Waiting for unit to become ready timed out.
+
+LocalizedString.COMMAND_NOT_SUPPORTED=Command not supported.
+
+LocalizedString.LOGICAL_BLOCK_ADDRESS_OUT_OF_RANGE=The logical block address is out of range.
+
+LocalizedString.ERROR_NO_MEDIA=No disk is in the drive.
+
+LocalizedString.DEVICE_IS_BUSY=Device is busy.
+
+LocalizedString.INVALID_SCSI_COMMAND_BLOCK=Invalid field in SCSI command block.
+
+LocalizedString.INVALID_SCSI_PARAM_LIST=Invalid field in SCSI parameter list.
+
+LocalizedString.MEDIA_WRITE_PROTECTED=The media is write protected.
+
+LocalizedString.SCSI_ERROR=SCSI Error {ScsiErrorCode}H.
+
+LocalizedString.NO_MEDIA_PRESENT=There is no media in the drive.
+
+LocalizedString.MEDIA_INSERT_TITLE=Insert Media
+
+LocalizedString.ReRunTestPrompt=The {MediaName} test has failed.  The failure could be caused by a scratched, dirty or defective media, or it could be an actual hardware problem.  Click "Yes" if you would like to rerun the test with a different media, or click "No" to continue without rerunning the test.
+
+LocalizedString.ReRunTestTitle={MediaName} Test
+
+LocalizedString.ApprovedMediaPrompt=The {MediaName} test has failed. Please run the test again with different media.

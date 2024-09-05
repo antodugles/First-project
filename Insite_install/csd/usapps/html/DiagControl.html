@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Diag Control</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<!-- For debugging -->
+		<!--<link href="./ViewXML.css" media="screen" rel="stylesheet" type="text/css" />
+		<script src="./ViewXML.js" type="text/javascript"></script>-->
+		<link rel="stylesheet" type="text/css" media="screen" href="./progress.css"/>
+		<link rel="stylesheet" type="text/css" media="screen" href="./DiagControl.css"/>
+		<script src="./fileio.js" type="text/javascript"></script>
+		<script src="./progress.js" type="text/javascript"></script>
+		<script src="./DiagControl.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			// Publish function that DiagTree will call, which will update m_selectedDiags array
+			function publish(arr) {
+				DiagCtrl.m_selectedDiags = new Array();
+				for (var i = 0; i < arr.length; i++)
+				{
+					// Store only the name of the diagnostics
+					DiagCtrl.m_selectedDiags.push(arr[i].substr(arr[i].lastIndexOf("/")+1));
+				}
+				
+				// If the dignostics didn't get executed yet,
+				var oButton = document.getElementById("execute");
+				if (oButton.value == "Execute")
+				{
+					// Enable or disable List advanced options and Execute button according to the number of selected diagnostics
+					DiagCtrl.disableListOptions(DiagCtrl.m_selectedDiags.length < 2);
+					oButton.disabled = (DiagCtrl.m_selectedDiags.length == 0);
+					//  Cap the maximum loop count allowed depending on the number of diagnostics selected
+					DiagCtrl.onLoopCountChange(document.getElementById("loopcount"));
+				}
+			}
+		</script>
+	</head>
+	<body onload="DiagCtrl.initControl();"> 
+		<script language="javascript">
+			if (!document.all) 
+			{
+				// Frame labels position correction for Mozilla
+				var style = "<style media='screen'>div.control p.label {top: -22px;}</style>";
+				document.write(style);
+			}
+		</script>
+		<form id="controlform">
+			<div class="control">
+				<input class="advanced" id="advanced" type="button" name="advanced" value="Advanced>>" onclick="DiagCtrl.onAdvancedClick(this);">
+				<div class="frame loopcount" id="loopcountframe"><span>Loop Count: </span><input class="text" id="loopcount" type="text" name="loopcount" maxlength="4" value="1" onkeyup="DiagCtrl.onLoopCountChange(this);"/></div>
+				<div class="frame status loopcount none" id="loopstatusframe"><pre><p id="loopnumber">Loop: XX of YY</p><p id="listnumber">List: XX of YY</p></pre></div>
+				<div class="frame execute"><input id="execute" type="button" name="execute" value="Execute" onclick="DiagCtrl.execute();"/><p class="label">Control</p></div>
+				<div class="frame info"><input class="text" id="info" type="text" name="info" readonly="true"/><p class="label">Information</p></div>
+				<div class="frame">	
+					<div class="pbar" id="totalprogress">
+						<div class="pbar2"><!-- --></div>
+						<div class="pbar3">
+							<div class="stateholder">
+								<div class="state">
+									<div class="state2"><!-- --></div>
+									<div class="corner top left"><!-- --></div>
+									<div class="corner top right"><!-- --></div>
+									<div class="corner bottom left"><!-- --></div>
+									<div class="corner bottom right"><!-- --></div>
+								</div>
+							</div>
+						</div>
+						<div class="corner top left"><!-- --></div>
+						<div class="corner top right"><!-- --></div>
+						<div class="corner bottom left"><!-- --></div>
+						<div class="corner bottom right"><!-- --></div>
+					</div>
+					<p class="label" id="totalprogresslabel">Total Progress</p>
+				</div>
+			</div>
+			<div class="control none" id="advancedcontrol">
+				<div id="looping" class="frame looping">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>Stop On Failure:</td>
+							<td><input type="radio" name="stoponfailure" value="Yes" onclick="DiagCtrl.updateOptions();" /><span>Yes</span></td>
+							<td><input type="radio" name="stoponfailure" value="No" checked="No" onclick="DiagCtrl.updateOptions();" /><span>No</span></td>
+						</tr>
+						<tr>
+							<td>Stop On Abort:</td>
+							<td><input type="radio" name="stoponabort" value="Loop" onclick="DiagCtrl.updateOptions();" /><span>Loop</span></td>
+							<td><input type="radio" name="stoponabort" value="Diag" checked="Diag" onclick="DiagCtrl.updateOptions();" /><span>Diag</span></td>
+						</tr>
+						<tr>
+							<td>Loop Order:</td>
+							<td colspan="2"><input type="radio" name="looporder" value="ABCABCABC" checked="ABCABCABC"/><span>ABCABCABC</span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="2"><input type="radio" name="looporder" value="AAABBBCCC"/><span>AAABBBCCC</span></td>
+						</tr>
+					</table>
+					<p class="label">Looping</p>
+				</div>
+				<div id="list" class="frame list">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>Stop On Failure:</td>
+							<td><input type="radio" name="stoponfailurelist" value="Yes" onclick="DiagCtrl.updateOptions();" /><span>Yes</span></td>
+							<td><input type="radio" name="stoponfailurelist" value="No" checked="No" onclick="DiagCtrl.updateOptions();" /><span>No</span></td>
+						</tr>
+						<tr>
+							<td>Stop On Abort:</td>
+							<td><input type="radio" name="stoponabortlist" value="List" onclick="DiagCtrl.updateOptions();" /><span>List</span></td>
+							<td><input type="radio" name="stoponabortlist" value="Diag" checked="Diag" onclick="DiagCtrl.updateOptions();" /><span>Diag</span></td>
+						</tr>
+						<tr>
+							<td colspan="3">&#160;</td>
+						</tr>
+						<tr>
+							<td colspan="3">&#160;</td>
+						</tr>
+					</table>
+					<p class="label">List</p>
+				</div>
+				<div class="frame">	
+					<div class="pbar" id="currentprogress">
+						<div class="pbar2"><!-- --></div>
+						<div class="pbar3">
+							<div class="stateholder">
+								<div class="state">
+									<div class="state2"><!-- --></div>
+									<div class="corner top left"><!-- --></div>
+									<div class="corner top right"><!-- --></div>
+									<div class="corner bottom left"><!-- --></div>
+									<div class="corner bottom right"><!-- --></div>
+								</div>
+							</div>
+						</div>
+						<div class="corner top left"><!-- --></div>
+						<div class="corner top right"><!-- --></div>
+						<div class="corner bottom left"><!-- --></div>
+						<div class="corner bottom right"><!-- --></div>
+					</div>
+					<p class="label" id="currentprogresslabel">Current Progress</p>
+				</div>
+			</div>
+			<!-- For debugging -->
+			<!--<input id="debug" type="button" name="debug" value="Debug" onclick="DiagCtrl.debug();"/>-->
+		</form>
+	</body>
+</html>

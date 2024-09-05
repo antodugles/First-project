@@ -1,0 +1,62 @@
+﻿ /* <header>
+  * <cr> 
+  *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+  * </cr>
+  * <addr>
+  *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+  *  All rights reserved. 
+  * </addr>
+  *
+  * <lic>
+  * This software is the confidential and proprietary information of PC-Doctor, Inc.
+  * ("Confidential Information"). You shall not disclose such confidential
+  * information and shall use it only in accordance with the terms of the license
+  * agreement you entered into with PC-Doctor.
+  * </lic>
+  * 
+  * <desc>
+  *  The pcdrusbloopback english strings properties file
+  * </desc>
+  * 
+  * <file>
+  * @author  June_Li
+  * @version $Id: //depot/mainline/Matrix_Projects/projects/modules/src/windows/diag/pcdrusbloopback
+  /pcdrusbloopback.p5p$
+  * @.date   $DateTime: 2005/06/16 13:46:33 $
+  * @.change $Change: 39950 $
+  * @.last   $Author: Dan_Lu $
+  * </file>
+  * </header>
+  */
+
+Module.Name=USB Loopback
+Module.Description=USB Loopback Test
+Module.Copyright=Copyright (c) 2000-2005 PC-Doctor, Inc. All Rights Reserved.
+Module.Company=PC-Doctor, Inc.
+
+Test.USBLoopbackTest.Name=USB Loopback Test
+Test.USBLoopbackTest.Description=PC-Doctor USB Loopback Test
+
+Event.USBLoopbackTestFail.Message=Test Failed
+Event.USBLoopbackTestFail.EventCode=2
+
+#MSG_DRIVER_NOT_OPEN
+Event.USBDriverNotOpen.Message=Unable to open PC-Doctor driver!
+Event.USBDriverNotOpen.EventCode=3
+
+Event.LoopbackNotConnected.Message=Unable to detect the PC-Doctor USB/LPT Loopback Adapter.  Please connect the adapter and click OK.
+Event.LoopbackNotConnected.EventCode=4
+
+# Localized string
+LocalizedString.MsgDidTestPass=Did the test pass?
+
+#MSG_CABLE_NOT_CONNECTED_PROMPT
+LocalizedString.MsgCableNotConnectedPrompt=Unable to detect the PC-Doctor USB/LPT Loopback Adapter.  Please connect the adapter and click OK.
+
+#Add following string since usbloopback test has been changed
+LocalizedString.MsgResultDetectTwoPort=Two ports detected. Do you want to test other ports?
+LocalizedString.MsgResultDetectOnePort= One port detected. Do you want to test other ports? 
+LocalizedString.MsgResultDetectNone=No port detected, do you want to test other ports?  
+LocalizedString.MsgTestCanceled=USB Loopback test is canceled.
+LocalizedString.MsgUSBDriverNotOpen=Unable to open PC-Doctor driver!
+

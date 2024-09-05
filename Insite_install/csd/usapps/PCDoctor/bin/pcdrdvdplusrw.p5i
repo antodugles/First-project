@@ -1,0 +1,84 @@
+
+/* 
+ * 
+ *  Copyright (c) 2000-2005 PC-Doctor, Inc.
+ * 
+ * 
+ *  9805 Double R Blvd. Suite 301, Reno NV 89521 USA
+ *  All rights reserved. 
+ * 
+ *
+ * 
+ * This software is the confidential and proprietary information of PC-Doctor, Inc.
+ * ("Confidential Information"). You shall not disclose such confidential
+ * information and shall use it only in accordance with the terms of the license
+ * agreement you entered into with PC-Doctor.
+ * 
+ * 
+ * 
+ * Module:		pcdrdvdplusrw
+ * Customer:	default
+ * Variant:		default
+ * OS:			windows
+ * Time:		20050616 1642
+ * 
+ * 
+ * 
+ * @author  Automatically Generated from the INI Database
+ * @version $Id: 
+ * @.date   
+ * @.change 
+ * @.last   
+ * 
+ * 
+ *
+ * THIS INI FILE WAS MACHINE GENERATED FROM THE INI DATABASE
+ * DO NOT MODIFY THIS FILE, IT WILL BE OVER-WRITTEN DURING
+ * COMPILATION
+ */
+
+Test.ReadWriteTest.BlankMediaOnly = false
+
+# CheckForQualifiedMedia (true/false) Setting CheckForQualifiedMedia to true the
+# module  will check whether the media being used is on the manufacturers
+# qualifed media list  and will prompt to alert user when the test failed on
+# unqualified media. Setting it  to false will disable the prompt so end user
+# will not be alert of unqualified media.
+Test.ReadWriteTest.CheckForQualifiedMedia = false
+
+# DiscID (MEIDIA_TYPE,MANUFACTUER_ID) A list of DVD+RW disc media type ID and
+# manufacturer IDs  in pairs that are used for identifiing for qualified media.
+# Each pairs represent the medi type ID  and manufacturer IDs in the DVD+RW ADIP
+# information on each individual qualifed media.  NOTE: All  DiscID are seperated
+# by commas and they must be in pairs such as the following example: 
+# DISC1_MEIDIA_TYPEID, DISC1_MANUFACTURERID,  DISC2_MEIDIA_TYPEID,
+# DISC2_MANUFACTURERID,  DISC3_MEIDIA_TYPEID, DISC3_MANUFACTURERID   In the case
+# there is only one DiscID available for the disc, do the following: 
+# DISC1_MEIDIA_TYPEID, ,   ,DISC2_MANUFACTURERID  basically put an empty space
+# between the commas in place for the missing ID.   DiscID can be any ASCII
+# string.
+Test.ReadWriteTest.DiscID =  R00,RICOHJPN, R01,CMC MAG, F01,CMC MAG, R03,MBIPG101, R04,MBIPG101, 003,MCC, E01,CMC MAG, 001,MKM, W01,CMC MAG, W01,RICOHJPN, 041,PHILIPS, 001,MCC, 002,MCC, T02,YUDEN000, W03,MBIPG101, A01,MCC, W04,MBIPG101, A02,MKM, R01,PRODISC, R01,RITEK, P40,BeAll, 001,MAXELL, R02,PRODISC, R01,RICOHJPN, D01,SONY, T01,YUDEN000, 001,TDK, P80,BeAll000, 002,MAXELL, R03,PRODISC, R02,RICOHJPN, R03,RITEK, D11,SONY, 002,TDK, 010,PHILIPS, W01,PRODISC, 001,RITEK, 041,PHILIPS, 004,RITEK, S11,SONY
+
+Test.ReadWriteTest.Enable = true
+
+Test.ReadWriteTest.FormatOnlyIfRequired = true
+
+Test.ReadWriteTest.NumberOfRepetitions = 500
+
+Test.ReadWriteTest.PostMinimalErase = false
+
+Test.ReadWriteTest.PromptToEraseOnAbort = false
+
+Test.ReadWriteTest.PromptUserForMedia = true
+
+# ReRunTestOnFailure: (true/false) Setting ReRunTestOnFailure to true will 
+# generate a prompt to ask end user whether they would like to rerun the test 
+# when test failed. Setting it to false will not prompt end user to rerun on
+# failure.
+Test.ReadWriteTest.ReRunTestOnFailure = true
+
+Test.ReadWriteTest.SecondsForBlanking = 60
+
+Test.ReadWriteTest.WarnOnNonBlankMedia = true
+
+

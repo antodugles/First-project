@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<tbody><tr id="SampleRFS1.xml">
+		<td>
+			<input type="checkbox" id="SampleRFS1.xml"/>
+		</td>
+		<td class="LastName"><a href="javascript:ViewRFS('SampleRFS1.xml')">Ojha</a></td>
+		<td class="FirstName">Alok</td>
+		<td class="DateTime">06/06/2006 3:30 PM</td>
+		<td class="Description">This is a test &lt; Case Please I...</td>
+		<td class="Status">Responded</td>
+		<td class="RefNo">GE123456789</td>
+		<date class="DateTime">1149625787000</date>
+	</tr>
+	<tr id="SampleRFS2.xml">
+		<td>
+			<input type="checkbox" id="SampleRFS2.xml"/>
+		</td>
+		<td class="LastName"><a href="javascript:ViewRFS('SampleRFS2.xml')">Oh</a></td>
+		<td class="FirstName">Jung</td>
+		<td class="DateTime">06/06/2006 3:31 PM</td>
+		<td class="Description">This is a test Case…Please Ign...</td>
+		<td class="Status">Sent</td>
+		<td class="RefNo"></td>
+		<date class="DateTime">1149625830000</date>
+	</tr>
+	<tr id="SampleRFS3.xml">
+		<td>
+			<input type="checkbox" id="SampleRFS3.xml"/>
+		</td>
+		<td class="LastName"><a href="javascript:ViewRFS('SampleRFS3.xml')">Doe</a></td>
+		<td class="FirstName">John</td>
+		<td class="DateTime">06/06/2006 3:31 PM</td>
+		<td class="Description">This is a test Case…Please Ign...</td>
+		<td class="Status">Not Sent</td>
+		<td class="RefNo"></td>
+		<date class="DateTime">1149625852000</date>
+	</tr>
+	<tr id="SampleRFS4.xml">
+		<td>
+			<input type="checkbox" id="SampleRFS4.xml"/>
+		</td>
+		<td class="LastName"><a href="javascript:ViewRFS('SampleRFS4.xml')">Doe</a></td>
+		<td class="FirstName">Jane</td>
+		<td class="DateTime">06/06/2006 3:33 PM</td>
+		<td class="Description">This is a test Case…Please Ign...</td>
+		<td class="Status">Not Sent</td>
+		<td class="RefNo"></td>
+		<date class="DateTime">1149625962000</date>
+	</tr>
+	<tr id="SampleRFS5.xml">
+		<td>
+			<input type="checkbox" id="SampleRFS5.xml"/>
+		</td>
+		<td class="LastName"><a href="javascript:ViewRFS('SampleRFS5.xml')">Simpson</a></td>
+		<td class="FirstName">Bart</td>
+		<td class="DateTime">06/06/2006 3:33 PM</td>
+		<td class="Description">This is a test &lt; Case Please I...</td>
+		<td class="Status">Responded</td>
+		<td class="RefNo">GE123456789</td>
+		<date class="DateTime">1149625985000</date>
+	</tr>
+	<tr id="SampleRFS6.xml">
+		<td>
+			<input type="checkbox" id="SampleRFS6.xml"/>
+		</td>
+		<td class="LastName"><a href="javascript:ViewRFS('SampleRFS6.xml')">Spigel</a></td>
+		<td class="FirstName">Spike</td>
+		<td class="DateTime">06/06/2006 3:34 PM</td>
+		<td class="Description">This is a test Case…Please Ign...</td>
+		<td class="Status">Sent</td>
+		<td class="RefNo"></td>
+		<date class="DateTime">1149626046000</date>
+	</tr>
+</tbody>

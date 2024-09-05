@@ -1,0 +1,14 @@
+
+CapabilityImp.BlueTooth.Description=Bluetooth Device
+CapabilityImp.HardDrive.Description=Hard Drive
+CapabilityImp.Modem.Description=Modem
+CapabilityImp.NetworkCard.Description=Network Card
+CapabilityImp.VideoCard.Description=Video Card
+CapabilityImp.SoundCard.Description=Sound Card
+CapabilityImp.OpticalDrive.Description=Optical Drive
+CapabilityImp.CDROM.Description=CD-ROM Drive
+CapabilityImp.CDR.Description=CD-R Drive
+CapabilityImp.DVD.Description=DVD Drive
+CapabilityImp.DVDRAM.Description=DVD-RAM Drive
+CapabilityImp.DVDMINUSRW.Description=DVD-RW Drive
+CapabilityImp.DVDPLUSRW.Description=DVD+RW Drive

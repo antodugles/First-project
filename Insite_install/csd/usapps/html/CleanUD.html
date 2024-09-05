@@ -1,0 +1,47 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.74 [en] (Windows NT 5.0; U) [Netscape]">
+   <meta name="Author" content="Insite Account">
+   <title>CleanUD</title>
+<script language=javascript>
+
+function cleanUD()
+{
+	  var ans=confirm("Warning: All current user defined seetings will be cleaned. \n Use the application's backup and restore feature to save the current copy \n Ok -- Proceed \n Cancel -- Stop")
+	if(ans==true)
+	{
+		url="/uscgi-bin/CleanUD.cgi?bkup=no"
+		
+	}
+	else
+	{
+		alert("Action Cancelled")
+	}
+location.href=url
+}
+</script>
+</head>
+<body text="#000000" bgcolor="#FFFFCC" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+&nbsp;
+<center><table BORDER=6 CELLSPACING=0 CELLPADDING=0 >
+<tr>
+<td>
+<center>
+<h1>
+Instructions&nbsp;</h1></center>
+
+<pre>This tool will clean all the user-defined settings so&nbsp; that the application starts with
+default values.
+
+NOTE: Be sure to backup the current settings if you want to use them later.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use the application's backup and restore feature under Utility -> System tab.&nbsp;</pre>
+<br><br>
+<center><form name=f1><input type=button onClick=cleanUD() value="Clean Userdefs"></form></center>
+</td>
+</tr>
+</table></center>
+
+</body>
+</html>
